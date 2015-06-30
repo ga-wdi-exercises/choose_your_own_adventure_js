@@ -7,7 +7,7 @@
 - Any path the user goes down must ask them at least 3 questions(more if you want!)
 - There must be a minimum of 7 total destinations the user could arrive at based on their responses.(again more if you want!)
 - For at least 2(also can be more!) of the questions asked, there must be more then 2 possible user responses
-- Adventure must contain one integer responses
+- Adventure must contain at least one integer response and one string response
 
 *hint* you may need `parseInt()` and `toString()`
 
