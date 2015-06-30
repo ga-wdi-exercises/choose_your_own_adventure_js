@@ -19,6 +19,9 @@ if(pathInput == "l"){
       buffer()
     }
     else {
+      while(ghostGirlResponse < 100){
+        var ghostGirlResponse = prompt("That numbers not big enough. Guess again now or i keeel you")
+      }
       console.log("The girl says to you, 'Oh " + ghostGirlResponse + " is my favorite number too!' Then leave you. You continue on your journey and finally get to.... Walmart'" )
       buffer()
     }
