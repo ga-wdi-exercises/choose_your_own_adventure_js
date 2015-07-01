@@ -23,10 +23,28 @@ function adventure_time(){
 
         break;
       case "b":
-        console.log("sniff it for curiosity");
+        console.log("Snookie sniffs at it curiously and suddenly it opens and KILLER MUTANT NINJAS POP OUT!!!!");
+        var choice02_1 = prompt("What Should Snookie Do?! \n[a]FIGHT THEM!\n[b]RUN!");
+        if (choice02_1 == "a"){
+          console.log("Snookie decides he should fight them AND THEN REMEMBERS HE IS PLUGGED INTO THE MATRIX AND KNOWS KUNG FU AND REALIZES HE IS NEO!!!! fin.");
+        } else if (choice02_1 =="b"){
+          console.log("Snookie is a dog, they are ninjas. Fuuuuuck that. and Snookie runs away and they give chase!!");
+          var choice02_1_1 = prompt("Snookie turns a left at the next corner only to be faced with Mr. Rogers!! Should he...\n[a]try and hide behind Mr.Rogers\n[b]keep on running");
+            if(choice02_1_1 =="a"){ console.log("Snookie hides behind Mr. Rogers who pulls OUT A MACHIEN GUN AND KILLS ALL THE NINJAS BECAUSE NOBODY MESSES WITH MR.ROGERS. fin.");}
+
+            else if(choice02_1_1 == "b"){console.log("Snookie keeps on running and realizes he's hungry so stops into the nearest pizza shop. fin.");}
+        }
         break;
       case "c":
-        console.log("bark at it");
+        console.log("Snookie Barks at it and it TRANSFORMS INTO A GIANT HEAVY METAL MECH WARRIOR");
+        var choice03_1 = prompt("Should Snookie...\n[a]play the banjo?\n[b]pee on the Heavy Metal Mech Warrior");
+          if (choice03_1=="a"){ console.log("Snookie pulls out his banjo and plays a tune AND DESTROYS THE MECH WARRIOR WITH THE SONIC WAVES BECAUSE IT'S A MEGASONICSUPERSOMETHING BANJO. fin.");}
+          else if(choice03_1 =="b"){
+              console.log("Snookie Shrugs and thinks it's just another thing to pee on and lifts his leg to pee");
+              var choice03_1_1 = prompt("The Mech warrior ask if he is going a 1 or 2 ...");
+                if (choice03_1_1.parseInt() == 1){console.log("Snookie Barks 1 and the Mech Warrior EXPLODES OUT OF TERROR OF BEING URINATED ON!!!!  fin.");}
+                else if(choice03_1_1.parseInt() ==2){console.log("Snookie Barks 2 and the Mech Warrior Bends over and POOPS ON THE SNOOKIE!!! fin.");}
+          }
         break;
       case "d":
         console.log("ignore and keep on going");
