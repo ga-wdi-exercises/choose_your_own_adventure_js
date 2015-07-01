@@ -47,7 +47,16 @@ function adventure_time(){
           }
         break;
       case "d":
-        console.log("ignore and keep on going");
+        console.log("Snookie figures it's not interesting and keeps on walking home");
+        var choice04_1 = prompt("Snookie walks into his house and sees someone left the oven on should he...\n[a]Bark a voice command to turn it off \n[b]ignore he wants to eat some tacos first");
+        if (choice04_1 == "a"){console.log("he Barks a Voice command to the house to turn it off BUT THE HOUSE HAS TURNED INTO SKYNET AND REBELS AND HE MUST LEAD THE HUMAN-PUPPY REBELLION!!  fin.");}
+        else if(choice04_1 =="b"){
+            console.log("He ignores it and goes to make some tacos because he is hungry but A GIANT FIRE DEMON LEAPS OUT OF THE OVEN!!!");
+            var choice04_1_1 = prompt("Snookie dodges a fireball! should he...\n[a]Invite the fire demon for tacos?\n[b]Bark at the fire demon?");
+            if (choice04_1_1 =="a"){console.log("Snookie Invites the fire demon for tacos, who is very lonely and they become friends forever! fin.");}
+            else if(choice04_1_1=="b"){console.log("Snookie Barks at the fire demon who is startled, trips over a chew toy and falls on Snookie IMBUING SNOOKIE WITH FIRE DEMON POWERS AND HE BECOMES A SUPER PUPPY HERO!!!!!!!  fin.");}
+
+        }
         break;
     }
 
