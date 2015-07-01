@@ -71,11 +71,51 @@ if (firstAnimal == "B") {
   console.log("To see cats, you have to walk across the zoo. It's about 2 miles.")
   var takeWalk = prompt("You've walked awfully far and you're still not at the Cats exhibit. Would you like to take a rest or keep going? Enter 'R' to take a rest; enter 'G' to keep going.");
   if (takeWalk == "R"){
-// code here
+    console.log("You sit down to wait.");
+    moveToNext();
+    var restLength = prompt("How long would you like to rest here? Please enter a number of minutes to rest.");
+    if (restLength < 5) {
+      console.log("Good call. A quick rest does your muscles good. Then you get up and finish the trek. At last: The cats!");
+      moveToNext();
+      var whichCat = prompt("Which big cat would you like to see? (Please enter 'Tiger' or 'Lion'.)");
+      if (whichCat == "Tiger") {
+        console.log("Good call! Our tiger just had cubs. The baby tigers are so cute that you decide to spend the rest of the day here watching them play.");
+        moveToNext();
+        prompt("Glad you found an animal you like! Come again soon.");
+      } else if (whichCat == "Lion"){
+        console.log("ROAR! The lion at our zoo is really impressive. In fact, he's so impressive that you decide that's all you need to see, and you choose to leave the zoo.");
+        moveToNext();
+        prompt("Glad you got to see our lion! See you later.");
+      }
+    } else if (restLength > 5 && restLength <= 20){
+      console.log("Luckily you have plenty of time to rest. So you decide to count the minutes as they pass. The minutes go by...");
+      for (var i = 0; i < restLength; i = i + 1){
+        console.log(i);
+      }
+      moveToNext();
+      console.log("All of that counting has made you sleeping...kind of like counting sheep. You decide you'd rather keep counting sheep and take a nap than see animals, so you head home. The end.");
+      moveToNext();
+      prompt("Enjoy your nap!");
+  } else {
+      console.log("Hmm. If you need a 20+ minute break just to walk halfway to the other side of the zoo, this experience probably isn't for you. You decide to head home.");
+      moveToNext();
+      prompt("That's too bad. Come back when you're more in shape!");
+    }
   } else if (takeWalk == "G") {
-// code here
-  }
+    console.log("Walking it is!")
+    moveToNext();
+    var drinkResponse = prompt("After the walk, you're very thirsty, so you visit a concession stand. Would you like the Kitty Cola or a bottle of water? (Please enter 'water' for the bottled water or 'cola' for the soda.)");
+    if (drinkResponse == "water"){
+      console.log("That refreshing bottle of water was tasty! But now you have to go to the bathroom, and that's on the other side of the zoo. After you walk there, you decide it's not worth it to stay, and you head home.");
+      moveToNext;
+      prompt("Sorry you didn't see any animals! Better luck next time.");
+    } else if (drinkResponse == "cola") {
+      console.log("At first, the buzz from the soda is great...but then your blood sugar crashes and you're too tired to keep going. YOu decide to head out to get lunch and re-set your blood sugar.");
+      moveToNext;
+      prompt("Hope your trek to lunch is more successful that the trek to the cats! The end.");
 
+    }
+  }
 } else if (firstAnimal == "P") {
   console.log("Let's go see some monkies!");
   moveToNext();
@@ -128,17 +168,29 @@ if (firstAnimal == "B") {
     }
   } else if (touchLizard == "N") {
     console.log("Yeah, lizards feel weird. Let's move on.")
-    var afterLizard = prompt("Do you want to see alligators or snakes next? (Please enter "A" for Alligators; enter "S" for Snakes.)");
+    var afterLizard = prompt("Do you want to see alligators or snakes next? (Please enter 'A' for Alligators; enter 'S' for Snakes.)");
     if (afterLizard == "A") {
-    // Alligator code here
+      console.log("This zoo has a giant alligator, and he's sleeping.");
+      moveToNext();
+      var sleepingGatorResponse = prompt("Do you want to stick around to see if he wakes up? (Please enter 'y' for yes; enter 'n' for no.)");
+      if (sleepingGatorResponse == "y"){
+        console.log("Well, he was alseep, but suddenly he's swimming right toward you and slams into the glass. CHOMP! He's trying to eat you. That's pretty scary, and you decide that's quite enough excitement for one day. It's time to head home.");
+        moveToNext();
+        prompt("Thanks for coming! See you next time.");
+      } else if (sleepingGatorResponse == "n"){
+        console.log("That's okay. You've already seen two animals today, and you decide it's time to head outside the zoo to go to lunch.");
+        moveToNext();
+        prompt("We'll see you after lunch? The end.");
+      }
     } else if (afterLizard = "S"){
-    // Snake code here his zoo has a giant alligator, and he's sleeping. Do you want to wake him up?
+      console.log("Snakes--interesting choice. You proceed to see the boa constrictor, which is only 8 feet long.");
+      moveToNext();
+      prompt("Not impressed? It's okay if you head out. See you next time!");
+    }
   }
-
-  }
-
-} else {
-  console.log("All right, that wasn't an option. But I'll still show you something cool.")
-
-  moveToNext();
 }
+//else {
+//  console.log("All right, that wasn't an option. But I'll still show you something cool.")
+
+//  moveToNext();
+// }
