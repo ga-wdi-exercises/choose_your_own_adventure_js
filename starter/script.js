@@ -14,8 +14,8 @@ if (name != null){
   console.log("You are not allowed to play. Come back later!");
 }
 
-console.log ("You are a basketball player. It is 4th quarter and your team is \n
-losing by 1 point. Only a few seconds left.");
+console.log ("You are a basketball player. It is 4th quarter and your team is losing by 1 point.
+Only a few seconds left.");
 
 var time = prompt ("How many seconds are left?");
 while (0 < time < 5 ) {
