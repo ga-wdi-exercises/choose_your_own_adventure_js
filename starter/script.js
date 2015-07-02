@@ -43,15 +43,4 @@ else if (myDiet==='no'){
 }
 else {
   console.log("Please either either yes or no");
-
-
-
-
-/* Final destination
-1. Stop and repeat
-2. Good management
-3. Need to work on diet
-4. Need to work on exercise
-5. Need to work in diet and exercise
-6. Appointment with doctor needed
-7.
+}
