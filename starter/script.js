@@ -8,7 +8,7 @@
 
 
 var name = prompt("What is your name?");
-if (name != null){
+if (name !== null){
   console.log("Hello" + name + ". Let's play basketball game!");
 } else {
   console.log("You are not allowed to play. Come back later!");
@@ -26,7 +26,7 @@ console.log ("Your team manager lets you take a last shot.");
 var shot = prompt("Do you take this shot? Choose 'yes' or 'no'");
 if (shot === "yes" || shot === "Yes"){
   console.log("Great! You have 2 options.");
-
+}
   var options = prompt("Layup or Jumpshot. Please choose 'l' or 'j'");
   if (options === "l" || options === "L") {
     console.log ("Wow. Your layup succeeded, and your team won by 1 point!!");
@@ -36,11 +36,11 @@ if (shot === "yes" || shot === "Yes"){
 
   console.log ("You are a champion! Congratulations!! This is your 5th championship titles.");
 
-  var champsnum = prompt ("Do you want to see what year you won titles? Choose 'y' or 'n'");
+  var champsnum = prompt ("Do you want to see what years you won titles? Choose 'y' or 'n'");
   if (champsnum === "y" || champsnum === 'Y'){
-    var 5th = ["2002", "2006", "2009", "2012", "2015"];
-    for (i in 5th){
-      console.log(i);
+    var years = ["2002", "2006", "2009", "2012", "2015"];
+    for (i=0; i<years.length; i++) {
+      console.log(years[i]);
     }
   } else {
     console.log ("Okay. It was a great season. Go to nice vacation!!");
