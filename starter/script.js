@@ -52,7 +52,7 @@ if (wantToBeQB === "y") {
       } else {
         console.log("You drop back to pass. You survey the field.");
         buffer();
-        var receiver = prompt("There are three receivers on the play.\nWho do you want to throw it to?\n Desean, Pierre or Jordan");
+        var receiver = prompt("There are three receivers on the play.\nWho do you want to throw it to?\n desean, pierre or jordan");
           if (receiver == "desean"){
             console.log("Desean catches your great throw and sprints down the sideline.");
             console.log("It looks like he might score. But wait!");
