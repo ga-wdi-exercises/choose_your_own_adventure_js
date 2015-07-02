@@ -64,13 +64,8 @@ function adventure_time(){
 
 
 // start of the program .
-
-var start_adventure = prompt("#### WELCOME TO PUPPY POWER ADVENTURE !! #### \nReady to start? [y/n]");
-if (start_adventure == "y") {
-        alert("YES SUCKA!");
-        console.log("Snookie is a cute little puppy strolling down the street..."); //figure out why prompt kicks up before this even shows
-        adventure_time();
-
-    } else if (start_adventure == "n"){
-      alert("THE WORLD ENDS, GOODBYE ");
-    }
+var start_adventure;
+while (start_adventure != "y"){
+  start_adventure = prompt("#### WELCOME TO PUPPY POWER ADVENTURE !! #### \nReady to start? [y/n]");
+}
+adventure_time();
