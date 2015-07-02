@@ -33,6 +33,32 @@ if (nFLQB === "y") {
           }
           console.log("Congrats! Alfred scored a touchdown. Go celebrate with the team!!!");
           buffer();
+      } else {
+        console.log("You drop back to pass. You survey the field.");
+        buffer();
+        var receiver = prompt("There are three receivers on the play.\nWho do you want to throw it to?\n Desean, Pierre or Jordan");
+          if (receiver == "Desean" || "desean"){
+            console.log("Desean catches your great throw and sprints down the sideline.");
+            console.log("It looks like he might score. But wait!");
+            console.log("He starts to celebrate too early and fumbles at the 5 yard line.");
+            console.log("Shake your head in disbelief as you head to the sideline.");
+            buffer();
+          } else if (receiver == "Pierre" || "pierre"){
+            console.log("Congratulations. Pierre caught your pass.");
+            console.log("Three yards down the field. On 3rd and 7.");
+            console.log("Looks like it's time to punt.");
+            console.log("Shake your head in disbelief as you head to the sideline.");
+            buffer();
+          } else if (receiver == "Jordan" || "jordan"){
+            console.log("Your pass to Jordan was intercepted.");
+            console.log("Did you not see the defender right there in the middle of the field?");
+            console.log("Shake your head in disbelief as you head to the sideline.");
+            buffer();
+          } else {
+            console.log("Looks like you took too long to throw it and got sacked.");
+            console.log("Shake your head in disbelief as you head to the sideline.");
+            buffer();
+          }
       }
   } else if (timeLeft <= 5){
     console.log("Time is running out. You should have moved faster.");
