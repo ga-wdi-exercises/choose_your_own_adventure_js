@@ -38,7 +38,7 @@ if (shot === "yes" || shot === "Yes"){
 
   var champsnum = prompt ("Do you want to see what year you won titles? Choose 'y' or 'n'");
   if (champsnum === "y" || champsnum === 'Y'){
-    var 5th = [2002, 2006, 2009, 2012, 2015];
+    var 5th = ["2002", "2006", "2009", "2012", "2015"];
     for (i in 5th){
       console.log(i);
     }
