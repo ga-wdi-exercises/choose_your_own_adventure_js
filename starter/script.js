@@ -1,16 +1,16 @@
-
+//Question 1
 var name= prompt('Hi, what is your name?'); //string response
 
 console.log('Hi' +' '+ name);
 var bloodSugar= prompt('Please check your blood sugar and enter the results');//integer response
+//Loop
 
-
+while(bloodSugar <60){
+    console.log("Please eat something and visit us again in 15 minutes");
+}
 /*Blood Sugar Results  */
 
-if (bloodSugar < 60){
-  console.log("Please eat something and visit us again in 15 minutes");
-}
-else if (bloodSugar > 60 && bloodSugar < 140){
+if (bloodSugar > 60 && bloodSugar < 140){
   console.log("Keep up the good work");
 }
 else if (bloodSugar >139 && bloodSugar < 400){
@@ -20,7 +20,7 @@ else {
   console.log("Since your blood sugar is above 400, please call your doctor for further instructions")
 }
 
-//Question 1 Exercise
+//Question 2 Exercise
 var myExercise= prompt('Do you exercise 0-2 times a week or 3-7 times a week?. Please enter either 0-2 or 3-7');
 
 if (myExercise==='0-2'){
@@ -32,7 +32,7 @@ else if (myExercise==='3-7'){
 else {
   console.log("Please enter either 0-2 or 3-7");
 }
-//Question 2 Diet
+//Question 3 Diet
 var myDiet= prompt('Do you follow a diabetic diet? Enter yes or no');
 
 if (myDiet==='yes'){
@@ -45,8 +45,13 @@ else {
   console.log("Please either either yes or no");
 
 
-/* Final desistion
+
+
+/* Final destination
 1. Stop and repeat
 2. Good management
-3. Needs some work
-4.
+3. Need to work on diet
+4. Need to work on exercise
+5. Need to work in diet and exercise
+6. Appointment with doctor needed
+7.
