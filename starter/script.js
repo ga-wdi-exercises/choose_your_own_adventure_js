@@ -26,13 +26,19 @@ if (nFLQB === "y") {
         console.log("Good idea to hand it off to Alfred.");
         buffer();
         var howManyYards = prompt("It looks like there's a big hole for Alfred to run through.\nHow many yards does he run?\n Please enter a number.");
-          while (howManyYards < 65) {
-            console.log("Cmon, have more faith in your running back.");
+          if (howManyYards > 75){
+            console.log("Congrats! Alfred scored a touchdown!");
+            console.log("Though it seems you have confused him with Forrest Gump.");
             buffer();
-            howManyYards = prompt("How many yards do you think he'll run.");
-          }
+          } else {
+            while (howManyYards < 65) {
+              console.log("Cmon, have more faith in your running back.");
+              buffer();
+              howManyYards = prompt("How many yards do you think he'll run.");
+            }
           console.log("Congrats! Alfred scored a touchdown. Go celebrate with the team!!!");
           buffer();
+        }
       } else {
         console.log("You drop back to pass. You survey the field.");
         buffer();
