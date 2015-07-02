@@ -13,7 +13,8 @@ if (suspectPursuit === "hallway") {
 	invitation = invitation.toLowerCase();
 	if (invitation === "yes" || invitation === "y") {
 		alert("You grab a pot of coffee and some cups and make your way to the interrogation room to get a peak through one-way mirror. 'Coffee anyone?' you ask and get some nods. While you're pouring the coffee, you're listening intently, committing every detail to memory.");
-		
+		//this continues the story
+		leadConvergence();
 	}
 	
 	else if (invitation === "no" || invitation === "n") {
@@ -29,6 +30,24 @@ if (suspectPursuit === "hallway") {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 else if (suspectPursuit === "stairs"){
 	alert("You take the service stairs and step out into the lobby just as the suspect rushes past you. All you have to do is stick out your foot and the he is splayed out on the floor. You're already putting him in handcuffs when your male colleagues catch up with you, panting heavily.\n\n'May I be of further assistance?' you say coyly.")
+	var interrogation = prompt("Your work earns you an invitation to the interrogation room. It's going to be ugly, Agent Thompson has a mean left hook and is not much of a talker. Do you stay anyway? (Yes/No)").toLowerCase();
+	if (interrogation === "yes" || interrogation === "y"){
+		//continues the story
+		leadConvergence()
+	}
+	else if (interrogation === "no" || interrogation === "n") {
+		alert("You decide to skip interrogation, you've seen enough of Agent Thompson for the day.")
+		var proceed = prompt("You skipped the interrogation and your investigation is stalled. Do you continue to investigate? (Yes/No)").toLowerCase();
+		if (proceed === "yes" || proceed === "y"){
+			
+		}
+		else if (proceed === "no" || proceed === "n"){
+			//Not Cut Out for This
+		}
+	}
+	else {
+		alert("Not a valid choice. Refresh and try again.");
+	}
 }
 
 //frist split
