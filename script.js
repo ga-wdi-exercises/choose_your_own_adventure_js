@@ -1,3 +1,8 @@
+//Comfort Level: 3
+//Completness: 4
+
+
+
 //console.log( "Welcome to the F.I.F.A. Womens World Cup! Team U.S.A. has made it to the finals." )
 var opponent = prompt("Do you face up against England, Japan, or will you drop out? Enter 'E', 'J', or 'D'");
 //England winner text
