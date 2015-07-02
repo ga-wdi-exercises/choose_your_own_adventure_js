@@ -26,7 +26,7 @@ console.log ("Your team manager lets you take a last shot.");
 var shot = prompt("Do you take this shot? Choose 'yes' or 'no'");
 if (shot === "yes" || shot === "Yes"){
   console.log("Great! You have 2 options.");
-}
+
   var options = prompt("Layup or Jumpshot. Please choose 'l' or 'j'");
   if (options === "l" || options === "L") {
     console.log ("Wow. Your layup succeeded, and your team won by 1 point!!");
