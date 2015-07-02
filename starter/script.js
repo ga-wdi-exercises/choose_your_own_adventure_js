@@ -22,6 +22,18 @@ if (nFLQB === "y") {
     console.log("Congrats on not taking forever to get to the line.");
     buffer();
     var playCall = prompt("You snap the ball. What would you like to do?\n Handoff\n Pass");
+      if (playCall == "handoff") {
+        console.log("Good idea to hand it off to Alfred.");
+        buffer();
+        var howManyYards = prompt("It looks like there's a big hole for Alfred to run through.\nHow many yards does he run?\n Please enter a number.");
+          while (howManyYards < 65) {
+            console.log("Cmon, have more faith in your running back.");
+            buffer();
+            howManyYards = prompt("How many yards do you think he'll run.");
+          }
+          console.log("Congrats! Alfred scored a touchdown. Go celebrate with the team!!!");
+          buffer();
+      }
   } else if (timeLeft <= 5){
     console.log("Time is running out. You should have moved faster.");
   }
