@@ -20,6 +20,7 @@ if (suspectPursuit === "hallway") {
 	else if (invitation === "no" || invitation === "n") {
 		//This choice leads to consequence "Not Cut Out for This"
 		//end of branch/////////////////////////////////////////
+		notCutOut()
 	}
 	else {
 		alert("Not a valid choice. Refresh and try again.");
@@ -39,10 +40,26 @@ else if (suspectPursuit === "stairs"){
 		alert("You decide to skip interrogation, you've seen enough of Agent Thompson for the day.")
 		var proceed = prompt("You skipped the interrogation and your investigation is stalled. Do you continue to investigate? (Yes/No)").toLowerCase();
 		if (proceed === "yes" || proceed === "y"){
-			
+			var search = prompt("Though you missed out on the interrogation, there are other places to get intel. Do you want to check the Chief's office or Agent Sousa's locked desk drawer? (office/desk)").toLowerCase();
+			if (search === "office"){
+				//Cover Blown
+				exposed();
+			}
+			else if (search === "desk"){
+				//Cover Saved
+				goodSave();
+			}
+			else {
+				alert("Not a valid choice. Refresh and try again.");
+			}
 		}
 		else if (proceed === "no" || proceed === "n"){
 			//Not Cut Out for This
+			notCutOut();
+		}
+		
+		else {
+			alert("Not a valid choice. Refresh and try again.");
 		}
 	}
 	else {
@@ -70,18 +87,22 @@ function leadConvergence() {
 		var crate = prompt("With the giant incapacitated, you can turn your attention back to the crates. There are 3 that draw your attention which one do you open? Crate #1, Crate #16, or Crate #5? (1,16,5)")
 		if (crate == 1) {
 			//Find Cap's Blood
+			capBlood();
 		}
 		else if (crate == 16){
 			//Save The Day
+			saveTheDay();
 		}
 		else if (crate == 5){
 			//Death
+			death();
 		}
 	}
 	else if (pursueLead ==="no" || pursueLead === "n"){
 		alert("You decide it's too dangerous and it is time to come clean with your colleagues.")
 		//This choice leads to consequence "Not Cut Out for This"
 		//end of branch/////////////////////////////////////////
+		notCutOut();
 	}
 	else {
 		alert("Not a valid choice. Refresh and try again.");
@@ -92,15 +113,30 @@ function leadConvergence() {
 ///////////////////////////////OUTCOMES/////////////////////////////////////////////////////////////////////////////
 
 ////Not Cut Out for This
-
+function notCutOut() {
+	alert("You realize you're not cut out for this work. You just don't have the stomach for it anymore. Better leave it to your male colleagues, you're tired of fighting for acceptance - they'll never see you as equal")
+}
 ////Death
+function death() {
+	alert("Whatever was in that crate was highly volatile. The moment you opened it, the components reacted. The blast levelled out the entire marina. Your body was instantly vaporized.")
+}
 
 ///Cover Blown
+function exposed() {
+	alert("You get caught red-handed! Chief catches you snooping in his office, your cover is exposed, you're immediately expelled from SSR. You're lucky they didn't take you seriously, or you would be in jail. Who is going to exonerate Howard Stark now?")
+}
 
 ///Cover Saved
+function goodSave() {
+	alert("You long suspected Sousa was up to something. When you pick the lock on his desk drawer you discover an entire file of information that could pontentially lead to you. You can't have your cover blown, at least not till you exonerate Howard Stark. You take his files so you can destroy discreetly later. You live to fight another day.")
+}
 
 ///Save the Day
+function saveTheDay() {
+	alert("You open the crate #16 and see a couple of canisters that seem to contain some sort of gas. You don't know what it does. It looks pretty sinister, though. You have a sudden premonition. Something compels you to throw it overboard. Later, you have no idea what possesed you, but somehow you feel like you saved the day.")
+}
 
 ///Find Cap's Blood
-
-///Did not find Cap's Blood
+function capBlood() {
+	alert("You find the last remaining vial of blood beloning to Steve Rogers aka Captain America. Memories overwhelm you. You won't let it fall into the wrong hads. You know exatly what to do with it.")
+}
