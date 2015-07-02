@@ -9,7 +9,7 @@ var sectorSelect = prompt("Which one would you like to travel to, Red or Green?"
 if(sectorSelect == "red"){
     console.log("Really? No one goes to the Red Sector unless they have too!");
     var confirmRed = prompt("Are you sure?");
-    if(confirmRed == "y" || "yes" || "Yes" || "Y"){
+    if(confirmRed == "yes"){
         console.log("Now entering Red Sect...We are under attack! Five enemy ships directly ahead!");
         var fightOrRun = prompt("Should we run or fight?!");
         if(fightOrRun == "fight" || "Fight"){
@@ -26,6 +26,9 @@ if(sectorSelect == "red"){
             }
         }
     }
+    else if (confirmRed == "no"){
+        console.log("I thought you were trying to play a game? Simulation Over.");
+    }
 }
 else if (sectorSelect == "green"){
     console.log("Welcome to the Green Sector. The Green Sector Patrol is telling me we are not authorized to be here. We could try to bribe them.");
@@ -33,9 +36,12 @@ else if (sectorSelect == "green"){
     if (confirmBribe == "yes"){
         var bribeAmount = prompt("Confirm how much.");
         while(bribeAmount < 1500){
-            bribeAmout = prompt("The GS Patrol isn't excepting it, maybe more?");
+            bribeAmount = prompt("The GS Patrol isn't excepting it, maybe more?");
         }
-        console.log("Ok, they said we are free to go.");
+        console.log("Ok, they said we are free to go. This place kinda sucks...");
+    }
+    else if (confirmBribe == "no"){
+        console.log("We are being asked to leave. I think we should listen. Simulation Over.");
     }
 }
 
