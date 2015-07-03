@@ -10,7 +10,7 @@ var wantToBeQB = prompt("Have you ever wanted to be an NFL Quarterback?\n Yes = 
 if (wantToBeQB === "n") {
     console.log("Hmmmm. You must not be a football fan. But that's okay. Maybe it's for the best.");
     buffer();
-    var favoriteSport = prompt("What's your favorite sport?");
+    var favoriteSport = prompt("What's your favorite sport?").toLowerCase();
         if (favoriteSport == "baseball") {
           console.log("I know I'm supposed to ask you another question but just thinking about baseball makes me ....zzzzzzzzz");
           console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
@@ -31,7 +31,7 @@ if (wantToBeQB === "y") {
   if (timeLeft > 5){
     console.log("Congrats on not taking forever to get to the line.");
     buffer();
-    var playCall = prompt("You snap the ball. What would you like to do?\n handoff\n pass");
+    var playCall = prompt("You snap the ball. What would you like to do?\n handoff\n pass").toLowerCase();
       if (playCall === "handoff") {
         console.log("Good idea to hand it off to Alfred.");
         buffer();
@@ -52,7 +52,7 @@ if (wantToBeQB === "y") {
       } else {
         console.log("You drop back to pass. You survey the field.");
         buffer();
-        var receiver = prompt("There are three receivers on the play.\nWho do you want to throw it to?\n desean, pierre or jordan");
+        var receiver = prompt("There are three receivers on the play.\nWho do you want to throw it to?\n Desean, Pierre or Jordan").toLowerCase();
           if (receiver == "desean"){
             console.log("Desean catches your great throw and sprints down the sideline.");
             console.log("It looks like he might score. But wait!");
