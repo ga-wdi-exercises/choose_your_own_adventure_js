@@ -2,10 +2,15 @@ var buffer = function(){
   console.log("*******************************")
 }
 
+function firstLetterOfResponse (response){
+  var responseArray = response.split("");
+  return oneLetterResponse = responseArray[0];
+}
+
 var name = prompt("what is your name");
 console.log("Hi, " + name +".");
 buffer();
-var wantToBeQB = prompt("Have you ever wanted to be an NFL Quarterback?\n Yes = y\n No = n");
+var wantToBeQB = firstLetterOfResponse(prompt("Have you ever wanted to be an NFL Quarterback?\n Y/N")).toLowerCase();
 
 if (wantToBeQB === "n") {
     console.log("Hmmmm. You must not be a football fan. But that's okay. Maybe it's for the best.");
@@ -79,7 +84,7 @@ if (wantToBeQB === "y") {
   } else if (timeLeft <= 5){
     console.log("You really should have moved faster.");
     buffer();
-      var callTimeout = prompt("Time is running out. You have two timeouts. Do you call one?\n Yes = y\n No = n");
+      var callTimeout = firstLetterOfResponse(prompt("Time is running out. You have two timeouts. Do you call one?\n Y/N")).toLowerCase();
         if (callTimeout == "y"){
           console.log("You have called a timeout. At least it wasn't the worst thing that could have happened.");
           console.log("Shake your head in disbelief as you head to the sideline.");
