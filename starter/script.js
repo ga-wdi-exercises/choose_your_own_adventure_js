@@ -57,6 +57,7 @@ function sunshineRoom(rooms) {
 
   if (playerChoice.toUpperCase() === "LEMONADE") {
     console.log("lemonade");
+    alert("So refreshing!\n\nEverything's starting to spin, though.\n\n\nThis lemonade is a little sweet....")
     rooms.push("CANDY");
     candyRoom(rooms);
   } else if (playerChoice.toUpperCase() === "SUNGLASSES") {
@@ -74,6 +75,7 @@ function sunshineRoom(rooms) {
 
 function candyRoom(rooms) {
   console.log("candy!");
+
 }
 
 function unicornsRoom(rooms) {
@@ -82,6 +84,30 @@ function unicornsRoom(rooms) {
 
 function darknessRoom(rooms) {
   console.log("darkness");
+  var rooms = rooms;
+  alert("Welcome to the Land of Darkness! Escape, if you can!");
+  alert("There seems to be a door right in front of you. There's also a table with a flashlight and a box of matches")
+  var darkness = true;
+  while(true) {
+    var playerChoice = prompt("What do you do?");
+    playerChoice = playerChoice.toUpperCase();
+    if (playerChoice === "OPEN DOOR" && darkness) {
+      alert("The door won't open");
+    }
+    else if (playerChoice === "OPEN DOOR" && !darkness) {
+      alert("The door opens!")
+      rooms.push("DARKNESS");
+      nextRoom(rooms);
+    }
+    else if (playerChoice === "LIGHT MATCH") {
+      darkness = false;
+      alert("Hm, that's better");
+    }
+    else {
+      alert("that didn't work");
+    }
+  }
+
 }
 
 function hungerRoom(rooms) {
@@ -95,6 +121,11 @@ function wolvesRoom(rooms) {
 
 //Final puzzle: sends you either to happiness castle or pit of despair.
 
+
+//next room engine
+function nextRoom(rooms) {
+  console.log("next room");
+}
 
 //Intro
 //Welcome to the land of sunshine, candy, and unicorns! Careful, though --
