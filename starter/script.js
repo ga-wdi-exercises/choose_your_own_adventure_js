@@ -18,30 +18,62 @@ Adventure must contain at least one integer response and one string response
 Adventure must contain at least one functional loop in the code base
 hint you may need parseInt() and toString()*/
 
-//Intro
-//Welcome to the land of sunshine, candy, and unicorns! Careful, though --
-//some parts around here aren't so friendly.
-//'What's your name?''
-// **save name as var**
-function anteRoom() {
-  alert("Welcome to the land of SUNSHINE, CANDY, and UNICORNS! Careful, though -- some parts around here aren't so friendly.");
 
-  var playerName = prompt("What's your name?");
-  return playerName;
-}
-
-console.log(anteRoom());
 
 //'What would you like to see while you're here?''
 //if response is 'sunshine', 'candy', or 'unicorns', direct them to the
 //relevant room.
 
-//If anything else, randomly direct them to "darkness", "hunger", "or "wolves".
+//If anything else, direct them to "darkness", "hunger", "or "wolves".
+function anteRoom(playerName) {
+  var playerChoice = prompt("Hi there, " + playerName +"! What would you like to see while you're here?");
+  console.log(playerChoice.toUpperCase());
+
+  if (playerChoice.toUpperCase() ===  "SUNSHINE") {
+    sunshineRoom();
+  } else if (playerChoice.toUpperCase() === "CANDY") {
+    candyRoom();
+  } else if (playerChoice.toUpperCase() === "UNICORNS") {
+    unicornsRoom();
+  } else {
+    console.log("send them to the bad place");
+  }
+}
 
 //Solve a puzzle in each room. If successful in happy room, progress to next
 //happy room. If in unhappy room, move back to a happy room.
 
 //If unsuccessful in happy room, assign to unhappy room. If in unhappy
 //room, die.
+function sunshineRoom() {
+  console.log("sunshine!");
+}
+
+function candyRoom() {
+  console.log("candy!");
+}
+
+function unicornsRoom() {
+  console.log("unicorns!");
+}
 
 //Final puzzle: sends you wither to happiness castle or pit of despair.
+
+
+
+//Intro
+//Welcome to the land of sunshine, candy, and unicorns! Careful, though --
+//some parts around here aren't so friendly.
+//'What's your name?''
+// **save name as var**
+
+function playGame() {
+  alert("Welcome to the land of SUNSHINE, CANDY, and UNICORNS! Careful, though -- some parts around here aren't so friendly.");
+
+  var playerName = prompt("What's your name?");
+  console.log(playerName);
+
+  anteRoom(playerName);
+}
+
+playGame();
