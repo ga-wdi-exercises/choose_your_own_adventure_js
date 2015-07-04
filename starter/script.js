@@ -24,10 +24,13 @@ hint you may need parseInt() and toString()*/
 //'What's your name?''
 // **save name as var**
 function anteRoom() {
-  alert("Welcome to the land of SUNSHINE, CANDY, and UNICORNS! Careful, though -- some parts around here aren\'t so friendly.");
+  alert("Welcome to the land of SUNSHINE, CANDY, and UNICORNS! Careful, though -- some parts around here aren't so friendly.");
+
+  var playerName = prompt("What's your name?");
+  return playerName;
 }
 
-anteRoom();
+console.log(anteRoom());
 
 //'What would you like to see while you're here?''
 //if response is 'sunshine', 'candy', or 'unicorns', direct them to the
