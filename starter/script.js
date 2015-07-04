@@ -1,3 +1,5 @@
+// This homework assignment is based off the cherished children's book, If You Give a Mouse a Cookie, by Laura Numeroff and illustrated by Felicia Bond. The mouse will be asking questions to the young boy (you) and the boy shall answer.
+
 // Mouse asking for you name.
 console.log("You meet a mouse infront of your house.");
 var name = prompt("Mouse: Please tell me your name!");
