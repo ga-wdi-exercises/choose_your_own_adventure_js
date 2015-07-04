@@ -18,6 +18,10 @@ switch(choice1) {
 						switch (choice1aA) {
 							case "s":
 							var choice1aB = prompt("How many times?");
+							console.log("You stab death.");
+							for (i = 1; i <= choice1aB; i++) {
+								console.log("You stab him again.")
+							}
 							choice1aB = parseInt(choice1aB);
 								console.log("You stab death " + choice1aB + " times. Death is no more, but he was actually just misunderstood all along, and you've done a terrible thing.");
 							break;
