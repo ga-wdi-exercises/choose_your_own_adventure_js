@@ -1,0 +1,79 @@
+body {
+  background-color: black;
+  background-image: url(http://p1.pichost.me/i/62/1866187.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+ }
+.banner {height: 300px;}
+h1 {
+  font-family: "8BITWONDERNominal";
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  display: inline;
+  float: left;
+  position:  inherit;
+  padding-left:30px;
+}
+h2 {
+  color: grey;
+  font-size: 140px;
+  text-align: center;
+}
+header {
+  background-color: black;
+   background-repeat:no-repeat;
+   background-size: cover;
+   height:100px;
+   width:100%;
+   background-position: center;
+}
+.heart{
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+  display: inline;
+}
+.buttonDiv{
+  text-align: center;
+  padding-bottom: 20px;
+}
+button{
+  font-family: "8BITWONDERNominal";
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  background-color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  }
+.runGuy{
+  height: 100px;
+  width: 100px;
+  float: left;
+  }
+.statWindow{
+  margin: auto;
+  text-align: center;
+  border: 5px solid white;
+  width: 300px;
+  background-color: black;
+  color: white;
+  font-family: "8BITWONDERNominal";
+  font-weight: normal;
+  font-style: normal;
+  }
+p {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+audio{visibility: hidden;}
