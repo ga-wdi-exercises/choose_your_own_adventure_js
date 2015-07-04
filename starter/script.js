@@ -3,36 +3,51 @@
 function init() { 
     // console.log("init");
 
-    var selectedScene;
+    // prompt conditions:
+    //   not null ("cancel" option)
+    //   string is valid (A, B, C entered)
+    //   number entry is valid
+
+    var selectedScene, optionCharCount, optionPadding;
 	var sceneArray = [];
 	var selectionArray = ["A", "B", "C"];
 	var optionString = "";
 	var nextOption = "";
+	var padString = ""
+	var optionStringMax = 12;
 
 	sceneArray = initScenes();
 	var whichScene = "s0000";
 
+	// ======= load first scene =======
 	getScene(whichScene);
 
-	// ======= ======= ======= getScene ======= ======= ======= 
+
+	// ======= ======= ======= get Scene display ======= ======= ======= 
 	function getScene(whichScene) { 
-	    // console.log("getScene");
+	    console.log("getScene");
 
 	    // ======= get scene object =======
 		optionString = "";
 	    nextScene = getSceneObject(whichScene);
 
-	    // ======= play game of not cancelled by user =======
+	    // ======= play game if not cancelled by user =======
 	    if (nextScene != "cancel") {
 			for (var i=0; i < nextScene.linkText.length; i++ ) {
-				nextSelection = selectionArray[i];
+				padString = "";
+				optionCharCount = nextScene.linkOptions[i].length;
+				optionPadding = optionStringMax - optionCharCount;
+
+				for (var j=0; j < optionPadding; j++ ) {
+					padString = padString + " ";
+				}
 				if (i == nextScene.linkText.length - 1) {
-					optionString = optionString + nextSelection + ": " +  nextScene.linkText[i] + "\n\n";
+					optionString = optionString + nextScene.linkOptions[i] + ": " +  padString + nextScene.linkText[i] + "\n\n";
 				} else {
-					optionString = optionString + nextSelection + ": " +  nextScene.linkText[i] + "\n";
+					optionString = optionString + nextScene.linkOptions[i] + ": " +  padString + nextScene.linkText[i] + "\n";
 				}
 			}
-			optionString = optionString + "******* ******* ******* ******* ******* ******* ******* "
+			optionString = optionString + nextScene.sceneKey + " ******* ******* ******* ******* ******* ******* ******* "
 
 
 			// ======= ======= ======= current scene display ======= ======= ======= 
@@ -47,59 +62,43 @@ function init() {
 			// ======= ======= ======= user input prompt ======= ======= ======= 
 			// ======= ======= ======= user input prompt ======= ======= ======= 
 
-		    selectedScene = prompt(nextScene.sceneTitle + "\n------- ------- -------\n" + nextScene.sceneText);
+		    userEntry = prompt(nextScene.sceneTitle + "\n------- ------- -------\n" + nextScene.sceneText);
 
-		    // ======= canceling game =======
-		    if (selectedScene == null) {
-			    console.log("\n ///// You can reload the page if you'd like to play again. /////\n");
+		    // ======= cancelling game =======
+		    if (userEntry == null) {
+			    console.log("\n///// You can reload the page if you'd like to play again. /////\n");
 
 			// ======= scene selected =======
 		    } else {
-		    	selectedScene = selectedScene.toUpperCase();
+
+		    	// ======= text vs number entry =======
+		    	if (!isNaN(userEntry)) {
+		    		userEntry = parseInt(userEntry);
+		    	}
 
 			    // ======= input validation =======
 			    inputIsValid = false;
-			    for (var i=0; i < selectionArray.length; i++ ) {
-			    	nextSelectOption = selectionArray[i];
-			    	if (selectedScene == nextSelectOption) {
+			    for (var i=0; i < nextScene.linkOptions.length; i++ ) {
+			    	nextSelectOption = nextScene.linkOptions[i];
+			    	if (userEntry == nextSelectOption) {
 			    		inputIsValid = true;
+			    		whichScene = nextScene.linkKeys[i];
+			    		break;
 			    	}
 			    }
 
 			    // ======= input not valid; try again =======
 			    if (inputIsValid == false) {
-			    	console.log("\n///// Uh oh... Make sure you entered A, B or C. /////\n");
-			    	getScene(whichScene);
-
-			    // ======= input ok; get next Scene =======
-			    } else {
-				    if (selectedScene === null) {
-				        console.log("\n///// Uh oh... Nothing works? /////\n");
-				    } else {
-						switch(selectedScene) {
-						    case "A":
-						        whichScene = nextScene.linkKeys[0];
-						        break;
-						    case "B":
-						        whichScene = nextScene.linkKeys[1];
-						        break;
-						    case "C":
-						        whichScene = nextScene.linkKeys[2];
-						        break;
-						    default:
-						        whichScene = "s0000";
-						        console.log("///// Uh oh... The computer is lost; back to the begining! /////");
-						}
-					    getScene(whichScene);
-				    }
+			    	console.log("\n///// Uh oh... Check the options and try again! /////\n");
 			    }
+			    getScene(whichScene);
 		    }
 	    } else {
 		    console.log("\n///// You can reload the page if you'd like to play again. /////\n");
 	    }
 	}
 
-	// ======= called by init() ======= ======= ======= ======= ======= ======= ======= 
+	// ======= ======= ======= get Scene object ======= ======= ======= 
 	function getSceneObject(selectedSceneKey) { 
 	    // console.log("getSceneObject");
 
@@ -128,56 +127,60 @@ function init() {
 	    console.log("initScenes");
 
 	    var s0000 = new Scene (
-	        /* sceneKey:   */ "s0000",
-	        /* sceneTitle: */ "dank dark place",
-	        /* sceneText:  */ "Lorem ipsum dolor the work sitpertin aliquam tibique the workers, debsae cu pri, aeque window est ut.", 
-	        /* linkKeys:   */ ["s1000", "s2000", "s3000"], 
-	        /* linkText:   */ ["Lorem ipsum dolor sitpertest ut.", 
+	        /* sceneKey:    */ "s0000",
+	        /* sceneTitle:  */ "dank dark place",
+	        /* sceneText:   */ "Lorem ipsum dolor the work sitpertin aliquam tibique the workers, debsae cu pri, aeque window est ut.", 
+	        /* linkKeys:    */ ["s1000", "s2000", "s3000"], 
+	        /* linkOptions: */ ["A", "S", "D"], 
+	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
 	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
 	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."], 
 	        sceneArray
 	    );
-	    var s1000 = new Scene ( "s1000", "title", "text", ["s1100", "s1200", "s1300"], ["t1100", "t1200", "t1300"], sceneArray);
-	    var s2000 = new Scene ( "s1000", "title", "text", ["s2100", "s2200", "s2300"], ["t2100", "t2200", "t2300"], sceneArray);
-	    var s3000 = new Scene ( "s1000", "title", "text", ["s3100", "s3200", "s3300"], ["t3100", "t3200", "t3300"], sceneArray);
+	    var s1000 = new Scene ( "s1000", "title", "text", ["s1100", "s1200", "s1300"], ["11", "22", "33"], ["t1100", "t1200", "t1300"], sceneArray);
+	    var s2000 = new Scene ( "s2000", "title", "text", ["s2100", "s2200", "s2300"], ["sdg", "dtdtdr", "setysty"], ["t2100", "t2200", "t2300"], sceneArray);
+	    var s3000 = new Scene ( "s3000", "title", "text", ["s3100", "s3200", "s3300"], ["sdg", "dtdtdr", "setysty"], ["t3100", "t3200", "t3300"], sceneArray);
 
 	    var s1100 = new Scene (
-	        /* sceneKey:   */ "s1100",
-	        /* sceneTitle: */ "purpose in life",
-	        /* sceneText:  */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
-	        /* linkKeys:   */ ["s1110", "s1120", "s1130"], 
-	        /* linkText:   */ ["Lorem ipsum dolor sitpertest ut.", 
+	        /* sceneKey:    */ "s1100",
+	        /* sceneTitle:  */ "purpose in life",
+	        /* sceneText:   */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
+	        /* linkKeys:    */ ["s1110", "s1120", "s1130"], 
+	        /* linkOptions: */ ["dfg", "sdg", "dfgh"], 
+	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
 	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
 	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."], 
 	        sceneArray
 	    );
 	    var s1200 = new Scene (
-	        /* sceneKey:   */ "s1200",
-	        /* sceneTitle: */ "anyone from anywhere",
-	        /* sceneText:  */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
-	        /* linkKeys:   */ ["s1210", "s1220", "s1230"], 
-	        /* linkText:   */ ["Lorem ipsum dolor sitpertest ut.", 
+	        /* sceneKey:    */ "s1200",
+	        /* sceneTitle:  */ "anyone from anywhere",
+	        /* sceneText:   */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
+	        /* linkKeys:    */ ["s1210", "s1220", "s1230"], 
+	        /* linkOptions: */ ["11", "22", "33"], 
+	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
 	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
 	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."], 
 	        sceneArray
 	    );
 	    var s1300 = new Scene (
-	        /* sceneKey:   */ "s1300",
-	        /* sceneTitle: */ "on the wind over the forest",
-	        /* sceneText:  */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
-	        /* linkKeys:   */ ["s1310", "s1320", "s1330"], 
-	        /* linkText:   */ ["Lorem ipsum dolor sitpertest ut.", 
+	        /* sceneKey:    */ "s1300",
+	        /* sceneTitle:  */ "on the wind over the forest",
+	        /* sceneText:   */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
+	        /* linkKeys:    */ ["s1310", "s1320", "s1330"], 
+	        /* linkOptions: */ ["sdg", "dtdtdr", "setysty"], 
+	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
 	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
 	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."], 
 	        sceneArray
 	    );
 
-	    var s2100 = new Scene ( "s2100", "title", "text", ["s2110", "s2120", "s2130"], ["t2110", "t2120", "t2130"], sceneArray);
-	    var s2200 = new Scene ( "s2200", "title", "text", ["s2210", "s2220", "s2230"], ["t2210", "t2220", "t2230"], sceneArray);
-	    var s2300 = new Scene ( "s2300", "title", "text", ["s2310", "s2320", "s2330"], ["t2310", "t2320", "t2330"], sceneArray);
-	    var s3100 = new Scene ( "s3100", "title", "text", ["s3110", "s3120", "s3130"], ["t3110", "t3120", "t3130"], sceneArray);
-	    var s3200 = new Scene ( "s3200", "title", "text", ["s3210", "s3220", "s3230"], ["t3210", "t3220", "t3230"], sceneArray);
-	    var s3300 = new Scene ( "s3300", "title", "text", ["s3310", "s3320", "s3330"], ["t3310", "t3320", "t3330"], sceneArray);
+	    var s2100 = new Scene ( "s2100", "title", "text", ["s2110", "s2120", "s2130"], ["sdg", "dtdtdr", "setysty"], ["t2110", "t2120", "t2130"], sceneArray);
+	    var s2200 = new Scene ( "s2200", "title", "text", ["s2210", "s2220", "s2230"], ["sdg", "dtdtdr", "setysty"], ["t2210", "t2220", "t2230"], sceneArray);
+	    var s2300 = new Scene ( "s2300", "title", "text", ["s2310", "s2320", "s2330"], ["sdg", "dtdtdr", "setysty"], ["t2310", "t2320", "t2330"], sceneArray);
+	    var s3100 = new Scene ( "s3100", "title", "text", ["s3110", "s3120", "s3130"], ["sdg", "dtdtdr", "setysty"], ["t3110", "t3120", "t3130"], sceneArray);
+	    var s3200 = new Scene ( "s3200", "title", "text", ["s3210", "s3220", "s3230"], ["sdg", "dtdtdr", "setysty"], ["t3210", "t3220", "t3230"], sceneArray);
+	    var s3300 = new Scene ( "s3300", "title", "text", ["s3310", "s3320", "s3330"], ["sdg", "dtdtdr", "setysty"], ["t3310", "t3320", "t3330"], sceneArray);
 
 		return sceneArray;
 	}
@@ -186,17 +189,17 @@ function init() {
 	// ======= ======= ======= SCENE constructor ======= ======= ======= 
 	// ======= ======= ======= SCENE constructor ======= ======= ======= 
 
-	function Scene (sceneKey, sceneTitle, sceneText, linkKeys, linkText, sceneArray) {
+	function Scene (sceneKey, sceneTitle, sceneText, linkKeys, linkOptions, linkText, sceneArray) {
 	    // console.log("Scene");
 
 	    this.sceneKey = sceneKey;
 	    this.sceneTitle = sceneTitle;
 	    this.sceneText = sceneText;
 	    this.linkKeys = linkKeys;
+	    this.linkOptions = linkOptions;
 	    this.linkText = linkText;
 
-	    // == build sceneArray / store scene object 
-	    // this.sceneArray = sceneArray;
+	    // store scene object 
 	    sceneArray.push(this);
 
 	}
