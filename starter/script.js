@@ -41,10 +41,12 @@ function anteRoom(playerName) {
 }
 
 //Solve a puzzle in each room. If successful in happy room, progress to next
-//happy room. If in unhappy room, move back to a happy room.
+//happy room. If in unhappy room, move to next happy room.
 
 //If unsuccessful in happy room, assign to unhappy room. If in unhappy
-//room, die.
+//room, move to next unhappy room.
+
+//If successful in either last room, move to final puzzle room.
 function sunshineRoom() {
   console.log("sunshine!");
 }
@@ -57,7 +59,7 @@ function unicornsRoom() {
   console.log("unicorns!");
 }
 
-//Final puzzle: sends you wither to happiness castle or pit of despair.
+//Final puzzle: sends you either to happiness castle or pit of despair.
 
 
 
