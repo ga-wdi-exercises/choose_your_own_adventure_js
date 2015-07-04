@@ -29,6 +29,7 @@ function anteRoom(playerName, rooms) {
   var playerChoice = prompt("Hi there, " + playerName +"! What would you like to see while you're here?");
   console.log(playerChoice.toUpperCase());
   rooms.push(playerChoice.toUpperCase());
+  console.log(rooms);
 
   if (playerChoice.toUpperCase() ===  "SUNSHINE") {
     sunshineRoom(rooms);
@@ -56,9 +57,11 @@ function sunshineRoom(rooms) {
 
   if (playerChoice.toUpperCase() === "LEMONADE") {
     console.log("lemonade");
+    rooms.push("CANDY");
     candyRoom(rooms);
   } else if (playerChoice.toUpperCase() === "SUNGLASSES") {
     console.log("sunglasses");
+    rooms.push("DARKNESS");
     alert("Everything is...is going dark...\n\n\nso very dark...")
     darknessRoom(rooms);
   } else {
