@@ -25,19 +25,21 @@ hint you may need parseInt() and toString()*/
 //relevant room.
 
 //If anything else, direct them to "darkness", "hunger", "or "wolves".
-function anteRoom(playerName) {
+function anteRoom(playerName, rooms) {
   var playerChoice = prompt("Hi there, " + playerName +"! What would you like to see while you're here?");
   console.log(playerChoice.toUpperCase());
+  rooms.push(playerChoice.toUpperCase());
 
   if (playerChoice.toUpperCase() ===  "SUNSHINE") {
-    sunshineRoom();
+    sunshineRoom(rooms);
   } else if (playerChoice.toUpperCase() === "CANDY") {
-    candyRoom();
+    candyRoom(rooms);
   } else if (playerChoice.toUpperCase() === "UNICORNS") {
-    unicornsRoom();
+    unicornsRoom(rooms);
   } else {
     console.log("send them to the bad place");
   }
+//Add handler for blank response
 }
 
 //Solve a puzzle in each room. If successful in happy room, progress to next
@@ -47,20 +49,48 @@ function anteRoom(playerName) {
 //room, move to next unhappy room.
 
 //If successful in either last room, move to final puzzle room.
-function sunshineRoom() {
-  console.log("sunshine!");
+function sunshineRoom(rooms) {
+  //putting on sunglasses sends you to the room of darkness.
+  var rooms = rooms;
+  var playerChoice = prompt("Welcome to the land of sunshine! Nothing can hurt us here!\n\nGosh, it sure is hot and bright, though.\n\nOh look! A nice man selling sunglasses and frosty lemonade! What should we buy from him?")
+
+  if (playerChoice.toUpperCase() === "LEMONADE") {
+    console.log("lemonade");
+    candyRoom(rooms);
+  } else if (playerChoice.toUpperCase() === "SUNGLASSES") {
+    console.log("sunglasses");
+    alert("Everything is...is going dark...\n\n\nso very dark...")
+    darknessRoom(rooms);
+  } else {
+    alert("I don't understand that");
+    console.log("improper input")
+    sunshineRoom();
+  }
+
 }
 
-function candyRoom() {
+function candyRoom(rooms) {
   console.log("candy!");
 }
 
-function unicornsRoom() {
+function unicornsRoom(rooms) {
   console.log("unicorns!");
 }
 
-//Final puzzle: sends you either to happiness castle or pit of despair.
+function darknessRoom(rooms) {
+  console.log("darkness");
+}
 
+function hungerRoom(rooms) {
+  console.log("hunger");
+}
+
+function wolvesRoom(rooms) {
+  console.log("wolves!");
+}
+
+
+//Final puzzle: sends you either to happiness castle or pit of despair.
 
 
 //Intro
@@ -70,12 +100,13 @@ function unicornsRoom() {
 // **save name as var**
 
 function playGame() {
+  var rooms = [];
   alert("Welcome to the land of SUNSHINE, CANDY, and UNICORNS! Careful, though -- some parts around here aren't so friendly.");
 
   var playerName = prompt("What's your name?");
   console.log(playerName);
-
-  anteRoom(playerName);
+//add handler for blank response
+  anteRoom(playerName, rooms);
 }
 
 playGame();
