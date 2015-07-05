@@ -37,6 +37,9 @@ function anteRoom(playerName) {
     unicornsRoom();
   } else {
     console.log("send them to the bad place");
+    alert("I told you to be careful.");
+    darknessRoom();
+
   }
 //Add handler for blank response
 }
@@ -135,7 +138,7 @@ function darknessRoom() {
 
 function hungerRoom() {
   console.log("hunger");
-  var playerChoice = ("It is cold. Your stomach is growling. You barely have energy to stand.")
+  var playerChoice = prompt("It is cold. Your stomach is growling. You barely have energy to stand.")
 
   if (playerChoice.toUpperCase() === "EAT") {
     alert("That's better.");
@@ -154,7 +157,7 @@ function wolvesRoom() {
 
   var attack = 0;
   var run = 0;
-  for (var i=0; 1<3; i++) {
+  for (var i=0; i<3; i++) {
     var playerChoice = prompt("Do you attack, or run?")
     if (playerChoice.toUpperCase() === "ATTACK") {
       alert("Hit! But they're still coming!");
@@ -169,11 +172,11 @@ function wolvesRoom() {
     }
   }
 
-  if (attack < run) {
+  if (attack > run) {
     alert("You killed them off! Congratulations!")
     finalRoom();
   }
-  else if (run >attack) {
+  else if (run > attack) {
     alert("The cowardly lion lives to fight another day");
     finalRoom();
   }
@@ -189,7 +192,7 @@ function finalRoom() {
   console.log("Final room");
   var playerChoice = prompt("Always wax, yet always wane: I melt, succumbéd to the flame.\nLighting darkness, with fate unblest, I soon devolve to shapeless mess. ");
 
-  if (playerChoicetoUpperCase === "CANDLE" || playerChoicetoUpperCase === "A CANDLE") {
+  if (playerChoice.toUpperCase() === "CANDLE" || playerChoice.toUpperCase() === "A CANDLE") {
     endRoom("win");
   }
   else {
@@ -198,7 +201,7 @@ function finalRoom() {
 }
 
 function endRoom(result) {
-  console.
+  console.log("end room");
   if (result === "win") {
     alert("Congratulations! You get to spend as much time as you want here at Happiness Castle!");
   }
@@ -219,6 +222,9 @@ function playGame() {
   var playerName = prompt("What's your name?");
   console.log(playerName);
 //add handler for blank response
+  while (playerName === "") {
+    playerName = prompt("I'd really like to know your name.");
+  }
   anteRoom(playerName);
 }
 
