@@ -133,6 +133,19 @@ function darknessRoom(rooms) {
 
 function hungerRoom(rooms) {
   console.log("hunger");
+  var rooms = rooms;
+  var playerChoice = ("It is cold. Your stomach is growling. You barely have energy to stand.")
+
+  if (playerChoice.toUpperCase() === "EAT") {
+    alert("That's better.");
+    rooms.push("HUNGER");
+    finalRoom();
+  }
+  else {
+    alert("That's not what you need to do right now.");
+    hungerRoom();
+  }
+
 }
 
 function wolvesRoom(rooms) {
@@ -142,11 +155,6 @@ function wolvesRoom(rooms) {
 
 //Final puzzle: sends you either to happiness castle or pit of despair.
 
-
-//next room engine
-function nextRoom(rooms) {
-  console.log("next room");
-}
 
 //Intro
 //Welcome to the land of sunshine, candy, and unicorns! Careful, though --
