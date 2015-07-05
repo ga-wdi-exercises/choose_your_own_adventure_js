@@ -89,9 +89,9 @@ function candyRoom(rooms) {
     unicornsRoom(rooms);
   }
   else if (candyPrice <= 5) {
-    alert("I am insulted! To the wolves with you!")
+    alert("I am insulted! You will never eat candy again!")
     rooms.push("CANDY");
-    wolvesRoom();
+    hungerRoom();
   }
   else {
     console.log("candy error");
