@@ -154,6 +154,18 @@ function wolvesRoom() {
 
 
 //Final puzzle: sends you either to happiness castle or pit of despair.
+function finalRoom() {
+  console.log("Final room");
+  var playerChoice = prompt("Always wax, yet always wane: I melt, succumbéd to the flame.\nLighting darkness, with fate unblest, I soon devolve to shapeless mess. ");
+
+  if (playerChoicetoUpperCase === "CANDLE" || playerChoicetoUpperCase === "A CANDLE") {
+    endRoom("win");
+  }
+  else {
+    endRoom("lose");
+  }
+}
+
 
 
 //Intro
