@@ -28,7 +28,6 @@ hint you may need parseInt() and toString()*/
 function anteRoom(playerName, rooms) {
   var playerChoice = prompt("Hi there, " + playerName +"! What would you like to see while you're here?");
   console.log(playerChoice.toUpperCase());
-  rooms.push(playerChoice.toUpperCase());
   console.log(rooms);
 
   if (playerChoice.toUpperCase() ===  "SUNSHINE") {
@@ -58,11 +57,11 @@ function sunshineRoom(rooms) {
   if (playerChoice.toUpperCase() === "LEMONADE") {
     console.log("lemonade");
     alert("So refreshing!\n\nEverything's starting to spin, though.\n\n\nThis lemonade is a little sweet....")
-    rooms.push("CANDY");
+    rooms.push("SUNSHINE");
     candyRoom(rooms);
   } else if (playerChoice.toUpperCase() === "SUNGLASSES") {
     console.log("sunglasses");
-    rooms.push("DARKNESS");
+    rooms.push("SUNSHINE");
     alert("Everything is...is going dark...\n\n\nso very dark...")
     darknessRoom(rooms);
   } else {
@@ -75,8 +74,27 @@ function sunshineRoom(rooms) {
 
 function candyRoom(rooms) {
   console.log("candy!");
-
+  var room = rooms;
+  var playerCandy = prompt("Welcome to the Land of Candy! What kind of candy would you like to buy?");
+  var playerChoice = prompt(playerCandy + "? I think we have that. How many pieces of gold are you willing to pay for it, though?");
+  var candyPrice = parseInt(playerChoice);
+  console.log(candyPrice);
+  if (isNaN(candyPrice)) {
+    alert("Hm, I don't think you understand where you are. Let's try this again.");
+    candyRoom();
+  }
+  else if (candyPrice > 5) {
+    alert("A fair price. Enjoy your " + playerCandy + ".");
+    rooms.push("CANDY");
+    unicornsRoom(rooms);
+  }
+  else if (candyPrice <= 5) {
+    alert("I am insulted! To the wolves with you!")
+    rooms.push("CANDY");
+    wolvesRoom();
+  }
 }
+
 
 function unicornsRoom(rooms) {
   console.log("unicorns!");
