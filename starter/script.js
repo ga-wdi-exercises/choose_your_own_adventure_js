@@ -25,17 +25,16 @@ hint you may need parseInt() and toString()*/
 //relevant room.
 
 //If anything else, direct them to "darkness", "hunger", "or "wolves".
-function anteRoom(playerName, rooms) {
+function anteRoom(playerName) {
   var playerChoice = prompt("Hi there, " + playerName +"! What would you like to see while you're here?");
   console.log(playerChoice.toUpperCase());
-  console.log(rooms);
 
   if (playerChoice.toUpperCase() ===  "SUNSHINE") {
-    sunshineRoom(rooms);
+    sunshineRoom();
   } else if (playerChoice.toUpperCase() === "CANDY") {
-    candyRoom(rooms);
+    candyRoom();
   } else if (playerChoice.toUpperCase() === "UNICORNS") {
-    unicornsRoom(rooms);
+    unicornsRoom();
   } else {
     console.log("send them to the bad place");
   }
@@ -49,21 +48,18 @@ function anteRoom(playerName, rooms) {
 //room, move to next unhappy room.
 
 //If successful in either last room, move to final puzzle room.
-function sunshineRoom(rooms) {
+function sunshineRoom() {
   //putting on sunglasses sends you to the room of darkness.
-  var rooms = rooms;
   var playerChoice = prompt("Welcome to the land of sunshine! Nothing can hurt us here!\n\nGosh, it sure is hot and bright, though.\n\nOh look! A nice man selling sunglasses and frosty lemonade! What should we buy from him?")
 
   if (playerChoice.toUpperCase() === "LEMONADE") {
     console.log("lemonade");
     alert("So refreshing!\n\nEverything's starting to spin, though.\n\n\nThis lemonade is a little sweet....")
-    rooms.push("SUNSHINE");
-    candyRoom(rooms);
+    candyRoom();
   } else if (playerChoice.toUpperCase() === "SUNGLASSES") {
     console.log("sunglasses");
-    rooms.push("SUNSHINE");
     alert("Everything is...is going dark...\n\n\nso very dark...")
-    darknessRoom(rooms);
+    darknessRoom();
   } else {
     alert("I don't understand that");
     console.log("improper input")
@@ -72,9 +68,8 @@ function sunshineRoom(rooms) {
 
 }
 
-function candyRoom(rooms) {
+function candyRoom() {
   console.log("candy!");
-  var room = rooms;
   var playerCandy = prompt("Welcome to the Land of Candy! What kind of candy would you like to buy?");
   var playerChoice = prompt(playerCandy + "? I think we have that. How many pieces of gold are you willing to pay for it, though?");
   var candyPrice = parseInt(playerChoice);
@@ -85,12 +80,10 @@ function candyRoom(rooms) {
   }
   else if (candyPrice > 5) {
     alert("A fair price. Enjoy your " + playerCandy + ".");
-    rooms.push("CANDY");
-    unicornsRoom(rooms);
+    unicornsRoom();
   }
   else if (candyPrice <= 5) {
     alert("I am insulted! You will never eat candy again!")
-    rooms.push("CANDY");
     hungerRoom();
   }
   else {
@@ -99,13 +92,23 @@ function candyRoom(rooms) {
 }
 
 
-function unicornsRoom(rooms) {
+function unicornsRoom() {
   console.log("unicorns!");
+  alert("Welcome to the Land of Unicorns!")
+  var playerChoice = prompt("A riddle for you:\n\nA hunter walks a mile due south, turns and walks a mile due east, turns again and walks a mile due north, only to find herself back where she started. The hunter draws a bead on a bear and shoots it dead. What color is the bear?");
+
+  if (playerChoice.toUpperCase() === "WHITE") {
+    alert("You're a clever one.");
+    finalRoom();
+  }
+  else {
+    alert("Nope!");
+    wolvesRoom();
+  }
 }
 
-function darknessRoom(rooms) {
+function darknessRoom() {
   console.log("darkness");
-  var rooms = rooms;
   alert("Welcome to the Land of Darkness! Escape, if you can!");
   alert("There seems to be a door right in front of you. There's also a table with a flashlight and a box of matches")
   var darkness = true;
@@ -117,8 +120,7 @@ function darknessRoom(rooms) {
     }
     else if (playerChoice === "OPEN DOOR" && !darkness) {
       alert("The door opens!")
-      rooms.push("DARKNESS");
-      nextRoom(rooms);
+      nextRoom();
     }
     else if (playerChoice === "LIGHT MATCH") {
       darkness = false;
@@ -131,14 +133,12 @@ function darknessRoom(rooms) {
 
 }
 
-function hungerRoom(rooms) {
+function hungerRoom() {
   console.log("hunger");
-  var rooms = rooms;
   var playerChoice = ("It is cold. Your stomach is growling. You barely have energy to stand.")
 
   if (playerChoice.toUpperCase() === "EAT") {
     alert("That's better.");
-    rooms.push("HUNGER");
     finalRoom();
   }
   else {
@@ -148,7 +148,7 @@ function hungerRoom(rooms) {
 
 }
 
-function wolvesRoom(rooms) {
+function wolvesRoom() {
   console.log("wolves!");
 }
 
@@ -163,13 +163,12 @@ function wolvesRoom(rooms) {
 // **save name as var**
 
 function playGame() {
-  var rooms = [];
   alert("Welcome to the land of SUNSHINE, CANDY, and UNICORNS! Careful, though -- some parts around here aren't so friendly.");
 
   var playerName = prompt("What's your name?");
   console.log(playerName);
 //add handler for blank response
-  anteRoom(playerName, rooms);
+  anteRoom(playerName);
 }
 
 playGame();
