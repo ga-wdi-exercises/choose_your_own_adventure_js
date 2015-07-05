@@ -166,7 +166,15 @@ function finalRoom() {
   }
 }
 
-
+function endRoom(result) {
+  console.
+  if (result === "win") {
+    alert("Congratulations! You get to spend as much time as you want here at Happiness Castle!");
+  }
+  else if (result == "lose") {
+    alert("You lose. You are dommed to spend the rest of your days here in the Pit of Despair.");
+  }
+}
 
 //Intro
 //Welcome to the land of sunshine, candy, and unicorns! Careful, though --
