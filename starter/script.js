@@ -93,6 +93,9 @@ function candyRoom(rooms) {
     rooms.push("CANDY");
     wolvesRoom();
   }
+  else {
+    console.log("candy error");
+  }
 }
 
 
