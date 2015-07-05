@@ -150,6 +150,37 @@ function hungerRoom() {
 
 function wolvesRoom() {
   console.log("wolves!");
+  alert("Ah! Wolves! They're everywhere, and hungry!")
+
+  var attack = 0;
+  var run = 0;
+  for (var i=0; 1<3; i++) {
+    var playerChoice = prompt("Do you attack, or run?")
+    if (playerChoice.toUpperCase() === "ATTACK") {
+      alert("Hit! But they're still coming!");
+      attack += 1;
+    }
+    else if (playerChoice.toUpperCase() === "RUN") {
+      alert("You've dodged them, but they're chasing you down!");
+      run+=1;
+    }
+    else {
+      alert("I don't think you want to do that");
+    }
+  }
+
+  if (attack < run) {
+    alert("You killed them off! Congratulations!")
+    finalRoom();
+  }
+  else if (run >attack) {
+    alert("The cowardly lion lives to fight another day");
+    finalRoom();
+  }
+  else {
+    alert("You can't make up your mind, can you?");
+    finalRoom();
+  }
 }
 
 
