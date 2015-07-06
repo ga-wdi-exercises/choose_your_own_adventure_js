@@ -19,7 +19,7 @@ function init() {
 	var optionStringMax = 20;
 
 	sceneArray = initScenes();
-	var whichScene = "s0000";
+	var whichScene = "s0";
 
 	// ======= load first scene =======
 	getScene(whichScene);
@@ -177,111 +177,169 @@ function init() {
 	function initScenes() { 
 	    console.log("initScenes");
 
-	    var s0000 = new Scene (
-	        /* sceneKey:    */ "s0000",
+	    var s0 = new Scene (
+	        /* sceneKey:    */ "s0",
 	        /* sceneTitle:  */ "Rat Cat Bash",
 	        /* sceneText:   */ "The human is tapping away at his device -- what does he see in that thing? -- but there's a feast-ful of rats in the alley and you need an all-natural snack after all that pre-processed Purina. (There's never enough, anyway).  Time to motivate the human...",
-	        /* linkKeys:    */ [["r1000", "r2000"], "s2000", "s1000"], 
+	        /* linkKeys:    */ ["s3", "s1", "s7"], 
 	        /* linkOptions: */ ["D   At the Door", "L   Near the Laptop", "C   Scratch the Couch"], 
 	        /* linkText:    */ ["Wait patiently by the door", 
 	        					"Sit real close to the laptop looking sweet and cuddly", 
 	        					"Start scratching on the couch.  Works every time!"]);
 
-	    var r1000 = new Scene (
-	        /* sceneKey:    */ "r1000",
-	        /* sceneTitle:  */ "Out at Last",
-	        /* sceneText:   */ "Amazingly the human notices -- his device must be making him happy this time -- and he opens the door.  (You can taste that rataliscious rib cage already!)",
-	        /* linkKeys:    */ ["s1100", "s1200", "s1300"], 
-	        /* linkOptions: */ ["E   Enemy Cats", "G   Garbage Cans", "N   Neighbor Lady"], 
-	        /* linkText:    */ ["Scan for enemy cats.  There are some big and mean ones out here.", "Head straight for the garbage cans.  Gotta hand it to those humans -- overflow makes hunting a lot easier", "See if that nice lady across the alley is around.  She's always good for a handout."]);
-
-	    var r2000 = new Scene (
-	        /* sceneKey:    */ "r2000",
+	    var s3 = new Scene (
+	        /* sceneKey:    */ "s3",
 	        /* sceneTitle:  */ "At the Door",
 	        /* sceneText:   */ "As usual the human is cursing at the device and ignores your needs.  Time to...",
-	        /* linkKeys:    */ ["s1000", "s2000", "s1000"], 
-	        /* linkOptions: */ ["Y   Yowl", "L   Laptop", "C   Scratch the Couch"], 
-	        /* linkText:    */ ["Yowl loudly non-stop until he gets off his ass and opens the door", "Sit real close to the laptop looking sweet and cuddly", "Start scratching on the couch.  Works every time!"]);
+	        /* linkKeys:    */ ["s7", "s13"], 
+	        /* linkOptions: */ ["C   Scratch the Couch", "Y   Yowl loudly"], 
+	        /* linkText:    */ ["Start scratching on the couch.  Works every time.", 
+	        					"Yowl loudly non-stop till he opens the door."]);
 
-	    var s1000 = new Scene (
-	        /* sceneKey:    */ "s1000",
-	        /* sceneTitle:  */ "Out at Last",
-	        /* sceneText:   */ "It worked!  Out at last.  Ahhh... the smell rodent everywhere!  Now...",
-	        /* linkKeys:    */ ["s1100", "s1200", "s1300"], 
-	        /* linkOptions: */ ["E   Enemy Cats", "G   Garbage Cans", "N   Neighbor Lady"], 
-	        /* linkText:    */ ["Scan for enemy cats.  There are some big and mean ones out here.", "Head straight for the garbage cans.  Gotta hand it to those humans -- overflow makes hunting a lot easier", "See of that nice lady across the alley is around.  She's always good for a handout."]);
-
-	    var s2000 = new Scene (
-	        /* sceneKey:    */ "s2000",
+	    var r9 = new Scene (
+	        /* sceneKey:    */ "r9",
 	        /* sceneTitle:  */ "Near the Laptop",
-	        /* sceneText:   */ "He doesn't notice.  The human keeps tapping...  Gonna be one of those nights.  Time to...",
-	        /* linkKeys:    */ ["s2100", "s1000", "s1000"],
-	        /* linkOptions: */ ["C   Claws", "K   Keyboard", "S   Stare Sweetly"], 
-	        /* linkText:    */ ["Try the claws-to-the-face move -- works every time (but might make him mad)", "Rest sweetly next to the keyboard, one paw near the return key (also works but takes longer)", "Better stare sweetly at him this time... Often takes too long but won't make him mad..."]);
+	        /* sceneText:   */ "Amazingly the human notices -- his device must be making him happy this time -- and he opens the door.  (You can taste that rat-a-liscious rib cage already!)",
+	        /* linkKeys:    */ ["s15", "s16", "s17"], 
+	        /* linkOptions: */ ["G   Garbage cans", "C   Enemy cats", "N   Nice lady"], 
+	        /* linkText:    */ ["Head straight for the garbage cans.  Gotta hand it to those humans -- overflow makes hunting a lot easier", 
+	        					"Scan for enemy cats.  There are some big and mean ones out here", 
+	        					"See of that nice lady across the alley is around.  She's always good for a handout."]);
 
-	    var s2100 = new Scene (
-	        /* sceneKey:    */ "s2100",
-	        /* sceneTitle:  */ "How much Claw?",
-	        /* sceneText:   */ "This is always tricky -- how much claw?",
-	        /* linkKeys:    */ ["s2110", "s2120", "s2130", "s9000"], 
-	        /* linkOptions: */ ["25% ", "50% ", "75% ", "100% "], 
-	        /* linkText:    */ ["Best if he's cursing and glaring (anything more and he'll slap you away) but could be ignored if he's focusing and will delay the hunt", "Good move if he's hard to read...", "75% Risky but effective -- he'll make loud annoyance noises but garenteed to pick you up and throw you out.  Embarassing but it gets the door opened...", "Only if you're suicidal..."]);
+	    var s1 = new Scene (
+	        /* sceneKey:    */ "s1",
+	        /* sceneTitle:  */ "Near the Laptop",
+	        /* sceneText:   */ "Sit real close to the laptop looking sweet and cuddly",
+	        /* linkKeys:    */ ["s4", "s5", "s6"], 
+	        /* linkOptions: */ ["C   Claws to the face", "R   Rest quietly", "S   Stare sweetly"], 
+	        /* linkText:    */ ["Try the claws-to-the-face move -- works every time (but might make him mad.  But how much Claw?", 
+	        					"Rest quietly next to the keyboard, one paw near the return key (also works but takes longer)", 
+	        					"Better stare sweetly at him this time... Often takes too long but won't make him mad..."]);
 
-	    var s2110 = new Scene ( "s2110", "Keyboard", "text", ["s2210", "s2220", "s2230"], ["sdg", "dtdtdr", "setysty"], ["t2210", "t2220", "t2230"]);
+	    var s4 = new Scene (
+	        /* sceneKey:    */ "s4",
+	        /* sceneTitle:  */ "Claws to the face",
+	        /* sceneText:   */ "This can be tricky.  You need the right amount of claw.",
+	        /* linkKeys:    */ ["s9", "s9", "s13", "s99"], 
+	        /* linkOptions: */ ["25%", "50%", "75%", "100%"], 
+	        /* linkText:    */ ["Best if he's cursing and glaring (anything more and he'll slap you away) but could be ignored if he's focusing and will delay the hunt", 
+	        					"Good move if he's hard to read...", 
+	        					"Risky but effective -- he'll make loud annoyance noises but guaranteed to pick you up and throw you out.  Embarassing but it gets the door opened...",
+	        					"Only if you're suicidal"]);
 
-	    var s2120 = new Scene ( "s2120", "Keyboard", "text", ["s2210", "s2220", "s2230"], ["sdg", "dtdtdr", "setysty"], ["t2210", "t2220", "t2230"]);
+	    var s5 = new Scene (
+	        /* sceneKey:    */ "s5",
+	        /* sceneTitle:  */ "Rest quietly",
+	        /* sceneText:   */ "Resting sweetly takes a while, but there are options:",
+	        /* linkKeys:    */ ["s0"], 
+	        /* linkOptions: */ ["P   Paw pressure", "W   Watching and waiting", "T   Take a walk"], 
+	        /* linkText:    */ ["A little paw pressure on the return key usually works.", 
+	        					 "Watching and waiting.", 
+	        					 "Taking a walk across the keys is what is needed."]);
 
-	    var s2130 = new Scene ( "s2130", "Keyboard", "text", ["s2210", "s2220", "s2230"], ["sdg", "dtdtdr", "setysty"], ["t2210", "t2220", "t2230"]);
+	    var s6 = new Scene (
+	        /* sceneKey:    */ "s6",
+	        /* sceneTitle:  */ "Stare sweetly",
+	        /* sceneText:   */ "Better stare sweetly at him this time... Often takes too long but won't make him mad...",
+	        /* linkKeys:    */ ["s0"], 
+	        /* linkOptions: */ ["0"], 
+	        /* linkText:    */ ["0"]);
 
-	    var s9000 = new Scene ( "s2140", "Keyboard", "Game over!  You're at the pound...", ["s2210", "s2220", "s2230"], ["sdg", "dtdtdr", "setysty"], ["t2210", "t2220", "t2230"]);
-
-	    var s2300 = new Scene (
-	        /* sceneKey:    */ "s2300",
-	        /* sceneTitle:  */ "title",
-	        /* sceneText:   */ "Fail!  That device controls his brain sometimes.  Gotta make some noise...",
-	        /* linkKeys:    */ ["s3100", "s3200", "s3300"], 
-	        /* linkOptions: */ ["Y  Yowl", "L  Laptop", "S  Start sniffing around"],
-	        /* linkText:    */ ["t3100", "t3200", "t3300"]);
-
-	    var s1100 = new Scene (
-	        /* sceneKey:    */ "s1100",
-	        /* sceneTitle:  */ "purpose in life",
-	        /* sceneText:   */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
-	        /* linkKeys:    */ ["s1110", "s1120", "s1130"], 
-	        /* linkOptions: */ ["dfg", "sdg", "dfgh"], 
-	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
-	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
-	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."]);
-	    var s1200 = new Scene (
-	        /* sceneKey:    */ "s1200",
-	        /* sceneTitle:  */ "anyone from anywhere",
-	        /* sceneText:   */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
-	        /* linkKeys:    */ ["s1210", "s1220", "s1230"], 
-	        /* linkOptions: */ ["11", "22", "33"], 
-	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
-	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
-	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."]);
-	    var s1300 = new Scene (
-	        /* sceneKey:    */ "s1300",
-	        /* sceneTitle:  */ "on the wind over the forest",
-	        /* sceneText:   */ "Lorem ipsum dolor sitpertin aliquam tibique, debsae cu pri, aeque graece est ut.", 
-	        /* linkKeys:    */ ["s1310", "s1320", "s1330"], 
-	        /* linkOptions: */ ["sdg", "dtdtdr", "setysty"], 
-	        /* linkText:    */ ["Lorem ipsum dolor sitpertest ut.", 
-	        					"Lorem ipsum dolor sitpertin aliquam tibique, debpertin aliquam tibsae cu pri, aequ.", 
-	        					"Lorem ipin aliquam tibique, debsae cu pri, aeque graece r sitique, debsae cu pri, aeque graece est ut."]);
-
-	    var s3000 = new Scene (
-	        /* sceneKey:    */ "s3000",
+	    var s7 = new Scene (
+	        /* sceneKey:    */ "s7",
 	        /* sceneTitle:  */ "Scratch the Couch",
-	        /* sceneText:   */ "This one always works.  Sure enough he's kicking you out.",
-	        /* linkKeys:    */ ["s2100", "s1000", "s1000"],
-	        /* linkOptions: */ ["C   Claws", "K   Keyboard", "S   Stare Sweetly"], 
-	        /* linkText:    */ ["Try the claws-to-the-face move -- works every time (but might make him mad)", "Rest sweetly next to the keyboard, one paw near the return key (also works but takes longer)", "Better stare sweetly at him this time... Often takes too long but won't make him mad..."]);
+	        /* sceneText:   */ "Start scratching on the couch.  Works every time!",
+	        /* linkKeys:    */ ["s13"], 
+	        /* linkOptions: */ ["G   Go for it."], 
+	        /* linkText:    */ ["Go for it."]);
 
-	    var s3100 = new Scene ( "s3100", "title", "text", ["s3110", "s3120", "s3130"], ["sdg", "dtdtdr", "setysty"], ["t3110", "t3120", "t3130"]);
-	    var s3200 = new Scene ( "s3200", "title", "text", ["s3210", "s3220", "s3230"], ["sdg", "dtdtdr", "setysty"], ["t3210", "t3220", "t3230"]);
-	    var s3300 = new Scene ( "s3300", "title", "text", ["s3310", "s3320", "s3330"], ["sdg", "dtdtdr", "setysty"], ["t3310", "t3320", "t3330"]);
+	    var s8 = new Scene (
+	        /* sceneKey:    */ "s8",
+	        /* sceneTitle:  */ "",
+	        /* sceneText:   */ "",
+	        /* linkKeys:    */ ["s13"], 
+	        /* linkOptions: */ ["0"], 
+	        /* linkText:    */ ["0"]);
+
+	    var s9 = new Scene (
+	        /* sceneKey:    */ "s9",
+	        /* sceneTitle:  */ "Door open!",
+	        /* sceneText:   */ "Amazingly the human notices -- his device must be making him happy this time -- and he opens the door.  (You can taste that rat-a-liscious rib cage already!)",
+	        /* linkKeys:    */ ["s15", "s16", "s17"], 
+	        /* linkOptions: */ ["G   Garbage cans", "C   Enemy cats", "N   Nice lady"], 
+	        /* linkText:    */ ["Head straight for the garbage cans.  Gotta hand it to those humans -- overflow makes hunting a lot easier", 
+	        					"Scan for enemy cats.  There are some big and mean ones out here", 
+	        					"See of that nice lady across the alley is around.  She's always good for a handout."]);
+
+	    var s10 = new Scene (
+	        /* sceneKey:    */ "s10",
+	        /* sceneTitle:  */ "",
+	        /* sceneText:   */ "",
+	        /* linkKeys:    */ ["s14"], 
+	        /* linkOptions: */ ["0"], 
+	        /* linkText:    */ ["0"]);
+
+	    var s11 = new Scene (
+	        /* sceneKey:    */ "s11",
+	        /* sceneTitle:  */ "",
+	        /* sceneText:   */ "",
+	        /* linkKeys:    */ ["s13"], 
+	        /* linkOptions: */ ["0"], 
+	        /* linkText:    */ ["0"]);
+
+	    var s12 = new Scene (
+	        /* sceneKey:    */ "s12",
+	        /* sceneTitle:  */ "",
+	        /* sceneText:   */ "",
+	        /* linkKeys:    */ ["s13"], 
+	        /* linkOptions: */ ["0"], 
+	        /* linkText:    */ ["0"]);
+
+	    var s13 = new Scene (
+	        /* sceneKey:    */ "s13",
+	        /* sceneTitle:  */ "Out at last",
+	        /* sceneText:   */ "It worked!  Out at last.  Ahhh... the smell rodent everywhere!  Now...",
+	        /* linkKeys:    */ ["s15", "s16", "s17"], 
+	        /* linkOptions: */ ["G   Garbage cans", "C   Enemy cats", "N   Nice lady"], 
+	        /* linkText:    */ ["Head straight for the garbage cans.  Gotta hand it to those humans -- overflow makes hunting a lot easier", 
+	        					"Scan for enemy cats.  There are some big and mean ones out here", 
+	        					"See of that nice lady across the alley is around.  She's always good for a handout."]);
+
+	    var s15 = new Scene (
+	        /* sceneKey:    */ "s15",
+	        /* sceneTitle:  */ "Garbage cans",
+	        /* sceneText:   */ "Ah, the menu...",
+	        /* linkKeys:    */ ["s0", "s0", "s0"], 
+	        /* linkOptions: */ [1, 2, 3], 
+	        /* linkText:    */ ["Can #1.  Looks like an old carpet and some sheets", 
+	        					"Can #2.  Foil from the barbeque, paper plates.  Rats love that stuff", 
+	        					"Can #3.  Clean and closed.  Those people never help out..."]);
+
+	    var s16 = new Scene (
+	        /* sceneKey:    */ "s16",
+	        /* sceneTitle:  */ "",
+	        /* sceneText:   */ "",
+	        /* linkKeys:    */ ["s22", "s23", "s24"], 
+	        /* linkOptions: */ ["0", "0", "0"], 
+	        /* linkText:    */ ["Check down the alley", 
+	        					"Check up the alley", 
+	        					"Forget about it...  The rats are running!"]);
+
+	    var s17 = new Scene (
+	        /* sceneKey:    */ "s17",
+	        /* sceneTitle:  */ "Nice Lady",
+	        /* sceneText:   */ "Uh oh...  she's not home.  Now what?",
+	        /* linkKeys:    */ ["s00"], 
+	        /* linkOptions: */ ["0"], 
+	        /* linkText:    */ ["0"]);
+
+	    var s99 = new Scene (
+	        /* sceneKey:    */ "s99",
+	        /* sceneTitle:  */ "Game over!",
+	        /* sceneText:   */ "Game over!  You're at the pound...",
+	        /* linkKeys:    */ ["s00"], 
+	        /* linkOptions: */ ["Try Again?"], 
+	        /* linkText:    */ ["Try Again?"]);
 
 	    return sceneArray;
 	}
