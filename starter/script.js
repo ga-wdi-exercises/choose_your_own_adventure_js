@@ -7,7 +7,7 @@ sex = prompt(' "We cannot see you from here, are you male or female?" [Enter m o
 
 while (sex != 'm' && sex != 'f'){
   alert(' "We cannot see you from here, are you male or female?"');
-  sex = prompt('[Enter m or f]');
+  sex = prompt('[Unnaccepted response - please enter m or f]');
 }
 
 if (house === 't') {
@@ -18,7 +18,7 @@ if (house === 't') {
     alert('"Ah, Lady Daenerys, forgive us - we\'ve been expecting your arrival!"');
   }
 } else if (house === 'l') {
-  //House Stark
+  //House Lannister
   if (sex === 'm'){
     alert('"Ah, Lord Jamie, forgive us - we\'ve been expecting your arrival!"');
   } else {
