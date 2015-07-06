@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  margin-top: 20%;
+}
+
+p {
+  text-align: center;
+  text-emphasis: 1em;
+}
+
+body {
+  background-image: url("http://www.theluxuryspot.com/wp-content/uploads/2011/10/02haunted-house.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: red;
+  text-shadow: 1em 1em 1em #000;
+  font-family: nosifer;
+}
