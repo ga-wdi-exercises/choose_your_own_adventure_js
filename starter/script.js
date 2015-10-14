@@ -91,7 +91,7 @@ console.log("Ok " + name + "! Time to plan a trip..");
                         if(scared === "y") {
                           console.log("Well that's too bad, you're missing out. You've been booked a ticket to Napa");
                         } else {
-                          console.log("Hmm, your choices seem weird, try starting over");
+                          console.log("Hmm, your life choices seem weird, try starting over");
                         }
                     }
                   } else {
@@ -149,7 +149,7 @@ console.log("Ok " + name + "! Time to plan a trip..");
                                       if(scared === "y") {
                                         console.log("Well that's too bad, you're missing out. You've been booked a ticket to Napa");
                                       } else {
-                                        console.log("Hmm, your choices seem weird, try starting over");
+                                        console.log("Hmm, your life choices seem weird, try starting over");
                                       }
                                   }
                                 }
