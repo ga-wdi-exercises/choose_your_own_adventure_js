@@ -1,14 +1,12 @@
-Game:
+Var buffer = function(){
+console.log("************")
+}
+console.log("You want to jorney to a remote island to seek treasure...")
+buffer()
+var pathInput = ("You can either take a Boat, a Plane, a Helicopter, or Swim..(please enter ('b' or 'p' or 'h' or 's')")
 
-You journey to a remote island looking for treasure
-
-Mode of Transportation
-1. Boat
-2. Plane
-3. Helicopter
-4. Swim (it’s not that far)
-
-If you take a boat you get halfway there, a great white jumps out of the ocean eats you and your boats continues to move running into the beach and blowing up into millions of pieces.
+if (pathInput == "b")
+console.log("You take the boat, you get half way there, a great white breach the surface, eats you in one bit and returs to the deep blue...Your boat, while on autopilot, crashes and burns on the island")
 
 Plane: turbulent with a harsh landing rupturing one of your kidneys, you make it to the island but you’re in a lot of pain
 
