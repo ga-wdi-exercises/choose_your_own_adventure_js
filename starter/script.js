@@ -1,8 +1,8 @@
 // My TERRIBLE Weird Fiction Choose Your Own Adventure. Enjoy!
 
-console.log("You are standing on the front porch of the dilapidated home of the infamous explorer, Clark Ashton Smith. An elusive man, Smith was known for his boldness of character and relentless curiosity. Weeks after his disappearance, a letter arrived at your doorstep signed by Smith himself. The envelope containing the letter also held a worn key and a scrap of paper with his address. A few days later a neighbor found Smith dead in his foyer.");
+console.log("You are standing on the front porch of the dilapidated home of Clark Smith, an infamous explorer. An elusive man, Smith was known for his boldness of character and relentless curiosity. Weeks after his disappearance, a letter arrived at your doorstep hastily signed by Smith himself. The envelope containing the letter held a worn key and a torn scrap of paper with his address. A few days after the letter arrived, a neighbor found Smith dead in his foyer.");
 
-console.log("It is said that Smith excavated something of great scientific value from the depths of the earth and his journal may shed some light on where you can find it and what happened to him. The massive door in front of you has disturbing markings hacked into its wooden frame. You turn the door handle and find it locked. You hesitate, fingering Smith's key in your pocket.");
+console.log("It is said that Smith excavated something of great scientific value from the depths of the earth and his journal may shed some light on where you can find it and what happened to him. The massive door in front of you has disturbing markings hacked into its wooden frame. You turn the handle of the door to find it locked. You hesitate, fingering Smith's key in your pocket.");
 
 var useLeave = prompt("USE Clark Smith's key or LEAVE and go home?");
 if (useLeave.toUpperCase() === 'USE' || useLeave.toUpperCase() === 'KEY') {
@@ -14,7 +14,7 @@ if (useLeave.toUpperCase() === 'USE' || useLeave.toUpperCase() === 'KEY') {
     if (exploreGo.toUpperCase() === "EXPLORE") {
       console.log("You take a deep breath in and start walking down the hallway toward the horrible sound. Your stomach turns with every step. You briefly hesitate at the doorway where the sound is coming from before deciding you can't turn back now. As you turn the corner you find a creature beyond comprehension. You try to make sense of the its countless heads and limbs but your vision fails you and you drop to the floor. You are never heard from again.");
     } else {
-      console.log("You decide that finding the journal and whatever Smith discovered isn't worth the risk. You rush out the front door and back to the safety of your home. Late in the following evening while lounging by the fireplace in your study you hear a faint noise coming from the hallway. Your stomach drops when you realize it's the same chilling sound you heard the night before. Your minds unravels as you attempt to comprehend what kind of unnatural creature could possibly make such a sound. Just as you begin to feel ill you remember that you keep your pistol stashed in the desk at the other end of the room.");
+      console.log("You decide that finding the journal and whatever Smith discovered isn't worth the risk. You rush out the front door and back to the safety of your home. Late in the following evening while lounging by the fireplace in your study you hear a faint noise coming from the hallway. Your stomach drops when you realize it's the same chilling sound you heard the night before. Your minds unravels as you attempt to comprehend what kind of unnatural creature could make such a sound. Just as you begin to feel ill you remember that you keep your pistol stashed in the desk at the other end of the room.");
       var hideGrab = prompt("HIDE under the table or GRAB your pistol?");
       if (hideGrab.toUpperCase() === "HIDE") {
         console.log("You hide under the table and put your hands over your ears as you try to block out the sound but it only seems to make it louder. Your heart races. Surely this must be a dream.");
@@ -25,10 +25,11 @@ if (useLeave.toUpperCase() === 'USE' || useLeave.toUpperCase() === 'KEY') {
             console.log("You crawl out from under the table and run away from the sound as fast as you can. Your senses must have deceived you as you turn the corner and find the horrifying creature waiting for you. While trying to make sense of the creature’s countless heads and limbs your vision fails you and you drop to the floor. You are never heard from again.");
           }
       } else {
-        console.log("You make a break for the desk. Frantically, you toss everything out of the drawer to get to it. The sound of falling books and pens seems to have attracted the creature's attention. You finally wrap your hands around the gun.");
+        console.log("You make a break for the desk. Frantically, you toss everything out of the drawer. The sound of falling books and pens seems to have attracted the creature's attention. You finally wrap your hand around the gun.");
         var scareAimRun = prompt("Shoot the pistol in the air to SCARE the creature away? AIM at the doorway and wait? RUN out the back door?")
         if (scareAimRun.toUpperCase() === "SCARE") {
-          var scream = prompt("A surge of adrenaline runs through you as you fire the pistol into the air and scream. What do you say?");
+          console.log("A surge of adrenaline runs through you as you fire the pistol into the air and scream.");
+          var scream = prompt("What do you yell?");
           if (scream.length > 10) {
             console.log("You scream " + "'" + scream + "' " + "at the top of your lungs and fire the pistol a second time. The slurping ceases immediately and you listen intently for what seems like an eternity. After a couple hours pass you run out of your house and never return. You move to a new town, far away in a distant county in hope of finding peace but it isn’t long before the terrible sound returns. You spend the last few months of your life moving from town to town before being driven mad. Like Smith before you, you are never seen alive again.")
           } else {
