@@ -1,18 +1,59 @@
 // The Mystery of the Lost Locket
 //
-// - What is your name?
-//     - Erin
-// - You’re just who we’ve been looking for! You come highly recommended as an expert sleuth. We need your help solving the mystery of the Lost Locket! Will you accept the assignment? (Y/N)
-//     - Y
-//         - Thank you! We can enlist the help of some other detectives in this mystery. Who would you rather have help you: Nancy Drew or The Hardy Boys? (N/H)
-//             - N
-//                 - Here’s your brief on the assignment. Nancy’s eating lunch at the The Flying Fish at the harbor. We need you to go pick her up. You can choose to take the car, tandem bicycle or double kayak. (C/B/K)
-//                     - C
-//                         - The Rolls Royce is a pretty sweet ride. You two go around town picking up clues and drinking coffee and solve the mystery just in time for dinner. Turns out the locket was in the cup holder all this time! {END 4}
-//                     - B
-//                         - It turns out Nancy is not a good bicycle rider. On the way to the haunted mansion, she falls over, the bike frame is broken and you’re stuck in the middle of a country road and have to walk home. {END 3}
-//                     - K
-//                         - Oh no! You’re not a very good kayaker. How did you tip that over? All the clues are lost and the mystery is never solved. {END 2}
+// Get User Name
+var name = prompt("What is your name?");
+document.write("<h2>" + name + "!</h2>");
+
+function askQuestion(promptText) {
+  var userInput = prompt(promptText);
+  userInput = userInput.toLowerCase();
+  document.write("<h2>" + promptText + "</h2><p>" + name + " answered: " + userInput + "</p>");
+  return userInput;
+}
+
+// Does user accept the assignment?
+var promptAssignment = "You’re just who we’ve been looking for! You come highly recommended as an expert sleuth. We need your help solving the mystery of the Lost Locket! Will you accept the assignment? (y/n)";
+var promptAssignmentAnswer = askQuestion(promptAssignment);
+
+// "y" - Select Partner - Nancy Drew or Hardy Boys
+if (promptAssignmentAnswer === "y") {
+  var promptYes = "Thank you! We should enlist the help of some other detectives in this mystery. Who would you rather have help you: Nancy Drew or The Hardy Boys? (n/h)";
+  var promptYesAnswer = askQuestion(promptYes);
+
+    // "n" - Pick Up Nancy
+    if (promptYesAnswer === "n") {
+      var promptNancy = "Here’s your brief on the assignment. Nancy’s eating lunch at the The Flying Fish restaurant at the harbor. We need you to go pick her up. You can choose to take the car, tandem bicycle or double kayak. (c/b/k)";
+      var promptNancyAnswer = askQuestion(promptNancy);
+
+        // "c" - Car  - ENDING
+        if (promptNancyAnswer === "c") {
+          var promptCar = "The Rolls Royce is a pretty sweet ride. You two go around town picking up clues and drinking coffee and solve the mystery just in time for dinner. Turns out the locket was in the cup holder all this time! [THE END]";
+          document.write("<h2>" + promptCar + "</h2>");
+
+        // "b" - Bicycle - ENDING
+        } else if (promptNancyAnswer === "b") {
+          var promptBicycle = "It turns out Nancy is not a good bicycle rider. On the way to the haunted mansion, she falls over, the bike frame is broken and you’re stuck in the middle of a country road and have to walk home. [THE END]";
+          document.write("<h2>" + promptBicycle + "</h2>");
+
+        // "k" - Kayak - ENDING
+        } else if (promptNancyAnswer === "k") {
+          var promptKayak = "Oh no! You’re not a very good kayaker. How did you tip that over? All the clues are lost and the mystery is never solved. [THE END]";
+          document.write("<h2>" + promptKayak + "</h2>");
+        }
+
+      // "h" - Meet the Hardy Boys
+    } else if (promptYesAnswer === "h") {
+      var promptHardyBoys = "The Hardy Boys are on their way! Where would you like them to meet you to start looking for clues: the Library or the Park? (l/p)";
+      var promptHardyBoysAnswer = askQuestion(promptHardyBoys);
+    }
+
+  // "n" - How much money would it take?
+} else if (promptAssignmentAnswer === "n") {
+  var promptNo = "No? What if we pay you a handsome sum? How much money would you need to take on this assignment? (Please enter a number.)";
+  var promptNoAnswer = askQuestion(promptNo);
+}
+
+//
 //             - H
 //                 - The Hardy Boys are on their way! Where would you like them to meet you to start looking for clues: the Library or the Park? (L/P)
 //                     - L
@@ -23,6 +64,10 @@
 //                                 - You and the Hardy Boys leave the Library and get into the Rolls Royce. What do you find? The locket was in the cup holder this whole time! {END 6}
 //                     - P
 //                         - You all pile into the car to go to the Park and, when you stop at the drive-thru on the way, your soda spills all over the interior because it won’t fit into the cupholder. What’s in the bottom? The locket! Another mystery solved. {END 7}
+
+
+
+
 //     - N
 //         - No? What if we pay you a handsome sum? How much money would you need to take on this assignment? (Please enter a number.)
 //             - <=1,000
