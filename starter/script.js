@@ -31,7 +31,7 @@ if (move == 'walk' && distance>=50){
       floore = parseInt(prompt("Come on. Give me a number here."));
     }
     if (floor<10 && floor > 0){
-      alert(fear+ " are pretty good climbers, and "+fear+" could definitely climb that high. You're dead.");
+      alert(fear+ " are pretty good climbers, and mutant "+fear+" could definitely climb that high. You're dead.");
     }else if (floor == 0){
       alert("Ground floor? Seriously? You're dead.");
     }else{
@@ -55,9 +55,32 @@ if (move == 'walk' && distance>=50){
     fork = prompt("Can't go that way.\n(enter 'left' or 'right')");
   }
   if (fork == 'left'){
-    alert("You never go left. Don't you know anything? You're dead.");
+    var getAway = prompt("Theres an old car or an old bike. Which do you take?\n(enter 'car' or 'bike')");
+    while(['car','bike'].indexOf(getAway) == -1){
+      getAway = prompt("That mode of transport isn't available. Pick the car or bike.\n(enter 'car' or 'bike')");
+    }
+    if (getAway == 'car'){
+      var wait = prompt("You chose the old car, which inevitably broke down. You call Triple-A, but they can't be there for a while. How long do you wait?\n(enter a number of minutes)");
+      while (isNaN(parseInt(wait))){
+        wait = prompt("Need a number of minutes here.\n(enter a number of minutes)");
+      }
+      if (parseInt(wait)>60){
+        alert("You're sitting there waiting for Triple-A while being chased by MUTANT "+fear.toUpperCase()+". They quickly made up ground and now you're dead.")
+      }else{
+        alert("Good call in not waiting too long. You're alright in my book. That is all. I'll let you live for that.")
+      }
+    }
   }else{
-    alert("You went right. Rad.");
+    alert("You went right...");
+    var decision = prompt("Right into the waiting arms of MUTANT "+fear.toUpperCase()+". There's only one way to escape now-- either play dead or fight. Which do you do?\n(enter 'play dead' or 'fight')");
+    while (['play dead','fight'].indexOf(decision) == -1){
+      decision = prompt("Only two choices here. Play dead or fight.\n(enter 'play dead' or 'fight')");
+    }
+    if (decision == 'play dead'){
+      alert("You chose correctly. Mutant "+fear+" have a notoriously short attention span, get bored, and leave you alone.");
+    }else{
+      alert("You chose wrong. We're dealing with a PACK OF MUTANT "+fear.toUpperCase()+". You're outnumbered and dead.");
+    }
   }
 }else if(move == 'run' && distance>20){
   var hidingPlace = prompt("Most people can't "+move+" that far, especially you. You'd probably get tired and need a place to hide. There's a hardware store or an old decrepit house. Where do you go?\n(enter 'store' or 'house')");
