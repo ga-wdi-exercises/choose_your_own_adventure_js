@@ -1,6 +1,6 @@
 // My TERRIBLE Weird Fiction Choose Your Own Adventure. Enjoy!
 
-console.log("You are standing on the front porch of the dilapidated home of the infamous explorer, Clark Ashton Smith. An elusive man, Smith was known for his boldness of character and relentless curiosity. One month ago, and weeks after his disappearance, a letter arrived at your doorstep signed by Smith himself. The envelope containing the letter also held a worn key and a scrap of paper with his address. A few days after you received the envelope, a neighbor found Smith dead in his foyer.");
+console.log("You are standing on the front porch of the dilapidated home of the infamous explorer, Clark Ashton Smith. An elusive man, Smith was known for his boldness of character and relentless curiosity. Weeks after his disappearance, a letter arrived at your doorstep signed by Smith himself. The envelope containing the letter also held a worn key and a scrap of paper with his address. A few days later a neighbor found Smith dead in his foyer.");
 
 console.log("It is said that Smith excavated something of great scientific value from the depths of the earth and his journal may shed some light on where you can find it and what happened to him. The massive door in front of you has disturbing markings hacked into its wooden frame. You turn the door handle and find it locked. You hesitate, fingering Smith's key in your pocket.");
 
@@ -9,12 +9,12 @@ if (useLeave.toUpperCase() === 'USE' || useLeave.toUpperCase() === 'KEY') {
   console.log("You insert the key into the lock and turn it. There is a loud clank as the heavy bolt slides away. You slowly push the door open and look down the dark hallway. A deep chill moves through you and in the distance you hear a strange slurping noise that sends shivers down your spine.");
   var leaveEnter = prompt("Do you ENTER the house or LEAVE?");
   if (leaveEnter.toUpperCase() === "ENTER") {
-    console.log("You slowly step inside the house. Nothing could have prepared you for the state of Smith's home. The entire house is in ruins. A heavy, broken chandelier dangles above you while the hallway sconces intermittently sputter sparks into the misty air. The slurping sound grows louder and you begin to second guess your decision to step inside.")
+    console.log("You slowly step inside. Nothing could have prepared you for the state of Smith's home. The entire house is in ruins. A heavy chandelier dangles above you while the broken sconces sputter sparks down the hallway. The slurping grows louder and you begin to second guess your decision to step inside.")
     var exploreGo = prompt("EXPLORE or LEAVE?")
     if (exploreGo.toUpperCase() === "EXPLORE") {
       console.log("You take a deep breath in and start walking down the hallway toward the horrible sound. Your stomach turns with every step. You briefly hesitate at the doorway where the sound is coming from before deciding you can't turn back now. As you turn the corner you find a creature beyond comprehension. You try to make sense of the its countless heads and limbs but your vision fails you and you drop to the floor. You are never heard from again.");
     } else {
-      console.log("You decide that finding the journal and whatever Smith discovered isn't worth the risk. You rush out the front door and back to the safety of your home. Late in the following evening while lounging by the fireplace in your study you hear a faint noise coming from the hallway. Your stomach drops when you realize it's the same chilling, slupring sound you heard the night before. Your minds unravels as you attempt to comprehend what kind of unnatural creature could possibly make such a sound. As you begin to feel ill you remember that your pistol is stashed in the desk at the other end of the room.");
+      console.log("You decide that finding the journal and whatever Smith discovered isn't worth the risk. You rush out the front door and back to the safety of your home. Late in the following evening while lounging by the fireplace in your study you hear a faint noise coming from the hallway. Your stomach drops when you realize it's the same chilling sound you heard the night before. Your minds unravels as you attempt to comprehend what kind of unnatural creature could possibly make such a sound. Just as you begin to feel ill you remember that you keep your pistol stashed in the desk at the other end of the room.");
       var hideGrab = prompt("HIDE under the table or GRAB your pistol?");
       if (hideGrab.toUpperCase() === "HIDE") {
         console.log("You hide under the table and put your hands over your ears as you try to block out the sound but it only seems to make it louder. Your heart races. Surely this must be a dream.");
@@ -25,7 +25,7 @@ if (useLeave.toUpperCase() === 'USE' || useLeave.toUpperCase() === 'KEY') {
             console.log("You crawl out from under the table and run away from the sound as fast as you can. Your senses must have deceived you as you turn the corner and find the horrifying creature waiting for you. While trying to make sense of the creature’s countless heads and limbs your vision fails you and you drop to the floor. You are never heard from again.");
           }
       } else {
-        console.log("You make a break for the desk where your pistol is stored. Frantically, you toss everything out of the drawer to get to it. The sound of falling books and pens seems to have attracted the creature's attention. You finally wrap your hands around the gun.");
+        console.log("You make a break for the desk. Frantically, you toss everything out of the drawer to get to it. The sound of falling books and pens seems to have attracted the creature's attention. You finally wrap your hands around the gun.");
         var scareAimRun = prompt("Shoot the pistol in the air to SCARE the creature away? AIM at the doorway and wait? RUN out the back door?")
         if (scareAimRun.toUpperCase() === "SCARE") {
           var scream = prompt("A surge of adrenaline runs through you as you fire the pistol into the air and scream. What do you say?");
