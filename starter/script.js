@@ -1,9 +1,5 @@
-// The Mystery of the Lost Locket
-//
-// Get User Name
-var name = prompt("What is your name?");
-document.write("<h2>" + name + "!</h2>");
-
+// The Mystery of the Lost Locket - A Choose Your Own Adventure Game
+// Function to ask questions to user
 function askQuestion(promptText) {
   var userInput = prompt(promptText);
   userInput = userInput.toLowerCase();
@@ -11,9 +7,14 @@ function askQuestion(promptText) {
   return userInput;
 }
 
+// Function to write ending
 function writeEnding(endingText) {
   document.write("<h2>" + endingText + "</h2>");
 }
+
+// Get user name
+var name = prompt("What is your name?");
+document.write("<h2>" + name + "!</h2>");
 
 // Does the user accept the assignment?
 var promptAssignment = "You’re just who we’ve been looking for! You come highly recommended as an expert sleuth. We need your help solving the mystery of the Lost Locket! Will you accept the assignment? (y/n)";
@@ -60,7 +61,7 @@ if (promptAssignmentAnswer === "y") {
           var nelsonEnding = "With her help, you find the next clue. And the next one. And the next one. Except it turns out they aren’t clues at all, but false leads. By the time you realize she was misleading you, Mrs. Nelson is on a plane to South America with the locket around her neck. [THE END]";
           writeEnding(nelsonEnding);
 
-        // "n" - Find the locket - ENDING
+        // "n" - Leave the Library - ENDING
         } else if (promptAskNelsonAnswer === "n") {
           var cupHolderEnding = "You and the Hardy Boys leave the Library and get into the Rolls Royce. What do you find? The locket was in the cup holder this whole time! [THE END]";
           writeEnding(cupHolderEnding);
@@ -71,20 +72,20 @@ if (promptAssignmentAnswer === "y") {
         var parkEnding = "You all pile into the car to go to the Park and, when you stop at the drive-thru on the way, your soda spills all over the interior because it won’t fit into the cupholder. What’s in the bottom? The locket! Another mystery solved. [THE END]";
         writeEnding(parkEnding);
       }
-
     }
 
-  // "n" - How much money would it take?
+  // "n" - How much money would it take to hire the user?
 } else if (promptAssignmentAnswer === "n") {
   var promptNo = "No? What if we pay you a handsome sum? How much money would you need to take on this assignment? (Please enter a number.)";
   var promptNoAnswer = askQuestion(promptNo);
-  promptNoAnswer = parseInt(promptNoAnswer);
+  promptNoAnswer = parseInt(promptNoAnswer, 10);
 
+  // Message for when user provides an acceptable price.
   var goodPriceEnding = "I think we can make that work. Let me talk to the bosses to arrange payment. Never mind…we’re actually broke. [THE END]";
 
-  // User doesn't enter number or number is less than 1 - ENDING
+  // User doesn't enter number OR number is less than 1 - ENDING
   if (!promptNoAnswer || promptNoAnswer < 1) {
-    var notAnAnswerEnding = "That doesn't even make sense! Maybe you aren't as good a detective as I thought...";
+    var notAnAnswerEnding = "That doesn't even make sense! Maybe you aren't as good a detective as I thought...[THE END]";
     writeEnding(notAnAnswerEnding);
 
   // If number is greater than 1000
@@ -92,7 +93,7 @@ if (promptAssignmentAnswer === "y") {
     var promptTooExpensive = "You’re too rich for my blood. I don’t even think the locket’s worth that much. Can you charge a lower fee? How much?";
     while (promptNoAnswer > 1000) {
       promptNoAnswer = askQuestion(promptTooExpensive);
-      promptNoAnswer = parseInt(promptNoAnswer);
+      promptNoAnswer = parseInt(promptNoAnswer, 10);
     }
     writeEnding(goodPriceEnding);
 
