@@ -19,6 +19,6 @@ else {
 
 }
 
-console.log("Im done ith the loop")
+console.log("Im done with the loop")
 var thirdprompt = prompt("you come out of the trance and need to make a decision: \n 1. go home 2. realize you are at home 3. look for the unicorn again")
-var fourthprompt = prompt("It doesn't matter what you chose I need to turn in this homework so your adventure has ended.")
+alert("It doesn't matter what you chose I need to turn in this homework so your adventure has ended.")
