@@ -31,7 +31,8 @@ if (challengeOne == "y") {
       var hangOn = prompt("Enter a value between 1 and 10 for how much strength you have. ");
         while(hangOn < 7) {
 
-/* POSSIBLE SOLUTION - TRY REVERSING THE ORDER OF HANGON < 7 AND HANGON 4 */
+/* POSSIBLE SOLUTION - TRY REVERSING THE ORDER OF HAN
+/* Solution does not work. */
 /* OUTCOME  Challenge Two - Response J - No strength - Game ends */
           // if (hangOn < 4) {
           //   console.log("Not enough strength. You fall to your death. Sorry about that.")
@@ -46,7 +47,8 @@ if (challengeOne == "y") {
 
 /* Challenge Two - Response I */
     } else if (challengeTwo == "i") {
-      console.log("Good thing you studied Latin. You move forward.");
+      console.log("Good thing you studied Latin. You move forward.")
+    };
 
 /* Challenge Three  - need to incorporate into two options from Challenge Two?*/
     // console.log("You come to the third challenge - a giant chasm barring your path forward. The diary says you are going to have to take a leap of faith. You make the jump - do you have enough faith?");
