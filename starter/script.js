@@ -75,16 +75,15 @@ buffer();
     }
     else if (fireChoice === "extinguish") {
       console.log("You grab the nearest fire extinguisher and spray the foam on the fire. Phew, that was close!")
-    else if (fireChoice = "roll") {
+    }
+    else if (fireChoice === "roll") {
       console.log("Well, you aren't on fire yet... but you stop, drop and roll anyway. What next?")
       var stopDropRoll = prompt("Calmly [leave] through the nearest exit or try to be a [hero]?")
-      if (stopDropRoll = "leave") {
+      if (stopDropRoll === "leave") {
         console.log("You make a calm exit and let the fire department handle the fire. Class is cancelled for the rest of the day, but you get tons of homework to make up for it.")
       }
-      else if stopDropRoll = "hero" {
+      else if (stopDropRoll === "hero") {
         console.log("You try to attempt a heroic action, but the fire is far too big. RIP")
       }
     }
     }
-    }
-  }
