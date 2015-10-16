@@ -2,10 +2,10 @@
 while(adv !== 'y' || 'n') {
   var adv = prompt("Frodo, would you like to take the ring to Mordor? (Y/N)");
 
-  if(adv == "y") {
+  if(adv === "y") {
     var sam = prompt("Will you take Sam with you? (Y/N)");
 
-    if(sam == 'y') {
+    if(sam === 'y') {
       var begin = prompt('Great choice! Are you ready to begin? (Y/N)');
     }
       if(begin === 'y') {
@@ -28,7 +28,7 @@ while(adv !== 'y' || 'n') {
 
   }
 
-  else if (adv == "n") {
+  else if (adv === "n") {
     var shire = prompt("Shall we have a cup of mead? (Y/N)");
 
     if(shire === 'y') {
@@ -37,11 +37,11 @@ while(adv !== 'y' || 'n') {
         numDrink += 1;
         var noMore = prompt("Shall we have another? (Y/N)");
         if(noMore === 'y' ) {
-          alert("I agree!")
+          alert("I agree!");
         }
 
         else if(noMore === 'n') {
-          alert("You're right.")
+          alert("You're right.");
           numDrink = 3;
         }
       }
@@ -57,7 +57,7 @@ while(adv !== 'y' || 'n') {
       }
 
       else if(fishing === 'n') {
-        alert("Fine, I'm just going to go fishing with Smeagol.")
+        alert("Fine, I'm just going to go fishing with Smeagol.");
         adv = n;
       }
     }
