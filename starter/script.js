@@ -53,10 +53,11 @@ buffer();
     buffer();
     console.log("Just as you're finishing up on the toilet, you notice there isn't any toilet paper in the dispenser!")
     console.log("BZZT! Just your luck, the fire alarm begins ringing too! What an unfortunate series of events.")
-    var toiletPaper = prompt("Find some toilet paper?" [y]/[n]);
-    var washHands = prompt("Wash your hands?" [y]/[n])
+    var toiletPaper = prompt("Find some toilet paper? [y]/[n]");
+    var washHands = prompt("Wash your hands? [y]/[n]")
     if (toiletPaper === 'y' && washHands === 'y') {
       console.log("Congratulations for accomplishing basic human hygiene!");
+      console.log("You manage to get out of the building and back to class.")
     }
     else {
       console.log("Wow, really? You're pretty gross.");
@@ -70,7 +71,7 @@ buffer();
     console.log("As you begin to make your way towards the stairs, you suddenly notice that there's an actual fire!")
     console.log("You consider your options:")
     var fireChoice = prompt("[run] for the stairs, find a fire [extinguish]er, or stop, drop and [roll]?")
-    if (fireChoice === run) {
+    if (fireChoice === "run") {
       console.log("You run for the stairs, only to trip and fall face first down the stairs and black out...")
     }
     else if (fireChoice === "extinguish") {
