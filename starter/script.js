@@ -28,8 +28,12 @@ function adventure() {
 
         while (darkMatter > 2) {
           console.log("That'll be "+ price +" Earth bucks. Oh you only have $1,500? Try again.");
+          darkMatter = prompt("You only have $1,500. How much dark matter do you want?");
         }
         console.log("That'll be " + price + " Earth bucks.");
+        console.log("'You got it! Thanks for your business.''");
+        console.log("You and the team make a successful delivery to Mars and are rewarded with... a free pizza! Good job on another successful mission. ");
+
       } else {
       console.log("Well you ran out of fuel after about 10 minutes. Fortunately there were enough escape pods to get everyone home safely, but you had to abandon the pizza. The NFL was furious and put a hit out on each of you. Good luck.");
       }
@@ -43,12 +47,6 @@ function adventure() {
   } else {
       if (name == 'Fry') {
         console.log("Too busy watching Leela get fitted for a monocle? Lame. Ok bye.");
-        var playAgain = prompt("Play again? Enter 'y' or 'n'");
-        if (playAgain == 'y') {
-          adventure();
-        } else {
-          return "The End.";
-        }
       } else if (name == 'Leela') {
         console.log("'Ah yes you had that appointment to get fitted for a monocle. I guess Bender will have to fly the ship!' The ship crashes shortly after take-off; Bender was the only survivor. Hope you like your new monocle.");
         return "The End. Call adventure() to play again.";
