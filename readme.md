@@ -6,8 +6,8 @@ Using what you know about data types, variables, operators, conditional blocks, 
 * Any path the user goes down must ask them at least **three** questions.
 * There must be a minimum of **seven** total destinations the user could arrive at based on their responses.
 * For **at least one** of the questions asked, there must be **more than two possible user responses**.
-* Adventure must contain at least one integer response and one string response.
-* Adventure must contain at least one functional loop in the code base.
+* Your code must contain **at least one loop**.
+* Your code must make use of **both string and number user inputs**.
 > **Hint:** You may need `parseInt()` and `toString()`
 
 ### Need Some Inspiration?
@@ -20,7 +20,7 @@ How about...
 ### Pseudo-coded Example
 
 What is your name?
-  * `Sean`
+* `Sean`
 
 Nice to meet you, `Sean`. What year would you like to go to? **(YYYY)**
 * `>= 2015`
