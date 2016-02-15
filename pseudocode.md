@@ -14,7 +14,7 @@ Using what you know about data types, variables, operators, conditional blocks, 
 
 * Good morrow, my fair adventurer. Please pick a number `1` through `4` (i.e. `1`, `2`, `3`, or `4`): **(1/2/3/4)**
     * `1`
-      * You are Hermia. You are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M)\n-Face death (D)\n-Become a nun (N).\nAfter your father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?  **(M/D/N/R)**
+      * You are Hermia!\nYou are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M)\n-Face death (D)\n-Become a nun (N).\nAfter your father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?  **(M/D/N/R)**
           * `M`arry Demetrius
               * You are truly Daddy's little girl. You marry Demetrius, but you have an unhappy life. Do you want to change your previous answer (Y/N)? **(Y/N)**
                   * `Y`es
@@ -41,7 +41,7 @@ Using what you know about data types, variables, operators, conditional blocks, 
                       * Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
 
     * `2`
-      * You are Helena. You are pretty awkward and you are desperately in love with Demetrius. Unfortunately, Demetrius has his sights set on Hermia. Hermia loves Lysander, but her father is forcing her to marry Demetrius. Oy! You overhear Hermia and Lysander's plans to run away and elope. Do you tell Demetrius of their impending elopement (`T`) or stay quiet (`S`)? **(T/S)**
+      * You are Helena!\nYou are pretty awkward and you are desperately in love with Demetrius. Unfortunately, Demetrius has his sights set on Hermia. Hermia loves Lysander, but her father is forcing her to marry Demetrius. Oy!\nYou overhear Hermia and Lysander's plans to run away and elope. Do you:\n-Tell Demetrius of their impending elopement (T).\n-Or stay quiet (S)? **(T/S)**
           * `T`ell Demetrius
               * Good choice. Demetrius goes after the pair of lovers, and you follow him into the forest. At first Demetrius still refuses to consider your love, but then a fairy enchants him and he loves you! However, the fairy also accidentally enchants Lysander and the two boys are fighting over your love. You are unaware that this is the working of fairies and you think they are mocking you. Furthermore, Hermia is mad at you for stealing Lysander. Do you run away (`R`) or fight back (`F`)? **(R/F)**
                   * `R`un away

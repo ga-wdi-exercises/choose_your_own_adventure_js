@@ -1,9 +1,10 @@
 //First Prompt to Pick a Number>Character
 var start_number = prompt("Good morrow, my fair midsummer adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
+
 //1->Hermia
 if (start_number === "1") {
   var hermia_intro = prompt("You are Hermia!\nYou are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M).\n-Face Death (D).\n-Become a Nun (N).\nAfter you father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?");
-} if (hermia_intro === "R" || hermia_intro === "r") { //RUN AWAY
+    if (hermia_intro === "R" || hermia_intro === "r") { //RUN AWAY
         var hermia_run = prompt("RUN AWAY WITH LYSANDER.\nGood choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Do you stay in the forest (F) or return home (H)?");
             if (hermia_run === "F" || hermia_run === "f") {
                 var hermia_forest = prompt("FOREST\nLysander and you have a fairy-filled wedding and live in peace with nature for the rest of your days. Congratulations!");
@@ -34,7 +35,14 @@ if (start_number === "1") {
     }
 //2->Helena
 } else if (start_number === "2") {
-  console.log('Helena');
+  //console.log('Helena');
+  var helena_intro = prompt("You are Helena!\nYou are pretty awkward and you are desperately in love with Demetrius. Unfortunately, Demetrius has his sights set on Hermia. Hermia loves Lysander, but her father is forcing her to marry Demetrius. Oy!\nYou overhear Hermia and Lysander's plans to run away and elope. Do you:\n-Tell Demetrius of their impending elopement (T).\n-Or stay quiet (S)?");
+    if (helena_intro === "T" || helena_intro === "t") {
+        var helena_tell = prompt("TELL DEMETRIUS\nGood choice. Demetrius goes after the pair of lovers, and you follow him into the forest. At first Demetrius still refuses to consider your love, but then a fairy enchants him and he loves you! However, the fairy also accidentally enchants Lysander and the two boys are fighting over your love. You are unaware that this is the working of fairies and you think they are mocking you. Furthermore, Hermia is mad at you for stealing Lysander.\nDo you run away (R) or fight back (F)?");
+    } else if (helena_intro === "S" || helena_intro === "s") {
+        var helena_stay = prompt("STAY QUIET\nHermia and Lysander are caught by the police, and Hermia is forced to marry Demetrius. Do you want to change your previous answer (Y/N)?");
+    }
+
 //3->Lysander
 } else if (start_number === "3") {
   console.log('Lysander');
