@@ -15,21 +15,21 @@ if (start_number === "1") {
             if (hermia_marry === "Y") {
                 var hermia_yes = prompt("Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!");
             } else if (hermia_marry === "N") {
-                var hermia_marry_no = prompt("");
+                var hermia_marry_no = prompt("You have a comfortable, but unhappy life. Lysander throws rocks at your window, but it's too late.");
             }
     } else if (hermia_intro === "D") { //DEATH
         var hermia_die = prompt("DEATH.\nYou have been reading too much Romeo and Juliet. You are put to death, and your father is very sad. Do you want to change your previous answer (Y/N)?");
             if (hermia_die === "Y") {
                 var hermia_yes = prompt("Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!");
             } else if (hermia_die === "N") {
-                var hermia_die_no = prompt("");
+                var hermia_die_no = prompt("Okay, well unfortunately you are still dead then.");
         }
     } else if (hermia_intro === "N") { //NUN
         var hermia_nun = prompt("NUN.\nYou are banished to a temple and you are only allowed to sleep, eat, and worship Artemis for the rest of your days. Do you want to change your previous answer (Y/N)?")
             if (hermia_nun === "Y") {
                 var hermia_yes = prompt("Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!");
             } else if (hermia_nun === "N") {
-                var hermia_nun_no = prompt("");
+                var hermia_nun_no = prompt("Have fun worshipping Artemis for the rest of your days.");
         }
     }
 //2->Helena
