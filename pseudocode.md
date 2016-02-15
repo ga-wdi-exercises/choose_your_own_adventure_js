@@ -14,27 +14,27 @@ Using what you know about data types, variables, operators, conditional blocks, 
 
 * Good morrow, my fair adventurer. Please pick a number `1` through `4` (i.e. `1`, `2`, `3`, or `4`): **(1/2/3/4)**
     * `1`
-      * You are Hermia. You are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens that if you do not marry Demetrius (`M`), you must either face death (`D`) or become a nun (`N`). Lysander pleads that you run away with him and elope (`R`). What is your choice (`M`, `D`, `N`, `R`)?  **(M/D/N/R)**
+      * You are Hermia. You are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M)\n-Face death (D)\n-Become a nun (N).\nAfter your father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?  **(M/D/N/R)**
           * `M`arry Demetrius
-              * You are truly Daddy's little girl. You marry Demetrius, but you have an unhappy life. Do you want to change your previous answer? **(Y/N)**
+              * You are truly Daddy's little girl. You marry Demetrius, but you have an unhappy life. Do you want to change your previous answer (Y/N)? **(Y/N)**
                   * `Y`es
                       * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
                   * `N`o
                       * You have a comfortable, but unhappy life. Lysander throws rocks at your window, but it's too late.
           * `D`eath
-              * You have been reading too much Romeo and Juliet. You are put to death, and your father is very sad. Do you want to change your previous answer? **(Y/N)**
+              * You have been reading too much Romeo and Juliet. You are put to death, and your father is very sad. Do you want to change your previous answer (Y/N)? **(Y/N)**
                   * `Y`es
                       * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
                   * `N`o
                       * Okay, well unfortunately you are still dead then.
           * `N`un
-              *  Do you want to change your previous answer? **(Y/N)**
+              *  You are banished to a temple and you are only allowed to sleep, eat, and worship Artemis for the rest of your days. Do you want to change your previous answer (Y/N)? **(Y/N)**
                   * `Y`es
                       * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
                   * `N`o
                       * Have fun worshipping Artemis for the rest of your days.
           * `R`un away with Lysander
-              * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Do you stay in the forest (`F`) or return home (`H`)? **(F/H)**
+              * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Do you stay in the forest (F) or return home (H)? **(F/H)**
                   * `F`orest
                       * Lysander and you have a fairy-filled wedding and live in peace with nature for the rest of your days. Congratulations!
                   * `H`ome
