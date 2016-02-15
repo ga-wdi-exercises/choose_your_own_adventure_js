@@ -2,10 +2,11 @@
 /*
 Each path of decisions is inside its own function.
 An array, paths, holds variables representing those functions / paths.
-gameOn() starts the game.  It runs a for loop that goes thru paths and calls a function for the path chosen according the number input from user
-  i.e. paths[i]
-the play again function asks the user if she wants to play again.  It gets run at the end of each path function.
-if user answers yes, gameOn() starts the game again.
+gameOn() starts the game.  It asks the user for a number. Then a for loop goes
+thru paths and calls a function for the path matching the number entered by the
+user.At the end of each path, the user is asked if she wants to play again.
+That gets done by the playAgain() function. If user answers yes, gameOn() starts
+the game again.
 */
 
 var paths = [null, snacks, bball, fball];
