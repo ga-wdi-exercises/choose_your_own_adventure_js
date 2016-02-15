@@ -38,9 +38,19 @@ if (start_number === "1") {
   //console.log('Helena');
   var helena_intro = prompt("You are Helena!\nYou are pretty awkward and you are desperately in love with Demetrius. Unfortunately, Demetrius has his sights set on Hermia. Hermia loves Lysander, but her father is forcing her to marry Demetrius. Oy!\nYou overhear Hermia and Lysander's plans to run away and elope. Do you:\n-Tell Demetrius of their impending elopement (T).\n-Or stay quiet (S)?");
     if (helena_intro === "T" || helena_intro === "t") {
-        var helena_tell = prompt("TELL DEMETRIUS\nGood choice. Demetrius goes after the pair of lovers, and you follow him into the forest. At first Demetrius still refuses to consider your love, but then a fairy enchants him and he loves you! However, the fairy also accidentally enchants Lysander and the two boys are fighting over your love. You are unaware that this is the working of fairies and you think they are mocking you. Furthermore, Hermia is mad at you for stealing Lysander.\nDo you run away (R) or fight back (F)?");
+        var helena_tell = prompt("TELL DEMETRIUS\nGood choice. Demetrius goes after the pair of lovers, and you follow him into the forest. At first Demetrius still refuses to consider your love, but then a fairy enchants him and he loves you!\nHowever, the fairy also accidentally enchants Lysander and the two boys are fighting over your love. You are unaware that this is the working of fairies and you think they are mocking you. Furthermore, Hermia is mad at you for stealing Lysander.\nDo you run away (R) or fight back (F)?");
+            if (helena_tell === "R" || helena_tell === "r") {
+                var helena_run = prompt("RUN AWAY\nThe woods are filled with vines and thickets, and it gets very dark. You become too weary to carry on and you fall asleep.\nHowever, you magically wake up in Demetrius' loving arms! Lysander has been disenchanted and loves Hermia again. The four of you return home, have a joint wedding, and live happily ever after. Congratulations!");
+            } else if (helena_tell === "F" || helena_tell === "f") {
+                var helena_fight = prompt("FIGHT BACK\nAfter a hilarious quarrel among the four lovers, you all become too weary and fall asleep.\nHowever, you magically wake up in Demetrius' loving arms! Lysander has been disenchanted and loves Hermia again. The four of you return home, have a joint wedding, and live happily ever after. Congratulations!");
+            }
     } else if (helena_intro === "S" || helena_intro === "s") {
         var helena_stay = prompt("STAY QUIET\nHermia and Lysander are caught by the police, and Hermia is forced to marry Demetrius. Do you want to change your previous answer (Y/N)?");
+            if (helena_stay === "Y" || helena_stay === "y") {
+                var helena_yes = prompt("Good choice. Demetrius goes after the pair of lovers, and you follow him into the forest. At first Demetrius still refuses to consider your love, but then a fairy enchants him and he loves you!\nHowever, the fairy also accidentally enchants Lysander and the two boys are fighting over your love. You are unaware that this is the working of fairies and you think they are mocking you. Furthermore, Hermia is mad at you for stealing Lysander.\nAfter a hilarious quarrel among the four lovers, you all become too weary and fall asleep. However, you magically wake up in Demetrius' loving arms! Lysander has been disenchanted and loves Hermia again.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!");
+        } else if (helena_stay === "N" || helena_stay === "n") {
+                var helena_no = prompt("You remain alone and sad for the rest of your life.");
+        }
     }
 
 //3->Lysander
