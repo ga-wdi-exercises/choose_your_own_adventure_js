@@ -2,10 +2,10 @@
 /*
 Each path of decisions is inside its own function.
 An array, paths, holds variables representing those functions / paths.
-gameOn() starts the game.  It asks the user for a number. Then a for loop goes
+play() starts the game.  It asks the user for a number. Then a for loop goes
 thru paths and calls a function for the path matching the number entered by the
 user.At the end of each path, the user is asked if she wants to play again.
-That gets done by the playAgain() function. If user answers yes, gameOn() starts
+That gets done by the playAgain() function. If user answers yes, play() starts
 the game again.
 */
 
