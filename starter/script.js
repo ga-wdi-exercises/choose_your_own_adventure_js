@@ -1,20 +1,26 @@
 
+/*
+Each path of decisions is inside its own function.
+An array, paths, holds variables representing those functions / paths.
+gameOn() starts the game.  It runs a for loop that goes thru paths and calls a function for the path chosen according the number input from user
+  i.e. paths[i]
+the play again function asks the user if she wants to play again.  It gets run at the end of each path function.
+if user answers yes, gameOn() starts the game again.
+*/
+
 var paths = [null, snacks, bball, fball];
-gameOn();
-function gameOn() {
-    alert("You're about to be born again, this time as a pro athlete...\n" +
-                    'Answer the following questions to fulfill your destiny...\n' +
-                    'Ready? Press Ok to start');
+play();
+
+function play() {
+  alert("You're about to be born again, this time as a pro athlete...\n" +
+        'Answer the following questions to fulfill your destiny...\n' +
+        'Ready? Press Ok to start');
   var intensity = parseInt(prompt('On a scale of 1 - 3, how intense are you in this life (3 = most intense)...?'));
   for (var i = 1; i < paths.length; i++) {
     if (i === intensity) {
       paths[i]();
     }
   }
-}
-
-function playAgain() {
-  
 }
 
 function fball() {
@@ -50,6 +56,7 @@ function fball() {
         }
     }
   }
+  playAgain();
 }
 
 function bball() {
@@ -89,7 +96,9 @@ function bball() {
       alert('You answered ' + daughter + '. I\'ll take it!');
     }
   }
+  playAgain();
 }
+
 function snacks() {
   var like = prompt('Ah, so you\'re the easy going type.  But still kind of competitve.  Do you like to snack tho? (y/n)');
   if (like == 'y') {
@@ -126,5 +135,17 @@ function snacks() {
         alert('You love wide, open fields.  You build a great baseball career as Bryce Harper');
       }
     }
+  }
+  playAgain();
+}
+
+function playAgain() {
+  var again = prompt('Excellent! Your desinty is in your hands...\n' +
+                    'Play again...? (y/n)');
+  if (again == 'y') {
+    play();
+  } else {
+    return alert('Thanks for playing!\n' +
+                 'Exiting game...');
   }
 }
