@@ -44,7 +44,7 @@ function afternoon() {
 
 function solveClient() {
   console.log("You turn your powers of observation up to 11 for approximately five seconds. From her bootlaces, perfume, and frayed lapel you deduce her husband has run off with the scullery maid. Do you tell her Now or String her along?");
-  var choice = prompt("Coose N or S").toUpperCase();
+  var choice = prompt("Choose N or S").toUpperCase();
   if (choice == "N") {
     console.log("You explain that her husband has been unfaithful for the past two years and has run off to America. She pays you with her diamond brooch. On her way out she flutters her hand at Dr. Watson while mouthing the words, “Telegraph me.” THE END");
   }
@@ -75,7 +75,7 @@ function mycroft() {
   var choice = prompt("Enter your guess");
   var counter = 0;
   while (choice != 18) {
-    console.log("No, no. Do try again.");
+    console.log("Do try again.");
     counter += 1;
     if (counter == 3) {
       console.log("Perhaps you should try guessing 18.");
