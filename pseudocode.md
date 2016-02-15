@@ -13,43 +13,59 @@ Using what you know about data types, variables, operators, conditional blocks, 
 # Midsummer Night's Dream
 
 * Good morrow, my fair adventurer. Please pick a number `1` through `4` (i.e. `1`, `2`, `3`, or `4`): **(1/2/3/4)**
-    * `1` You are Hermia. Insert description of character here. **(M/D/C/R)**
+    * `1`
+      * You are Hermia. You are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens that if you do not marry Demetrius (`M`), you must either face death (`D`) or become a nun (`N`). Lysander pleads that you run away with him and elope (`R`). What is your choice (`M`, `D`, `N`, `R`)?  **(M/D/N/R)**
           * `M`arry Demetrius
               * You are truly Daddy's little girl. You marry Demetrius, but you have an unhappy life. Do you want to change your previous answer? **(Y/N)**
                   * `Y`es.
+                      * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
                   * `N`o.
                       * You have a comfortable, but unhappy life. Lysander throws rocks at your window, but it's too late.
           * `D`eath
               * You have been reading too much Romeo and Juliet. You are put to death, and your father is very sad. Do you want to change your previous answer? **(Y/N)**
                   * `Y`es.
+                      * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
                   * `N`o.
                       * Okay, well unfortunately you are still dead then.
-          * `C`hastity
+          * `N`un
               *  Do you want to change your previous answer? **(Y/N)**
                   * `Y`es.
+                      * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
                   * `N`o.
                       * Have fun worshipping Artemis for the rest of your days.
           * `R`un away with Lysander
-              * Good choice. Insert plot here.
-    * `2` You are Helena. Insert description of character here. **(T/S)**
+              * Good choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Do you stay in the forest (`F`) or return home (`H`)? **(F/H)**
+                  * `F`orest
+                      * Lysander and you have a fairy-filled wedding and live in peace with nature for the rest of your days. Congratulations!
+                  * `H`ome
+                      * Now that Demetrius loves Helena, you are successfully able to convince your father to let you marry Lysander. Lysander and you have a beautiful wedding and live happily ever after. Congratulations!
+
+    * `2`
+      * You are Helena. Insert description of character here. **(T/S)**
           * `T`ell Demetrius
           * `S`tay quiet`
               * Hermia and Lysander are caught by the police, and Hermia is forced to marry Demetrius. Do you want to change your previous answer? **(Y/N)**
                   * `Y`es.
                   * `N`o.
                       * You remain alone for the rest of your life.
-    * `3` You are Lysander. Insert description of character here. **(E/D)**
+
+    * `3`
+      * You are Lysander. Insert description of character here. **(E/D)**
           * `E`lope with Hermia
           * `D`uel Demetrius
               * Do you want to change your previous answer? **(Y/N)**
                   * `Y`es.
                   * `N`o.
                       * Demetrius kills you in a duel. Ouch.
-    * `4` You are Demetrius. Insert description of character here. **(F/B)**
+
+    * `4`
+      * You are Demetrius. Insert description of character here. **(F/B)**
           * `F`ollow Hermia
           * `B`achelor
               * I forgot to mention that you are poor and that marrying into Hermia's family will bring you riches. Do you want to change your previous answer? **(Y/N)**
                   * `Y`es.
                   * `N`o.
-                      * You remain poor and alone for the rest of your days.
-    * `0` OR `< 4` Please pick either `1`, `2`, `3`, or `4`. **(Loops back to previous command)**
+                      * That annoying Helena follows you around, and you remain poor and alone for the rest of your days.
+
+    * `0` OR `< 4`
+      * Please pick either `1`, `2`, `3`, or `4`. **(Loops back to previous command)**
