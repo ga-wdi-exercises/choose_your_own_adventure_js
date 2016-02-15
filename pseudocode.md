@@ -71,13 +71,19 @@ Using what you know about data types, variables, operators, conditional blocks, 
                       * Demetrius kills you in a duel. Ouch.
 
     * `4`
-      * You are Demetrius. Insert description of character here. **(F/B)**
+      * You are Demetrius!\nYou are smart and attractive, but you have a horrible personality. You have somehow convinced Hermia's father for his daughter's hand in marriage, but she is in love with Lysander. You HATE Lysander.\nHermia's father has left her with little choice but to marry you, and you think she will concede. However, this annoying girl named Helena who likes to follow you around tells you that Lysander and Hermia have run away to elope. Do you:\n-Follow Hermia (F)?\n-Or Remain a Bachelor (B)? **(F/B)**
           * `F`ollow Hermia
+              * Good choice. You follow the pair of lovers into the forest, and it turns out that Helena has followed you and pleads for your love. You refuse.\nHowever, something strange happens while you are asleep and you suddenly are in love with Helena! BUT Lysander also loves Helena now too! Do you:\n-Serenade Helena (S)\n-Or Duel Lysander (D)? **(S/D)**
+                  * `S`erenade Helena
+                      * You try to convince Helena to choose you over Lysander, but she thinks you are mocking her, as neither of you loved her before.\nAfter a hilarious quarrel among the four lovers, you all become too weary and fall asleep. However, when you wake up, you are pleased to find Helena sleeping beside you and later learn that Lysander is in love with Hermia again. It turns out that this mishap was all of the work of fairies.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!
+                  * `D`uel Lysander
+                      * Lysander accepts your challenge, but as the two of you run off to find a good location, you suddenly become very tired and immediately fall asleep.\nWhen you wake up, you are pleased to find Helena sleeping beside you and later learn that Lysander is in love with Hermia again. It turns out that this mishap was all of the work of fairies.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!
           * `B`achelor
               * I forgot to mention that you are poor and that marrying into Hermia's family will bring you riches. Do you want to change your previous answer? **(Y/N)**
                   * `Y`es
+                      * Good choice. You follow the pair of lovers into the forest, and it turns out that Helena has followed you and pleads for your love. You refuse.\nHowever, something strange happens while you are asleep and you suddenly are in love with Helena! BUT Lysander also loves Helena now too!\nYou challenge Lysander to a duel. He accepts your challenge, but as the two of you run off to find a good location, you suddenly become very tired and immediately fall asleep.\nWhen you wake up, you are pleased to find Helena sleeping beside you and later learn that Lysander is in love with Hermia again. It turns out that this mishap was all of the work of fairies.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!
                   * `N`o
-                      * That annoying Helena follows you around, and you remain poor and alone for the rest of your days.
+                      * That annoying Helena still follows you around, and you remain poor and alone for the rest of your days.
 
     * `0` OR `< 4`
       * Please pick either `1`, `2`, `3`, or `4`. **(Loops back to previous command)**
