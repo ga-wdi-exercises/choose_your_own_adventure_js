@@ -1,0 +1,55 @@
+/*
+Use prompt() to prompt the participant
+prompt variables
+  intensity;
+split the adventures into functions.  each adventure is a function
+  dance()
+  sneakers()
+  snacks()
+use an array with function calls
+use a for loop to select the adventure
+  for loop selects the function to run
+  functions are held in an array
+
+You're about to be born again, this time as a pro athlete.
+Answer the following questions to fulfill your destiny...
+Ready? Press OK to start...
+
+On a scale of 1 - 3, how intense are you?
+  3 --> Dance
+    Do you like to dance? Y/N
+      if Y --> you are in the NFL.  Do you like to tackle people? Y/N
+        if Y --> Do you run really fast? Y/N
+          if N --> you're a lineman.  Were you born South or North of the Mason Dixon Line? South / North
+            You're ____
+          else Y --> you're a wide Reciever. Were you born South or North of the Mason Dixon Line? South / North
+            You're ____
+
+      else N --> you're a fighter.what year were you born?
+          < 1980 --> Do you like bees or just their honey? bees/ honey
+            bees --> you're muhammed ali
+            honey --> you're sugar ray leonard
+          > 1980 do you dance? Y / N
+          Y --> capoeira something something
+          N --> you're ronda rousey you're generations fighting sport is MMA
+
+  2 -->
+    Welcome to North Carolina! Wait. I thought I said WEST! You did, but here is where you get good.  And get stalked by apparel companies seeking endorsements. Do you go with Nike or Under Armor? (nike/ua)
+    UA --
+      Steph Curry. daughter or no?
+        daughter --> awesome
+        no daughter --> boring
+    Nike -- choose nike, choose college duke /wake
+      duke --> JJ Reddick
+
+
+ 1 --> Do you like snacks? y/n
+      Y --> do you eat small snacks all day? y/n
+          y --> do you love to hangout? y/n
+            y --> you're a softball player
+            n --> you're a bowler
+          n --> do you like the outdoors? y/n
+            y --> you're a golfer
+            n --> you're a baseball player
+      N -->
+*/
