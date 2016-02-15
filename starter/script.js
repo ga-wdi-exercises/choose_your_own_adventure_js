@@ -1,27 +1,20 @@
-function gameOn (x) {
-  var keepGoing = x;
-  var paths = [null, snacks, bball, fball];
-  var start = alert("You're about to be born again, this time as a pro athlete...\n" +
+
+var paths = [null, snacks, bball, fball];
+gameOn();
+function gameOn() {
+    alert("You're about to be born again, this time as a pro athlete...\n" +
                     'Answer the following questions to fulfill your destiny...\n' +
                     'Ready? Press Ok to start');
   var intensity = parseInt(prompt('On a scale of 1 - 3, how intense are you in this life (3 = most intense)...?'));
-
-  //thought this was a <concise alternative to if...else or switch statement
   for (var i = 1; i < paths.length; i++) {
     if (i === intensity) {
       paths[i]();
     }
   }
-
-keepGoing = prompt('Intrigued...? Your destiny is in your hands...\n' +
-                     'Play again? (y/n)');
-
-while (keepGoing == 'y'){
-    gameOn();
 }
 
-alert('That was fun, no? Thanks for playing!');
-    return;
+function playAgain() {
+  
 }
 
 function fball() {
@@ -135,18 +128,3 @@ function snacks() {
     }
   }
 }
-
-gameOn('y');
-/*
-function gameOn (x) {
-  if (x == 'y') {
-    for (var i = 0; i < paths.length; i++) {
-      if (i === intensity) {
-        paths[i]();
-      }
-    }
-  } else if (keepGoing == 'n') {
-    alert('that was fun, no? Thanks for playing!');
-  }
-}
-*/
