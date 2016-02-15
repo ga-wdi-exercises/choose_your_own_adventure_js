@@ -3,7 +3,7 @@ var start_number = prompt("Good morrow, my fair midsummer adventurer. Please pic
 
 //1->Hermia
 if (start_number === "1") {
-  var hermia_intro = prompt("You are Hermia!\nYou are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M).\n-Face Death (D).\n-Become a Nun (N).\nAfter you father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?");
+  var hermia_intro = prompt("You are Hermia!\nYou are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M)\n-Face Death (D)\n-Become a Nun (N)\nAfter you father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?");
     if (hermia_intro === "R" || hermia_intro === "r") { //RUN AWAY
         var hermia_run = prompt("RUN AWAY WITH LYSANDER.\nGood choice. Lysander and you enter a forest enchanted by fairy creatures. Helena and Demetrius have followed you into the forest as well. Lysander and Demetrius have been put under a fairy spell, and they are now both in love with Helena instead! After a hilarious quarrel, the fairies disenchant Lysander and he loves you again. Plus, Demetrius still loves Helena! Do you stay in the forest (F) or return home (H)?");
             if (hermia_run === "F" || hermia_run === "f") {
@@ -35,7 +35,6 @@ if (start_number === "1") {
     }
 //2->Helena
 } else if (start_number === "2") {
-  //console.log('Helena');
   var helena_intro = prompt("You are Helena!\nYou are pretty awkward and you are desperately in love with Demetrius. Unfortunately, Demetrius has his sights set on Hermia. Hermia loves Lysander, but her father is forcing her to marry Demetrius. Oy!\nYou overhear Hermia and Lysander's plans to run away and elope. Do you:\n-Tell Demetrius of their impending elopement (T).\n-Or stay quiet (S)?");
     if (helena_intro === "T" || helena_intro === "t") {
         var helena_tell = prompt("TELL DEMETRIUS\nGood choice. Demetrius goes after the pair of lovers, and you follow him into the forest. At first Demetrius still refuses to consider your love, but then a fairy enchants him and he loves you!\nHowever, the fairy also accidentally enchants Lysander and the two boys are fighting over your love. You are unaware that this is the working of fairies and you think they are mocking you. Furthermore, Hermia is mad at you for stealing Lysander.\nDo you run away (R) or fight back (F)?");
@@ -55,7 +54,23 @@ if (start_number === "1") {
 
 //3->Lysander
 } else if (start_number === "3") {
-  console.log('Lysander');
+  var lysander_intro = prompt("You are Lysander!\nYou are a romantic individual and you are deeply in love with Hermia. Unfortunately, her father is forcing her to marry Demetrius, your arch-enemy! Do you:\n-Elope with Hermia (E)\n-Or Duel Demetrius (D)?");
+    if (lysander_intro === "E" || lysander_intro === "e") {
+        var lysander_elope = prompt("ELOPE WITH HERMIA\nGood choice. Hermia and you run away into the woods together. Unbeknownst to you, Demetrius and Helena have followed you.\nHowever, upon entering the woods, something strange happens and you suddenly love Helena instead. Hermia is no longer of interest to you AND Demetrius loves Helena now too! Do you:\n-Serenade Helena (S)\n-Or Duel Demetrius (D)?");
+            if (lysander_elope === "S" || lysander_elope === "s") {
+                var lysander_serenade = prompt("SERENADE HELENA\nYou try to convince Helena to choose you over Demetrius, but she thinks you are mocking her, as neither of you loved her before.\nAfter a hilarious quarrel among the four lovers, you all become too weary and fall asleep. However, when you wake up, you are no longer in love with Helena and are pleased to find Hermia sleeping beside you. It turns out that this mishap was all of the work of fairies.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!");
+            } else if (lysander_elope === "D" || lysander_elope === "d") {
+                var lysander_duel_forest = prompt("DUEL DEMETRIUS\nDemetrius accepts your challenge, but as the two of you run off to find a good location, you suddenly become very tired and immediately fall asleep.\nWhen you wake up, you are no longer in love with Helena and are pleased to find Hermia sleeping beside you. It turns out that this mishap was all of the work of fairies.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!");
+            }
+    } else if (lysander_intro === "D" || lysander_intro === "d") {
+        var lysander_duel_intro = prompt("DUEL DEMETRIUS\nDemetrius is a skilled marksman and would most likely kill you in a duel. Do you want to change your previous answer (Y/N)?");
+            if (lysander_duel_intro === "Y" || lysander_duel_intro === "y") {
+                var lysander_yes = prompt("Good choice. Hermia and you run away into the woods together. Unbeknownst to you, Demetrius and Helena have followed you.\nHowever, upon entering the woods, something strange happens and you suddenly love Helena instead. Hermia is no longer of interest to you AND Demetrius loves Helena now too!\nYou challenge Demetrius to a duel. He accepts your challenge, but as the two of you run off to find a good location, you suddenly become very tired and immediately fall asleep.\nWhen you wake up, you are no longer in love with Helena and are pleased to find Hermia sleeping beside you. It turns out that this mishap was all of the work of fairies.\nThe four of you return home, have a joint wedding, and live happily ever after. Congratulations!");
+            } else if (lysander_duel_intro === "N" || lysander_duel_intro === "n") {
+                var lysander_no = prompt("Demetrius kills you in a duel. Ouch.");
+            }
+    }
+
 //4->Demetrius
 } else if (start_number === "4") {
   console.log('Demetrius');
