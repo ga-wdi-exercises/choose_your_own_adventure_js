@@ -1,0 +1,26 @@
+PseudoCode for ChooseYourOwnBodiceRipper:
+
+1.       Write out intro – console.log – setting.
+2.       Get user input: Are you a lass, a lad, or neither?
+a.       If you are a lass then here is your story. It goes like this. You have two suitors and a sick dad. Do you chose to stay with your father and forsake the Highwayman? Or do you leave with him, this is your life. Type Farmboy or Highwayman.
+                                                               i.      If Farmboy: he messes up. Has another lady. Confesses he loves sheep. You can decide to either A. Stick it out or B. run away.
+1.   	If A. stick it out: you end up miserable in suburbia.
+2.       If B. You end up with the highwayman. (V) see other path.
+                                                             ii.      If Highwayman you have sordid romance with highwayman. Then he asks if he can ravage you: You say yes or no.
+1.       Yes: you end up marrying him. Happy ending.
+2.       No. he ends up eating you and turning you into a zombie ending.
+b.      If you’re a lad you are doing this thing and then you have this woman and you either: A. fight or B. make love.
+                                                               i.      If you fight: you lose your woman but are badly hurt. The man you fought was a zombie. You will either turn, or be turned into a vampire by Veronica, the terrifying but irresistible temptress. Vampire or Zombie:
+1.       Vampire? Vampire ending.
+2.       Zombie? Zombie ending.
+                                                             ii.      If you make love, the man you should have fought catches you with your pants down and kills your gf. How many years do you spend mourning?
+1.       If the answer is <2 you “shake it off” and  blah blah blah ending.
+2.       if the answer is >2 you spend you become a windswept homless man pining for your lost love. Ending.
+c.       if you are “neither” you must be a nun. Are you?
+                                                               i.      If yes: nun ending.
+                                                             ii.      If no: you are father priest guy. Aren’t you? Y/N.
+1.       If yes:  too bad you are into beatings. Your victim bites you: How many times?
+a.       Bites = more than 2 times: your victim is a vampire and you go back to vampire ending.
+b.      Less than two times no : miserable in suburbia.
+2.       If no in you are a bro in towson. Right?
+a.       You have a miserable suburban ending.
