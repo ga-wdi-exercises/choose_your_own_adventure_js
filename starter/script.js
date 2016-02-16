@@ -13,7 +13,7 @@ while(response != "Q" && response != "q")
   var response = window.prompt("Where do you want to go?"
   + "\n Right to Tomorrowland (R)"
   + "\n Straight to Fantasyland (S)"
-  + "\n Left to Adventureland and Liberty Square (L)"
+  + "\n Left to Adventureland (L)"
   + "\n Go home (Q)");
 
   if(response == "R" || response == "r")
