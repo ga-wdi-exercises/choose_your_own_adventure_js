@@ -53,6 +53,42 @@ else if (thirdInput == "maze") {
 }
 else if (thirdInput == "237") {
   console.log("Ok, you picked 237")
-  console.log("Woah, there is some weirdness going on at this hotel.  Was that guy wearing a dog costume?  Well… I guess you can try anything once...")
+  console.log("Woah, there is some weirdness going on at this hotel.  Was that guy wearing a dog costume?  Well… I guess you should try anything once...")
 }
 buffer()
+
+
+
+
+
+
+console.log("Just out of curiosity, is this your first winter as caretaker here?")
+var fourthInput = prompt("Please enter 'yes' or 'no'")
+
+  while (fourthInput == "yes") {
+    console.log("I'm sorry to differ with you sir, but you are the caretaker. You've always been the caretaker. I should know sir. I've always been here.");
+    fourthInput;
+    break;
+  }
+
+
+
+
+
+console.log("please enter either a number of years or forever")
+
+
+
+
+
+
+console.log("So, on a scale of 1-10, how would you rate the time you spent as winter caretaker at the Overlook Hotel?")
+var lastInput = prompt("Please enter a number between 1 and 10.")
+
+if (lastInput > 7) {
+  console.log("Great! We can't wait to see you back next year!")
+}
+else if (lastInput > 4) {
+  console.log("...")
+}
+else console.log("...")
