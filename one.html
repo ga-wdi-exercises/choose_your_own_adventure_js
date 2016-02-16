@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Story</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="one.css" rel="stylesheet">
+      <link href="bootstrap.css" rel="stylesheet">
+    <script src="one.js"></script>
+    <script src="two.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+    <header class="row">
+      <div class="col-xs-offset-4 col-xs-4">
+    <h1>Story Time</h1>
+  </div>
+</header>
+
+<section class="row">
+  <div class="col-xs-12">
+  <img class="img-responsive center-block" src="https://www.discovermeteor.com/images/book.svg">
+</div>
+</section>
+
+<footer class="row">
+<div class="col-xs-4">
+<button id="good" type="button">GoodSide</button>
+<p id="goodside">The goodside is, you are amazing!</p>
+<img id="gs" src="http://vignette4.wikia.nocookie.net/goodluckcharlie/images/4/42/Smiley-face.jpg/revision/latest?cb=20111208212822">
+</div>
+<div class="col-xs-4">
+<button id="bad" type="button">BadSide</button>
+<p id="badside">The badSide is, you are unappealing!</p>
+<img id="bs" src="http://www.clipartbest.com/cliparts/RTA/Anj/RTAAnjAkc.png">
+</div><div class="col-xs-4">
+<button id="scary" type="button">ScarySide</button>
+<p id="scaryside">The scaryside is, everyone is weird! </p>
+<img id="ss" src="http://3.bp.blogspot.com/-lme1mYYz6CA/U2Oqv8J12cI/AAAAAAAAY-U/sMQ0vaH1LVY/s1600/Ghost-Face-Emoji.png">
+</div>
+</footer>
+
+</footer>
+
+</div>
+</div>
+<script>
+$(function(){
+
+    $("#goodside").hide();
+    $("#badside").hide();
+    $("#bs").hide();
+      $("#gs").hide();
+      $("#ss").hide();
+    $("#scaryside").hide();
+
+    $("#good").click(function(){
+        $("#goodside").show(400);
+        $("#gs").show(400);
+        });
+        $("#bad").click(function(){
+            $("#badside").show(400);
+            $("#bs").show(400);
+            });
+
+            $("#scary").click(function(){
+                $("#scaryside").show(400);
+                $("#ss").show(400);
+                });
+});
+
+</script>
+  </body>
+</html>
