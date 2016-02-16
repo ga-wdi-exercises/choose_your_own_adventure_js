@@ -44,45 +44,7 @@ while(response != "Q" && response != "q")
 
 window.alert("I'm sorry to hear you have to leave. Have a nice day!");
 
-//
-// theHub();
-//
-// function theHub()
-// {
-//   window.alert("Let's continue forward to the Hub! You can see Cinderella's castle in front of you and several spokes in different directions." + "\n"
-//   + "From here, you can go anywhere in the park!");
-//
-//   var response = window.prompt("Where do you want to go?"
-//   + "\n Right to Tomorrowland (R)"
-//   + "\n Straight to Fantasyland (S)"
-//   + "\n Left to Adventureland and Liberty Square (L)"
-//   + "\n Go home (Q)");
-//
-//   if(response == "R" || response == "r")
-//   {
-//     window.alert("You've chosen Tomorrowland, the land of the future that always was and never will be.");
-//     tomorrowland();
-//   }
-//   else if(response == "S" || response == "s")
-//   {
-//     window.alert("You've chosen Fantasyland. You pass through Cinderella's castle, where you can see a beautiful mosaic that tell's Cinderella's story.");
-//     fantasyland();
-//   }
-//   else if(response == "L" || response == "l")
-//   {
-//     window.alert("You've chosen Adventureland. You can hear drums beating in the distance.");
-//     adventureland();
-//   }
-//   else if(response == "Q" || response == "q")
-//   {
-//     window.alert("I'm sorry to hear you have to leave. Have a nice day!");
-//   }
-//   else
-//   {
-//     window.alert("I know the choice is hard, take your time.");
-//     theHub();
-//   }
-// } // end theHub
+/* Yarrr, here be functions */
 
 function tomorrowland()
 {
@@ -125,7 +87,6 @@ function tomorrowlandRides()
   else {
     {
       window.alert("It seems like you don't like these choices. Maybe you'd prefer to return to the Hub?")
-      // theHub();
     }
   }
 } // end tomorrowlandRides
@@ -185,7 +146,6 @@ function fantasylandRides()
   else {
     {
       window.alert("It seems like you don't like these choices. Maybe you'd prefer to return to the Hub?")
-      // theHub();
     }
   }
 } // end fantasylandRides
@@ -238,7 +198,6 @@ function adventurelandRides()
   else {
     {
       window.alert("It seems like you don't like these choices. Maybe you'd prefer to return to the Hub?")
-      // theHub();
     }
   }
 } // end adventurelandRides
