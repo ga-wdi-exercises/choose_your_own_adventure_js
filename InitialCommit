@@ -1,0 +1,112 @@
+var sport = prompt("Time to get coaching advice on a sport!");
+
+var WhichOne = prompt("Do you want to learn about tennis or quidditch? (T/Q)\n[T]ennis!\n[Q]uidditch!").toLowerCase;
+
+switch (WhichOne) {
+  case "t":
+  playTennis();
+  break;
+  case "q":
+  playQuidditch();
+  break;
+}
+
+function playTennis() {
+  alert("Awesome! You have chosen a great sport");
+  LeftRight();
+}
+function LeftRight() {
+  var Handedness = prompt("Do you play with your left or right hand? (L/R)\n[L]eft\n[R]ight").toLowerCase;
+}
+switch (Handedness) {
+  case "l":
+  alert("Sweet, that's a big advantage in tennis! I'm going to have to use unique methods though.");
+  Left-handed();
+  break;
+  case "r":
+  alert("Outstanding, I will use traditional methods.");
+  Right-handed();
+  break;
+
+  function Left-handed() {
+    var Strenghts = parseInt(prompt("Choose your strength: Forehand, Backhand, Serve, or Volley? (1/2/3/4)\n[1]Forehand.\n[2]Backhand.\n[3]Serve.\n[4]Volley"));
+    switch (Strengths) {
+      case 1:
+      alert("Nice! you will be hitting with topspin to pull a righty opponent off the court in no time!");
+      break;
+      case 2;
+      alert("A strong lefty backhand will will you any match if you can handle the opponents forehand");
+      break;
+      case 3;
+      alert("Great! Be sure to mix it up as often as possible to keep your opponent guessing");
+      break;
+      case 4; alert("Try a drop shot once in a while and aim for mid court");
+      break;
+
+      var Weaknesses = parseInt(prompt("Choose your weakness: Footwork, Return-Serve, Serve, or Other? (1/2/3/4)\n[1]Footwork.\n[2]Return-Serve.\n[3]Serve.\n[4]Other"));
+      switch (Weaknesses) {
+        case 1:
+        alert("This is essential in tennis so run and stretch a lot, and eat healthy");
+        break;
+        case 2;
+        alert("Split step right before opponent strikes the ball");
+        break;
+        case 3;
+        alert("Toss the ball high, stay low to the ground, and then spring up upon striking the ball");
+        break;
+        case 4; alert("Uh oh! you may need a different coach..");
+        break;
+    }
+  }
+    function Right-Handed() {
+      var Strenghts = parseInt(prompt("Choose your strength: Forehand, Backhand, Serve, or Volley? (1/2/3/4)\n[1]Forehand.\n[2]Backhand.\n[3]Serve.\n[4]Volley"));
+      switch (Strengths) {
+        case 1:
+        alert("Nice! you will be hitting with topspin in no time!");
+        break;
+        case 2;
+        alert("A strong righty backhand will will you any match if you can handle the opponents forehand");
+        break;
+        case 3;
+        alert("Great! Be sure to mix it up as often as possible to keep your opponent guessing");
+        break;
+        case 4; alert("Try a drop shot once in a while and aim for mid court");
+        break;
+      }
+
+      var Weaknesses = parseInt(prompt("Choose your weakness: Footwork, Return-Serve, Serve, or Other? (1/2/3/4)\n[1]Footwork.\n[2]Return-Serve.\n[3]Serve.\n[4]Other"));
+      switch (Weaknesses) {
+        case 1:
+        alert("This is essential in tennis so run and stretch a lot, and eat healthy");
+        break;
+        case 2;
+        alert("Split step right before opponent strikes the ball");
+        break;
+        case 3;
+        alert("Toss the ball high, stay low to the ground, and then spring up upon striking the ball");
+        break;
+        case 4; alert("Uh oh! you may need a different coach..");
+        break;
+    }
+  }
+  function PlayQuidditch() {
+    alert("Awesome, Quidditch is really fun.. so long ass you can stay on your broom..")
+    chooseCharacter();
+  }
+  function chooseCharacter () {
+    var character = prompt("Who is your favorite character? (H/R/He/M)\n[H]arry\n[R]on\n[He]rmone\n[M]alfoy").toLowerCase;
+  }
+  switch (character) {
+    case "h":
+    alert("Go get the golden snitch!");
+    break;
+    case "r":
+    alert("Guard the loops!");
+    break;
+    case "he":
+    alert("Go push Malfoy off his broom!");
+    break;
+    case "m":
+    alert("You Suck");
+    break;
+  }
