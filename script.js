@@ -72,8 +72,9 @@ if (hang == "R") {
         else if (roy >= 2000) {console.log("Roy is born too late for your sensibilities, kids these days... Game over before you reach 8th grade. Rick tries to cheer you up with some ice cream.")}
         else if (1900 < roy < 1989) {console.log("You score 249,976, good enough for 17th place! Rick scores higher... You had an ok day, I guess.")}
         else if (1989 < roy < 1999) {console.log("You score 249,976, good enough for 17th place! Rick scores higher... You had an ok day, I guess.")}
-
     }
+//Invalid Rick choice:
+    else {console.log("You have not selected a valid input... GAME OVER.")}
 }
 
 //Hang with Morty
@@ -89,7 +90,7 @@ else if (hang == "M") {
         else if (tv=="H") {console.log("Today's episode, the plumbus. Rick always wanted to know how those were made. " +userName+" had a chill day.")}
         else if (tv=="G") {console.log("Morty: Jeez, Rick, Gazorpazorpfield sure was pissed off today. " +userName+" had a chill day.")}
         }
-//go to Mall
+//go to Mall 
     else if (mortyChoice == "M") {
             var rick1 = prompt("Rick storms in and says: THERE'S NO TIME FOR THAT RIGHT NOW MORTY & "+userName.toUpperCase()+"! YOU GOTTA HELP ME RIGHT NOW. (H) Help Rick, (D) Don't help")
             var rick = rick1.toUpperCase()
@@ -98,6 +99,8 @@ else if (hang == "M") {
             //Don't help Rick
             else {console.log("Rick is left without help, Morty and "+userName+" never see Rick again. Game over.")}
         }
+//Invalid Morty choice
+    else {console.log("You have not selected a valid input... GAME OVER.")}
 }
 
 //Hang with Jerry, why would you do that?
@@ -106,3 +109,5 @@ else if (hang == "J") {
     var jerry = parseInt(jerry1)
     for (var i = 1; i <= jerry; i++) {console.log(userName + " helped Jerry apply to job "+i+". Status: DENIED.")}
 }
+
+else {console.log("You have not selected a valid input... GAME OVER.")}
