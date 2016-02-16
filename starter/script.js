@@ -116,7 +116,11 @@ if((fairyDust === 'p') || (fairyDust === 'P')){
     alert("You didn't make a decision soon enough and could not acquire the fairy dust. \nHowever, The Fairy Queen does give you a map to navigate Fiery Cove, for the princesses dress. \nAll the fiaries disappear with the sunrise.");
 };
 
+/*At this point, it would be benificial to figure out how to turn some of the repetitive
+options into a function that I can just call. */
+
                     //All at Firey Cove with Dragons.
+
 //You are scared as you walk amongst dozens of sleeping Dragons.
 //Choose: Change your mind and exit as quickly and stealthily as possible.
       //At the end of the Cove is a watery OASIS
