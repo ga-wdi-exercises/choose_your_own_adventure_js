@@ -3,23 +3,27 @@
 //Goal is to get all the makeup, hair, and clothing neccessities for the Princess. And bring
 // them back so that she can go to THE red carpet event.
 
+//Items to get:
 //Elf workers gift = heels/shoes
 //Unicorn Rainbow throwup = lip sticks
 //Medusa hair = necklace
 //Dragon scales = dress
 //Fairy dust = shimmer and highlights
-//Mermaid hair = extentions or weave
-//Phoenix ashes = smokey eyes
+//Mermaid hair = extentions or weave//Phoenix ashes = smokey eyes
 
+//First I need something to hold items: a dictionary/key:value pair.
+var backPack = {'Unicorn Rainbow Lipstick':0, 'Mermaid Weave':0, 'Dragon Scale Dress': 0,
+  'Medusa necklace':0, 'Stilletoes by Elf': 0, 'Mermaid Weave': 0, 'Fairy Face Shimmer': 0}
 
+//The story begins.
+alert("The Millinnial Princess Pink Apple Everly Reignbeau aka Princess Pear of MacEphora Lusha Brown Land is getting ready for her first Golden Carpet event.");
+alert("She has summoned you to her chambers.");
 
-//Print to screen: The Millinnial Princess Pink Apply Everly Reignbeau aka Princess Pear of Mac'Ephora Lusha Brown Land is getting ready for
-//her first Golden Carpet event.
-//She has summoned you to her chambers. What is your name great warrior?
-//User enters name.
-//Princess Oh 'Users Name', all the things I have are so common, the other Princesses will
-//surely have the same thing on. I need you to find me the rarest of the rare things that
-//will make my beauty stand out above all the others. Will you help.
+//Get name from user
+var userName = prompt("Princess Pear: 'What is your name great warrior?'");
+
+//Princess Pear's Mission
+alert("Princess Pear: 'Oh," + " "+ userName + " " + "all the things I have are so common, the other Princesses will surely have the same thing on. I need you to find me the rarest of the rare things that will make my beauty stand out above all the others. Will you help?'");
 //(y)es, gladly, were do I start?,
       //First go to the elves in the basement, I hear they make shoes.
 //(N)o, unless you fill my pockets with gold,
@@ -33,7 +37,7 @@
 //They are tired and cannot take on anymore orders. The princesses from around the world
 //Trapped them here. However, if he frees them, they will make one last pair for Princess Pear
 //Choose : (y)es of course,
-      //Thank you, thank you. *Gain shoes* Elves tell user about Yum Yum Forest and Unicorns
+      //Thank you, thank you. *Gain Stilletoes by Elf* Elves tell user about Yum Yum Forest and Unicorns
             //Spots Unicorn and unicorn gets scared and throws up Rainbows.
             //Offers to give (R)ainbow lipstick in exchange for users lunch.
             //Choose: (y)es and trade *Gain Unicorn Rainbow Lipstick*
@@ -108,4 +112,4 @@
 //User empties scachel.
 //IF you have 6-7 items = Glory and the Princess hand in marriage.
 //IF you have 3-5 items = Land to grow a family and no more missions
-//IF you have 2 or less = Banished back to Medusa's layer. 
+//IF you have 2 or less = Banished back to Medusa's layer.
