@@ -1,0 +1,43 @@
+@font-face {
+  font-family: terminal;
+  src: url('FZero.ttf');
+}
+
+* {
+    font-family: terminal;
+    font-size: 1em;
+}
+
+.output {
+  margin-left: 35px;
+}
+
+p {
+  margin: 0px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.input {
+  display: flex;
+}
+
+.input p {
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  height: 28px;
+  padding: 0px;
+  width: 100%;
+  border: 0px;
+}
