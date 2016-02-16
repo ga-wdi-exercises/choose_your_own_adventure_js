@@ -15,7 +15,8 @@ function theHub()
   var response = window.prompt("Where do you want to go?"
   + "\n Right to Tomorrowland (R)"
   + "\n Straight to Fantasyland (S)"
-  + "\n Left to Adventureland and Liberty Square (L)");
+  + "\n Left to Adventureland and Liberty Square (L)"
+  + "\n Go home (Q)");
 
   if(response == "R" || response == "r")
   {
@@ -31,6 +32,10 @@ function theHub()
   {
     window.alert("You've chosen Adventureland. You can hear drums beating in the distance.");
     adventureland();
+  }
+  else if(response == "Q" || response == "q")
+  {
+    window.alert("I'm sorry to hear you have to leave. Have a nice day!");
   }
   else
   {
