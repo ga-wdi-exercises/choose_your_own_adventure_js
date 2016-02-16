@@ -16,10 +16,11 @@ var choice = prompt("NW, SW, NE, SE").toString();.toUpperCase(); {// change inpu
       if (roomMateOrUber == "R");{
       console.log("So you miss your college days, dorm rooms, roommates, and drama?\
        Your first roommate is great and pay his rent on time but the secnd one loses \
-       her job and can't make the rent. Do you kick her out so you can find a new roommate \
-       or make her sleep on the couch and do AirBnB in her old room?")
+       her job and can't make the rent.")
       };
-        var KickOrAirbnb = prompt("Type 'K' to Kick her out or 'A' for AirBnB").toUpperCase(); { // make user choose btw Kick friend out or AirBnB
+        var KickOrAirbnb = prompt("Do you kick her out so you can find a new roommate \
+        or make her sleep on the couch and do AirBnB in her old room? \
+        Type 'K' to Kick her out or 'A' for AirBnB").toUpperCase(); { // make user choose btw Kick friend out or AirBnB
 
           if (KickOrAirbnb == "K"); { // display the info if user chooses to kick friend out
           console.log("Reasonable choice. Everyone needs to pay their own way, \
@@ -42,9 +43,9 @@ var choice = prompt("NW, SW, NE, SE").toString();.toUpperCase(); {// change inpu
       };
     else if (roomMateOrUber == "U") { // display if user chooses to do Uber
       console.log("Uber is great way to make money on your time with your car. \
-      Uber black pays more but uber x has fewer rules. Do you decide on uber X or uber black? **(X/B)**");
+      Uber black pays more but uber x has fewer rules.");
 
-        var UberXOrBlack = prompt("Type'X' for UberX or 'B' for Uber-Black").toString();.toUpperCase(); { // decide if I want to keep using tostring or restrict user answer to only the 2 options
+        var UberXOrBlack = prompt("Do you decide on uber X or uber black? Type'X' for UberX or 'B' for Uber-Black").toString();.toUpperCase(); { // decide if I want to keep using tostring or restrict user answer to only the 2 options
           if (UberXOrBlack == "X"); {
             console.log("on uber x you must work 5 hours a day 7 days a week to come up with the rent. \
             You now have no social life outside of uber and your internship")
@@ -58,9 +59,18 @@ var choice = prompt("NW, SW, NE, SE").toString();.toUpperCase(); {// change inpu
 
           else {
             return UberXOrBlack; // write a code to send user back to var Uber-Black
-          }
-        }
-    }
-  else if (choice == SW) {
-    console.log("");
+          };
+        };
+    };
+  else if (choice == "SW") {
+    console.log("Very Resonable choice. In fact it is so reasonable that 50,000 people just like you made the same choice \
+    and Southwest becomes the the part of the city with the most rapidly increasing rents.  \
+    You decide to sign a 5 year lease \to lock-in a rent you can afford.  You better love this internship and stay in DC for a while \
+     because with the $5,000 deposit you can't afford to move again any time soon")
+  };
+
+  else if (choice == "NE") {
+    console.log("Northeast is a wise choice. Lots of up and coming nieghborhoods and your new place is in walking distance to your internship. \
+    You no longer use your car on a regular basis.  Do you sell your car or keep it?");
+    var sellOrKeep = prompt("Do you sell or keep your car? Type 'S' to sell it or 'K' to keep it")
   }
