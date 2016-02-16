@@ -24,7 +24,8 @@ function theHub()
   }
   else if(response == "S" || response == "s")
   {
-    console.log("S path");
+    window.alert("You've chosen Fantasyland. You pass through Cinderella's castle, where you can see a beautiful mosaic that tell's Cinderella's story.");
+    fantasyland();
   }
   else if(response == "L" || response == "l")
   {
@@ -96,3 +97,68 @@ function endOfTomorrowlandRide()
     fantasyland();
   }
 } // end endOfTomorrowlandRide
+
+function fantasyland()
+{
+  window.alert("Welcome to Fantasyland! Where all your dreams come true!");
+  fantasylandRides();
+} // end fantasyland
+
+function fantasylandRides()
+{
+  var response = window.prompt("What kind of ride do you want to go on?"
+  + "\n A thrill ride (T)"
+  + "\n Something funny (F)"
+  + "\n A nostalgic classic (N)"
+  + "\n Something that will cause pain and regret (P)");
+
+  if(response == "T" || response == "t")
+  {
+    window.alert("Thrills huh? Let's go on Seven Dwarves Mine Train! The cars sway as you ride it, which is pretty cool.");
+    window.alert("WHEEEEEEEEEEEEEeeeeeeee!!!");
+    endOfFantasylandRides();
+  }
+  else if(response == "F" || response == "f")
+  {
+    window.alert("Laughs? You're going to love The Many Adventures of Winnie the Pooh! I love when the car bounces along with Tigger!");
+    window.alert("Bouncy bouncy bouncy!")
+    endOfFantasylandRides();
+  }
+  else if(response == "N" || response == "n")
+  {
+    window.alert("A classic. Good choice! Let's head over to Dumbo the Flying Elephant!");
+    window.alert("When I see an elephant fly...");
+    endOfFantasylandRides();
+  }
+  else if(response == "P" || response == "p")
+  {
+    window.alert("Really? Pain? You're going to regret this...But let's head over to it's a small world!");
+    window.alert("It's a small world after all. It's a small world after all. It's a small world after all. It's a small small world.");
+    endOfFantasylandRides();
+  }
+  else {
+    {
+      window.alert("It seems like you don't like these choices. Maybe you'd prefer to return to the Hub?")
+      theHub();
+    }
+  }
+} // end fantasylandRides
+
+function endOfFantasylandRides()
+{
+  var response = window.prompt("That was fun! Do you want to go on another ride? (Y for yes)")
+  if(response == "Y" || response == "y")
+  {
+    fantasylandRides();
+  }
+  else
+  {
+    window.alert("Ok! Let's move on to Adventureland!");
+    adventureland();
+  }
+} // end endOfFantasylandRides
+
+function adventureland()
+{
+  
+}
