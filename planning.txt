@@ -30,17 +30,8 @@ Left - towards adventureland/liberty square
       Another ride or goto adventureland
   Left - Adventureland
     Laughs - Jungle Cruise
-      Another ride or goto frontierland
+      Another ride or goto liberty square
     Nostalgia - Enchanted Tiki Room
-      Another ride or goto frontierland
+      Another ride or goto liberty square
     Thrills - Pirates of the Caribbean
-      Another ride or goto frontierland
-
-      Frontierland
-        Laughs - Country Bear Jamboree
-          Another ride or goto the hub
-        Thrills
-          Big Thunder Mountain
-            Another ride or goto the hub
-          Splash Mountain
-            Another ride or goto the hub
+      Another ride or goto liberty square
