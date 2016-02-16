@@ -22,22 +22,22 @@ alert("The Millinnial Princess Pink Apple Everly Reignbeau \naka Princess PEAR o
 var userName = prompt("Princess Pear: 'What is your name great warrior?'" , "Type Name.");
 
 //Princess Pear's Mission
+//If I console.log(firstReply); I do get whatever I put in. So the error is in the loop.
 alert("Princess PEAR: \n'Oh," + " "+ userName + " " + "all the things I have are so common, the other Princesses will surely have the same thing on. I need you to find me the rarest of the rare things that will make my beauty stand out above all the others. \n\nWill you help?'");
 var firstReply = prompt("Will you help the princess? \n\nType 'Y' for 'Yes, gladly, where do I start' \nOR 'N' for 'No, unless you fill my pockets with gold' \nOR 'B' for 'But, your beauty outshines the others, you could wear a trashbag.'");
 
 //How will user began journey?
-while(firstReply === " "){
+while(firstReply === ""){
   if ((firstReply === 'y') || (firstReply === 'Y')){
     alert("Oh, thank you, " + " "+ userName + " " + "you are as wonderful as they say you are! \n\nYou must first go to the elves in the basement, I hear they make the finest shoes.");
   }else if ((firstReply === 'n') || (firstReply === 'N')) {
       alert("Fine, " + " "+ userName + ", " + "you heathenous scoundrel! I'll pay. \n\nNow go to the elves in the basement, I hear they make the finest shoes. ");
   }else if ((firstReply === 'b') || (firstReply === "B")) {
       alert("Gross! " + " "+ userName + " " + "I would rather die! \n\nPlease just go to the elves in the basement, I hear they make the finest shoes.");
-  }else {
-      firstReply = " "
-      var firstReply = ("What did you say," + " "+ userName + ", " + "Speak up.");
-  }
-} //Loop is not working!!! :-(
+  }else{
+      var firstReply = prompt("What did you say," + " "+ userName + ", " + "Speak up.");
+  };
+}//Loop is not working!!! :-(
 /*Researched how I might fix this. Stackoverflow suggestion was to check if value is truthy.
 You can just check if the variable has a truthy value or not. That means
 
