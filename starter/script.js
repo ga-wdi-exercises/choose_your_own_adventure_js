@@ -38,6 +38,21 @@ while(firstReply === " "){
       var firstReply = ("What did you say," + " "+ userName + ", " + "Speak up.");
   }
 } //Loop is not working!!! :-(
+/*Researched how I might fix this. Stackoverflow suggestion was to check if value is truthy.
+You can just check if the variable has a truthy value or not. That means
+
+if( value ) {
+}
+will evaluate to true if value is not:
+
+null
+undefined
+NaN
+empty string ("")
+0
+false
+
+Lets see if this helps.*/
 
 
 //Elves in the basement
@@ -56,7 +71,7 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
   backPack['Stilletoes by ELF'] = 1
 
   //Next destination is Yum Yum Forest
-  alert("You arrive at Yum Yum Forrest. Suddenly you spot a dashing black unicorn with a dazzling blue hued horn. \nThe Unicorn sees you, and in shock throws up rainbows.");
+  alert("You arrive at Yum Yum Forrest. Suddenly you spot a dashing black unicorn with a dazzling blue hued horn. \nThe Unicorn sees you, and in shock, throws up rainbows.");
   alert("The Unicorn:'Please don't kill me. Here take this rainbow lipstick instead, I'm sure a pretty lady would love it. \n\n The Unicorn offers you his upchuck.");
   var freeUnicorn = prompt("Choose: 'Y' for 'Yes, Princess PEAR would love this. \n OR 'N' for 'No' and try to capture the unicorn to sell its horn and steal the lipstick.");
 
@@ -139,6 +154,6 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
 //When you arrive.
 //She asks you what you brought.
 //User empties scachel.
-//IF you have 6-7 items = Glory and the Princess hand in marriage.
+//IF you have 6-7 items = Glory and the Princess' hand in marriage.
 //IF you have 3-5 items = Land to grow a family and no more missions
 //IF you have 2 or less = Banished back to Medusa's layer.
