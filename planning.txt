@@ -1,0 +1,46 @@
+Walk down Main Street
+
+Enter the Hub
+
+Right - Tomorrowland
+  Thrills - Space mountain
+    Another ride or goto fantasyland
+  Laughs - Monsters Laugh Floor
+    Another ride or goto fantasyland
+  Nostalgia - Carousel of Progress
+    Another ride or goto fantasyland
+  Pain - Stitches Great Escape
+    Another ride or goto fantasyland
+
+Straight - through the castle to Fantasyland
+  Thrills - Seven Dwarves Mine Train
+    Another ride or goto liberty square
+  Laughs - Winnie the Pooh
+    Another ride or goto liberty square
+  Nostalgia - Dumbo's Flying Elephants
+    Another ride or goto liberty square
+  Pain - It's a small world
+    Another ride or goto liberty square
+
+Left - towards adventureland/liberty square
+  Right - Liberty Square
+    Fun - Haunted Mansion
+      Another ride or goto adventureland
+    Nap - Hall of Presidents
+      Another ride or goto adventureland
+  Left - Adventureland
+    Laughs - Jungle Cruise
+      Another ride or goto frontierland
+    Nostalgia - Enchanted Tiki Room
+      Another ride or goto frontierland
+    Thrills - Pirates of the Caribbean
+      Another ride or goto frontierland
+
+      Frontierland
+        Laughs - Country Bear Jamboree
+          Another ride or goto the hub
+        Thrills
+          Big Thunder Mountain
+            Another ride or goto the hub
+          Splash Mountain
+            Another ride or goto the hub
