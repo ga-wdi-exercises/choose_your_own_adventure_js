@@ -1,0 +1,34 @@
+Congratulations!  You've been beamed into a Hardy Boys mystery.  Choose a character.
+  -Frank
+  -Joe
+      Class at Bayport High has just let out and you receive an urgent message from your dad.  A rare moonstone  shipped on a freighter just arriving from India has disappeared.  Where do you want to go?
+        -Home (to meet with your father)
+            You catch sight of a suspicious character eavesdropping in the bushes.  What do you do?
+              -Chase
+                  The man sees you and gets away!  You return home, where your dad gives you the details of the theft.  It is a complex smuggling operation, and because all the trails are cold, there is no clear next step.  Shucks!
+              -Ignore him and plant false information when you meet with dad.
+                  Great thinking, sleuth!  Dad outlines a false plan to arrange a meeting with the ship's crew.  The police close in on the warehouse and intercept the theif on his way in.  The moonstone is recovered!  How do you want to celebrate?
+                    -Beach Boys dance party at Callie's house.  Wohoo!
+                    -Call Chet, Tony, Biff, Callie, and Iola and meet up at the Silver Diner.  Burgers and shakes!
+
+        -Police Station (to meet with Chief Collig)
+            You catch sight of a suspicious character sitting in a parked car in front of the station.  When you see him, he drives away.  What do you do?
+              -Head into the station and report
+                  Chief Collig issues a warning over the radio and informs the police down at the wharf.  The driver arrives at the wharf and is arrested, but he doesn't have the moonstone.  Darn!
+              -Hop on your motorcycles and pursue
+                  The car drives to the warehouse next to the wharf and the driver goes inside.  What next?
+                    -enter the warehouse
+                      It's dark inside.  The next thing you know, you are knocked out, gagged, and tied up.  Better luck next time, gumshoe!
+                    -wait for police reinforcements and then enter
+                      The chief arrives with backup and they enter the warehouse.  They arrest an entire band of smugglers and recover the moonstone.  How do you want to celebrate?
+                          -Beach Boys dance party at Callie's house.  Wohoo!
+                          -Call Chet, Tony, Biff, Callie, and Iola and meet up at the Silver Diner.
+
+        -The wharf to investigate the freighter
+            You catch sight of a suspicious character watching you who immediately heads toward an adjacent warehouse. What do you do?
+              -Chase.
+                  You tackle and subdue him.  The missing gem stone is in his pocket. Nice work!  How do you want to celebrate?
+                      -Beach Boys dance party at Callie's house.  Wohoo!
+                      -Call Chet, Tony, Biff, Callie, and Iola and meet up at the Silver Diner.  Burgers and shakes!
+              -Head to the freighter to inform the crew of suspicious activity on shore.
+                  You head up the gangplank and enter the bridge.  It appears abandoned, but a split second later, the lights go out and you are subdued by several stevedores.  You are tied up and thrown into a bale of jute in the cargo area.  Better luck next time, gumshoe!
