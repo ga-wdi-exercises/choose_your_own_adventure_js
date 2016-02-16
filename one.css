@@ -1,0 +1,16 @@
+*{
+  
+  font-family: sans-serif;
+  color: #428bca;
+}
+header{
+  text-align: center;
+}
+footer{
+  text-align: center;
+  margin-top: 20px;
+}
+img{
+  max-width: 300px;
+  max-height: 300px;
+}
