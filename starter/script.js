@@ -79,5 +79,5 @@ if (parseInt(team) === 1) {
     };
   };
 } else {
-  console.log("That was not a valid answer.")
+  alert("That was not a valid answer.")
 }
