@@ -42,7 +42,6 @@ if ((firstReply === 'y') || (firstReply === 'Y')){
 };
 
 
-
 //Elves in the basement
 alert("You arrive in the deepest darkest parts of the castles basement. \nYou reach a door the says Elf Made, a very popular brand in the kingdom.");
 alert("You open the door and see thousands of elves working hard, making shoes. \nYou clear your throat and ask for the finest pair of shoes for Princess PEAR.");
@@ -50,7 +49,9 @@ alert("One elf steps forward and says: 'We are tired and cannot take on anymore 
 
 //Will you help Elves?
 var helpElves = prompt("Will you help the elves? \nType 'Y' for 'Yes, of course. \nOR 'N' for No, and choose to kill all but one, who you will force to make the shoes ");
-
+while(helpElves === ""){
+  var helpElves = prompt("What say you, sir?");
+};
 //Paths based on answers to elves
 if ((helpElves === 'y') || (helpElves === 'Y')){
   alert("The elves: 'Thank you, Thank you.' You have saved the elves. \nThe elves quickly make a magical translucent 6 inch stilletoe that takes on the color of garments around it.");
@@ -71,18 +72,18 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
         alert("Unicorn kicks you with front hooves, knocking you out, and burries lipstick so it can't be used.");
         alert("You wake to shimmering Fairies hovering above you. It is a party. They invite you to party with them.");
       }
-}else if ((helpElves === 'n') || (helpElves === 'N')) {
-  alert("Horrible chose," + " "+ userNamer +". " + " You have angered all the elves with your evil plan. \nThey band together, create a portal and fling you into it.");
+}else{
+  alert("Horrible choice," + " "+ userNamer +". " + " You should have said yes. You have angered all the elves with your evil plan. \nThey band together, create a portal and fling you into it.");
   alert("You awake to a lavishly designed candle lit bedroom. \nNervously, you race to the nearest door, open it, but find a deep chamber fill with stone statues of men.");
   alert("You are in MEDUSA's Lair!!!, sucks for you. \n\nYou are quick on your toes, and blow out the candles as you hear foot steps approaching.");
   alert("The light from the hall illuminates a snaked haired lady. She is exhales in annoyance at the dark room and heads for the nearest candle to light.");
   var fightMedusa = prompt("You quickly blow out her flame. What will you do next? \nChoose: 'S' for 'Sneak away before she catches you' \nOR 'U' for 'Use your cunning ways to seduce her, have one night stand, steal Medusa Hair for a necklace and sneak out before she wakes.'");
 
   //Paths to Medusa choice
-  if ((fightMedusa === 'y') || (fightMedusa === 'Y')){
+  if ((fightMedusa === 's') || (fightMedusa === 'S')){
     alert("You quietly sneak past medusa, forfeiting any possible items you could get from her. \nBut you are safe. ");
     alert("You find yourself safe and sound outside of Medusa's lair and after a time, you come upon a party of Fairies.");
-  }else if ((fightMedusa === 'n') || (fightMedusa === 'N')){
+  }else if ((fightMedusa === 'u') || (fightMedusa === 'U')){
     alert("Some hot R-rated stuff happens and relaxing cuddling finishes off the night. While Medusa is sleeping, you rip out a snake strand and dash out of her lair.");
     alert("You collect *Medusa necklace* for Princess PEAR.");
     backPack['Medusa necklace'] = 1
@@ -92,15 +93,28 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
 
 
 
-                      //All at Fairies
-//Fairies are sweet and loving, healing users wounds and offering tea and cookies.
-//User eats and parties with them all night and the Fairy king makes user honorary guest.
-//You notice all their meals appear with fairy dust which would be nice for Princess Pear
-//Choose: (A)sk for a bit for the princess *Gains Fairy Face Shimmer*
-      //The Fairy King is pleased and tells you the secret of Dragon scales. You travel
-      //Firey cove.
-//OR: Get the frairies (d)runk and steal it. *Gains Fairy Face Shimmer*
-      //The king discovers your deed as you are leaving and curses you to Firey Cove.
+                      //All paths lead to Fairies
+alert("The Fairies are sweet and loving, healing your wounds and offering you tea and cookies.");
+alert("The Fairy Queen makes you the honorary guest. You eat and party with the Fairies all night long.")
+alert("You notice all the faireies meals appear out of thin air with a little fairy dust. \nYou think to yourself that this dust would be nice for Princess PEAR");
+
+//Get answer to Fairy dust problem.
+var fairyDust = prompt("How do you get some fairy dust? Choose: 'P' for 'Politely ask for a bit of dust for your princess,  \nOR 'G' for 'Get the frairies drunk and steal it. '");
+while(fairyDust === ""){
+  var fairyDust = prompt("Hurry," + " " +userName + " " + "you must choose before sunrise!");
+
+//Go down next path based on answer
+if((fairyDust === 'p') || (fairyDust === 'P')){
+    alert("The Fairy Queen is pleased and gives you a small pounch of *Fairy Face Shimmer*.");
+    backPack['Fairy Face Shimmer'] = 1;
+    alert("She also tells you the secrets of the Fiery Cove and how dragon scales make for great garments and armor.");
+}else if((fairyDust === 'g') || (fairyDust === 'G')){
+    alert("You swipe some fairy dust from a drunk fairy and make for your exit.");
+    backPack['Fairy Face Shimmer'] = 1;
+    alert("The Fairy Queen discovers your deed as you are sneaking away and curses you to the dreadful Firey Cove. Firey Cove is filled with dozens of dragons!!!");
+}else{
+    alert("You didn't make a decision soon enough and could not acquire the fairy dust. \nHowever, The Fairy Queen does give you a map to navigate Fiery Cove, for the princesses dress. \nAll the fiaries disappear with the sunrise.");
+};
 
                     //All at Firey Cove with Dragons.
 //You are scared as you walk amongst dozens of sleeping Dragons.
