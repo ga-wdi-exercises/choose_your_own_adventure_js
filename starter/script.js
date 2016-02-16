@@ -29,7 +29,8 @@ function theHub()
   }
   else if(response == "L" || response == "l")
   {
-    console.log("L path");
+    window.alert("You've chosen Adventureland. You can hear drums beating in the distance.");
+    adventureland();
   }
   else
   {
@@ -160,5 +161,53 @@ function endOfFantasylandRides()
 
 function adventureland()
 {
-  
-}
+  window.alert("Welcome to Adventureland! You feel like an explorer as you pass by the ancient tikis that line the path.");
+  adventurelandRides();
+} // end adventurelandRides
+
+function adventurelandRides()
+{
+  var response = window.prompt("What kind of ride do you want to go on?"
+  + "\n A thrill ride (T)"
+  + "\n Something funny (F)"
+  + "\n A nostalgic classic (N)");
+
+  if(response == "T" || response == "t")
+  {
+    window.alert("Thrills huh? Let's go on Pirates of the Caribbean! Remember, dead men tell no tales!");
+    window.alert("Yoho yoho a pirate's life for me!");
+    //endOfFantasylandRides();
+  }
+  else if(response == "F" || response == "f")
+  {
+    window.alert("Laughs? You're going to love the world famous Jungle Cruise!");
+    window.alert("How do you tell the difference between the male and female Zebras? The males have black and white stripes and the females have white and black stripes.");
+    //endOfFantasylandRides();
+  }
+  else if(response == "N" || response == "n")
+  {
+    window.alert("A classic. Good choice! Let's head over to the Enchanted Tiki Room!");
+    window.alert("In the tiki tiki tiki room, where the birds sing words and the flowers croon!");
+    //endOfFantasylandRides();
+  }
+  else {
+    {
+      window.alert("It seems like you don't like these choices. Maybe you'd prefer to return to the Hub?")
+      theHub();
+    }
+  }
+} // end adventurelandRides
+
+function endOfAdventurelandRides()
+{
+  var response = window.prompt("That was fun! Do you want to go on another ride? (Y for yes)")
+  if(response == "Y" || response == "y")
+  {
+    adventurelandRides();
+  }
+  else
+  {
+    window.alert("Ok! Let's move on to Fantasyland!");
+    fantasyland();
+  }
+} // end endOfAdventurelandRides
