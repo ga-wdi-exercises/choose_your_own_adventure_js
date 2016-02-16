@@ -73,7 +73,13 @@ if (start_number === "1") {
 
 //4->Demetrius
 } else if (start_number === "4") {
-  console.log('Demetrius');
+  var demetrius_intro = prompt("You are Demetrius!\nYou are smart and attractive, but you have a horrible personality. You have somehow convinced Hermia's father for his daughter's hand in marriage, but she is in love with Lysander. You HATE Lysander.\nHermia's father has left her with little choice but to marry you, and you think she will concede. However, this annoying girl named Helena who likes to follow you around tells you that Lysander and Hermia have run away to elope. Do you:\n-Follow Hermia (F)?\n-Or Remain a Bachelor (B)?");
+    if (demetrius_intro === "F" || demetrius_intro === "f") {
+        var demetrius_follow = prompt("FOLLOW HERMIA\nGood choice. You follow the pair of lovers into the forest, and it turns out that Helena has followed you and pleads for your love. You refuse.\nHowever, something strange happens while you are asleep and you suddenly are in love with Helena! BUT Lysander also loves Helena now too! Do you:\n-Serenade Helena (S)\n-Or Duel Lysander (D)?");
+    } else if (demetrius_intro === "B" || demetrius_intro === "b") {
+        var demetrius_bachelor = prompt("REMAIN A BACHELOR\nI forgot to mention that you are poor and that marrying into Hermia's family will bring you riches. Do you want to change your previous answer (Y/N)?");
+    }
+
 //Other numbers.
 } else {
   //console.log('Not valid number');
