@@ -57,14 +57,14 @@ function rightSwipe () {
 
 function runStory () {
   var swipeDirection = prompt("You come across a cute girl on tinder. You can either swipe left or right (enter 'l' or 'r')");
-  if (swipeDirection == "l" || startStory() == "L") {
+  if (swipeDirection == "l" || swipeDirection == "L") {
     var leftSwipeQty = 1;
     while (leftSwipeQty < 3) {
       leftSwipeQty ++;
       startStory2();
     }
     console.log ("Just kidding about the number of fish in the sea, there are only 3... Try not being so picky next time.");
-  } else if (startStory() == "r" || startStory() == "R") {
+  } else if (swipeDirection == "r" || swipeDirection == "R") {
     rightSwipe();
   } else {
     console.log ("Sorry that's not an acceptable response")
