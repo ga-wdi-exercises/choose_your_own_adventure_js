@@ -92,7 +92,11 @@ if (start_number === "1") {
 
 //Other numbers.
 } else {
-  //console.log('Not valid number');
-  var start_number = prompt("Good morrow, my fair adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
-  //HOW DO I MAKE THIS A LOOP?
+  var promptLoop = function(start_number) {
+      if (start_number === "0" || start_number <= parseInt("5")) {
+        var start_loop =  prompt("Good morrow, my fair adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
+      }
+  }
+  promptLoop(start_number);
+
 }
