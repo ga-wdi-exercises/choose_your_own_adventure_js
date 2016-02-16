@@ -28,31 +28,19 @@ var firstReply = prompt("Will you help the princess? \n\nType 'Y' for 'Yes, glad
 
 //How will user began journey?
 while(firstReply === ""){
-  if ((firstReply === 'y') || (firstReply === 'Y')){
-    alert("Oh, thank you, " + " "+ userName + " " + "you are as wonderful as they say you are! \n\nYou must first go to the elves in the basement, I hear they make the finest shoes.");
-  }else if ((firstReply === 'n') || (firstReply === 'N')) {
-      alert("Fine, " + " "+ userName + ", " + "you heathenous scoundrel! I'll pay. \n\nNow go to the elves in the basement, I hear they make the finest shoes. ");
-  }else if ((firstReply === 'b') || (firstReply === "B")) {
-      alert("Gross! " + " "+ userName + " " + "I would rather die! \n\nPlease just go to the elves in the basement, I hear they make the finest shoes.");
-  }else{
-      var firstReply = prompt("What did you say," + " "+ userName + ", " + "Speak up.");
-  };
-}//Loop is not working!!! :-(
-/*Researched how I might fix this. Stackoverflow suggestion was to check if value is truthy.
-You can just check if the variable has a truthy value or not. That means
+  var firstReply = prompt("What did you say," + " "+ userName + ", " + "Speak up.");
+};
 
-if( value ) {
-}
-will evaluate to true if value is not:
+if ((firstReply === 'y') || (firstReply === 'Y')){
+  alert("Oh, thank you, " + " "+ userName + " " + "you are as wonderful as they say you are! \n\nYou must first go to the elves in the basement, I hear they make the finest shoes.");
+}else if ((firstReply === 'n') || (firstReply === 'N')) {
+    alert("Fine, " + " "+ userName + ", " + "you heathenous scoundrel! I'll pay. \n\nNow go to the elves in the basement, I hear they make the finest shoes. ");
+}else if ((firstReply === 'b') || (firstReply === "B")) {
+    alert("Gross! " + " "+ userName + " " + "I would rather die! \n\nPlease just go to the elves in the basement, I hear they make the finest shoes.");
+}else{
+    alert("Silly goose I'll take that as a yes \n\nNow go to the elves in the basement, I hear they make the finest shoes.");
+};
 
-null
-undefined
-NaN
-empty string ("")
-0
-false
-
-Lets see if this helps.*/
 
 
 //Elves in the basement
