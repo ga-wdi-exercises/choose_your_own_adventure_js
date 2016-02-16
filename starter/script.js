@@ -3,7 +3,7 @@
 Each path of decisions is inside its own function.
 An array, paths, holds variables representing those functions / paths.
 play() starts the game.  It asks the user for a number. Then a for loop goes
-thru paths and calls a function for the path matching the number entered by the
+thru paths and calls a function at the index matching the number entered by the
 user.At the end of each path, the user is asked if she wants to play again.
 That gets done by the playAgain() function. If user answers yes, play() starts
 the game again.
@@ -16,7 +16,8 @@ function play() {
   alert("You're about to be born again, this time as a pro athlete...\n" +
         'Answer the following questions to fulfill your destiny...\n' +
         'Ready? Press Ok to start');
-  var intensity = parseInt(prompt('On a scale of 1 - 3, how intense are you in this life (3 = most intense)...?'));
+  var intensity = parseInt(prompt('On a scale of 1 - 3, how intense are you in your current life...?\n' +
+                                  '(3 === most intense)'));
   for (var i = 1; i < paths.length; i++) {
     if (i === intensity) {
       paths[i]();
