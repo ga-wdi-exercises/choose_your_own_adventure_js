@@ -4,7 +4,7 @@ Pseudocode
 
 - What is your name?
   - `Sean`
-- Nice to meet you, `Sean`. Congradulations on your new job as a web developer intern.  Your annual salary will be $30,000 per year.  I'm here to help you find a place to live. Now which part of the city would you like to live.**(NW, SW, SE, NE)**
+- Nice to meet you, `Sean`. Congratulations on your new job as a web developer intern.  Your annual salary will be $30,000 per year.  I'm here to help you find a place to live. Now which part of the city would you like to live.**(NW, SW, SE, NE)**
     - `NW`
         -  Northwest has great bars, resturants and tons of night life. You have Champange taste on a beer budget. Unfortunately your intern salary wont cover the $2,000 per month rent. Do you get 3 roommates or uber on nights and weekends. **(R/U)**
             - `R`roommate
