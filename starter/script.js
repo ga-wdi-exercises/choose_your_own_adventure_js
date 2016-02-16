@@ -160,7 +160,6 @@ function endOfFantasylandRides()
   else
   {
     window.alert("Ok! Let's head back to the Hub!");
-    theHub();
   }
 } // end endOfFantasylandRides
 
