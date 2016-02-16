@@ -3,13 +3,13 @@ window.alert("Welcome to the Magic Kingdom!" + "\n"
 + "The Happiest Place on Earth!");
 
 window.alert("Our first stop is Main Street USA. The street is bustling with shops and entertainment."
-+ "\n" + "Fact: Each business name in the shop windows refers to a person who had some part in the building of Disney World.");
++ "\n" + "Fun fact: Each business name in the shop windows refers to a person who had some part in the building of Disney World.");
 
 theHub();
 
 function theHub()
 {
-  window.alert("Let's continue forward to the hub! You can see Cinderella's castle in front of you and several spokes in different directions." + "\n"
+  window.alert("Let's continue forward to the Hub! You can see Cinderella's castle in front of you and several spokes in different directions." + "\n"
   + "From here, you can go anywhere in the park!");
 
   var response = window.prompt("Where do you want to go?"
@@ -57,25 +57,25 @@ function tomorrowlandRides()
   {
     window.alert("Thrills huh? Let's go on Space Mountain! It's an indoor roller coaster in the dark!");
     window.alert("WHEEEEEEEEEEEEEeeeeeeee!!!");
-    endOfTomorrowlandRide();
+    endOfTomorrowlandRides();
   }
   else if(response == "F" || response == "f")
   {
     window.alert("Laughs? You're going to love Monsters Inc Laugh Floor! It's an interactive comedy show!");
     window.alert("Hellooooooo humans!")
-    endOfTomorrowlandRide();
+    endOfTomorrowlandRides();
   }
   else if(response == "N" || response == "n")
   {
     window.alert("A classic. Good choice! Let's head over to the Carousel of Progress, designed by Walt Disney's original team!");
     window.alert("There's a great big beautiful tomorrow, Shining at the end of every day...");
-    endOfTomorrowlandRide();
+    endOfTomorrowlandRides();
   }
   else if(response == "P" || response == "p")
   {
-    window.alert("Really? Paain? You're going to regret this...But let's head over to Stitch's Great Escape");
+    window.alert("Really? Pain? You're going to regret this...But let's head over to Stitch's Great Escape");
     window.alert("Chili dog burps...forever");
-    endOfTomorrowlandRide();
+    endOfTomorrowlandRides();
   }
   else {
     {
@@ -85,7 +85,7 @@ function tomorrowlandRides()
   }
 } // end tomorrowlandRides
 
-function endOfTomorrowlandRide()
+function endOfTomorrowlandRides()
 {
   var response = window.prompt("That was fun! Do you want to go on another ride? (Y for yes)")
   if(response == "Y" || response == "y")
@@ -101,7 +101,7 @@ function endOfTomorrowlandRide()
 
 function fantasyland()
 {
-  window.alert("Welcome to Fantasyland! Where all your dreams come true!");
+  window.alert("Welcome to Fantasyland! Where all your dreams can come true!");
   fantasylandRides();
 } // end fantasyland
 
@@ -154,8 +154,8 @@ function endOfFantasylandRides()
   }
   else
   {
-    window.alert("Ok! Let's move on to Adventureland!");
-    adventureland();
+    window.alert("Ok! Let's head back to the Hub!");
+    theHub();
   }
 } // end endOfFantasylandRides
 
@@ -176,19 +176,19 @@ function adventurelandRides()
   {
     window.alert("Thrills huh? Let's go on Pirates of the Caribbean! Remember, dead men tell no tales!");
     window.alert("Yoho yoho a pirate's life for me!");
-    //endOfFantasylandRides();
+    endOfAdventurelandRides();
   }
   else if(response == "F" || response == "f")
   {
     window.alert("Laughs? You're going to love the world famous Jungle Cruise!");
     window.alert("How do you tell the difference between the male and female Zebras? The males have black and white stripes and the females have white and black stripes.");
-    //endOfFantasylandRides();
+    endOfAdventurelandRides();
   }
   else if(response == "N" || response == "n")
   {
     window.alert("A classic. Good choice! Let's head over to the Enchanted Tiki Room!");
     window.alert("In the tiki tiki tiki room, where the birds sing words and the flowers croon!");
-    //endOfFantasylandRides();
+    endOfAdventurelandRides();
   }
   else {
     {
