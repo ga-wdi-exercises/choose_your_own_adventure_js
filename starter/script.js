@@ -23,7 +23,8 @@ alert("She has summoned you to her chambers.");
 var userName = prompt("Princess Pear: 'What is your name great warrior?'");
 
 //Princess Pear's Mission
-alert("Princess Pear: 'Oh," + " "+ userName + " " + "all the things I have are so common, the other Princesses will surely have the same thing on. I need you to find me the rarest of the rare things that will make my beauty stand out above all the others. Will you help?'");
+alert("Princess Pear: 'Oh," + " "+ userName + " " + "all the things I have are so common, the other Princesses will surely have the same thing on. I need you to find me the rarest of the rare things that will make my beauty stand out above all the others. \nWill you help?'");
+var firstReply = prompt("Will you help the princess? \n\nType 'Y' for 'Yes, gladly, where do I start' \nOR 'N' for 'No, unless you fill my pockets with gold' \nOR 'B' for 'But, your beauty outshines the others, you could wear a trashbag.'");
 //(y)es, gladly, were do I start?,
       //First go to the elves in the basement, I hear they make shoes.
 //(N)o, unless you fill my pockets with gold,
