@@ -48,14 +48,14 @@ alert("One elf steps forward and says: 'We are tired and cannot take on anymore 
 //Will you help Elves?
 var helpElves = prompt("Will you help the elves? \nType 'Y' for 'Yes, of course. \nOR 'N' for No, and choose to kill all but one, who you will force to make the shoes ");
 
-//Paths based on answers
+//Paths based on answers to elves
 if ((helpElves === 'y') || (helpElves === 'Y')){
   alert("The elves: 'Thank you, Thank you.' You have saved the elves. \nThe elves quickly make a magical translucent 6 inch stilletoe that takes on the color of garments around it.");
   alert("You gain an item: *Stilletoes by ELF* \n\nBecause of your kindness, the elves tell you about Yum Yum forest and how Unicorns might help.");
   //Add item to backpack.
   backPack['Stilletoes by ELF'] = 1
 
-  //Next destination
+  //Next destination is Yum Yum Forest
   alert("You arrive at Yum Yum Forrest. Suddenly you spot a dashing black unicorn with a dazzling blue hued horn. \nThe Unicorn sees you, and in shock throws up rainbows.");
   alert("The Unicorn:'Please don't kill me. Here take this rainbow lipstick instead, I'm sure a pretty lady would love it. \n\n The Unicorn offers you his upchuck.");
   var freeUnicorn = prompt("Choose: 'Y' for 'Yes, Princess PEAR would love this. \n OR 'N' for 'No' and try to capture the unicorn to sell its horn and steal the lipstick.");
@@ -69,23 +69,25 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
         alert("You wake to shimmering Fairies hovering above you. It is a party. They invite you to party with them.");
       }
 }else if ((helpElves === 'n') || (helpElves === 'N')) {
+  alert("Horrible chose," + " "+ userNamer +". " + " You have angered all the elves with your evil plan. \nThey band together, create a portal and fling you into it.");
+  alert("You awake to a lavishly designed candle lit bedroom. \nNervously, you race to the nearest door, open it, but find a deep chamber fill with stone statues of men.");
+  alert("You are in MEDUSA's Lair!!!, sucks for you. \n\nYou are quick on your toes, and blow out the candles as you hear foot steps approaching.");
+  alert("The light from the hall illuminates a snaked haired lady. She is exhales in annoyance at the dark room and heads for the nearest candle to light.");
+  var fightMedusa = prompt("You quickly blow out her flame. What will you do next? \nChoose: 'S' for 'Sneak away before she catches you' \nOR 'U' for 'Use your cunning ways to seduce her, have one night stand, steal Medusa Hair for a necklace and sneak out before she wakes.'");
 
+  //Paths to Medusa choice
+  if ((fightMedusa === 'y') || (fightMedusa === 'Y')){
+    alert("You quietly sneak past medusa, forfeiting any possible items you could get from her. \nBut you are safe. ");
+    alert("You find yourself safe and sound outside of Medusa's lair and after a time, you come upon a party of Fairies.");
+  }else if ((fightMedusa === 'n') || (fightMedusa === 'N')){
+    alert("Some hot R-rated stuff happens and relaxing cuddling finishes off the night. While Medusa is sleeping, you rip out a snake strand and dash out of her lair.");
+    alert("You collect *Medusa necklace* for Princess PEAR.");
+    backPack['Medusa necklace'] = 1
+    alert("You find yourself safe and sound outside of Medusa's lair and after a time, you come upon a party of Fairies.");
+  }
 }
 
-//(n)o, Ill kill all but one and that one will make the shoes!
-      //All elves attack user and push him through portal to Medusa's layer
-            //User is in candle lit bedroom. He tries to leave through a door but
-            //its a closet full of men turned to stone. User realizes where they are and panics
-            //User knows (s)he is in Medusa's layer and thinks quickly.
-            //he blows out all the candles so that it is pitch black.
-            //Medusa walks in and is confused why it is dark, as she is lighting a candle.
-            //Choose: Blow candle out and (s)neak away before she catches you
-                      //User finds way out of layer and is back in Yum Yum Forest
-                      //where you stumble upon Fairies
-            //OR: Blow candle out, use your (c)unning words to seduce her, have one night stand,
-            //steal Medusa Hair for a necklace and sneak out before she wakes. *Gain Medusa necklace*
-                      //User finds way out of layer and is back in Yum Yum Forest
-                      //Where you stumble upon fairies.
+
 
                       //All at Fairies
 //Fairies are sweet and loving, healing users wounds and offering tea and cookies.
