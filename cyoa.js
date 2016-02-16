@@ -46,7 +46,7 @@ function getIQ(){
 function timeTravel(year){
 
   if(year >= 2015){
-    theFuture(getFutureName(),pickPortal());
+    theFuture(getFutureName());
   }
   else if (year > 1985  && year <= 2014) {
     theSortaPresent(changeLife());
@@ -63,7 +63,7 @@ function timeTravel(year){
   }
 }
 
-  function theFuture (name, color ){
+  function theFuture (name){
     var specTech = 0;
     var specPower = 0;
     console.log(name + ' has enter the battle.');
@@ -82,7 +82,7 @@ function timeTravel(year){
     }
 
     }
-    console.log("Battle Summary: Special Tech level" +specTech + "Special Powers level " + specPowers);
+    console.log("Battle Summary: Special Tech level " +specTech + " Special Powers level " + specPower);
     if(specTech > specPower){
       console.log("you'd rather have power than material things, so you invoke a do-over");
       GetYear();
@@ -94,10 +94,11 @@ function timeTravel(year){
     }
     else if (specTech === specPower) {
       pickPortal();
-      if(color === 'red'){
+      var color = pickPortal();
+      if(color === "red"){
         thePast(chooseAnswer());
       }
-      else if (color === 'blue') {
+      else if (color === "blue") {
         console.log("You've returned home a powerful human");
         console.log("You Win!");
       }
