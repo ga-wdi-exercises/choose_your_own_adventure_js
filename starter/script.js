@@ -13,39 +13,65 @@
 
 //First I need something to hold items: a dictionary/key:value pair.
 var backPack = {'Unicorn Rainbow Lipstick':0, 'Mermaid Weave':0, 'Dragon Scale Dress': 0,
-  'Medusa necklace':0, 'Stilletoes by Elf': 0, 'Mermaid Weave': 0, 'Fairy Face Shimmer': 0}
+  'Medusa necklace':0, 'Stilletoes by ELF': 0, 'Mermaid Weave': 0, 'Fairy Face Shimmer': 0}
 
 //The story begins.
-alert("The Millinnial Princess Pink Apple Everly Reignbeau aka Princess Pear of MacEphora Lusha Brown Land is getting ready for her first Golden Carpet event.");
-alert("She has summoned you to her chambers.");
+alert("The Millinnial Princess Pink Apple Everly Reignbeau \naka Princess PEAR of MacEphora Lusha Brown Land \nis getting ready for her first Golden Carpet event. \n\nShe has summoned you to her chambers.\n");
 
 //Get name from user
-var userName = prompt("Princess Pear: 'What is your name great warrior?'");
+var userName = prompt("Princess Pear: 'What is your name great warrior?'" , "Type Name.");
 
 //Princess Pear's Mission
-alert("Princess Pear: 'Oh," + " "+ userName + " " + "all the things I have are so common, the other Princesses will surely have the same thing on. I need you to find me the rarest of the rare things that will make my beauty stand out above all the others. \nWill you help?'");
+alert("Princess PEAR: \n'Oh," + " "+ userName + " " + "all the things I have are so common, the other Princesses will surely have the same thing on. I need you to find me the rarest of the rare things that will make my beauty stand out above all the others. \n\nWill you help?'");
 var firstReply = prompt("Will you help the princess? \n\nType 'Y' for 'Yes, gladly, where do I start' \nOR 'N' for 'No, unless you fill my pockets with gold' \nOR 'B' for 'But, your beauty outshines the others, you could wear a trashbag.'");
-//(y)es, gladly, were do I start?,
-      //First go to the elves in the basement, I hear they make shoes.
-//(N)o, unless you fill my pockets with gold,
-      //Fine you heathen, I'll pay. Now go to the elves in the basement, I hear they make shoes.
-// or (B)ut your beauty outshines the others, you could wear a trashbag.
-      //Gross, I would rather die. Please just go to the elves in the basement, I hear they make shoes.
 
-                    //All at elves
-//The elves are working hard
-//You ask for help. One elf steps forward and says
-//They are tired and cannot take on anymore orders. The princesses from around the world
-//Trapped them here. However, if he frees them, they will make one last pair for Princess Pear
-//Choose : (y)es of course,
-      //Thank you, thank you. *Gain Stilletoes by Elf* Elves tell user about Yum Yum Forest and Unicorns
-            //Spots Unicorn and unicorn gets scared and throws up Rainbows.
-            //Offers to give (R)ainbow lipstick in exchange for users lunch.
-            //Choose: (y)es and trade *Gain Unicorn Rainbow Lipstick*
-                    //Unicorn leaves and you wonder forest and stubble upon fairies.
-            //or (n)o, try to kill unicorn to sell it and steal lipstick
-                    //Unicorn kicks user, knocks user out, and burries lipstick so it can't be used.
-                    //Fairies find user unconcious
+//How will user began journey?
+while(firstReply === " "){
+  if ((firstReply === 'y') || (firstReply === 'Y')){
+    alert("Oh, thank you, " + " "+ userName + " " + "you are as wonderful as they say you are! \n\nYou must first go to the elves in the basement, I hear they make the finest shoes.");
+  }else if ((firstReply === 'n') || (firstReply === 'N')) {
+      alert("Fine, " + " "+ userName + ", " + "you heathenous scoundrel! I'll pay. \n\nNow go to the elves in the basement, I hear they make the finest shoes. ");
+  }else if ((firstReply === 'b') || (firstReply === "B")) {
+      alert("Gross! " + " "+ userName + " " + "I would rather die! \n\nPlease just go to the elves in the basement, I hear they make the finest shoes.");
+  }else {
+      firstReply = " "
+      var firstReply = ("What did you say," + " "+ userName + ", " + "Speak up.");
+  }
+} //Loop is not working!!! :-(
+
+
+//Elves in the basement
+alert("You arrive in the deepest darkest parts of the castles basement. \nYou reach a door the says Elf Made, a very popular brand in the kingdom.");
+alert("You open the door and see thousands of elves working hard, making shoes. \nYou clear your throat and ask for the finest pair of shoes for Princess PEAR.");
+alert("One elf steps forward and says: 'We are tired and cannot take on anymore orders. \nThe princesses from around the world trapped us here and we have been slaving away ever since. \nHowever, if you free us, we will make one last pair for Princess PEAR' ");
+
+//Will you help Elves?
+var helpElves = prompt("Will you help the elves? \nType 'Y' for 'Yes, of course. \nOR 'N' for No, and choose to kill all but one, who you will force to make the shoes ");
+
+//Paths based on answers
+if ((helpElves === 'y') || (helpElves === 'Y')){
+  alert("The elves: 'Thank you, Thank you.' You have saved the elves. \nThe elves quickly make a magical translucent 6 inch stilletoe that takes on the color of garments around it.");
+  alert("You gain an item: *Stilletoes by ELF* \n\nBecause of your kindness, the elves tell you about Yum Yum forest and how Unicorns might help.");
+  //Add item to backpack.
+  backPack['Stilletoes by ELF'] = 1
+
+  //Next destination
+  alert("You arrive at Yum Yum Forrest. Suddenly you spot a dashing black unicorn with a dazzling blue hued horn. \nThe Unicorn sees you, and in shock throws up rainbows.");
+  alert("The Unicorn:'Please don't kill me. Here take this rainbow lipstick instead, I'm sure a pretty lady would love it. \n\n The Unicorn offers you his upchuck.");
+  var freeUnicorn = prompt("Choose: 'Y' for 'Yes, Princess PEAR would love this. \n OR 'N' for 'No' and try to capture the unicorn to sell its horn and steal the lipstick.");
+
+      if ((freeUnicorn === 'y') || (freeUnicorn === 'Y')){
+        alert("The Unicorn is happy and gallops away into the forest. \nYou collect *Unicorn Rainbow Lipstick*");
+        backPack['Unicorn Rainbow Lipstick'] = 1
+        alert("You wonder the forest until you happen upon a party of Fairies. They invite you to dance.");
+      }else if (((freeUnicorn === 'n') || (freeUnicorn === 'N'))) {
+        alert("Unicorn kicks you with front hooves, knocking you out, and burries lipstick so it can't be used.");
+        alert("You wake to shimmering Fairies hovering above you. It is a party. They invite you to party with them.");
+      }
+}else if ((helpElves === 'n') || (helpElves === 'N')) {
+
+}
+
 //(n)o, Ill kill all but one and that one will make the shoes!
       //All elves attack user and push him through portal to Medusa's layer
             //User is in candle lit bedroom. He tries to leave through a door but
