@@ -6,7 +6,7 @@ Your code must make use of both string and number user inputs. > Hint: You may n
 
 Prompt: "Welcome to the Oasis! What would you like to name your avatar?"
 
-Prompt: "Hi [name]! James Halliday has created an easter egg hunt for his 100,000,000 fortune. You may select one of the following participation options: 1. Join a Gunter Team; 2. Solo Play, or 3. Join the Sixers (Please enter corresponding number for your selection)"
+Prompt: "Hi [name]! James Halliday has created an easter egg hunt for his $100,000,000 fortune. You may select one of the following participation options: 1. Join a Gunter Team; 2. Solo Play, or 3. Join the Sixers (Please enter corresponding number for your selection)"
 
 If Gunter Clan is selected:
   Oh no! Parzival, Aech, Art3mis, Shoto and Daito all cracked the first clue. You need to find the copper key ASAP! Where do you want to look? Please select one of the following planets to search: 1. Pern; 2. Ludus (Please enter corresponding number for your selection).
@@ -24,7 +24,7 @@ If Gunter Clan is selected:
     Good job! You've found the location of the copper key--but the Sixers found it first! They have the area blocked off. How would you like to proceed? 1. Bomb the Sixers and their forcefield!; 2. Turn around and go home. (Please enter corresponding number for your selection)
 
     If "Bomb the Sixers" is selected:
-      Way to stand your ground! You annihilated an entire team of Sixers and broken through the forcefield. Too bad you didn't make it through soon enough--Parzival won the hunt! Oh well, it was fun while it lasted, right?
+      Way to stand your ground! You annihilated an entire team of Sixers and broke through the forcefield. Too bad you didn't make it through soon enough--Parzival won the hunt! Oh well, it was fun while it lasted, right?
 
     If "Turn around and go home" is selected:
       While you're on your way home, Parzival won the hunt! Good thing it wasn't the Sixers, right?
@@ -42,7 +42,7 @@ If Solo Play is selected:
       Aw man, nice try, but the correct answer was WarGames. While you were trying to figure out the answer, Parzival won the hunt!
 
 If Sixers is selected:
-  Interesting choice--you are property of Nolan Sorrento. Your team is working on figuring out the answer to the first clue when Parzival's name appears on the leaderboard. Crap! You're falling behind! Where do you want to look first? 1. Ludus; 2. Pern (Please enter corresponding number for your selection).
+  Interesting choice--you are now property of Nolan Sorrento. Your team is working on figuring out the answer to the first clue when Parzival's name appears on the leaderboard. Crap! You're falling behind! Where do you want to look first? 1. Ludus; 2. Pern (Please enter corresponding number for your selection).
 
   If Ludus is selected:
     Nice, you got it! Too bad Parzival, Art3mis, Aech, Shoto and Daito beat you to it. You need to catch up. What is your next move? 1. Block off the entrance to the Tomb of Horrors. There are no rules in the hunt, so it can't be cheating, right? 2. Move on and help Sorrento find the location of the Jade Key.
@@ -51,4 +51,4 @@ If Sixers is selected:
       You were bombed by a Gunter Clan and died. Meanwhile, Parzival won the hunt! Sucks to suck, Sux0rs!
 
     If option 2 is selected:
-      Nice try, but Parzival beat you to the punch and won the hunt. Down with the Sux0rs!
+      Nice try, but Parzival beat you to the punch and won the hunt! Down with the Sux0rs!
