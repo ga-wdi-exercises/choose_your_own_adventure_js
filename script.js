@@ -112,7 +112,7 @@ function DispHelp(){
 
 // Takes player to the node specified by node number.
 // Then displays the node description and possible paths to take.
-// Also determines if the player has reached the end of a tree and sets eog flag
+// Also detemines if the player has reached the end of a tree and sets eog flag
 // while displaying end game text and options.
 function GotoNode(nodeNumber){
   var n = 1;
