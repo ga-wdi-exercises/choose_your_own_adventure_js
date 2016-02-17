@@ -120,13 +120,27 @@ if((fairyDust === 'p') || (fairyDust === 'P')){
 options into a function that I can just call. */
 
                     //All at Firey Cove with Dragons.
+alert("You arrive in Fiery Cove. Not a nice place to be, as all around you are sleeping fire breathing dragons. Yikes!!");
+alert("You think to yourself: 'Is this really worth it. The fairies said dragon scales make for the best of the best clothing, but \nThe princes has thousands of dresses, right?'");
 
-//You are scared as you walk amongst dozens of sleeping Dragons.
-//Choose: Change your mind and exit as quickly and stealthily as possible.
-      //At the end of the Cove is a watery OASIS
-//OR: Use a bit of your fiary dust to blind them all. Skinning one of the smaller Dragons
-//and exiting as possible. *Gaind Dragon Scale dress*
-      //At the end of the Cove is a watery OASIS
+var burntButt = prompt("Choose: 'Y' for 'Yes, she is worth every burnt body part you might incur. \nOR 'N' for 'No, Princess PEAR needs to start believing in upcycling and remake an old dress into something new.' ");
+while(burntButt === ""){
+  var burntButt = prompt("You must make a choice, " + userName);
+}
+
+if((burntButt === 'y') || (burntButt === 'Y')){
+    alert("You think fast, take a bit of your fairy dust and blind all the Dragons.");
+    alert("The dragons began to wake and grow angry at their new found blindness.");
+    alert("You run through the cove and as you exit through the other end, you sword fight with a smaller dragon. \nYou are nimble, and kill it quickly in its blinded state, and skin it, taking as many scales as your sachel can hold.");
+    alert("You gain *Dragon Scale Dress*");
+    backPack['Dragon Scale Dress'] = 1;
+    alert("Upon exiting the cove, you arrive at a sunkissed, rainbow filled watery OASIS");
+}else {
+    alert("You quietly move through the dragons, ducking behind rocks at the slightest thought that one might be waking.");
+    alert("You successfully make it out of Fiery Cove alive without a scratch.");
+    alert("You think: 'Princess PEAR may not have a dress, but that wasn't the most important item anyway...hopefully.'");
+    alert("Upon exiting the cove, you arrive at a sunkissed, rainbow filled watery OASIS");
+}
 
                     //All At Mermaid Watery Oasis
 //There are mermaids everywhere, singing and combing their hair.
@@ -135,6 +149,18 @@ options into a function that I can just call. */
 //You tell them of your journey and all its excitement.
 //They are so enamored with you and excited by your travels, they offer to let you pick
 //a treasure you have yet to gain.
+
+var mermaidGift = prompt("");
+if{((burntButt === 'd') || (burntButt === 'D'))
+
+}else if((burntButt === 'm') || (burntButt === 'M')){
+
+}else if((burntButt === 'u') || (burntButt === 'U')){
+
+}else{
+    alert(By not picking an option the mermaids decide to suprise you with *Dragon Scale dress*);
+    backPack['Dragon Scale Dress'] += 1;
+};
     //Choose: Gain *(D)ragon Scale Dress.*
     //OR: Gain *(M)edusa necklace*
     //OR: Gain *(U)nicorn Rainbow Lipstick*
