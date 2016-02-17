@@ -1,21 +1,21 @@
 var buffer = function(){
   console.log("*******************************")
 }
-console.log("It's your first day on the job as winter caretaker at the Overlook Hotel.  You and your family are looking forward to a nice relaxing winter and some peace and quiet to work on your novel.")
+console.log("It's your first day on the job as winter caretaker at the Overlook Hotel.  You and your family are looking forward to a nice relaxing winter.")
 buffer();
 console.log("So, What do you want to do first?\nWork on your novel?\nGo see what Danny is up to?\nOr ride your big wheel around the hotel?")
-var firstInput = prompt("Please enter 'novel' 'danny' or 'big wheel'")
-if (firstInput == "novel") {
+var firstInput = prompt("Please enter 1 for 'novel', 2 for 'danny', or 3 for 'big wheel'")
+if (firstInput == 1) {
   console.log("Ok, you chose to work on your novel.")
   console.log("How’s this for an opening line? “All work and no play make Jack a dull boy”")
 }
-else if (firstInput == "danny") {
+else if (firstInput == 2) {
   console.log("Ok, you decided to go see Danny")
   console.log("Danny was busy talking to his friend Tony about red wine, or something like that.")
 }
-else if (firstInput == "big wheel") {
+else if (firstInput == 3) {
   console.log("Ok, you decided to go for a ride on the big wheel.")
-  console.log("You ran into these adorable little twin girls.  They were super friendly and wanted you to play with them forever and ever and ever...")
+  console.log("You ran into some adorable little twin girls.  They were super friendly and wanted you to come play with them forever and ever and ever...")
 }
 buffer()
 console.log("Yikes, looks like a big storm has rolled in.  We’re going to have to hunker down for a while.  On top of that, the family has been getting a little out of line lately.  Wendy read a rough draft of your novel and was not supportive at all.")
@@ -25,7 +25,7 @@ var secondInput = prompt("Please enter 'sabatoge' 'boardgames' or 'wendy darling
 
 
 if (secondInput == "wendy darling") {
-  console.log("Ok, you decided to have a nice reasonable conversation with Wendy, the light of your life.")
+  console.log("Ok, you decided to have a talk with Wendy, the light of your life.")
   console.log("Be sure to let her know you're not gonna hurt her.")
 }
 
@@ -71,11 +71,6 @@ var fourthInput = prompt("Please enter 'yes' or 'no'")
     break;
   }
 
-
-
-
-
-console.log("please enter either a number of years or forever")
 
 
 
