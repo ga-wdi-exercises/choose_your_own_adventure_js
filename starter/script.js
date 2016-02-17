@@ -61,7 +61,6 @@ else if (chaliceChoice == 'GOLDEN'){
           warriorWish = prompt ('great magic overwhelms you, a booming voice tells you to make a wish. What is your wish?');
           death();
         }
-
 function death(){
   choice = prompt('play again? YES or NO?');
   if (choice == 'YES'){
