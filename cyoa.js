@@ -43,6 +43,35 @@ function getIQ(){
   return Iq;
 }
 
+ function theSortaPresent(fate) {
+    if(fate === 'wealth'){
+      console.log("You're now rich beyond you wildest dreams");
+    }
+    else if (fate === 'IQ') {
+      changeIQ(getIQ());
+    }
+    else if (fate === 'social_status') {
+      console.log("You've achieve new popularity");
+    }
+
+  }
+
+  function thePast(answer){
+    if(answer === 'yes'){
+      console.log("You've entered a Pinocchio Paradox with no escape...");
+      console.log("Game Over!");
+    }
+    else if (answer === 'no') {
+      console.log("You've entered a Pinocchio Paradox with no escape...");
+      console.log("Game Over!");
+    }
+    else {
+      console.log("Smart choosing not to answer. You are returned to your time with wealth");
+      console.log("You Win. You've become a Jedi Master");
+    }
+
+  }
+
 function timeTravel(year){
 
   if(year >= 2015){
@@ -60,6 +89,38 @@ function timeTravel(year){
   else{
     console.log('What time is this??? Input again.');
     getYear();
+  }
+}
+
+function theWayPast(company){
+    if(company === "Apple"){
+      console.log("you now have a ton of wealth");
+    }
+    else if (company === "Google") {
+      console.log("It's a start though there's no internet");
+    }
+    else if (company === "Facebook") {
+      console.log("too bad there's no internet");
+      console.log("Game Over");
+    }
+    else {
+      console.log("That's not a choice. Pick again");
+      getBusiness();
+
+    }
+}
+
+function changeIQ(iq){
+  if(iq > 100){
+    console.log("Put your new intellectual abilities to good work ");
+  }
+  else if (iq < 100) {
+    console.log("You're now slow...");
+    console.log("Game Over");
+  }
+  else {
+    console.log("That's not a choice. Pick again");
+    getIQ();
   }
 }
 
@@ -89,7 +150,7 @@ function timeTravel(year){
     }
     else if (specTech < specPower) {
       console.log("With your power, fate has decided you rule future");
-      console.log("Nice!")
+      console.log("Nice!");
 
     }
     else if (specTech === specPower) {
@@ -106,69 +167,14 @@ function timeTravel(year){
         console.log("That's not an option. Pick Again");
         pickPortal();
       }
-  }
-
-  function theSortaPresent(fate) {
-    if(fate === 'wealth'){
-      console.log("You're now rich beyond you wildest dreams");
-    }
-    else if (fate === 'IQ') {
-      changeIQ(getIQ());
-    }
-    else if (fate === 'social_status') {
-      console.log("You've achieve new popularity")
     }
 
-  }
-
-  function thePast(answer){
-    if(answer === 'yes'){
-      console.log("You've entered a Pinocchio Paradox with no escape...");
-      console.log("Game Over!");
-    }
-    else if (answer === 'no') {
-      console.log("You've entered a Pinocchio Paradox with no escape...");
-      console.log("Game Over!");
-    }
-    else {
-      console.log("Smart choosing not to answer. You are returned to your time with wealth");
-      console.log("You Win. You've become a Jedi Master");
-    }
-
-  }
-
-  function theWayPast(company){
-    if(company === "Apple"){
-      console.log("you now have a ton of wealth");
-    }
-    else if (company === "Google") {
-      console.log("It's a start though there's no internet");
-    }
-    else if (company === "Facebook") {
-      console.log("too bad there's no internet");
-      console.log("Game Over");
-    }
-    else {
-      console.log("That's not a choice. Pick again");
-      getBusiness();
-
-    }
-
-  }
 }
 
-function changeIQ(iq){
-  if(iq > 100){
-    console.log("Put your new intellectual abilities to good work ");
-  }
-  else if (iq < 100) {
-    console.log("You're now slow...");
-    console.log("Game Over");
-  }
-  else {
-    console.log("That's not a choice. Pick again");
-    getIQ();
-  }
-}
+
+
+
+
+
 
 timeTravel(GetYear());
