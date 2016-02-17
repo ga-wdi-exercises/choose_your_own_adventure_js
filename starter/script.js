@@ -35,7 +35,11 @@ if (parseInt(team) === 1) {
     var jadeKey = prompt("NICE! You figured out where the Copper Key is hidden and beat Acererak the Demi-Lich at Joust! Now on to the next challenge. What is the name of the 1983 movie with Matthew Broderick where his hacker-geek character saves the world from World War III? 1. WarGames; 2. Real Genius.");
 
     if (parseInt(jadeKey) === 1) {
-      alert("Awesome--you nailed it! You're cruising through the hunt and have crushed the Sixers to win the hunt! Enjoy your prize money!");
+      alert("Awesome--you nailed it! You're cruising through the hunt and have crushed the Sixers to win the hunt! Enjoy your prize money! Open the JavaScript console to redeem your prize");
+
+      for (i = 100000000; i < 100000004; i++) {
+        console.log("Your credits just raised to " + i)
+      }
     } else if (parseInt(jadeKey) === 2) {
       alert("Aw man, nice try, but the correct answer was WarGames. While you were trying to figure out the answer, Parzival won the hunt!");
     } else {
