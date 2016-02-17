@@ -3,8 +3,13 @@ window.alert("Welcome to the Magic Kingdom! The Happiest Place on Earth!" +
 "\nLet's take a tour of the park together!");
 
 window.alert("Our first stop is Main Street USA. The street is bustling with shops and entertainment. You can see the Dapper Dans singing barbershop quartet."
-+ "\nFun fact: Each business name in the shop windows refers to a person who had some part in the building of Disney World."
-+ "\nLet's continue forward to the Hub!");
++ "\nFun fact: Each business name in the shop windows refers to a person who had some part in the building of Disney World.");
+
+var time = window.prompt("How many minutes should we stay to listen to the songs?");
+
+window.alert("You listen to " + time + " minutes of fantastic singing.")
+
+window.alert("Let's continue forward to the Hub!");
 
 while(response != "Q" && response != "q")
 {
