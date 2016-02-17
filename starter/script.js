@@ -1,14 +1,15 @@
 // put code here!
-window.alert("Welcome to the Magic Kingdom!" + "\n"
-+ "The Happiest Place on Earth!");
+window.alert("Welcome to the Magic Kingdom! The Happiest Place on Earth!" +
+"\nLet's take a tour of the park together!");
 
-window.alert("Our first stop is Main Street USA. The street is bustling with shops and entertainment."
-+ "\n" + "Fun fact: Each business name in the shop windows refers to a person who had some part in the building of Disney World.");
+window.alert("Our first stop is Main Street USA. The street is bustling with shops and entertainment. You can see the Dapper Dans singing barbershop quartet."
++ "\nFun fact: Each business name in the shop windows refers to a person who had some part in the building of Disney World."
++ "\nLet's continue forward to the Hub!");
 
 while(response != "Q" && response != "q")
 {
-  window.alert("Let's continue forward to the Hub! You can see Cinderella's castle in front of you and several spokes in different directions." + "\n"
-  + "From here, you can go anywhere in the park!");
+  window.alert("In the Hub, you can see Cinderella's castle in front of you and several paths that go in different directions." +
+  "\nFrom here, you can go anywhere in the park!");
 
   var response = window.prompt("Where do you want to go?"
   + "\n Right to Tomorrowland (R)"
@@ -42,13 +43,14 @@ while(response != "Q" && response != "q")
   }
 }
 
-window.alert("I'm sorry to hear you have to leave. Have a nice day!");
+window.alert("I'm sorry to hear you have to leave. Have a magical day!");
 
 /* Yarrr, here be functions */
 
 function tomorrowland()
 {
-  window.alert("Welcome to Tomorrowland! The sun shines off the silver buildings and there is alien writing on many of the buildings.");
+  window.alert("You have entered Tomorrowland! The sun shines off the silver buildings "
+  + "and there is alien writing on many of the buildings.");
   tomorrowlandRides();
 } // end tomorrowland
 
@@ -107,7 +109,8 @@ function endOfTomorrowlandRides()
 
 function fantasyland()
 {
-  window.alert("Welcome to Fantasyland! Where all your dreams can come true!");
+  window.alert("Welcome to Fantasyland! Where all your dreams can come true!"
+  + "\nYou can see Rapunzel's Tower and Beast's Castle in the distance.");
   fantasylandRides();
 } // end fantasyland
 
@@ -165,7 +168,8 @@ function endOfFantasylandRides()
 
 function adventureland()
 {
-  window.alert("Welcome to Adventureland! You feel like an explorer as you pass by the ancient tikis that line the path.");
+  window.alert("Welcome to Adventureland! You feel like an explorer as you pass by the ancient tikis that line the path. "
+  + "Up ahead, you see a row of camels. (Careful, they spit!)");
   adventurelandRides();
 } // end adventurelandRides
 
