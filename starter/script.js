@@ -15,6 +15,14 @@
 var backPack = {'Unicorn Rainbow Lipstick':0, 'Mermaid Weave':0, 'Dragon Scale Dress': 0,
   'Medusa necklace':0, 'Stilletoes by ELF': 0, 'Mermaid Weave': 0, 'Fairy Face Shimmer': 0}
 
+function noAnswerLoop(reply){
+  while(reply === ""){
+    var reply = prompt("You must make a choice, " + userName);
+  }
+  return reply;
+};
+
+
 //The story begins.
 alert("The Millinnial Princess Pink Apple Everly Reignbeau \naka Princess PEAR of MacEphora Lusha Brown Land \nis getting ready for her first Golden Carpet event. \n\nShe has summoned you to her chambers.\n");
 
@@ -27,9 +35,9 @@ alert("Princess PEAR: \n'Oh," + " "+ userName + " " + "all the things I have are
 var firstReply = prompt("Will you help the princess? \n\nType 'Y' for 'Yes, gladly, where do I start' \nOR 'N' for 'No, unless you fill my pockets with gold' \nOR 'B' for 'But, your beauty outshines the others, you could wear a trashbag.'");
 
 //How will user began journey?
-while(firstReply === ""){
-  var firstReply = prompt("What did you say," + " "+ userName + ", " + "Speak up.");
-};
+
+firstReply = noAnswerLoop(firstReply);
+
 
 if ((firstReply === 'y') || (firstReply === 'Y')){
   alert("Oh, thank you, " + " "+ userName + " " + "you are as wonderful as they say you are! \n\nYou must first go to the elves in the basement, I hear they make the finest shoes.");
@@ -49,9 +57,8 @@ alert("One elf steps forward and says: 'We are tired and cannot take on anymore 
 
 //Will you help Elves?
 var helpElves = prompt("Will you help the elves? \nType 'Y' for 'Yes, of course. \nOR 'N' for No, and choose to kill all but one, who you will force to make the shoes ");
-while(helpElves === ""){
-  var helpElves = prompt("What say you, sir?");
-};
+helpElves = noAnswerLoop(helpElves);
+
 //Paths based on answers to elves
 if ((helpElves === 'y') || (helpElves === 'Y')){
   alert("The elves: 'Thank you, Thank you.' You have saved the elves. \nThe elves quickly make a magical translucent 6 inch stilletoe that takes on the color of garments around it.");
@@ -73,12 +80,12 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
         alert("You wake to shimmering Fairies hovering above you. It is a party. They invite you to party with them.");
       }
 }else{
-  alert("Horrible choice," + " "+ userNamer +". " + " You should have said yes. You have angered all the elves with your evil plan. \nThey band together, create a portal and fling you into it.");
+  alert("Horrible choice," + " "+ userName +". " + " You should have said yes. You have angered all the elves with your evil plan. \nThey band together, create a portal and fling you into it.");
   alert("You awake to a lavishly designed candle lit bedroom. \nNervously, you race to the nearest door, open it, but find a deep chamber fill with stone statues of men.");
   alert("You are in MEDUSA's Lair!!!, sucks for you. \n\nYou are quick on your toes, and blow out the candles as you hear foot steps approaching.");
-  alert("The light from the hall illuminates a snaked haired lady. She is exhales in annoyance at the dark room and heads for the nearest candle to light.");
+  alert("The light from the hall illuminates a snaked haired lady. She exhales in annoyance at the dark room and heads for the nearest candle to light.");
   var fightMedusa = prompt("You quickly blow out her flame. What will you do next? \nChoose: 'S' for 'Sneak away before she catches you' \nOR 'U' for 'Use your cunning ways to seduce her, have one night stand, steal Medusa Hair for a necklace and sneak out before she wakes.'");
-
+  fightMedusa = noAnswerLoop(fightMedusa);
   //Paths to Medusa choice
   if ((fightMedusa === 's') || (fightMedusa === 'S')){
     alert("You quietly sneak past medusa, forfeiting any possible items you could get from her. \nBut you are safe. ");
@@ -96,12 +103,11 @@ if ((helpElves === 'y') || (helpElves === 'Y')){
                       //All paths lead to Fairies
 alert("The Fairies are sweet and loving, healing your wounds and offering you tea and cookies.");
 alert("The Fairy Queen makes you the honorary guest. You eat and party with the Fairies all night long.")
-alert("You notice all the faireies meals appear out of thin air with a little fairy dust. \nYou think to yourself that this dust would be nice for Princess PEAR");
+alert("You notice all the fairies meals appear out of thin air with a little fairy dust. \nYou think to yourself that this dust would be nice for Princess PEAR");
 
 //Get answer to Fairy dust problem.
 var fairyDust = prompt("How do you get some fairy dust? Choose: 'P' for 'Politely ask for a bit of dust for your princess,  \nOR 'G' for 'Get the frairies drunk and steal it. '");
-while(fairyDust === ""){
-  var fairyDust = prompt("Hurry," + " " +userName + " " + "you must choose before sunrise!");
+fairyDust = noAnswerLoop(fairyDust);
 
 //Go down next path based on answer
 if((fairyDust === 'p') || (fairyDust === 'P')){
@@ -116,17 +122,13 @@ if((fairyDust === 'p') || (fairyDust === 'P')){
     alert("You didn't make a decision soon enough and could not acquire the fairy dust. \nHowever, The Fairy Queen does give you a map to navigate Fiery Cove, for the princesses dress. \nAll the fiaries disappear with the sunrise.");
 };
 
-/*At this point, it would be benificial to figure out how to turn some of the repetitive
-options into a function that I can just call. */
 
                     //All at Firey Cove with Dragons.
-alert("You arrive in Fiery Cove. Not a nice place to be, as all around you are sleeping fire breathing dragons. Yikes!!");
+alert("It is morning and you have found yourself in Fiery Cove. Not a nice place to be, as all around you are sleeping fire breathing dragons. Yikes!!");
 alert("You think to yourself: 'Is this really worth it. The fairies said dragon scales make for the best of the best clothing, but \nThe princes has thousands of dresses, right?'");
 
 var burntButt = prompt("Choose: 'Y' for 'Yes, she is worth every burnt body part you might incur. \nOR 'N' for 'No, Princess PEAR needs to start believing in upcycling and remake an old dress into something new.' ");
-while(burntButt === ""){
-  var burntButt = prompt("You must make a choice, " + userName);
-}
+burntButt = noAnswerLoop(burntButt);
 
 if((burntButt === 'y') || (burntButt === 'Y')){
     alert("You think fast, take a bit of your fairy dust and blind all the Dragons.");
@@ -143,28 +145,34 @@ if((burntButt === 'y') || (burntButt === 'Y')){
 }
 
                     //All At Mermaid Watery Oasis
-//There are mermaids everywhere, singing and combing their hair.
-//They see you and all fawn and dote on you. They are not allowed to be around humans
-//but have been lacking excitement.
-//You tell them of your journey and all its excitement.
-//They are so enamored with you and excited by your travels, they offer to let you pick
-//a treasure you have yet to gain.
+alert("You've heard of this place. It has no name but it is filled with...!!!! ");
+alert("A gorgeous merperson leaps out of the water, just as you were about to think 'MERMAID!'");
+alert("You look around the oasis and there are merpeople surfacing everywhere to bath in the sun");
+alert("They see you and swim to the waters edge, inviting you in for a swim.");
+alert("One of the Mermaids speaks: 'Hi, I'm Coachellanna, we are not allowed to be around humans, and usually our king kills them on site. But he is not here, and you are so Gorgeous.'")
+alert("You tell them of your travels. \nThey are so enamored with you and excited by your stories. \nCoachellanna: We love all that is you. Please choose a gift as token of our appreciation and affection.");
+alert("Two other merbeings come up beside Coachellanna, and each hold out a clam.\nChoose: Choose: Gain *(D)ragon Scale Dress.* \nOR: Gain *(M)edusa necklace*, \nOR: Gain *(U)nicorn Rainbow Lipstick*")
 
-var mermaidGift = prompt("");
-if{((burntButt === 'd') || (burntButt === 'D'))
 
+var mermaidGift = prompt("Choose:");
+if((mermaidGift === 'd') || (burntButt === 'D')){
+    alert("Thank you, I'll choose this one.")
+    backPack['Dragon Scale Dress'] += 1;
 }else if((burntButt === 'm') || (burntButt === 'M')){
-
+    alert("Thank you, I'll choose this one.")
+    backPack['Medusa necklace'] += 1;
 }else if((burntButt === 'u') || (burntButt === 'U')){
-
+    alert("Thank you, I'll choose this one.")
+    backPack['Unicorn Rainbow Lipstick'] += 1;
 }else{
-    alert(By not picking an option the mermaids decide to suprise you with *Dragon Scale dress*);
+    alert("By not picking an option the mermaids decide to suprise you with *Dragon Scale dress*");
     backPack['Dragon Scale Dress'] += 1;
 };
-    //Choose: Gain *(D)ragon Scale Dress.*
-    //OR: Gain *(M)edusa necklace*
-    //OR: Gain *(U)nicorn Rainbow Lipstick*
-//User chooses a gift. As you thank the mermaid and prepare to leave you are drawn back to their
+
+/*alert("After sunbathing for a time, you realize you need to go. \nAs you gather your things, the mermaids pull you back into the water.");
+alert("This isn't good. What will you do?");
+var trappedFish = prompt("Choose:");*/
+
 //beauty. They don't want you to leave.
       //Choose: You lie and say you will come back after your mission.
             //Mermaids believe you and give you some of their hair to remember them by.
