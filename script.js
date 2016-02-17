@@ -1,7 +1,17 @@
 //First Prompt to Pick a Number>Character
 var start_number = prompt("Good morrow, my fair midsummer adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
 
+var start_integer = parseInt(start_number);
+
+while (start_integer == 0 || start_integer >== 5) {
+  start_number = prompt("Good morrow, my fair midsummer adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
+ }
+
+
 //1->Hermia
+//function startGame (start_number) {
+
+
 if (start_number === "1") {
   var hermia_intro = prompt("You are Hermia!\nYou are in love with Lysander, but your father insists that you marry Demetrius. Demetrius is attractive, but a jack-ass. Lysander has a heart of gold. Your father threatens you with three options: \n-Marry Demetrius (M)\n-Face Death (D)\n-Become a Nun (N)\nAfter you father leaves, Lysander pleads that you run away with him and elope (R).\nWhat is your choice (M, D, N, R)?");
     if (hermia_intro === "R" || hermia_intro === "r") { //RUN AWAY
@@ -89,14 +99,16 @@ if (start_number === "1") {
                 var demetrius_no = prompt("That annoying Helena still follows you around, and you remain poor and alone for the rest of your days.");
             }
     }
-
-//Other numbers.
-} else {
-  var promptLoop = function(start_number) {
-      if (start_number === "0" || start_number <= parseInt("5")) {
-        var start_loop =  prompt("Good morrow, my fair adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
-      }
-  }
-  promptLoop(start_number);
-
 }
+//Other numbers.
+//}
+//else {
+//   var promptLoop = function(start_number) {
+//       //if (start_number === "0" || start_number <= parseInt("5")) {
+//         var start_loop =  prompt("Good morrow, my fair adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
+//       //}
+//   }
+//   promptLoop(start_number);
+//
+//
+// }
