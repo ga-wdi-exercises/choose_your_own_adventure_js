@@ -77,7 +77,7 @@ function sayMyName(){
     while (name != "Karen") {
       prompt("Huh?? Who the HELL is THAT? I SAY-ED 'WHAT'S MY NAME?! (She looks mad... say something!)");
       strikes +=1;
-      if (strikes > 5){
+      if (strikes >= 3){
         var name = prompt("Fine. It's Karen. Just say Karen. You know what? Screw it. She leaves.");
         alert("THE END FOR YOU!");
       }
