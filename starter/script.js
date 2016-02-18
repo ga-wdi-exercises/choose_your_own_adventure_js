@@ -49,7 +49,7 @@ function IslandQueen(){
 function redHead(){
 	var KissKillMarry = prompt("she asks you point blank. Kiss kill or Marry?").toUpperCase();
 	if (KissKillMarry === "KISS") {
-		 KissMore();
+		 sayMyName();
 	}
 	else if (KissKillMarry === "KILL") {
 		alert("she kills you first. You bastard.");
@@ -60,9 +60,19 @@ function redHead(){
 }
 
 //==========KissMore===================
-function KissMore(){
-  alert("Write a Loop!");
+function sayMyName(){
+  alert("Everything is going well. Y'all kiss. Then she asks you the ultimate question, the one no woman should...she says....");
+  var name = prompt("Say my name?")
+  var strikes = 0
+    while (name != "Karen") {
+      prompt("Huh?? I SAY-ED 'WHAT'S MY NAME?! (Sheesh. Enter your best guess?)");
+      strikes +=1;
+      if (strikes > 5){
+        var name = prompt("Fine. It's Karen. Just say Karen. Screw it. She leaves.");
+      }
+    }
 }
+
 
 //==========Nextbook================
 function Nextbook(){
