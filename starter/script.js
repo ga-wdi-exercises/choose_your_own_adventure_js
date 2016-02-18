@@ -107,11 +107,12 @@ function BessiesRevenge(){
 }
 //=======Last Book Function=========
 function LastBook(){
-	var LoveIsDead = prompt("Who are we kidding? Wait... there's one more... This one is called 'WalkingStiff:an Affair with the Undead.' Zombies? I love Zombies! Let's do this!, right? Y or N? (come on, man?!)").toUpperCase();
+	var LoveIsDead = prompt("Who are we kidding? Wait... there's one more... This one is called 'WalkingStiff:an Affair with the Undead.' Zombies? I love Zombies! Let's do this!, right? Y or N? (come on, man!!!)").toUpperCase();
 	if (LoveIsDead === "Y") {
-		 Prompt("Zombie End it 1");
+		 alert("Chapter 1. The mist is curling around the aching arms of the black, leafless trees. The palid monuments to our brief and blindsighted mortalities stand starkly in the October night.");
+
 	}
 	else if (Choice1 === "N") {
-	    alert("Zombie End it 2");
+	    alert("Well too freakin' bad! I was asking to be NICE. You're reading it anyway. Okay... now where were we?");
 	}
 }
