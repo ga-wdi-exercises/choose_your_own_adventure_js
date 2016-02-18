@@ -1,36 +1,98 @@
-var welcome = prompt("Welcome to Washington, DC! What is your name?")
-var season = prompt("You'll have a great time here! Are you here in the spring, summer, fall or winter?")
-  if (season === spring || season === summer || season === fall or season === winter) {
-    prompt("There is so much to do in Washington, DC during the" + " " + season. "Do you want to do an activity inside or outside?")
+firstTimer();
+function firstTimer(){
+  var temp = prompt("Welcome to Washington, D.C.! I hope you're excited to be be here. Are you visiting when the temperature is hot or cold? Enter 'H' for hot or 'C' for cold.");
+  if (temp === "H") {
+    location1();
   }
-  else {
-    alert("Please enter a season. Either spring, summer, fall or winter.")
+  else if (temp === "C") {
+    location2();
   }
-    var place;
-    If (season === spring && place === outside) {
-      prompt("It's the perfect time of year! The weather isn't too hot or humid yet. It's also Cherry Blossom season! Do you want to see the cherry blossoms or check out Eastern Market?")
+}
+//==============================================
+function location1(){
+    var place = prompt("Great! Do you prefer to be inside or outside? Enter 'I' for inside or 'O' for outside.");
+    if (place === "O") {
+      boatOrRUn();
     }
-    else if (season ===spring && place === inside) {
-      prompt ("You must have allergies. That's okay! Do you want to see a performance for the Cherry Blossom Festival or go to the Botanical Gardens?")
-    }
-    else if (season === summer && place === outside) {
-      prompt("Some do like it hot! Do you want to go see a Nationals Baseball game or take a paddle board out on the Potomac River?")
-    }
-    else if (season === summer && place === inside) {
-      prompt("I don't blame you. Washington, D.C. can get VERY hot during the" + " " + season. "Do you want to see a movie or tour the Capitol building?")
-    }
-    else if (season === fall && place === outside) {
-      prompt("Another excellent choice! It's finally getting cooler after the unbearable summer we had. Do you want to go to the National Arboretum or go for a hike in Rock Creek Park?")
-    }
-    else if (season === fall && place === inside) {
-      prompt ("It can definitely get chilly during the" + " " + season. "We can either go to the Spy Museum or take a trip up the Washington Monument.")
-    }
-    else if (season === winter && place === outside) {
-      prompt ("You're brave! It can get pretty cold out there. But it's also beautiful. Do you want to go see the Zoo Lights or go ice skating on the mall?")
-    }
-    else if (season === winter && place === inside) {
-      prompt("I don't blame you! D.C. can still be great in the winter, though. Do you want to go see a Capitals hockey game or spend the day at the Spy Museum?")
+    else if (place === "I") {
+      museumOrHouse();
     }
     else {
-    alert("Please enter either inside or outside to tell me where you want to be!")
+      alert("Please enter either 'I' or 'O'.");
+      location1();
+    }
   }
+  //===========================================
+  function location2(){
+    var place = prompt("Great! Do you prefer to be inside or outside? Enter 'I' for inside or 'O' for outside");
+    if (place === "O") {
+      skateOrZoo();
+    }
+    else if (place === "I") {
+      sportOrMonument();
+    }
+    else {
+      alert("Please enter either 'I' or 'O'.");
+      location2();
+    }
+  }
+  //==============================================
+  function boatOrRUn() {
+    var heatOut = prompt("It's hot out! Do you want to go for a run around the monuments or take out a paddle board on the Potomac River? Enter 'R' for a run or 'B' for boating.");
+    if(heatOut === "R") {
+      alert("Make sure to hydrate and bring a camera to capture the sights!");
+    }
+    else if (heatOut === "B") {
+      alert("Bring your sunglasses and put on sunscreen! Remember: Don't fall in. The water is nasty!");
+    }
+    else {
+      alert("Please enter either 'R' or 'B'.");
+      boatOrRUn();
+    }
+  }
+  //==================================================
+function museumOrHouse() {
+  var heatIn = prompt("Too hot for you to be outdoors? That's okay. Do you want to go to a museum or take a tour of The White House? Enter 'M' for museum or 'W' for The White House.");
+  if (heatIn === 'M') {
+    alert("There are so many to choose from! There are no admission fees at ANY of the Smithsonian museums, so visit as many as you like.");
+  }
+  else if (heatIn === "W") {
+    alert("I hope you ordered tickets in advance! Maybe you'll see the President...or at least his dogs!");
+  }
+  else {
+    alert("Please enter either 'M' or 'W' to continue.");
+    museumOrHouse();
+  }
+}
+//========================================================
+function skateOrZoo() {
+  var coldOut = prompt("You are brave! It can get pretty cold in D.C. Do you want to go to the zoo or go ice-skating? Enter 'Z' for the zoo or 'S' for ice-skating.");
+  if (coldOut === "Z") {
+    alert("Go at night to enjoy the Zoo-Lights. Or go during the day to see tons of animals, including the new baby panda bear!");
+  }
+  else if (coldOut === 'S') {
+    alert("The Sculpture Gallery on the National Mall offers ice-skating in the winter. Enjoy and grab a hot chocolate to warm up when you're done!");
+  }
+  else {
+    alert("Please enter either 'Z' or 'S' to continue.");
+    skateOrZoo();
+  }
+}
+
+//===================================================
+function sportOrMonument() {
+  var coldIn = prompt("I don't blame you! Stay inside to keep warm. Do you want to go watch a Capitals hockey game or take a ride up the Washington Monument? Enter 'G' for a Caps game or 'WM' for the Washington Monument.");
+  if (coldIn === "G") {
+    alert("GO CAPS. Bring some money for a Caps shirt and food at the game. Have a blast!");
+  }
+  else if (coldIn === "WM") {
+    alert("The view up here is great! Especially in the winter when there are no leaves on the trees. Get there early to get a ticket! And don't forget your camera.");
+  }
+  else {
+    alert("Please enter either 'G' or 'WM' to continue.");
+    sportOrMonument();
+  }
+}
+function end() {
+  alert("Thanks for coming! Enjoy your visit and come again soon!")
+}
