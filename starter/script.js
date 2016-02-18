@@ -7,7 +7,15 @@ window.alert("Our first stop is Main Street USA. The street is bustling with sho
 
 var time = window.prompt("How many minutes should we stay to listen to the songs?");
 
-window.alert("You listen to " + time + " minutes of fantastic singing.")
+if(time > 0)
+{
+  window.alert("You listen to " + time + " minute(s) of fantastic singing.");
+}
+else {
+  window.alert("Hmm, I guess the Dans are not your thing...");
+}
+
+
 
 window.alert("Let's continue forward to the Hub!");
 
