@@ -1,0 +1,31 @@
+X Walk down Main Street
+
+X Enter the Hub
+
+X Right - Tomorrowland
+  X Thrills - Space mountain
+    X Another ride or goto fantasyland
+  X Laughs - Monsters Laugh Floor
+    X Another ride or goto fantasyland
+  X Nostalgia - Carousel of Progress
+    X Another ride or goto fantasyland
+  X Pain - Stitches Great Escape
+    X Another ride or goto fantasyland
+
+X Straight - through the castle to Fantasyland
+  X Thrills - Seven Dwarves Mine Train
+    Another ride or goto liberty square
+  X Laughs - Winnie the Pooh
+    Another ride or goto liberty square
+  XNostalgia - Dumbo's Flying Elephants
+    Another ride or goto liberty square
+  XPain - It's a small world
+    Another ride or goto liberty square
+
+  Left - Adventureland
+    Laughs - Jungle Cruise
+      Another ride or goto liberty square
+    Nostalgia - Enchanted Tiki Room
+      Another ride or goto liberty square
+    Thrills - Pirates of the Caribbean
+      Another ride or goto liberty square
