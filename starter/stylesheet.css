@@ -1,0 +1,19 @@
+
+button
+  
+
+
+
+    <button onclick="myFunction()">Must be 21 or older!!!</button>
+
+    <p id="demo"></p>
+
+    <script>
+    function myFunction() {
+        var drink = prompt("After a long day, it's time to relax with a bevey. You're at your regular drinking hole with friends. Larry, the bartender asks what you will have to drink. Will you start the night off with Beer, a cocktail or a shot, Beer, Drink");
+
+      if (person != null) {
+          document.getElementById("demo").innerHTML =
+          "Hello " + person + "! How are you today?";
+      }
+  }
