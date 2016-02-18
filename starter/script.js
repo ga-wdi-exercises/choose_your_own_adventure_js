@@ -91,25 +91,26 @@ buffer()
 
 var caretaker = function() {
   console.log("Just out of curiosity, is this your first winter as caretaker here?")
-  var fourthInput = prompt("Please enter 'yes' or 'no'")
-
+var fourthInput = function() {
+  prompt("Please enter 'yes' or 'no'")
+}
   while (fourthInput == "yes") {
     console.log("I'm sorry to differ with you sir, but you are the caretaker. You've always been the caretaker. I should know sir. I've always been here.");
-    fourthInput;
+    fourthInput()
     break;
   }
 }
-var rating = function() {
-  console.log("So, on a scale of 1-10, how would you rate the time you spent as winter caretaker at the Overlook Hotel?")
-  var lastInput = prompt("Please enter a number between 1 and 10.")
-  if (lastInput > 7) {
-    console.log("Great! We can't wait to see you back next year!")
-  }
-  else if (lastInput > 4) {
-    console.log("...")
-  }
-  else console.log("...")
-  }
+// var rating = function() {
+//   console.log("So, on a scale of 1-10, how would you rate the time you spent as winter caretaker at the Overlook Hotel?")
+//   var lastInput = prompt("Please enter a number between 1 and 10.")
+//   if (lastInput > 7) {
+//     console.log("Great! We can't wait to see you back next year!")
+//   }
+//   else if (lastInput > 4) {
+//     console.log("...")
+//   }
+//   else console.log("...")
+//   }
 
 function buffer() {
   console.log("*******************************");
