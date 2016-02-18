@@ -20,10 +20,10 @@ var BunionsOrRead = prompt("Now, what will it be honey-child, Mammaw's Bunions o
 
 function book(){
 	var PirateStory= prompt("Hmmm... This one looks like a real page turner. It's called 'Pirates in Heat: A Sea of Burning Booty' Do you want to crack it open? Type 'y' or 'n'. ").toUpperCase();
-	if (PirateStory === “Y”){
+  if (PirateStory === "Y"){
 		 ShipAdventure();
 	}
-	else if (PirateStory === “N”) {
+	else if(PirateStory === "N") {
     Nextbook();
 	}
 }
@@ -32,10 +32,10 @@ function book(){
 function ShipAdventure(){
 	alert("Your name is Duncan McBearish, you are the fearless cabinboy turned pirate king by the shear glory of how you looked when shirtless. You have grown tired of your parrot eyeballing your muscles and you decide to head to shore to make a few island women swear off their husbands for the privilige of smelling your shirt.");
   var sinkOrSwim = prompt("Once there you discover that your - write about lady drama - which one? Y or N?").toUpperCase();
-	if (sinkOrSwim ===“Y”) {
+	if (sinkOrSwim ==="Y") {
 		 redHead();
 	}
-	else if (sinkOrSwim === “N”) {
+	else if (sinkOrSwim === "N") {
 
 		IslandQueen();
 	}
@@ -43,15 +43,15 @@ function ShipAdventure(){
 //=============Island Queen Function ENDING 2===================
 
 function IslandQueen(){
-	alert("Island Queen Kills you Dead! THE END").toUpperCase();
+	alert("Island Queen Kills you Dead! THE END");
 	}
 //==================RedHead====================
 function redHead(){
 	var KissKillMarry = prompt("she asks you point blank. Kiss kill or Marry?").toUpperCase();
-	if (KissKillMarry === “KISS”) {
+	if (KissKillMarry === "KISS") {
 		 KissMore();
 	}
-	else if (KissKillMarry === “KILL”) {
+	else if (KissKillMarry === "KILL") {
 		alert("she kills you first. You bastard.");
 	}
   else if (KissKillMarry === "MARRY") {
@@ -67,20 +67,20 @@ function KissMore(){
 //==========Nextbook================
 function Nextbook(){
 	var MilkmaidStory = prompt("Yeah, me neither. Oooh! How about 'There's Something In The Milk Maid, part 4?' That's GOTTA be good, right? Type Y or N.").toUpperCase();
-	if (MilkmaidStory === “Y”) {
+	if (MilkmaidStory === "Y") {
 		 alert("Write a function for BEssies Revenge!");
 	}
-	else if (MilkmaidStory === “N”) {
+	else if (MilkmaidStory === "N") {
     LastBook();
 	}
 }
 //=======Last Book Function=========
 function LastBook(){
 	var LoveIsDead = prompt("Who are we kidding? Wait... there's one more... This one is called 'WalkingStiff:an Affair with the Undead.' Zombies? I love Zombies! Let's do this!, right? Y or N? (come on, man?!)").toUpperCase();
-	if (LoveIsDead === “Y”) {
+	if (LoveIsDead === "Y") {
 		 Prompt("Zombie End it 1");
 	}
-	else if (Choice1 === “N”) {
+	else if (Choice1 === "N") {
 	    alert("Zombie End it 2");
 	}
 }
