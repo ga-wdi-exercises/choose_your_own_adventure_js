@@ -6,7 +6,7 @@ console.log("userName is " + userName);
 var oldArray = [0,0,0];
 var newArray = [];
 
-var userPrimaryPick = prompt(userName + ", it is January 25th, 2016 and you're Frank Underwood's" + ' new campaign manager.  Hilary and Bernie have him on the ropes and you need to revive his campaign.  Should President Underwood head to Iowa, New Hampshire, or Nevada? (Please input "i" Iowa, "nh" for New Hampshire, or "n" for Nevada.)')
+var userPrimaryPick = prompt(userName + ", it is January 25th, 2016 and you're Frank Underwood's" + ' new campaign manager.  Hilary and Bernie have him on the ropes and you need to revive his campaign.  Should President Underwood head to Iowa, New Hampshire, or Nevada? (Please input "i" for Iowa, "nh" for New Hampshire, or "n" for Nevada.)')
 //answers are 'Iowa'/'iowa', 'New Hampshire'/'new hampshire', or 'Nevada'/'nevada'
 console.log(userName + " has chosen to go to " + userPrimaryPick);
 
@@ -78,8 +78,10 @@ if (userPrimaryPick === ('i')) {
         var buyingDelegates = prompt('Success.  Hilary is in prison and now it is down to you and Bernie.  Our budget for Nevada is $5 million.  How much do you want to use buying delegates? [Specify $ amount]')
         console.log(userName + " chose to spend " + buyingDelegates)
         // --> Start of Nevada's 1st 3rd Level <--
-        if (buyingDelegates < 3999999) {
-          confirm('Good idea.  This was enough to secure a victory without raising suspcious.  Looking forward to seeing what you are made of at Super Tuesday.');
+        if ((buyingDelegates < 3999999) && (buyingDelegates > 1500000)) {
+          confirm('Good idea.  This was enough to secure a victory without raising suspicion.  Looking forward to seeing what you are made of at Super Tuesday.');
+        } else if (buyingDelegates < 1499000) {
+          confirm('You cheapskate, this was not enough to secure a victory');
         } else if (buyingDelegates > 4000000) {
           confirm('Did you really think spending that amount would not raise suspicion?  The FBI is now investigating you.');
         } else confirm('You failed to follow simple instrustions.  Reload the page to start over.');
@@ -91,7 +93,7 @@ if (userPrimaryPick === ('i')) {
         if (resignOrNot === 'y') {
           confirm('Good luck with your career... in county government');
         } else if (resignOrNot === 'n') {
-          alert('You have guts, but the Underwoods own you now')
+          alert('You have guts, but the Underwoods now own you')
         } else null
         // --> End of Nevada's 2nd 3rd Level <--
       } else null;
