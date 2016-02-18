@@ -17,7 +17,7 @@ if (destination==="F") {
         }
 
   } else if (destination==="I") {
-    alert ("Congrats! Your going to Italy!");
+    alert ("Good choice! Your going to love Italy!");
     var whoIsGoing = prompt ("How many people, including you, will be going?");
 
         if (whoIsGoing < 3) {
@@ -49,7 +49,7 @@ if (destination==="F") {
   }
 
 
-var departingCity = prompt ("Would you prefer to fly out of New York or California?"); alert ("Great," + " " + departingCity + " " + "it is.");
+var departingCity = prompt ("What city would you like to fly out of? (Enter city name)"); alert ("Great," + " " + departingCity + " " + "it is.");
 
 var timeOfDay = prompt ("Would you prefer morning, afternoon, or evening? (m,a,e)");
 
@@ -62,4 +62,8 @@ var timeOfDay = prompt ("Would you prefer morning, afternoon, or evening? (m,a,e
   }
   else if (timeOfDay ==="e") {
       alert ("You're flight leaves at 6pm. The flight's are full so you and your guests all get middle seats....womp womp.");
+  }
+
+  for (i = 0; i < 1; i++) {
+      console.log ("Have a safe trip!");
   }
