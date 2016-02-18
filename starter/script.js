@@ -13,7 +13,7 @@
 
 //First I need something to hold items: a dictionary/key:value pair.
 var backPack = {'Unicorn Rainbow Lipstick':0, 'Mermaid Weave':0, 'Dragon Scale Dress': 0,
-  'Medusa necklace':0, 'Stilletoes by ELF': 0, 'Mermaid Weave': 0, 'Fairy Face Shimmer': 0}
+  'Medusa necklace':0, 'Stilletoes by ELF': 0, 'SmokeyEye by PHOENIX': 0, 'Fairy Face Shimmer': 0}
 
 function noAnswerLoop(reply){
   while(reply === ""){
@@ -154,14 +154,16 @@ alert("You tell them of your travels. \nThey are so enamored with you and excite
 alert("Two other merbeings come up beside Coachellanna, and each hold out a clam.\nChoose: Choose: Gain *(D)ragon Scale Dress.* \nOR: Gain *(M)edusa necklace*, \nOR: Gain *(U)nicorn Rainbow Lipstick*")
 
 
-var mermaidGift = prompt("Choose:");
-if((mermaidGift === 'd') || (burntButt === 'D')){
+var mermaidGift = prompt("Choose a clam: Pick '1', '2', or '3'.");
+mermaidGift = noAnswerLoop(mermaidGift);
+
+if((mermaidGift === '1') || (mermaidGift === 1)){
     alert("Thank you, I'll choose this one.")
     backPack['Dragon Scale Dress'] += 1;
-}else if((burntButt === 'm') || (burntButt === 'M')){
+}else if((mermaidGift === '2') || (mermaidGift === 2)){
     alert("Thank you, I'll choose this one.")
     backPack['Medusa necklace'] += 1;
-}else if((burntButt === 'u') || (burntButt === 'U')){
+}else if((mermaidGift === '3') || (mermaidGift === 3)){
     alert("Thank you, I'll choose this one.")
     backPack['Unicorn Rainbow Lipstick'] += 1;
 }else{
@@ -169,23 +171,34 @@ if((mermaidGift === 'd') || (burntButt === 'D')){
     backPack['Dragon Scale Dress'] += 1;
 };
 
-/*alert("After sunbathing for a time, you realize you need to go. \nAs you gather your things, the mermaids pull you back into the water.");
+alert("After sunbathing for a time, you realize you need to go. \nAs you gather your things, the mermaids pull you back into the water.");
 alert("This isn't good. What will you do?");
-var trappedFish = prompt("Choose:");*/
 
-//beauty. They don't want you to leave.
-      //Choose: You lie and say you will come back after your mission.
-            //Mermaids believe you and give you some of their hair to remember them by.
-            //Gain *Mermaid Weave*
-            //At the end of the beach is a dying Phoenix.
-      //OR: You stay, have weird mermaid orgy and leave while they are still cuddling and entangled in each other
-            //You make it to the end of the beach were you see a dying Phoenix
+var trappedFish = prompt("Choose: 'L' for 'Lie, and say you will come back after your mission \nOR 'S' for 'Stay, have weird mermaid orgy and leave while mermaids are still cuddling and entangled in each other.'");
+trappedFish = noAnswerLoop(trappedFish);
+
+if((trappedFish === 'l') || (trappedFish === 'L')){
+    alert("You lie to the merpeople. But they believe you and give you locks of their hair so you won't forget to return.")
+    alert("You gain *Mermaid Weave* ");
+    backPack['Mermaid Weave'] += 1;
+}else {
+    alert("That fun. You didn't gain any treasure...well not the treasure Princess PEAR would want anyway. Ha!")
 
                   //All at Phoenix
-//The Phoenix is kind and will grant you a wish before you die because he likes the company.
-//But first you must guess which door numbered 1 -20 will take you home.
-//20 doors appear. The Phoenix is happy you will be staying with him a while. He grins.
-//Choose: A number until you guess the right door.
+alert("You have been walking along the Oasis' sandy beach for a while when you spot a sickly looking enormous bird.");
+alert("You walk up to the bird and it smiles. \nBird:'I am a Phoenix. My name is Hashtag Lolly, but you can call me Hash for short.'");
+alert("I am so happy you are here to keep me company in my final hours. In fact, if you guess the number tattooed on my neck, \nI will tell you the dsecret to glamour and sassyness which any admirer would love.");
+
+var guessNum = prompt("This will be easy, so you agree to Hash's game.", "Pick a number between 1 and 20.");
+guessNum = noAnswerLoop(guessNum);
+
+var hashNum = Math.floor((Math.random() * 20) +1);
+
+if(guessNum === hashNum){
+  alert("Thank you for keeping an old Phoenix company. \nThe secret is to take my ashes for the perfect smokey eye eyeshadow.");
+  alert("Hash dies leaving behind his dust. You gain *SmokeyEye by PHOENIX*.");
+  backPack['SmokeyEye by PHOENIX'] = 1;
+}
 
 //Once user guesses correct door, Phoenix dies. *Gain Phoenix Smokey Eye Kit.*
 
