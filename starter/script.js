@@ -115,12 +115,12 @@ function LastBook(){
      alert("Actually,you know what? This one is pretty wierd... Suddenly...you realize you've not eaten in a while. Like 'you' YOU not the Zombie guy in the book...you look over at your grandmaw-maw... and you start to wonder...what DO brains taste like?....");
      alert("THE END FOR YOU!")
 	}
-	else if (Choice1 === "N") {
+	else if (LoveIsDead === "N") {
 	    alert("Well too freakin' bad! I was asking to be NICE. You're reading it anyway. Okay... now where were we?");
       alert("Chapter 1. The mist is curling around the aching arms of the black, leafless trees. The palid monuments to our brief and blindsighted mortalities stand stark against the Shady Grove Mosoluem and Child-Care Center.");
       alert("You notice a pungent aroma wafting in on the night breeze. Oh. Right. It's you. Yeah, see... the thing is you've been dead for, like, 40 years and you're still wearing the same clothes. But you're pretty hot, still, for a rotting corpse.");
       alert("Your thoughts drift back to thoughs of your poor, lost Rebecca...well, she WAS lost. She's actually still around here somewhere... but your feelings for her have changed ever since you ate that chunk of her face off...")
       alert("Actually,you know what? This one is pretty wierd... Suddenly...you realize you've not eaten in a while. Like 'you' YOU not the Zombie guy in the book...you look over at your grandmaw-maw... and you start to wonder...what DO brains taste like?....");
-      alert("THE END FOR YOU!")
+      alert("THE END FOR YOU!");
 	}
 }
