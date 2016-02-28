@@ -4,13 +4,13 @@ Pseudocode
 
 - What is your name?
   - `Sean`
-- Nice to meet you, `Sean`. Congratulations on your new job as a web developer intern.  Your annual salary will be $30,000 per year.  I'm here to help you find a place to live. Now which part of the city would you like to live.**(NW, SW, SE, NE)**
+- Nice to meet you, `Sean`. Congratulations on your new job as a web developer intern.  Your annual salary will be $30,000 per year.  I'm here to help you find a place to live. Now which part of the city would you like to live.**(NW, SW, NE, SE)**
     - `NW`
         -  Northwest has great bars, resturants and tons of night life. You have Champange taste on a beer budget. Unfortunately your intern salary wont cover the $2,000 per month rent. Do you get 3 roommates or uber on nights and weekends. **(R/U)**
             - `R`roommate
-                - So you miss your college days, dorm rooms, roommates, and drama. Your first 2 roommates are great and pay there rent on time but the third one loses her job and can't make the rent. Do you kick him out so you can find a new roommate or start make him sleep on the couch and do AirBnB in his old room? **(K/A)**
-                    - `K`kick him out
-                        - Reasonable choice.  Everyone needs to pay their own way, who cares if you loose your best friend from 5th grade in the process.  As the saying goes, "If you want a friend in Washington get a dog!"
+                - So you miss your college days, dorm rooms, roommates, and drama. Your first 2 roommates are great and pay there rent on time but the third one loses her job and can't make the rent. Do you kick her out so you can find a new roommate or start make her sleep on the couch and do AirBnB in her old room? **(K/A)**
+                    - `K`kick her out
+                        - Reasonable choice.  Everyone needs to pay their own way, who cares if you loose your best friend from 5th grade in the process.  As the saying goes, "If you want a friend in DC get a dog!"
                     - `A`AirBnB
                         - AirBnB is a great way to cover your missing rent and help if he couldn't pay rent he should be glad he can sleep on the couch. AirBnB works out well for two weeks until your landlord notices all the traffic in and out the apartment.  You are fined, and evicted for violating your lease.  You are forced to sleep in your car and shower in your office gym.
             - `U` uber
