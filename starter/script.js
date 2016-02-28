@@ -4,9 +4,9 @@ var name = prompt("what is your name?"); //.toUpperCase();
   if (name = true); {
   prompt("Welcome " + name +", Congratulations on your new job as a web developer intern. Your annual salary is $35,000 per year. I'm here to help you find an apartment.");
 };
-var choice = prompt("What part of the city would you like to live?NW, SW, NE, SE").toString();.toUpperCase(); {// change input to string and uppercase
+var choice = prompt("What part of the city would you like to live?NW, SW, NE, SE").toString().toUpperCase(); {// change input to string and uppercase
 
-  if (choice == "NW"); { // display info for NW and prompt user to type answer
+  if (choice == "NW") { // display info for NW and prompt user to type answer
   prompt("Northwest has great bars, resturants and tons of night life. \
   You have Champange taste on a beer budget. Unfortunately you cannot afford \
   $,2000 per month in rent on your miserable intern salary \
@@ -22,46 +22,47 @@ var choice = prompt("What part of the city would you like to live?NW, SW, NE, SE
         or make her sleep on the couch and do AirBnB in her old room? \
         Type 'K' to Kick her out or 'A' for AirBnB").toUpperCase(); { // make user choose btw Kick friend out or AirBnB
 
-          if (KickOrAirbnb == "K"); { // display the info if user chooses to kick friend out
+          if (KickOrAirbnb == "K") { // display the info if user chooses to kick friend out
           prompt("Reasonable choice. Everyone needs to pay their own way, \
            who cares if you loose your best friend from 5th grade in the process. \
             As the saying goes, 'If you want a friend in DC get a dog!'");
-          };
+          }
           else if (KickOrAirbnb == "A") { // display info if user chooses AirBnB
             prompt("AirBnB is a great way to cover your missing rent and help if he \
             couldn't pay rent he should be glad he can sleep on the couch. \
             AirBnB works out well for two weeks until your landlord notices all the traffic \
             in and out the apartment. You are fined, and evicted for violating your lease. \
             You are forced to sleep in your car and shower in your office gym.");
-          };
+          }
 
           else {
             prompt("Please type either R or U"); // force user to make a choice by repeating KickOrAirbnb
-            return KickOrAirbnb;
+           KickOrAirbnb;
           }
         }
-      };
+      }
+    }
     else if (roomMateOrUber == "U") { // display if user chooses to do Uber
       prompt("Uber is great way to make money on your time with your car. \
       Uber black pays more but uber x has fewer rules.");
 
-        var UberXOrBlack = prompt("Do you decide on uber X or uber black? Type'X' for UberX or 'B' for Uber-Black").toString();.toUpperCase(); { // decide if I want to keep using tostring or restrict user answer to only the 2 options
+        var UberXOrBlack = prompt("Do you decide on uber X or uber black? Type'X' for UberX or 'B' for Uber-Black").toString().toUpperCase(); { // decide if I want to keep using tostring or restrict user answer to only the 2 options
           if (UberXOrBlack == "X"); {
             prompt("on uber x you must work 5 hours a day 7 days a week to come up with the rent. \
-            You now have no social life outside of uber and your internship")
-          };
+            You now have no social life outside of uber and your internship");
+          }
 
           else if (UberXOrBlack == "B") { // display the info if user chooses Uber-Black
             promot("Uber black pays 3 times $40 per hour and you only have to work 15 hours a month to cover your rent. \
             Uber requires you buy commercial auto insurance which takes an exra $300/ per month so you barely break even. \
-            Hey at least you don't have roommates and can make the rent every month.")
-          };
+            Hey at least you don't have roommates and can make the rent every month.");
+          }
 
           else {
             return UberXOrBlack; // write a code to send user back to var Uber-Black
-          };
-        };
-    };
+          }
+        }
+    }
   else if (choice == "SW"); {
     prompt("Very Resonable choice. In fact it is so reasonable that 50,000 people just like you made the same choice \
     and Southwest becomes the the part of the city with the most rapidly increasing rents.  \
