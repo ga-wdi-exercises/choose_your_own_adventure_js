@@ -49,11 +49,11 @@ else {
     }
   }
   else if (choice == "SW") {
-    prompt("Very Resonable choice. In fact it is so reasonable that 50,000 people just like you made the same choice and Southwest becomes the the part of the city with the most rapidly increasing rents. You decide to sign a 5 year lease to lock-in a rent you can afford.  You better love this internship and stay in DC for a while because with the $5,000 deposit you can't afford to move again any time soon");
+    alert("Very Resonable choice. In fact it is so reasonable that 50,000 people just like you made the same choice and Southwest becomes the the part of the city with the most rapidly increasing rents. You decide to sign a 5 year lease to lock-in a rent you can afford.  You better love this internship and stay in DC for a while because with the $5,000 deposit you can't afford to move again any time soon");
   }
 
   else if (choice == "NE") {
-    var sellOrKeep = prompt("Northeast is a wise choice. Lots of up and coming nieghborhoods and your new place is in walking distance to your internship. You no longer use your car on a regular basis but you have to keep paying for parking.  Do you sell your car or keep it? Type 'S' to sell it or 'K' to keep it");
+    var sellOrKeep = prompt("Northeast is a wise choice. Lots of up and coming nieghborhoods and your new place is in walking distance to your internship. You no longer use your car on a regular basis but you have to keep paying for parking.  Do you sell your car or keep it? Type 'S' to sell it or 'K' to keep it"); // force user to make a choice
         if (sellOrKeep == "S") {
           alert("You sell your car and use the money to buy a new matching set of apple products; Macbook, Ipad, and Iphone now you can code in style!");
         }
@@ -62,7 +62,7 @@ else {
         }
 
         else {
-          alert("Don't you wish you can live without having to make difficult choices? ")
+          alert("Don't you wish you can live without having to make difficult choices?")
           var sellOrKeep;
          // write a code to return to the beginning of the NE section
         }
@@ -71,16 +71,17 @@ else {
 
   else if (choice == "SE") {
     var apartmentLevel = prompt("Anacostia is one of the last places you can still get a one bedroom for less than $1000 per month. You find the deal of a life time for $875 per month. The last decision you need to make is which apartment level you want. Do you want the top floor or the basement? Type'T' for top floor or 'B' for Basement").toUpperCase();
-
-        if (apartmentLevel = "T") {
+    // force user to make a choice
+        if (apartmentLevel == "T") {
         alert("Choosing the top floor guarantees no one will be stomping above your head. You can sleep in on the weekends with no interruptions. The elevator breaks down after 2 weeks and you have to walk up 4 flights to your unit. On the bright side you don't have to pay for a gym membership.");
         }
 
-        else if (apartmentLevel =="B") {
-          alert("The basement seems like a great choice, its cool in the summer time and easy access to bring things in and out your apartment. Your apartment is broken into and you learn the hard way easy access isn't always good.");
+        else if (apartmentLevel == "B") {
+          alert("The basement seems like a great choice, its cool in the summer time and easy access to bring things in and out of your apartment. Your apartment is broken into and you learn the hard way that easy access isn't always good.");
         }
 
         else {
+          alert ("Don't you wish you can live without having to make difficult choices?")
           apartmentLevel; // write a code to take user back to the beginning of SE section
         }
       }
