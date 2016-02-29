@@ -31,21 +31,21 @@ else {
 
     }
     else if (roomMateOrUber == "U") { // display if user chooses to do Uber
-      prompt("Uber is great way to make money on your time with your car. Uber black pays more but uber x has fewer rules.");
+      var UberXOrBlack = prompt("Uber is great way to make money on your time with your car. Uber black pays more but uber x has fewer rules. Do you decide on uber X or uber black? Type'X' for UberX or 'B' for Uber-Black").toString().toUpperCase();
 
-        var UberXOrBlack = prompt("Do you decide on uber X or uber black? Type'X' for UberX or 'B' for Uber-Black").toString().toUpperCase(); { // decide if I want to keep using tostring or restrict user answer to only the 2 options
+          // decide if I want to keep using tostring or restrict user answer to only the 2 options
           if (UberXOrBlack == "X") {
-            prompt("on uber x you must work 5 hours a day 7 days a week to come up with the rent. You now have no social life outside of uber and your internship");
+            alert("on uber x you must work 5 hours a day 7 days a week to come up with the rent. You now have no social life outside of uber and your internship");
           }
 
           else if (UberXOrBlack == "B") { // display the info if user chooses Uber-Black
-            promot("Uber black pays 3 times $40 per hour and you only have to work 15 hours a month to cover your rent. Uber requires you buy commercial auto insurance which takes an exra $300/ per month so you barely break even. Hey at least you don't have roommates and can make the rent every month.");
+            alert("Uber black pays 3 times $40 per hour and you only have to work 15 hours a month to cover your rent. Uber requires you buy commercial auto insurance which takes an exra $300/ per month so you barely break even. Hey at least you don't have roommates and can make the rent every month.");
           }
 
           else {
             UberXOrBlack; // write a code to send user back to var Uber-Black
           }
-        }
+
     }
   }
   else if (choice == "SW") {
