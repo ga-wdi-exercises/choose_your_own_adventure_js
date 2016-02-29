@@ -17,7 +17,7 @@ else {
         // make user choose btw Kick friend out or AirBnB
 
           if (KickOrAirbnb == "K") { // display the info if user chooses to kick friend out
-          prompt("Reasonable choice. Everyone needs to pay their own way, who cares if you loose your best friend from 5th grade in the process. As the saying goes, 'If you want a friend in DC get a dog!'");
+          alert("Reasonable choice. Everyone needs to pay their own way, who cares if you loose your best friend from 5th grade in the process. As the saying goes, 'If you want a friend in DC get a dog!'");
           }
           else if (KickOrAirbnb == "A") { // display info if user chooses AirBnB
             prompt("AirBnB is a great way to cover your missing rent and help if he couldn't pay rent he should be glad you let him sleep on the couch. AirBnB works out well until your landlord notices all the traffic in and out the apartment. You are fined and evicted for violating your lease agreement. You have to sleep in your car and shower in your office gym.");
@@ -25,7 +25,7 @@ else {
 
           else {
             prompt("Please type either R or U"); // force user to make a choice by repeating KickOrAirbnb
-           KickOrAirbnb;
+           KickOrAirbnb; // figure this out!
           }
 
 
