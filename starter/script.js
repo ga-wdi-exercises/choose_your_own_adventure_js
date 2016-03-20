@@ -5,10 +5,10 @@ var bumper = function() {
 console.log("You currently live in a place called 'City of Destruction'. Everyone is convinced the city is about to be completely wiped out. So you decide set out on a pilgramage.");
 bumper();
 
-var pilgramChoice = prompt("You can head toward the 'Borough of Despond' or toward the city known as 'Vanity Fair' (Please enter 'b' or 'v').");
+var pilgrimChoice = prompt("You can head toward the 'Borough of Despond' or toward the city known as 'Vanity Fair' (Please enter 'b' or 'v').");
 
 //Road to Borough of Despond
-if (pilgramChoice == 'b') {
+if (pilgrimChoice == 'b') {
   console.log("You arrive to the Borough of Despond and meet a man named 'Dubious'.");
   bumper();
   var responseToDubious = prompt("He reluctanly ask you for money to get dinner. You decide to \n('g') - give him some money and continue on your journey \n('w') - walk with him to the market, buy him food yourself and then continue \n('k') - keep on your journey");
@@ -69,7 +69,7 @@ if (pilgramChoice == 'b') {
 
 //Road to Vanity Fair
 
-else if (pilgramChoice == 'v') {
+else if (pilgrimChoice == 'v') {
   console.log("You arrive to Vanity Fair only realize that everyone only talks about thier accomplishments and all the nice thinigs they have. Then you meet a man named Commerce, and quickly realize he likes to talk numbers.");
   bumper();
   var commerceResponse = prompt("To get to know you he says 'Quick! Give me a number that evenly divides into 96 besides itself!' So you respond with \n - (any number evenly divisible by 96)  \n('m') - 'I missed that day in class'  \n('i') - I don't need to answer your question...you know where I'm from? The City of Destruction - I will destroy you!");
