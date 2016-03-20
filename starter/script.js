@@ -6,12 +6,11 @@ var gender = prompt("Hi, " + name + ". Are you male or female? (M/F)");
 console.log(gender);
  //**(M/F)**
 
-if (gender == 'F'||'f'){
-  console.log("Do what you want to do today!")
-}
-//(F)emale:  Do what you want to do today!
-else { //(gender == 'M' || 'm')
-
+// if (gender === 'F'||'f'){
+//   console.log("Do what you want to do today!")
+// }
+ if (gender === 'M'||'m'){
+    console.log("So, " + name + " you're a guy.")
   var status = prompt("Are you married? (Y/N)");
     if (status == 'Y'||'y'){
       var askHer = prompt("Ask her what she wants to do today.  Shopping, movie, dinner, or stay home? (S/M/D/H)");
@@ -37,10 +36,6 @@ else { //(gender == 'M' || 'm')
               console.log("Stay home, play video games, and download a movie while you cook ramen noodles!");
             }
           }
-            }
-          }
-
-      //  else if ((status == 'Y'||'y') || (fwb == 'Y'||'n')){
 
           if (askHer == 'S' || 's'){
               var shop = prompt("Does she want to go to the mall or to Costco? (M/C)")
@@ -68,6 +63,8 @@ else { //(gender == 'M' || 'm')
               console.log("Nice.  Order Chinese delivery, ring up The Notebook on Netflix, and you're good to go!");
             }
 
+}
+}
 
 
 
