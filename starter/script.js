@@ -10,7 +10,7 @@ var pilgramChoice = prompt("You can head toward the 'Borough of Despond' or towa
 if (pilgramChoice == 'b') {
   console.log("You arrive to the Borough of Despond and meet a man named 'Dubious'.");
   bumper();
-  var responseToDubious = prompt("He reluctanly ask you for money to get dinner. You decide to \n('g') - give him some money and continue on your journey \n('w') - walk with him to the market, buy him food yourself and then continue \n('s') - sit down and share dinner with him ");
+  var responseToDubious = prompt("He reluctanly ask you for money to get dinner. You decide to \n('g') - give him some money and continue on your journey \n('w') - walk with him to the market, buy him food yourself and then continue \n('k') - keep on your journey");
 
   //Response 'g'
   if (responseToDubious == 'g') {
@@ -44,10 +44,23 @@ if (pilgramChoice == 'b') {
         bumper();
       }
     }
-    else if (dubiousResponse == 'r') {
-      console.log("You channel your inner Usain back home and begin to ask a mentor for help planning your next pilgramage.");
+    else if (dubiousResponse == 'a') {
+      console.log("You channel your inner Usain and bolt back home and begin to ask a mentor for help planning your next pilgramage.");
     }
   }
 
-  
+  //Response 'k'
+  else if(responseToDubious == 'k') {
+    console.log("Knowing you have a long journey ahead of you, you politely decline and keep going.");
+    bumper();
+    var dubiousResponse = prompt("As you keep walking you start to think to yourself \n('s') - I should stop and help this fellow out \n ('c') - I feel a small bit of remores but I need to continue");
+  }
+    if(dubiousResponse == 's') {
+    console.log("You change your mind, turn around and give him a few Dollars; but as head on your way you fall into a swamp and Troy and Elizabeth from the show Swamp People save and the four of you have dinner together and laugh.");
+    bumper();
+  }
+  else if(dubiousResponse == 'c') {
+    console.log("You continue on your journey and suddenly fall into a swamp. Then Dubious saves you, brings you to his house and you have dinner with his family and play Settlers of Catan for 5.7 hours");
+    bumper();
+  }
 }
