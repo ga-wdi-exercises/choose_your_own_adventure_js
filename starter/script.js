@@ -33,14 +33,14 @@ if (pilgramChoice == 'b') {
     bumper();
     var dubiousResponse = prompt("As you walk, Dubious says 'Tom's cooking has taken a turn for the worse ever since Emeril Lagasse replaced him on the show.' With a grumbling stomach you \n('o') - order the sardine infused pecorino grilled cheese sandwhich topped with maggots and jellied moose nose \n('a') - Apologize to Dubious and run back home");
     if (dubiousResponse == 'o') {
-      console.log("After two bites you run out back upchuck, fall into a swamp.");
+      console.log("After two bites you run out back upchuck, and fall into a swamp.");
       bumper();
       var dubiousResponse = prompt("Dubious asks you if you know how to swim? \n('y') - yes \n('n') - no");
       if (dubiousResponse == 'y') {
         console.log("Dubious responds and says 'That's great, but I'm not sure how much that's going to help because you're in a swamp!' Then Troy and Elizabeth from the show Swamp People come and help you get out and you are on you're way again.");
         bumper();
       }
-      else {
+      else if (dubiousResponse == 'n') {
         console.log("You and Dubious start singing 'Sittin' on The Dock of the Bay' and Otis Redding appears, saves you, and you're on your way again.");
         bumper();
       }
@@ -54,10 +54,10 @@ if (pilgramChoice == 'b') {
   else if(responseToDubious == 'k') {
     console.log("Knowing you have a long journey ahead of you, you politely decline and keep going.");
     bumper();
-    var dubiousResponse = prompt("As you keep walking you start to think to yourself \n('s') - I should stop and help this fellow out \n('c') - I feel a small bit of remores but I need to continue");
+    var dubiousResponse = prompt("As you keep walking you start to think to yourself \n('s') - I should stop and help this fellow out \n('c') - I feel a small bit of remorse but I need to continue");
   }
     if(dubiousResponse == 's') {
-    console.log("You change your mind, turn around and give him a few Dollars; but as head on your way you fall into a swamp and Troy and Elizabeth from the show Swamp People save and the four of you have dinner together and laugh.");
+    console.log("You change your mind, turn around and give him a few dollars; but as head on your way you fall into a swamp and Troy and Elizabeth from the show Swamp People save and the four of you have dinner together and laugh.");
     bumper();
   }
   else if(dubiousResponse == 'c') {
@@ -72,7 +72,7 @@ if (pilgramChoice == 'b') {
 else if (pilgramChoice == 'v') {
   console.log("You arrive to Vanity Fair only realize that everyone only talks about thier accomplishments and all the nice thinigs they have. Then you meet a man named Commerce, and quickly realize he likes to talk numbers.");
   bumper();
-  var commerceResponse = prompt("To get to know you he says 'Quick! Give me a number that evenly divides into 96 besides itself!' So you respond with \n (any number evenly divisible by 96)  \n('m') - 'I missed that day in class'  \n('i') - I don't need to answer your question...you know where I'm from? The City of Destruction - I will destroy you!");
+  var commerceResponse = prompt("To get to know you he says 'Quick! Give me a number that evenly divides into 96 besides itself!' So you respond with \n - (any number evenly divisible by 96)  \n('m') - 'I missed that day in class'  \n('i') - I don't need to answer your question...you know where I'm from? The City of Destruction - I will destroy you!");
 
   //Response m
   if(commerceResponse == 'm') {
