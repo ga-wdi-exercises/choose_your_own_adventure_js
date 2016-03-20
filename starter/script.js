@@ -2,10 +2,10 @@ var bumper = function() {
   console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 };
 
-console.log("You currently live in a place called 'City of Destruction'. No one living there seems to have any hope and everyone is convinced the city is about to be completely wiped out. So you decide set out on a pilgramage.");
+console.log("You currently live in a place called 'City of Destruction'. Everyone is convinced the city is about to be completely wiped out. So you decide set out on a pilgramage.");
 bumper();
 
-var pilgramChoice = prompt("You can head toward the 'Borough of Despond' or toward the 'Village of Morality' (Please enter 'b' or 'v').");
+var pilgramChoice = prompt("You can head toward the 'Borough of Despond' or toward the city known as 'Vanity Fair' (Please enter 'b' or 'v').");
 
 if (pilgramChoice == 'b') {
   console.log("You arrive to the Borough of Despond and meet a man named 'Dubious'.");
