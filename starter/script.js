@@ -7,6 +7,7 @@ bumper();
 
 var pilgramChoice = prompt("You can head toward the 'Borough of Despond' or toward the city known as 'Vanity Fair' (Please enter 'b' or 'v').");
 
+//Road to Borough of Despond
 if (pilgramChoice == 'b') {
   console.log("You arrive to the Borough of Despond and meet a man named 'Dubious'.");
   bumper();
@@ -34,7 +35,7 @@ if (pilgramChoice == 'b') {
     if (dubiousResponse == 'o') {
       console.log("After two bites you run out back upchuck, fall into a swamp.");
       bumper();
-      var dubiousResponse = prompt("Dubious asks you if you know how to swim? \n ('y') - yes \n('n') - no");
+      var dubiousResponse = prompt("Dubious asks you if you know how to swim? \n('y') - yes \n('n') - no");
       if (dubiousResponse == 'y') {
         console.log("Dubious responds and says 'That's great, but I'm not sure how much that's going to help because you're in a swamp!' Then Troy and Elizabeth from the show Swamp People come and help you get out and you are on you're way again.");
         bumper();
@@ -53,7 +54,7 @@ if (pilgramChoice == 'b') {
   else if(responseToDubious == 'k') {
     console.log("Knowing you have a long journey ahead of you, you politely decline and keep going.");
     bumper();
-    var dubiousResponse = prompt("As you keep walking you start to think to yourself \n('s') - I should stop and help this fellow out \n ('c') - I feel a small bit of remores but I need to continue");
+    var dubiousResponse = prompt("As you keep walking you start to think to yourself \n('s') - I should stop and help this fellow out \n('c') - I feel a small bit of remores but I need to continue");
   }
     if(dubiousResponse == 's') {
     console.log("You change your mind, turn around and give him a few Dollars; but as head on your way you fall into a swamp and Troy and Elizabeth from the show Swamp People save and the four of you have dinner together and laugh.");
@@ -63,4 +64,46 @@ if (pilgramChoice == 'b') {
     console.log("You continue on your journey and suddenly fall into a swamp. Then Dubious saves you, brings you to his house and you have dinner with his family and play Settlers of Catan for 5.7 hours");
     bumper();
   }
+}
+
+
+//Road to Vanity Fair
+
+else if (pilgramChoice == 'v') {
+  console.log("You arrive to Vanity Fair only realize that everyone only talks about thier accomplishments and all the nice thinigs they have. Then you meet a man named Commerce, and quickly realize he likes to talk numbers.");
+  bumper();
+  var commerceResponse = prompt("To get to know you he says 'Quick! Give me a number that evenly divides into 96 besides itself!' So you respond with \n('n') - (any number evenly divisible by 96)  \n('i') - 'I missed that day in english class'  \n('j') - filler text filler text filler text filler text");
+
+  //Response i
+  if(commerceResponse == 'i') {
+    console.log("Commerce hits you on the head with a roll of magical nickels and you wake up repeating the Pythagorean Theorem.");
+    bumper();
+    var commerceAsks = prompt("Then he asks if you \n('n') - want to go see the N'SYNC reunion concert with him? \n('b') - go practice some binary code with Lord Of The Rings on in the background?");
+    if (commerceAsks == 'n') {
+      console.log("You guys get to the concert, and your mind is blown becusae Lance is the lead singer and Justin it totally off beat.");
+      bumper();
+    }
+    else if(commerceAsks == 'b') {
+      console.log("You get to Commerce's house and it's made of golden bricks in the shape of numbers. And then your mind is blown because you see Donald Trump, 50 Cent, and Lady Gaga having dinner and teaching themselves binary code.");
+      bumper();
+    }
+  }
+
+  //Response n
+
+  else if (commerceResponse == 'n') {
+    console.log("");
+  }
+
+  else {
+    while (commerceResponse < 12 ) {
+      var commerceResponse = prompt("Commerce says to you 'Hit me baby! One more time!'");
+    }
+    console.log("Commerce says 'Well done. I've got two tickets to the N'SYNC reunion concert. Let's head that way and share our perspectives on commerce integration.'");
+    bumper();
+  }
+
+
+
+
 }
