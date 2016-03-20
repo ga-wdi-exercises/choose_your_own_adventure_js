@@ -6,19 +6,44 @@ var gender = prompt("Hi, " + name + ". Are you male or female? (M/F)");
 console.log(gender);
  //**(M/F)**
 
-// if (gender === 'F'||'f'){
-//   console.log("Do what you want to do today!")
-// }
- if (gender === 'M'||'m'){
+if (gender === 'F' || gender === 'f'){
+  console.log("Do what you want to do today!")
+}
+ if (gender === 'M'||gender == 'm'){
     console.log("So, " + name + " you're a guy.")
-  var status = prompt("Are you married? (Y/N)");
-    if (status == 'Y'||'y'){
+  var married = prompt("Are you married? (Y/N)");
+    if (married == 'Y'||'y'){
       var askHer = prompt("Ask her what she wants to do today.  Shopping, movie, dinner, or stay home? (S/M/D/H)");
     }
-    else if (status == 'N' || 'n'){
+    if (askHer == 'S' || 's'){
+        var shop = prompt("Does she want to go to the mall or to Costco? (M/C)")
+          if (shop == 'm' || 'M'){
+            console.log("Take her to Tysons Galleria.");
+          }
+          else {
+            console.log("Take her to Costco, buy some toilet paper, then continue to Tysons Galleria.");
+          }
+        }
+
+       else if (askHer == 'M'||'m'){
+        var herMovie = prompt("Cool.  Does she want to see Fast & Furious 12 or the remake of The Notebook? (F/N)");
+        if (herMovie == 'F'||'f'){
+          console.log("Really?  Awesome!  Hurry before she changes her mind!");
+        }
+        else{
+          console.log("Of course.  You get to demonstrate your sensitive side again.  Bring tissues!");
+        }
+      }
+       else if (askHer == 'D'||'d'){
+        console.log("Sounds good.  Take her to the Italian restaurant at Tysons Galleria!");
+      }
+      else {
+        console.log("Nice.  Order Chinese delivery, ring up The Notebook on Netflix, and you're good to go!");
+      }
+    //else if (status == 'N' || status == 'n'){
       var fwb = prompt("Do you have a girlfriend? (Y/N)");
       // The life of a single man:
-        if (fwb == 'N' || fwb == 'n'){
+        if ((fwb == 'N' || fwb == 'n') && (married == 'N' || married == 'n')){
           var single = prompt("You\'re on your own today, " + name + ". Movies, food, video games, or all three? Or are you broke? (M,F,V,3,B)");
             if (single == 'M' || single == 'm'){
               console.log("Great!  Go to the cheap theater and spend $15 on popcorn for dinner.");
@@ -36,35 +61,8 @@ console.log(gender);
               console.log("Stay home, play video games, and download a movie while you cook ramen noodles!");
             }
           }
-
-          if (askHer == 'S' || 's'){
-              var shop = prompt("Does she want to go to the mall or to Costco? (M/C)")
-                if (shop == 'm' || 'M'){
-                  console.log("Take her to Tysons Galleria.");
-                }
-                else {
-                  console.log("Take her to Costco, buy some toilet paper, then continue to Tysons Galleria.");
-                }
-              }
-
-             else if (askHer == 'M'||'m'){
-              var herMovie = prompt("Cool.  Does she want to see Fast & Furious 12 or the remake of The Notebook? (F/N)");
-              if (herMovie == 'F'||'f'){
-                console.log("Really?  Awesome!  Hurry before she changes her mind!");
-              }
-              else{
-                console.log("Of course.  You get to demonstrate your sensitive side again.  Bring tissues!");
-              }
-            }
-             else if (askHer == 'D'||'d'){
-              console.log("Sounds good.  Take her to the Italian restaurant at Tysons Galleria!");
-            }
-            else {
-              console.log("Nice.  Order Chinese delivery, ring up The Notebook on Netflix, and you're good to go!");
-            }
-
 }
-}
+
 
 
 
