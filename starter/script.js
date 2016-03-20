@@ -2,28 +2,25 @@ var bumper = function() {
   console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 };
 
-// var age = prompt("What's your age?");
-//
-// if (age < 13) {
-//   console.log("You're allowed to play, but at your own risk!");
-// }
-// else {
-//   console.log("Ok let's play!");
-// }
-// bumper();
-//
-// console.log("You find yourself at a Justin Bieber concert...and what's worse is you're actually singing along");
-// bumper();
-// console.log("Then the Biebs stops singing, and asks 'Does anyone want to race me?'");
-// bumper();
-//
-// var notafanAnswer = prompt("Do you want to race Justin? (Please enter 'y' or 'n')");
-
 console.log("You currently live in a place called 'City of Destruction'. No one living there seems to have any hope and everyone is convinced the city is about to be completely wiped out. So you decide set out on a pilgramage.");
 bumper();
 
 var pilgramChoice = prompt("You can head toward the 'Borough of Despond' or toward the 'Village of Morality' (Please enter 'b' or 'v').");
 
 if (pilgramChoice == 'b') {
-  console.log("You arrive the Borough of Despond and meet a man named'Dubious'");
+  console.log("You arrive to the Borough of Despond and meet a man named 'Dubious'.");
+  bumper();
+  var responseToDubious = prompt("He reluctanly ask you for money to get dinner. You decide to \n('g') - give him some money and continue on your journey \n('w') - walk with him to the market and buy him food yourself and then continue \n('s') - sit down and share dinner with him ");
+  if (responseToDubious == 'g') {
+    console.log("You give him a few dollars and go on your way just before getting stuck in a swamp.");
+    bumper();
+    var dubiousResponse = prompt("He asks 'Do you know how to swim?' \n('y') - yes \n('n') - no");
+    if (dubiousResponse == 'y') {
+      console.log("Dubious responds and says 'That's great, but I'm not sure how much that's going to help because you're in a swamp!' Then Troy and Elizabeth from the show Swamp People come and help you get out and you are on you're way again.");
+      bumper();
+    }
+    else {
+      console.log("You and Dubious start singing 'Sittin' on The Dock of the Bay' and Otis Redding appears, saves you, and you're on your way again.");
+    }
+  }
 }
