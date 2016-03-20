@@ -19,7 +19,7 @@ Are you male or female? **(M/F)**
           (3):  Great!  Dave & Buster's it is!  ...If you have $115 to blow. **(Y,N)**
             (Y)es: Party!
             (N)o:  Stay home, play video games, and buy pizza AND beer!
-          (B)roke: Stay home, play video games, and download a movie while you
+          (B)roke: Stay home, play video games, then download a movie while you
                   cook ramen noodles!
 
       --else--
