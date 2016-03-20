@@ -1,0 +1,35 @@
+What's your name?
+* 'Bill'
+
+Are you male or female? **(M/F)**
+(F)emale:  Do what you want to do today!
+
+(M)ale: Are you married? **(Y/N)**
+* 'No'
+  Do you have a girlfriend? **(Y/N)**
+    * 'N'
+      * 'N' >-
+          You're on your own today.  Movies, video games, or
+          food?  Or all three? Or are you broke? **(M,V,F,3,B)**
+          (M)ovie: Great!  Go to the cheap theater and spend $15 on
+                  popcorn for dinner.
+          (V)ideo games:  Great!  Stay home, play games, and spend
+                  $15 on pizza for dinner.
+          (F)ood:  Great!  Order pizza delivery for $15.
+          (3):  Great!  Dave & Buster's it is!  ...If you have $115 to blow. **(Y,N)**
+            (Y)es: Party!
+            (N)o:  Stay home, play video games, and buy pizza AND beer!
+          (B)roke: Stay home, play video games, and download a movie while you
+                  cook ramen noodles!
+
+      --else--
+*(Yes):  Ask what she wants to do.  Shopping, movie, dinner, or stay home?
+        **(S,M,D,H)**
+        (S)hopping: Cool!  Do you want to go to the mall, or to Costco?  **(M,C)**
+            (M)all:  Go to Tyson's Galleria.
+            (C)ostco:  Go to Costco, get some toilet paper, then
+                      continue to Tyson's Galleria.
+        (M)ovie: Cool!  Do you want to see Fast & Furious 12 or The Notebook?
+        **(F/N)**
+          (F)ast & Furious: Really?  Awesome!
+          The (N)otebook: You get to show your sensitive side. Bring tissues!
