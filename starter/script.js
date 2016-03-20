@@ -72,28 +72,39 @@ if (pilgramChoice == 'b') {
 else if (pilgramChoice == 'v') {
   console.log("You arrive to Vanity Fair only realize that everyone only talks about thier accomplishments and all the nice thinigs they have. Then you meet a man named Commerce, and quickly realize he likes to talk numbers.");
   bumper();
-  var commerceResponse = prompt("To get to know you he says 'Quick! Give me a number that evenly divides into 96 besides itself!' So you respond with \n('n') - (any number evenly divisible by 96)  \n('i') - 'I missed that day in english class'  \n('j') - filler text filler text filler text filler text");
+  var commerceResponse = prompt("To get to know you he says 'Quick! Give me a number that evenly divides into 96 besides itself!' So you respond with \n (any number evenly divisible by 96)  \n('m') - 'I missed that day in class'  \n('i') - I don't need to answer your question...you know where I'm from? The City of Destruction - I will destroy you!");
 
-  //Response i
-  if(commerceResponse == 'i') {
+  //Response m
+  if(commerceResponse == 'm') {
     console.log("Commerce hits you on the head with a roll of magical nickels and you wake up repeating the Pythagorean Theorem.");
     bumper();
-    var commerceAsks = prompt("Then he asks if you \n('n') - want to go see the N'SYNC reunion concert with him? \n('b') - go practice some binary code with Lord Of The Rings on in the background?");
+    var commerceAsks = prompt("Then he asks if you \n('n') - want to go see the N'SYNC reunion concert with him? \n('b') - go practice some binary code with a mariachi band playing in the background?");
     if (commerceAsks == 'n') {
       console.log("You guys get to the concert, and your mind is blown becusae Lance is the lead singer and Justin it totally off beat.");
       bumper();
     }
     else if(commerceAsks == 'b') {
-      console.log("You get to Commerce's house and it's made of golden bricks in the shape of numbers. And then your mind is blown because you see Donald Trump, 50 Cent, and Lady Gaga having dinner and teaching themselves binary code.");
+      console.log("You get to Commerce's house and it's made of golden bricks in the shape of numbers. And then your mind is blown because you see Donald Trump, Rick Ross, and Lady Gaga having dinner together and teaching themselves binary code.");
       bumper();
     }
   }
 
-  //Response n
+  //Response i
 
-  else if (commerceResponse == 'n') {
-    console.log("");
+  else if (commerceResponse == 'i') {
+    console.log("Out of nowhere Commerce starts beat boxing and break dancing at the same time.");
+    var myResponse = prompt("A bit confused and impressed you \n('j') - you join in and start freestylin' \n('d') - you pull your DJ gear out and start scratchin' the 1's and 2's");
+    if (myResponse == 'j') {
+      console.log("Then Commmerce pulls off his mustache and beard and is really Drake");
+      bumper();
+    }
+    else if(myResponse == 'd') {
+      console.log("Then Commerce does a side-step into a hip-twist, turns into Michael Jackson and moon-walk's into the horizon.");
+      bumper();
+    }
   }
+
+
 
   else {
     while (commerceResponse < 12 ) {
@@ -102,8 +113,4 @@ else if (pilgramChoice == 'v') {
     console.log("Commerce says 'Well done. I've got two tickets to the N'SYNC reunion concert. Let's head that way and share our perspectives on commerce integration.'");
     bumper();
   }
-
-
-
-
 }
