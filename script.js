@@ -1,13 +1,11 @@
 name  = prompt("Hey, what's your name?")
-age = prompt("How old are you?") //I'm just going to assume everyone who plays this game is over 18
+age = prompt("How old are you?") 
 
-//I can't figure out why this loop doesn't work properly
-// while (age < 18) {
-//   console.log ("Sorry you're a bit too young to play this game.")
-// }
-// while (age >= 18) {
-//   console.log (entryPath)
-// }
+
+
+for(var i = age; i <= 17; i++) {
+name = "Young person";
+}
 
 
 
