@@ -1,10 +1,10 @@
 name  = prompt("Hey, what's your name?")
-age = prompt("How old are you?") 
+age = prompt("How old are you?")
 
 
 
 for(var i = age; i <= 17; i++) {
-name = "Young person";
+name = "Young person (you have played the lottery illegally)";
 }
 
 
