@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>World Quiz</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+
+  /*------------------------ storyline*/
+
+  button {
+
+    position: fixed;
+    left: 9%;
+    top: 75%;
+    width:3%;
+    height: 5%;
+    background-color: rgba(252, 254, 255, 0);
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    border-color: white;
+    font-size: auto;
+    color:rgb(220, 224, 27);
+    border-radius:50%;
+    border-color:rgba(252, 254, 255, 0);
+  }
+
+
+  button:hover {
+      color: #fff;
+      text-shadow:
+      -1px -1px 0 #00f,
+      1px -1px 0 #00f,
+      -1px 1px 0 #00f,
+      1px 1px 0 #00f;
+  }
+
+  .sparkle{
+      width:20px;
+      height:20px;
+      background-color:red;
+      position:relative;
+      margin:20%;
+      box-shadow:0 0 0px 0px rgba(0,0,0,.5);
+      background:url(http://i.imgur.com/2T5M8.png?1);
+       -webkit-animation:
+        sparkle .5s infinite steps(1),
+        movetop 2.5s infinite steps(1),
+        moveleft 3.5s infinite steps(1)
+      }
+
+
+        @keyframes sparkle {
+          0%, 100%{background-position:0px 0}
+          20%{background-position:20px 0}
+          40%{background-position:40px 0}
+          60%{background-position:60px 0}
+          80%{background-position:80px 0}
+        }
+        @keyframes movetop {
+          0%, 100%{top:0;}
+          20%{top:-50px;}
+          40%{top:5px;}
+          60%{top:-10px;}
+          80%{top:15px}
+        }
+
+        @keyframes moveleft {
+          0%, 100%{left:20px}
+          14.28%{ left:0px}
+          28.57%{ left:-25px}
+          42.85%{ left:-10px}
+          57.14%{ left:5px}
+          71.42%{ left:-15px}
+          85.71%{ left:10px}
+        }
+
+  /*-----------------maps      */
+
+        #floating-panel {
+          position: fixed;
+          top: 5%;
+          left: -45%;
+          z-index: 5;
+          background-color: #fff;
+          padding: 5px;
+          border: 1px solid #999;
+          text-align: center;
+          font-family: 'Roboto','sans-serif';
+          line-height: 30px;
+          padding-left: 10px;
+        }
+      .gm-style-mtc {
+          display: none;
+        }
+
+        #pac-input {
+          display: none;
+        }
+      #map {
+        height: 100%;
+        visibility: hidden;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      #target {
+        width: 345px;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+
+    <div id="map"></div>
+
+    <button id="button_0" onclick="adventure();" placeholder="Email Address">
+
+    <div  class="sparkle"></div>
+  </button>
+
+<div id="floating-panel">
+    <input id="address" type="textbox" value="type in stuff">
+    <input id="submit" type="button" value="Press Me!">
+<div>
+
+
+    <script>
+
+
+var response_1_1;
+var response_2;
+
+        function adventure() {
+
+                var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
+                document.getElementById("button_0").style.left = "15%";
+                document.getElementById("button_0").style.top = "80%";
+
+                var response_0=prompt("Lets play a travel game! I am 7ruth and what is your name?\n(Type in your first name)");
+
+                var letter_position = alphabet.indexOf(response_0.charAt(0));
+
+                      document.getElementById("button_0").style.visibility = "hidden";
+                      document.getElementById("map").style.visibility = "visible";
+                      document.getElementById("floating-panel").style.left = "40%";
+
+                   if (letter_position%2===0) {
+
+
+                      document.getElementById('address').value='Enter "wet" or "dry"';
+
+                      document.getElementById('submit').addEventListener('click', function() {
+
+                      });
+
+
+                   } else {
+
+                      document.getElementById('address').value='Enter "warm" or "cold"';
+
+                   }
+                 }
+
+
+
+
+
+      function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 36.964, lng: -122.015},
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
+        disableDefaultUI: true
+      });
+
+        var geocoder = new google.maps.Geocoder();
+
+        var place_inputs =["warm","cold","dry","wet"];
+        var place_outputs= ["Siena, Italy", "Zurich", "Winnipeg", "Fukuoka"]
+
+        document.getElementById('submit').addEventListener('click', function() {
+
+              response_1_1 = place_outputs[place_inputs.indexOf(document.getElementById('address').value)];
+
+
+              geocodeAddress(geocoder, map);
+
+              if (response_1_1!=="Siena, Italy" && response_1_1!=="Zurich") {
+
+                    setTimeout(function() {response_2 = prompt('Does this look more like "Winnipeg" or "Fukuoka"?');
+
+                        if (response_2==response_1_1) {
+                                confirm("You are correct!");
+                        } else {confirm("You are incorrect");
+                          }
+                          },3000);
+              } else {
+
+                    setTimeout(function() {response_2 = prompt('Does this look more like "Siena, Italy" or "Zurich"?');
+                        if (response_2==response_1_1) {
+                              confirm("You are correct!");
+                        } else {confirm("You are incorrect");
+              } },3000);
+            }
+          });
+
+
+
+
+
+         function geocodeAddress(geocoder, resultsMap) {
+           var address = response_1_1;
+           geocoder.geocode({'address': address}, function(results, status) {
+             if (status === google.maps.GeocoderStatus.OK) {
+               resultsMap.setCenter(results[0].geometry.location);
+              //  var marker = new google.maps.Marker({
+              //    map: resultsMap,
+              //    position: results[0].geometry.location
+              //  });
+             } else {
+               alert('Geocode was not successful for the following reason: ' + status);
+             }
+           });
+         }
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // // Create a marker for each place.
+            // markers.push(new google.maps.Marker({
+            //   map: map,
+            //   icon: icon,
+            //   title: place.name,
+            //   position: place.geometry.location
+            // }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf-D4jyfaLB1XuJwyoGzCmrQy_Nn1H07s&libraries=places&callback=initAutocomplete"
+         async defer></script>
+  </body>
+</html>
