@@ -78,13 +78,15 @@ function happyHourInsanity(){
   console.log("You begin to merge your brain with the alcohol branch or whatever and you start feeling less stressed out. Beer selection"+
   " is prety good too." +
   " After mingling a bit, some people ask you if you want to play beer pong. Hey, that's weird, they're playing beer pong.");
-  var toYolo = prompt("[1] Run several YOLO commands and play beer pong, or [2] wander around and see if anyone wants to go bar hopping?");
-  if (inputCrusher(toYolo,2)==1){
-    yoLoAndBehold();
-  } else {
+  var toYolo = prompt("[1] Run several YOLO commands and play beer pong, [2] wander around and see if anyone wants to go bar hopping, [3] jam a ham sandwich into your mouth to buy time?");
+  if (inputCrusher(toYolo,3)==1){
+    yoLoAndBehold(nputCrusher(toYolo,3)==2);
+  } else if {
     console.log("What where you thinking? There's free alcohol here. And you have like no money because you spent it all to come to GA.");
     var whatThinking = prompt(" Please enter what you are thinking:");
     console.log("I guess '"+whatThinking+"' is a reason. Well, let's just agree to disagree and leave it at that. the end");
+  } else {
+    console.log("You jam the ham sandwich into your mouth to buy yourself more time to decide. A ridiculous choice, but it works. In a way it works too well: you begin to choke. Luckily a guy wearing 3 fedoras performs the heimlich maneuver on you. You flee home in embarassment. THE END");
   }
 }
 
