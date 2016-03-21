@@ -2,13 +2,13 @@
 var person = prompt("Please enter your name", "Kevin Hart");
 
 if (person != null) {
-    document.getElementById("demo").innerHTML =
-    "Hey! " + person + "! Are you ready for a ride along with Ice Cube?";
+    console.log("Hey! " + person + "! Are you ready for a ride along with Ice Cube?");
+
 }
 
 var text;
 var favSong = prompt("What's your favorite Ice Cube Song");
-switch(favDrink) {
+switch(favSong) {
     case "It was a good day":
         text = "West Coast Classic!";
         break;
@@ -34,13 +34,13 @@ alert("Yay, Yay!");
 var answer = prompt("Do you want to go to the north, east, west, or south of the city?")
 switch (answer){
   case 'north':
-  console.console.log('The northern part of the city has the best restaurants');
+  console.log('The northern part of the city has the best restaurants');
   case 'east':
-  console.console.log('The eastern part of the city is where we can really take on crime');
+  console.log('The eastern part of the city is where we can really take on crime');
   case 'west':
-  console.console.log('The western part of the city is where the beach is.');
+  console.log('The western part of the city is where the beach is.');
   case 'south':
-  console.console.log('The southern part of the city is where we can grab a drink.');
+  console.log('The southern part of the city is where we can grab a drink.');
 }
 var direction = confirm("Did you chose north/east or south/west?");
 if (direction === north) {
