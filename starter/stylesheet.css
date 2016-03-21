@@ -1,0 +1,44 @@
+html {
+  background: url(images/brickbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(235, 234, 223)
+}
+body{
+font-family:georgia,timesnewroman;
+color:black;
+text-align: center;
+margin-left: auto;
+margin-right:auto;
+margin-top:10em;
+font-size: 14px;
+letter-spacing: 2px;
+}
+main{
+  position:relative;
+  background-color: rgba(235, 234, 223, 0.7);
+  width: 45em;
+  border: 10px solid rgba(235, 234, 223,0.9);
+  text-align: center;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:10em;
+  padding:1em 2em 2em 2em;
+}
+p{
+  margin:3px;
+  line-height:18px;
+}
+p.title{
+  font-weight:bold;
+  font-size: 18px;
+  margin: 2px;
+  letter-spacing: 4px;
+}
+p.subtitle{
+  font-size:14px;
+  margin:5px;
+  font-style: italic;
+}
