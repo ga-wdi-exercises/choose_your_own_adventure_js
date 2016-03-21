@@ -2,7 +2,7 @@
 var name = prompt("What\'s your name?");
 console.log(name);
 
-var gender = prompt("Hi, " + name + ". You have the day off today!  This script is going to help decide what to do.  First, are you male or female? (M/F)");
+var gender = prompt("Hi, " + name + ". You have the day off today!  This script is going to help decide what to do.  First, we have to ask: are you male or female? (M/F)");
 //console.log(gender);
  //**(M/F)**
 
