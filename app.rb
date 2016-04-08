@@ -31,7 +31,9 @@ if year.to_i >= 2015
 
       elsif action == "r"
          puts "`R`un like a coward. You get away, but your future son Marty Jr. is heckled for the rest of his days for his dad's cowardice."
+
       end # s/r
+
 
    elsif name == "g"
       puts "Griff is asking you if you are in, or out. What do you say? **(I/O)**"
@@ -43,6 +45,7 @@ if year.to_i >= 2015
 
       elsif asking == "o"
          puts "`O`ut. Good call. You deck Griff in the jaw and run away. He gives chase on his hoverboard and ends up in a pile of manure."
+
       end # i/o
 
    end # b/g
@@ -70,12 +73,15 @@ elsif year.to_i >= 1955 && year.to_i <= 1984
       puts "Interesting. You set up an elaborate plan for your future Dad to surprise your Mom by beating you up. Despite going horribly awry, the plan ultimately works. You may go back to your own time."
 
    end # y n s
+
 end # 1955 - 1984
+
 
 elsif year.to_i < 1955
    puts "I see you're a fan of Back to the Future 3. You've run out of nitroglycerin to get back to your own time. How do you power the Time Machine? **(H/M/T)."
 
-   power = gets.chomp
+
+   power == gets.chomp
    puts power
 
    if power == "h"
@@ -99,17 +105,3 @@ elsif year.to_i < 1955
    end # t l
 
 end # h m t
-
-
-# * `< 1955`
-#
-#         * `H`orses
-#             * Good idea, but no. The time machine needs to get to 88mph. 12 horsepower ain't gonna cut it.
-#         * `M`oonshine
-#             * You'd be better off drinking the moonshine. Do not pass Go, do not collect $200. Stuck in 1855.
-#         * `T`rain
-#             * Good call! This plan seems to be working. But wait! Clara wants to go Back to the Future with you at the last moment. What do you do? **(T/L)**
-#                 * `T`ake her
-#                     * Interesting choice. Unfortunately the Doc can't grab Clara and get back to the car in time. He ends up staying in 1855 with her.
-#                 * `L`eave her
-#                     * Smart choice. Unfortunately the Doc was deeply in love with Clara, and when he gets back to 1985 he becomes very depressed.
