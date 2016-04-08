@@ -84,6 +84,7 @@ elsif year.to_i < 1955
    power == gets.chomp
    puts power
 
+
    if power == "h"
       puts "Good idea, but no. The time machine needs to get to 88mph. 12 horsepower ain't gonna cut it."
 
