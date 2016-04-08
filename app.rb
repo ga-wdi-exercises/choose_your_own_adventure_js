@@ -78,12 +78,27 @@ elsif year.to_i < 1955
    power = gets.chomp
    puts power
 
-   if power = "h"
+   if power == "h"
       puts "Good idea, but no. The time machine needs to get to 88mph. 12 horsepower ain't gonna cut it."
 
-   elsif power = "m"
+   elsif power == "m"
       puts "You'd be better off drinking the moonshine. Do not pass Go, do not collect $200. Stuck in 1855."
-end
+
+   elsif power == "t"
+      puts "Good call! This plan seems to be working. But wait! Clara wants to go Back to the Future with you at the last moment. What do you do? **(T/L)**"
+
+      moment == gets.chomp
+      puts moment
+
+      if moment == "t"
+         puts "Interesting choice. Unfortunately the Doc can't grab Clara and get back to the car in time. He ends up staying in 1855 with her."
+
+      elsif moment == "l"
+         puts "Smart choice. Unfortunately the Doc was deeply in love with Clara, and when he gets back to 1985 he becomes very depressed."
+
+   end # t l
+
+end # h m t
 
 
 # * `< 1955`
