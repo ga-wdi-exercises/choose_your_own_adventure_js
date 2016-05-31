@@ -12,7 +12,7 @@ var quadrant = prompt("Would you like to start in NW, NE, SE, or SW?").toLowerCa
 if (quadrant == "nw") {
 console.log("Lovely! NW is the largest quadrant in Washington, DC and there is much to see there.")
 
-    var nwdcActivity = prompt("Where will we go first? (A) The National Zoo, (B) The 9:30 Club (C) Georgetown, or (D) The National Mall?", "A, B, C, or D").toLowerCase();
+    var nwdcActivity = prompt("Where will we go first? (A) The National Zoo (B) The 9:30 Club (C) Georgetown, or (D) The National Mall?", "A, B, C, or D").toLowerCase();
 
     if (nwdcActivity =="a") {
     console.log("nice. Panda time!!!!!!");
@@ -79,7 +79,7 @@ console.log("Excellent! Northeast DC is home to many wonderful neighborhoods, br
       var neFood = prompt("Choose a restaurant: (A) Toki Underground (B) Big Board (C) Union Market")
 
           if (neFood == "a") {
-            console.log ("You put your name down, had some beers at the Pug and enjoyed some LIFE CHANGING ramen. way.to.go.")
+            console.log ("You put your name down at Toki, had some beers at the Pug and enjoyed some LIFE CHANGING ramen. way.to.go.")
           }
           if (neFood == "b") {
             console.log ("Burgers, always a good choice. Diggin' your style.")
