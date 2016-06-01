@@ -107,7 +107,7 @@ Do you (e)ngage or (g)et away from this admitted stalker?
             apprehended for badass computer haxin, everyone you work with
             assumes it's something filthy.
 
-*********        
+*********
 
         //  c
             After thirty minutes on the phone, you now have unlimited calls to
@@ -185,3 +185,20 @@ Do you (e)ngage or (g)et away from this admitted stalker?
             they no longer consider you a threat.
 
             MOVIE OVER!!!
+
+
+AFTER CHOICE5:
+
+roll over or stay silent
+
+admit you're the one or admit you're not the one
+
+if admit positive, do you save trinity?
+
+if yes, you fail
+
+if no, you fail
+
+if admit you're not the one
+
+you save the human race
