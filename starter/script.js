@@ -1,69 +1,49 @@
-/* Westeros CYOA
+var name = prompt("Welcome to Westeros, what is your name?");
+var family = prompt("Are you of house Lanniser or Stark?");
+var money = 0;
+var days = 1;
 
-Aegon, what do u want to conquer first?
-1. Riverlands
-2. Casterly Rock
-3. Stormlands
-4. The North
-5. Highgarden
-6. The Eyrie
-8. Iron Islands
-7. Dorne
-*/
+  if (family === 'Lannister') {
+    console.log("Welcome "+name+" of House "+family+". You gain 300gold");
+    money = 300;
+    var choice1 = prompt("Where would you like to travel first?")
+      if (choice1 === 'Dorne'){
+        console.log("Upon arrival, you are rounded up by Dornish watchmen. They ask you where you are from. You answer proudly, "+name+" of house "+family+". The Dornish hate the Lannisters for killing the late queen. You are immediately slain. You Die at day"+days+". Game Over");
+      }
+      else if (choice1 === 'Kings Landing'){
+        money = money + 100;
+        days = days +1;
+        console.log("You are welcome at Kings Landing. You offer to work guard for the knight on behalf of House "+family+". You gain 100gold. Currently at "+money);
 
-var armyStrength;
-var dragons;
-var supplies;
-var strength;
-var negotiation;
-
-function rest(){
-  armyStrength = (armyStrength/2) + 300;
-}
-
-function status(){
-  console.log('You have ' + armyStrength ' , ' + dragons + 'Dragons, ' + supplies +' supplies');
-}
-
-function Westeros(){
-  console.log("Aegon, which lands would you like to conquer first?"
-"1. Riverlands"
-"2. Casterly Rock"
-"3. Stormlands"
-"4. The North"
-"5. Highgarden"
-"6. The Eyrie"
-"8. Iron Islands"
-"7. Dorne");
-dragons = 3;
-armyStrength = 0;
-supplies = 100;
-politics = 1000;
-
-return prompt("Pick a number");
-};
-
-function getPlayerMove(move)  {
-
-if (move == null){
-  move = Westeros();
-}
-return move;
-}
-
-function firstMove(choice1){
+        console.log("Would you like to spend your gold? Currently at"+money);
+        var choice2 = prompt("Where would you like to go? A) Varys pimp house. B) The Red Keep. C) Church of the Seven");
+          if (choice2 === 'A'){
+            if (money > 1000){
+              console.log("You do not have enough money. Currently at "+money);
+              var repeatQ = prompt("Would you like to do more shifts at Kings Landing? Y/N");
+                if (repeatQ === 'Y'){
+                  console.log("You work your days, dreaming of spending the night at Varys pleasure palace");
+                  for(var i = 0; i < ((1000-money)/100); i++){
+                    console.log("still working..");
+                    money += 100;
 
 
-  if (choice1 === "1")
-    prompt("How would you like to attack? D/A/N?");
-    if {
-
-    }
-    console.log("Lord Tully has bent the knee. You have gained 300 armyStrength and 200 supplies");
-    armyStrength = armyStrength + 300;
-    supplies = supplies + 200;
+                    else
+                    console.log("You pay the money you have worked hard to earn but you die at the hands of a bald assasin. You die at"+days+". Game over")
+                    return;}
 
 
-    function
 
-  }
+
+
+
+
+
+
+    if (family === 'Stark') {
+      console.log("Welcome "+name+" of House "+family);
+      var choice1 = prompt("Where would you like to travel first?")
+        if (choice1 === 'Casterly Rock'){
+          console.log("Upon arrival, you are rounded up by Lannister Guards . They ask you where you are from. You coldly answer, "+name+" of house "+family+". The Dornish hate the Lannisters for killing the late queen. You are immediately slain. You Die. Game Over");
+        }
+      }
