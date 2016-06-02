@@ -88,6 +88,11 @@ console.log("Excellent! Northeast DC is home to many wonderful neighborhoods, br
             console.log ("You overdid it a bit and bought food from at least 3 food stands, you're really full.")
           }
       }
+
+      if (havingHunger == "n") {
+      console.log("No worries, let's go to the arboretum instead.");
+    }
+
 }
 
 //SE DC results
