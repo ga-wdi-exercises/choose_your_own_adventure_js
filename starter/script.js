@@ -27,7 +27,7 @@ if(answer !== "Y"){
   var N = alert(stageOneA);
   setTimeout(function(){
     console.log("Choose Wisely....")
-    var stageOneAB = prompt("You feel began to feel to feel pretty bad because you lost your best friends, do you want go back downstairs and play the game? Y or N")
+    var stageOneAB = prompt("You feel began to feel pretty sad because you lost your best friends, do you want go back downstairs and play the game? Y or N")
 
     if(stageOneAB != "Y"){
       console.log("Enjoy the rest of your day..")
