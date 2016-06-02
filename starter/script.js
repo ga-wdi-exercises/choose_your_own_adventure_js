@@ -9,7 +9,7 @@ if (family === 'Lannister') {
     money = 300;
     decision1L();
 }
-
+//Wanted to add pictures assigned to each function to help pick the choices but ran out of time..
 function decision1L(){
     var choice1 = prompt("Where would you like to travel?")
     if (choice1 === 'Dorne'){
@@ -23,6 +23,23 @@ function decision1L(){
         console.log("You are welcome at Kings Landing. You offer to work guard for the knight on behalf of House "+family+". You gain 100gold. Currently at "+money+ "gold.");
         decision2L();
     }
+    if (choice1 === 'Casterly Rock'){
+        days = days +2;
+        console.log("You are welcome home. A banker comes to you and ask if you would like to deposit some gold.. you have "+money+" gold.");
+        var depositGold = prompt("How much gold would you like to deposit?");
+        if (depositgold = NaN){
+            depositGold = prompt("How much gold would you like to deposit (Please input a value)");
+        }
+        else if (depositGold > money){
+            depositGold = prompt("How much gold would you like to deposit (Please input a value less than "+money);
+        }
+        else if (depositGold > 1){ //could have used != NaN
+            money = money - parseInt(depositGold);
+            "You deposited "+money+" gold. You currently have "+money+" gold."
+            decision1L();
+        }
+
+
 }
 
 function decision2L(){
@@ -52,7 +69,7 @@ function decision2L(){
         console.log("You arent allowed here")
         decision1L();
     }
-    else if (choice2 === 'C'){
+    else if (choice2 === 'C')
         console.log("You go into the Drowning Whore, a Lannister favored bar.")
         var choiceBar = prompt("1) Buy a round for yourself or 2) for EVERYONE?")
             if (choiceBar === '1'){
@@ -79,11 +96,12 @@ function decision2L(){
                 }
                 if (choiceSong === '3'){
                     console.log("'The Dornishman's wife was as fair as the sun, and her kisses were warmer than spring...'");
-                    console.log("A Man named Bronn stops you from singing, he says 'This song really is all about the ending.' and stabs you. You are gushing out blood as he takes your mead.")
+                    console.log("A Man named Bronn stops you from singing, he says 'This song really is all about the ending.' and stabs you. You are gushing out blood as he takes your mead. You die at "+days);
                     console.log("GAME OVER");
                 }
-    }
-}
+
+
+
 
 
 
