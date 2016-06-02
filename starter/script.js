@@ -106,13 +106,11 @@ function adventure() {
         adventure();
       }
     }
-
   else {
     alert("Back to the beginning!");
     adventure();
   }
 }
-
 adventure();
 function camdenYards() {
   var yards = prompt("Taking the train straight from the ballpark, hope the O's won! (O!/No)");
