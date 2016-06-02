@@ -1,4 +1,3 @@
-// put code here!
 function adventure() {
   var start = prompt("Let's go to class at GA! How do we get there from Baltimore? Do we take the MARC, a Car or the Hyperloop?");
   if (start === "MARC") {
@@ -56,7 +55,7 @@ function adventure() {
         adventure();
       }
     }
-  // }
+
   else if (start === "Car") {
     var road = prompt("So which route are you going to take? 95, 1 or whatever just Google Maps it?");
     if (road === "95") {
@@ -66,7 +65,14 @@ function adventure() {
         adventure();
       }
       else {
-        alert("Phew, maybe you'll make it. Maybe.");
+        var trip = false;
+        while (trip === false) {
+          var yet = prompt("Are we there yet?");
+          if (yet === "Yes") {
+            trip = true;
+            alert("About time.")
+          }
+        }
         adventure();
       }
     }
@@ -91,15 +97,16 @@ function adventure() {
     }
   }
   else if (start === "Hyperloop") {
-    var musk = prompt("Cool you can hop on board but first, are you Elon Musk?")
-    if (musk === "Yes") {
-      "window.location.href='http://www.google.com'";
+    var musk = prompt("Cool you can hop on board but first, are you Elon Musk? Yes/No")
+      if (musk === "Yes") {
+        window.location = "https://www.linkedin.com/in/david-corderman-64a0762a"
+      }
+      else {
+        alert("Aaaaaaaaaand you're there.");
+        adventure();
+      }
     }
-    else {
-      alert("Aaaaaaaaaand you're there.");
-      adventure();
-    }
-  }
+
   else {
     alert("Back to the beginning!");
     adventure();
