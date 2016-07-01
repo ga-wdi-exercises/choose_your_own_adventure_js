@@ -9,9 +9,9 @@ var pathInput = prompt("You can either go left or right..(Please enter 'l' or 'r
 if(pathInput == "l"){
   console.log("You take the path to the left and you come across a tiny little girl a distance ways from the path to the left. Shes turned away from you so you can't totally make her out, but she appears to be crying")
   buffer()
-  var responseToTinyGirl = prompt("You ponder what you want to do ... and decide to\n('s') - stab her, you can't trust little girls these days.. haven't you seen like every horror movie ever?\n('c') - console her, shes a lost little girl!\n('i') - ignore her and continue on the trail")
-  if(responseToTinyGirl == 's'){
-    console.log("Without hesitating you stab the tiny girl with your dagger, she turns her head as you stab her, turn out shes a skeleton tiny girl and you just pissed her off")
+  var responseToTinyGirl = prompt("You ponder what you want to do ... and decide to\n('p') - push her, you can't trust little girls these days.. haven't you seen like every horror movie ever?\n('c') - console her, shes a lost little girl!\n('i') - ignore her and continue on the trail")
+  if(responseToTinyGirl == 'p'){
+    console.log("Without hesitating you push the tiny girl, she turns her head, turn out shes a skeleton tiny girl and you just pissed her off")
     buffer()
     var ghostGirlResponse = prompt("She asks a question, 'Whats your favorite number?'...\n('any number') - Without hesistating\n('h') - You hesistate for a moment...")
     if(ghostGirlResponse == 'h'){
@@ -29,9 +29,9 @@ if(pathInput == "l"){
   else if(responseToTinyGirl == 'c'){
     console.log("You call out to the little girl, 'whats wrong teeny tiny little girl? Are you ok?'")
     buffer()
-    var ghostGirlResponse = prompt("She turns and you realize she wasn't crying, but laughing so hysterically she was brought to tears. Confused and terrified you...\n(s) - stab her, you can't trust little girls these days.. haven't you seen like every horror movie ever?\n('r') - run away, get the hell outta dodge")
-    if(ghostGirlResponse == 's'){
-      console.log("Without hesitating you stab the tiny girl with your dagger, she turns her head as you stab her, turn out shes a skeleton tiny girl and you just pissed her off")
+    var ghostGirlResponse = prompt("She turns and you realize she wasn't crying, but laughing so hysterically she was brought to tears. Confused and terrified you...\n(p) - push her, you can't trust little girls these days.. haven't you seen like every horror movie ever?\n('r') - run away, get the hell outta dodge")
+    if(ghostGirlResponse == 'p'){
+      console.log("Without hesitating you push the tiny girl, she turns her head, turn out shes a skeleton tiny girl and you just pissed her off")
       buffer()
       var ghostGirlResponse = prompt("She asks a question, 'Whats your favorite number?'...\n('any number') - Without hesistating\n('h') - You hesistate for a moment...")
       if(ghostGirlResponse == 'h'){
