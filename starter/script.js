@@ -34,3 +34,14 @@ var daysVacation = parseFloat(prompt("You’ve had a long year, it’s time for 
       } else {
         alert("Sorry, but you didn't pick one of the possible locations!");
       }
+
+        // More Options in Europe
+        if (moreInEurope == "Germany") {
+          alert("Time to eat brats and drink beer!");
+        } else if (moreInEurope == "England") {
+          alert("Great, let’s book your trip! Maybe you’ll get a chance to see the Queen of England!");
+        } else if (moreInEurope == "No") {
+          alert("Sorry, those are all the upcoming trips we have scheduled for Europe.")
+        } else {
+          alert("Sorry, you didn't select a valid option.")
+        }
