@@ -46,8 +46,24 @@ var daysVacation = parseFloat(prompt("You’ve had a long year, it’s time for 
         }
     } else if (whereTo == "Africa") {
       var whereInAfrica = prompt("Great! So far we have a safari or bus tour of several countries. What will it be, bus or safari or neither?");
+        // Options for if user wants to go to Africa
+        if (whereInAfrica == "Bus") {
+          alert("Perfect, you’ll see a lot of different sights and do a tour of different cultures!");
+        } else if (whereInAfrica == "Safari") {
+          alert("You’ll love seeing all the wildlife!");
+        } else {
+          alert("Sorry, you didn't pick one of the right options!");
+        }
     } else if (whereTo == "South America") {
-      var whereInSouthAmerica = prompt("Fabulous, how about going to Argentina or Brazil?")
+      var whereInSouthAmerica = prompt("Fabulous, how about going to Argentina or Brazil?");
+        // Options for if user wants to go to South America
+        if (whereInSouthAmerica == "Argentina") {
+          alert("Fantastic, you’ll have a great time!");
+        } else if (whereInSouthAmerica == "Brazil") {
+          alert("Wonderful, you’ll really enjoy the music there and excellent cuisine.");
+        } else {
+          alert("Sorry, you didn't pick one of the options!");
+        }
     } else {
       alert("Please pick one of the offered locations.");
     }
