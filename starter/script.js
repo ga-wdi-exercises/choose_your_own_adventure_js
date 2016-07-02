@@ -1,1 +1,71 @@
-// put code here!
+var daysVacation = parseFloat(prompt("You’ve had a long year, it’s time for a vacation! How many days would you like to travel?"));
+
+// figuring out the number of days for the trip
+  for (daysVacation; daysVacation < 5; daysVacation++) {
+    alert("Only " + daysVacation + " days? You should take another day off.")
+  }
+  if  (daysVacation > 15) {
+    alert("Wow, you must have saved up a lot of vacation time! Let’s get started with planning your trip!");
+  } else if (isNaN) {
+    alert("Sorry, but you need to enter a number.");
+  } else {
+    alert("Sounds great!");
+  }
+
+// decide on a continent
+  var whereTo = prompt("Would you like to go to Europe, Asia, Africa, or South America?");
+    if (whereTo == "Europe") {
+      var whereInEurope = prompt("Ohh, Europe! how about going to France or Italy?");
+      // Options for if user wants to go to Europe
+      if (whereInEurope == "France") {
+        alert("Oiu! Let’s get you set up with going to the Eiffel Tower and make some fine dining dinner reservations!");
+      } else if (whereInEurope == "Italy") {
+        alert("Time to get ready to see some fine art and enjoy that great Italian cuisine!");
+      } else if (whereInEurope == "No") {
+        var moreInEurope = prompt("How about going to Germany or England?");
+          // More Options in Europe
+          if (moreInEurope == "Germany") {
+            alert("Time to eat brats and drink beer!");
+          } else if (moreInEurope == "England") {
+            alert("Great, let’s book your trip! Maybe you’ll get a chance to see the Queen of England!");
+          } else if (moreInEurope == "No") {
+            alert("Sorry, those are all the upcoming trips we have scheduled for Europe.")
+          } else {
+            alert("Sorry, you didn't select a valid option.")
+          }
+      } else {
+        alert("Sorry, but you didn't pick one of the possible locations!");
+      }
+    } else if (whereTo == "Asia") {
+      var whereInAsia = prompt("Great, how about going to China or India?");
+        // Options for if user wants to go to Asia
+        if (whereInAsia == "China") {
+          alert("Fantastic! Maybe you can visit the Great Wall!");
+        } else if (whereInAsia == "India") {
+          alert("Wonderful, I hear the food there is amazing!");
+        } else {
+          alert("Sorry, you didn't pick one of the possible locations in Asia!");
+        }
+    } else if (whereTo == "Africa") {
+      var whereInAfrica = prompt("Great! So far we have a safari or bus tour of several countries. What will it be, bus or safari or neither?");
+        // Options for if user wants to go to Africa
+        if (whereInAfrica == "Bus") {
+          alert("Perfect, you’ll see a lot of different sights and do a tour of different cultures!");
+        } else if (whereInAfrica == "Safari") {
+          alert("You’ll love seeing all the wildlife!");
+        } else {
+          alert("Sorry, you didn't pick one of the right options!");
+        }
+    } else if (whereTo == "South America") {
+      var whereInSouthAmerica = prompt("Fabulous, how about going to Argentina or Brazil?");
+        // Options for if user wants to go to South America
+        if (whereInSouthAmerica == "Argentina") {
+          alert("Fantastic, you’ll have a great time!");
+        } else if (whereInSouthAmerica == "Brazil") {
+          alert("Wonderful, you’ll really enjoy the music there and excellent cuisine.");
+        } else {
+          alert("Sorry, you didn't pick one of the options!");
+        }
+    } else {
+      alert("Please pick one of the offered locations.");
+    }
