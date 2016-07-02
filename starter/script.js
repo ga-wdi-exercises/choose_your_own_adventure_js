@@ -6,7 +6,9 @@ var daysVacation = parseFloat(prompt("You’ve had a long year, it’s time for 
   }
   if  (daysVacation > 15) {
     alert("Wow, you must have saved up a lot of vacation time! Let’s get started with planning your trip!");
-    } else {
+  } else if (isNaN) {
+    alert("Sorry, but you need to enter a number.");
+  } else {
     alert("Sounds great!");
   }
 
