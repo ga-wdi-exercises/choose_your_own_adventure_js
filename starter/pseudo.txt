@@ -1,0 +1,58 @@
+Prompt
+You are an adventurer. You have travelled to a cave high in a mountain range.
+Legend has it that there are three treasures within the cave. One treasure is guarded by a dragon.
+One treasure is hidden in a so called "spider" maze. Nothing is known about the third treasure.
+You have an old map which shows the location of the dragon and the start of the maze.
+You don't have any information about the third treasure.
+Would you like to head for the 'dragon' or the 'maze'?
+
+if questResponse equals 'dragon', {
+show dragonPrompt.
+
+  dragonPrompt
+  You enter the dragon's lair. As the dragon snores, he warms the bed upon which he lays.
+  His bed is made of coals and his nostrils expell fire as he sleeps. A bag hangs from the dragons necklace.
+  You notice a single gold coin on the floor which must have fallen from the bag.
+  The coin is partially melted.
+  A single gold coin is valuable enough to sustain your lifestyle for a year.
+  If the bag contains only gold, it likely weighs more than you.
+  Curious, you wonder how an ordinary bag could lay on coals and not burn.
+  Would you like to 'sneak' and steal from the dragon, 'wake' and reason with it, or 'slay' it?
+
+  if dragonPrompt response = 'sneak', {
+    show sneakPrompt
+
+    sneakPrompt
+    The coals look hot, but the gold is tantalizingly hot. There must be about a thousand gold coins
+    in the bag. How many would you like to steal?
+
+    if sneakPrompt response <= 50 {
+      show notGreedySneak prompt
+      You hastily yet quietly hurry to the bag. Switching your weight between feet as you fiddle with the bag,
+      you manage to open it and collect (sneakPrompt response) coins. You quickly get off the coals and exit
+      the dragon's lair without him noticing. Your feet suffered minor burns but you have more than enough coin
+      to pay for medical bills. Would you like to try for the other treasure? (y/n)
+
+      if notGreedySneakPrompt response == y {
+        show ultimatelyGreedySneakPrompt
+        Unfortunately, the treasures are cursed. Any one adventurer who attempts to obtain treasure from
+        both areas in the cave loses touch with reality, becomes lost in the cave and ultimately goes insane.
+        You head toward the spider cave but suddenly forget where you were going and why. You only
+        know that you feel a deep sense of dissatisfaction. You feel you should be searching for something, so
+        you wander the maze aimlessly. Lonely and unhappy, you begin to mumble to yourself. You feel the words
+        begin to lose their meaning over time until your sure you just speaking jibberish, but you continue anyway
+        so you can hear your own voice to be sure you're still alive. GAME OVER. YOU LOSE.
+      }
+
+      else if notGreedySneakPrompt response == n {
+      show trueNotGreedySneakPrompt
+      You have chosen to leave the cave. As you take a step toward the exit, a benevolent voice booms in your head.
+      "You have chosen well, adventurer. The third treasure is granted. You will keep your sanity and your treasure.
+      You will also have a heart of gold. But not in a literal sense because that would kill you. You will have the
+      wisdom to do right by yourself and others. Though you have stolen, you were not greedy thus you will be able to
+      have strong relationships and have a truly valuable life." GAME OVER. YOU WIN.
+      }
+    }
+    
+  }
+}
