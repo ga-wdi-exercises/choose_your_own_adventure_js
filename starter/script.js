@@ -1,15 +1,43 @@
-function start(){
-    document.getElementById('campaign').style.backgroundImage = "url('http://static.lakana.com/media.fox26houston.com/photo/2015/12/28/You%20decide%20logo%20straight_1451322101303_667343_ver1.0.png')"
-    confirm('Did you see your email?! You have offers to be the next Campaign Manager from all three candidates!');
+var campaign;
+var input = document.getElementById('input');
+input.onkeypress = function(event) {
+  if (event.key == "Enter") {
+    campaign = input.value;
+    input.parentNode.removeChild(input)
+    changeScreen(scenario.two)
+  }
+};
+
+var text = document.getElementById("text");
+function changeText(words) {
+  text.innerHTML = words.replace("Your Candidate", campaign);
 }
 
-function pictureChangePres() {
-    var candidate = confirm("This is going to be hard! Pick who you want to work for so we can get to the campaign and figure our what's going on");
-    if (candidate == true){
-        document.getElementById('campaign').style.backgroundImage = "url('http://pixel.nymag.com/imgs/daily/intelligencer/2016/03/28/28-bernie-sanders-hillary-clinton-donald-trump.w750.h560.2x.jpg')"
+var images = document.getElementById("images");
+function changeImage(img) {
+  images.style.backgroundImage = "url(" + img + ")";
+};
+
+function changeScreen(s) {
+  changeImage(s.image)
+  changeText(s.text)
+};
+
+scenario = {}
+var scenario = {
+  one: {
+    image: 'http://media.salon.com/2016/02/sanders_trump_hillary.jpg',
+    text: 'test',
     }
-    var choice1 = setTimeout(function(){prompt("Who's it going to be?")}, 1000);
 }
 
-start();
-pictureChangePres();
+changeScreen(scenario.one)
+
+
+//////WAT var buttonBox = document.getElementById('buttonBox');
+// function changeButtons(buttonList) {
+//   buttonBox.innerHTML = "";
+//   for (var i = 0; i < buttonList.length; i++) {
+//     buttonBox.innerHTML += "<button onClick="+buttonList[i][1]+">" + buttonList[i][0] + "</button>";
+//   };
+// };
