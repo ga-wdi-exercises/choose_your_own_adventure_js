@@ -1,8 +1,9 @@
-var campaign;
+var name;
 var input = document.getElementById('input');
+
 input.onkeypress = function(event) {
   if (event.key == "Enter") {
-    campaign = input.value;
+    name = input.value;
     input.parentNode.removeChild(input)
     changeScreen(scenario.two)
   }
@@ -25,9 +26,13 @@ function changeScreen(s) {
 
 scenario = {}
 var scenario = {
-  one: {
-    image: 'http://media.salon.com/2016/02/sanders_trump_hillary.jpg',
-    text: 'test',
+    one: {
+        image: 'http://media.salon.com/2016/02/sanders_trump_hillary.jpg',
+        text: "Welcome to the Campaign 2016 Edition!",
+    },
+    two: {
+        image: 'https://i.vimeocdn.com/portrait/58832_300x300.jpg',
+        text: 'test'
     }
 }
 
