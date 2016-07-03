@@ -53,6 +53,44 @@ show dragonPrompt.
       have strong relationships and have a truly valuable life." GAME OVER. YOU WIN.
       }
     }
-    
+
+    else if sneakPromptResponse > 50 {
+      show greedySneakPrompt
+      You hastily yet quietly hurry to the bag. Switching your weight between feet as you fiddle with the bag,
+      you manage to open it. You try to fit too many coins in your pockets. You try to carry the bag but it won't budge.
+      You accidentally spilled some coins from your pocket and awoke the dragon. As the dragon rose,
+      even more coins fell from the open bag. He seems pissed. You fire a well placed arrow and the bag falls from his necklace.
+      The dragon is breathing in getting ready to burn you. You might have enough time to grab 10 more 'coins'
+      or grab the 'bag'.
+
+      if greedySneakPrompt response == coins {
+        You managed to grab 10 more coins before the dragon exhaled. Congratualtions. He exhaled just afterward.
+        Fortunately, he prefers his meals rare, so you weren't burned too badly before being eaten alive.
+        GAME OVER. YOU LOSE.
+      }
+      else if greedySneakPrompt response == bag
+      show bagPrompt{
+        You realized at the last second that the fire-retardant bag can be used as armor against the dragon.
+        You put the bag on, and scurry toward the exit. The dragon shoots flames at you. But you are safe.
+        You step outside the dragons lair. Your bag-armor crumbles to dust. After all the confusion and spilling of coins,
+        you have only 40 coins in your pocket. Would you like to try for the other treasure? (y/n)
+
+        if bagPrompt response == y {
+          show ultimatelyGreedySneakPrompt
+        }
+        else {
+          show notGreedyBagPrompt
+          You have chosen to leave the cave. As you take a step toward the exit, a benevolent voice booms in your head.
+          "You have chosen well, adventurer. The third treasure is granted. You will keep your sanity and your treasure.
+          You will also have a heart of gold. But not in a literal sense because that would kill you. You will have the
+          wisdom to do right by yourself and others. Though you have stolen, and you were greedy, you ultimately learned from
+          your mistakes and were cunning. Thus you will be able to overcome any of life's obstacles,
+          have strong relationships, and have a truly valuable life." GAME OVER. YOU WIN.
+
+        }
+      }
+    }
   }
+
+  
 }
