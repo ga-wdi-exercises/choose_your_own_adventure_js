@@ -11,7 +11,7 @@ show dragonPrompt.
 
   dragonPrompt
   You enter the dragon's lair. As the dragon snores, he warms the bed upon which he lays.
-  His bed is made of coals and his nostrils expell fire as he sleeps. A bag hangs from the dragons necklace.
+  His bed is made of coals and his nostrils expel fire as he sleeps. A bag hangs from the dragons necklace.
   You notice a single gold coin on the floor which must have fallen from the bag.
   The coin is partially melted.
   A single gold coin is valuable enough to sustain your lifestyle for a year.
@@ -19,7 +19,7 @@ show dragonPrompt.
   Curious, you wonder how an ordinary bag could lay on coals and not burn.
   Would you like to 'sneak' and steal from the dragon, 'wake' and reason with it, or 'slay' it?
 
-  if dragonPrompt response = 'sneak', {
+  if dragonPrompt response = 'sneak' {
     show sneakPrompt
 
     sneakPrompt
@@ -34,13 +34,13 @@ show dragonPrompt.
       to pay for medical bills. Would you like to try for the other treasure? (y/n)
 
       if notGreedySneakPrompt response == y {
-        show ultimatelyGreedySneakPrompt
+        show ultimatelyGreedyDragonPrompt
         Unfortunately, the treasures are cursed. Any one adventurer who attempts to obtain treasure from
         both areas in the cave loses touch with reality, becomes lost in the cave and ultimately goes insane.
         You head toward the spider cave but suddenly forget where you were going and why. You only
         know that you feel a deep sense of dissatisfaction. You feel you should be searching for something, so
         you wander the maze aimlessly. Lonely and unhappy, you begin to mumble to yourself. You feel the words
-        begin to lose their meaning over time until your sure you just speaking jibberish, but you continue anyway
+        begin to lose their meaning over time until you're sure you are just speaking gibberish, but you continue anyway
         so you can hear your own voice to be sure you're still alive. GAME OVER. YOU LOSE.
       }
 
@@ -64,7 +64,7 @@ show dragonPrompt.
       or grab the 'bag'.
 
       if greedySneakPrompt response == coins {
-        You managed to grab 10 more coins before the dragon exhaled. Congratualtions. He exhaled just afterward.
+        You managed to grab 10 more coins before the dragon exhaled. Congratulations. He exhaled just afterward.
         Fortunately, he prefers his meals rare, so you weren't burned too badly before being eaten alive.
         GAME OVER. YOU LOSE.
       }
@@ -76,7 +76,7 @@ show dragonPrompt.
         you have only 40 coins in your pocket. Would you like to try for the other treasure? (y/n)
 
         if bagPrompt response == y {
-          show ultimatelyGreedySneakPrompt
+          show ultimatelyGreedyDragonPrompt
         }
         else {
           show notGreedyBagPrompt
@@ -91,6 +91,143 @@ show dragonPrompt.
       }
     }
   }
+  else if dragonPrompt response == 'wake' {
+    show wakePrompt
+    You poke the dragon. "Uhh... Mr. Dragon", you say. The dragon rises. "WHY DO YOU DISTURB MY SLUMBER, VERMIN?!
+    WHAT DO YOU WANT?" Will you remain 'silent', ask to 'live', or ask for 'riches'.
 
-  
+    if wakePrompt response == silent {
+      show silentPrompt
+      "WHY ARE YOU SILENT? YOU DON'T SMELL AFRAID. AM I TO UNDERSTAND YOU WANT NOTHING?"
+      "Yes", you reply. "...VERY WELL. MOST OF YOUR TYPE COME IN HERE DEMANDING GOLD.
+      FOR YOUR TEMPERANCE, I WILL ALLOW YOU TO LIVE AND GRANT YOU 10 GOLD COINS." The dragon hands you
+      10 coins. You exit the dragon's lair. Would you like to try for the other treasure? (y/n)
+
+      if silentPrompt response == y {
+        show ultimatelyGreedyDragonPrompt
+      }
+      else{
+        show notGreedyReasonPrompt
+        You have chosen to leave the cave. As you take a step toward the exit, a benevolent voice booms in your head.
+        "You have chosen well, adventurer. The third treasure is granted. You will keep your sanity and your treasure.
+        You will also have a heart of gold. But not in a literal sense because that would kill you. You reasoned with
+        the dragon and lived, and you were not greedy. Thus you will be able to navigate social situations with ease.
+        Due to your lack of greed and you social skills, you will have strong relationships, and a truly valuable life.
+        GAME OVER. YOU WIN.
+      }
+    }
+    else if wakePrompt response == live {
+      show livePrompt
+      "WHY WOULD YOU COME TO MY LAIR IF YOU WANT TO LIVE?"
+      "Because sir, unlike dragons, I need currency to live. One gold coin is enough to meet my needs for a year."
+      "... VERY WELL. YOU HAVE NOT BEEN INSOLENT. NOR COMPLETELY RESPECTFUL. TAKE A SINGLE GOLD COIN AND BE ON YOUR WAY."
+      You receive the coin, and exit the lair. Would you like to try for the other treasure? (y/n)
+
+      if livePrompt response == y {
+        show ultimatelyGreedyDragonPrompt
+      }
+      else {
+      show notGeedyReasonPrompt
+      }
+    }
+    else if wakePrompt response == riches {
+      show richesPrompt
+      You walk toward the dragon. "What do you need that treasure for?" you ask the dragon.
+      "I could use the treasure to pay for my needs 10 times over. While you only sleep near it, using it for nothing."
+      "YOUR KIND ARE ALL THE SAME. GREEDY AND INSOLENT" The dragon stabs you with his claw.
+      Still conscious, you are cooked by his fire breath. Then you are devoured. GAME OVER. YOU LOSE.
+    }
+
+  }
+  else if dragonResponse =='slay' {
+    show slayPrompt
+    What should you use to slay the dragon. In your inventory you have a rusty 'sword' and liquid 'n'itrogen.
+
+    if slayPrompt response == sword {
+      You take out your rusty sword. You rush across the bed of hot coals. You thrust the sword into the dragons neck...
+      the sword bends against the dragon's titanium-like scales. The dragon wakes. He Stabs you with his claws. Cooks you with
+      fire-breath and eats you alive. GAME OVER. YOU LOSE.
+    }
+
+    else if slayPrompt response == n {
+      show nPrompt
+      You remember you always carry a trusty canister of liquid nitrogen. You move quietly and swiftly across the bed of coals,
+      reach toward the dragons nostril and pour the liquid nitrogen inside. The dragon wakes. Inhales.
+      He is preparing to burn you alive. He exhales. No fire escapes him and he feels in pain. With the last of his strength,
+      he opens the bag and pours out the majority of the gold coins onto the coal bed. He freezes from the inside out.
+      His body lands on many of the coins making them inaccessible. But the bag lands where you can reach it.
+      You grab the bag and leave the lair. You check the bag for coins. There are 50 left.
+      Would you like to try for the other treasure? (y/n)
+
+      if nprompt response == y {
+        show ultimatelyGreedyDragonPrompt
+      }
+      else show winningSlayPrompt {
+      You have chosen to leave the cave. As you take a step toward the exit, a benevolent voice booms in your head.
+      "You have chosen well, adventurer. The third treasure is granted. You will keep your sanity and your treasure.
+      You will also have a heart of gold. But not in a literal sense because that would kill you. You defeated the dragon;
+      you did not act with greed. You will be able to overcome any obstacles in your life. Your lack of greed gives you peace
+      and provides you with meaningful relationships. You will have a truly valuable life. GAME OVER. YOU WIN.
+      }
+    }
+  }
+
+}
+
+if questResponse == 'maze' {
+  show mazeAlert
+  You enter the maze. It is a winding cavern with no landmarks with many branching paths.
+  You begin to feel hopeless. You sit down. You recoil as something drops from the ceiling.
+  A spider. Only its not. Its huge. And it stands up like an anthropoid. It speaks in whispers.
+  "Oh joy... another delicious adventurer. Ok. Here's the deal. We're going to play
+  a game. You must answer a riddle within three guesses.
+  If you fail to answer correctly, I get to spin you in my web and save you for when I get the munchies.
+  If you succeed I will reveal the location of the treasure and help you exit the maze."
+
+  loop 3 times{
+    show riddlePrompt
+    I am an empty void. Collect many earthly possessions to fill me, yet I grow deeper.
+    The hole is filled when you stop trying to fill it.
+    if n = 1 {
+    is it 'greed', 'donut holes' or 'love'
+    }
+    if riddlePrompt == greed {
+    break
+    }
+  }
+  if riddlePrompt == greed {
+    You solved the riddle. "Very well. I'll lead you to the treasure. And out of the maze."
+    The spider did as promised. You collected 50 gold coins. As you were exiting the maze,
+    the spider remarked, "Just so you know, the dragon has far more gold than 50 coins.
+    More even than you can carry out of here... heh heh heh." Would you like to try for the
+    the other treasure? (y/n)
+
+    if riddlePrompt response == y {
+      show ultimatelyGreedyMazePrompt
+      Unfortunately, the treasures are cursed. Any one adventurer who attempts to obtain treasure from
+      both areas in the cave loses touch with reality, becomes lost in the cave and ultimately goes insane.
+      You head toward the dragon's lair but suddenly forget where you were going and why. You only
+      know that you feel a deep sense of dissatisfaction. You feel you should be searching for something, so
+      you wander the cave aimlessly. Lonely and unhappy, you begin to mumble to yourself. You feel the words
+      begin to lose their meaning over time until you're sure you are just speaking gibberish, but you continue anyway
+      so you can hear your own voice to be sure you're still alive. GAME OVER. YOU LOSE.
+
+    }
+    else if riddlePrompt response == n {
+      show riddleWin
+      You gain the sense that the riddle had a relevant theme. You remember the
+      spider's treacherous laugh. You have chosen to leave the cave. As you take a step toward the exit,
+      a benevolent voice booms in your head. "You have chosen well, adventurer. The third treasure is granted.
+      You will keep your sanity and your treasure.
+      You will also have a heart of gold. But not in a literal sense because that would kill you.
+      You were cunning and not greedy. You will be able to solve complex problems and have a strong intuition.
+      You will know how to do the right thing and will have a truly valuable life. GAME OVER. YOU WIN.
+    }
+  }
+
+  else {
+    You failed to solve the riddle. "mmm I love this part." The spider grabs you with all his limbs.
+    He moves his lower abdomen in position and wraps you up in his web. Its strong like metal wires.
+    You suffer, unable to move for two days. Finally he bites your head off and devours you. GAME OVER. YOU LOSE.
+  }
 }
