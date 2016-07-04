@@ -361,7 +361,7 @@ function tryToSavePerson() {
 
 // Trying a second time to save the person only to die
 function secondDive() {
-  alert("You dive again under the surface. This time a hand reaches out and grabs ahold of your hand. You try and pull the person and yourself back up to the surface but you are tired and running out of air. Instead of pulling the person up, they are pulling you down. You atempt to break free of their grip but can't. Together you sink farther and farther down and soon drown. Next time don't be so noble");
+  alert("You dive again. This time a hand reaches out and grabs ahold of your hand. You try and pull the person and yourself back up to the surface but you are tired and running out of air. Instead of pulling the person up, they are pulling you down. You atempt to break free of their grip but can't. Together you sink farther and farther down and soon drown. Next time don't be so noble.");
   death();
 }
 
@@ -386,14 +386,14 @@ function beach() {
 
 // Choice for choosing number one which puts you in a groundhogs day loop
 function beachFood() {
-  alert("Pleased with you choice, the man leads you up the beach to small hunt. There he as food and wine and together you drink the night way. As the sun begins to rise the man offers you one last drink. You glup in down with pleasure and you start to feel dizzy. The man begins to laugh and says 'Welcome to the Ocean.' You collaps on the ground.")
+  alert("Pleased with your choice, the man leads you up the beach to small hut. There he as food and wine and together you drink the night way. As the sun begins to rise the man offers you one last drink. You glup in down with pleasure and you start to feel dizzy. The man begins to laugh and says 'Welcome to the Ocean.' You collaps on the ground.")
   alert("You have just woken up to find yourself floataing in the middle of the ocean. It is the dead of night, but the glow of moon allows you to see a few feet infront of you.")
   ocean();
 }
 
 // death from choosing to run
 function blackFishDeath() {
-  alert("As you begin to run the man looks disapointed and pulls out a whisle and blows it. Out of no where a Killer Whale glides up out of the ocean, grabs you, and pulls you back into the water.  The Killer Whales takes you back to his pod where he uses you as a toy to train some of the younger members of his pod. You survive for a while but are in horrible pain. When the walves are done with you they let you go and you sink to the bottom of the ocean.")
+  alert("As you begin to run the man looks disapointed and pulls out a whisle and blows it. Out of no where a Killer Whale glides up out of the ocean, grabs you, and pulls you back into the water.  The Killer Whales takes you back to his pod where he uses you as a toy to train some of the younger members of his pod. You survive for a while but are in horrible pain. When the whales are done with you they let you go and you sink to the bottom of the ocean.")
   death();
 };
 
@@ -418,7 +418,7 @@ function death() {
 
 function game() {
   alert("Welcome to the Ocean. I hope you survive. Valid moves are placed between sinlge quotes(' '). If you would like to exit at any time, type 'exit'. There are hidden paths that are not specified moves. To find them try look around some times.");
-  var start = alert("You have just woken up to find yourself floating in the middle of the ocean. It is the dead of night, but the glow of moon allows you to see a few feet infront of you.");
+  var start = alert("You have just woken up to find yourself floating in the middle of the ocean. It is the dead of night, but the glow of moon allows you to see a little bit in front of you.");
   ocean();
 };
 
