@@ -8,7 +8,8 @@ html{
 
 #images{
     height: 500px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     margin-top: 3em;
     margin-bottom: 1em;
@@ -19,10 +20,10 @@ html{
 #text{
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 10px black;
-    margin: 3em 6em;
+    text-shadow: 1px 2px 14px black;
+    margin: 1em 6em;
     margin-bottom: 1em;
-    background-color: white;
+    background-color: #e6e6e6;
     font-size: 27px;
 }
 

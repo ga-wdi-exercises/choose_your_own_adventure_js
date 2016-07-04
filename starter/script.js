@@ -2,6 +2,7 @@ var images = document.getElementById("images");
 var text = document.getElementById("text");
 var buttonBox = document.getElementById('buttonBox');
 var input = document.getElementById('box')
+var answer;
 var candidate;
 
 function changeText(words) {
@@ -85,7 +86,7 @@ var scenario = {
     six:{
         image: "http://i.huffpost.com/gen/1439544/images/o-BILL-CLINTON-OBAMA-facebook.jpg",
         text: "Ha! That was a joke. Bill's a little busy cleaning up some Clinton Foundation loose ends. Let's get you started on some operations. Do you want to work on the Twitter account or the Reddit account?",
-        buttons: [["Twitter", "chageSceneInput(scenario.seven)"],["Reddit","changeScene(scenario.eight)"]],
+        buttons: [["Twitter", "chageSceneInput(scenario.seven)"],["Reddit","changeScene(scenario.eighteen)"]],
         input:[],
     },
     seven:{
@@ -102,7 +103,7 @@ var scenario = {
     },
     nine:{
         image: "http://ichef.bbci.co.uk/news/660/cpsprodpb/2233/production/_85355780_028844202-1.jpg",
-        text: "Ohh boy. Now you've done it. This is how the Nazi's rose to power you know? Alright well now that you've pledge your undying loyalty what can you do for the campaign",
+        text: "Ohh boy. Now you've done it. This is how the Nazi's rose to power you know? Alright well now that you've pledged your undying loyalty what can you do for the campaign",
         buttons: [["Wait? Nazis? I might need to rethink this whole Trump thing", "changeScene(scenario.eleven)"], ["Let's go play off of people's fear and predjudices!!","changeScene(scenario.twelve)"]],
         input:[],
     },
@@ -122,26 +123,63 @@ var scenario = {
     twelve:{
         image: "http://www.nannygoatsinpanties.com/wp-content/uploads/2016/03/trump-gold-brick-maga.jpg",
         text: "Now you've done it. Everyone besides 'the silent majority' is pissed off at you. Looks like you've sunk our chances at election by alienating the people you call 'Aliens.'",
-        buttons: [],
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
         input:[],
     },
     thirteen:{
-        image: "",
-        text: "",
-        buttons: [],
+        image: "https://i.ytimg.com/vi/_dwIb9PwmhM/maxresdefault.jpg",
+        text: "Whoa! Slow down there buckaroo! Do you even know what the establishment is? Do you have time? Let me give you a 3 hour reddit fuled fact dubious lecture on what you don't know",
+        buttons: [["Ooooo...that's a little agressive...um sure I guess...", "changeScene(scenario.fifteen)"], ["Oh don't worry I know everything about the estblishment! Now let's go make sure we secure Larry Daivd as our Bernie joke writer!", "chageSceneInput(scenario.seventeen)"]],
         input:[],
     },
     fourteen:{
-        image: "",
-        text: "",
+        image: "http://www.cartoonmovement.com/depot/cartoons/2011/10/18/a_portrait_of_capitalism__tjeerd_royaards.jpeg",
+        text: "Capitalist..",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
+        input:[],
+    },
+    fifteen:{
+        image: "https://lehollandaisvolant.net/tout/folio/img/Spongebob%20time%20cards/many%20hours%20later.jpg",
+        text: "Many HOURS LATER",
+        buttons: [["What Happened?!?!","changeScene(scenario.sixteen)"]],
+        input:[],
+    },
+    sixteen:{
+        image: "http://www.sbmania.net/pictures/1c/351.png",
+        text: "Has the revolution happened yet?",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
+        input:[],
+    },
+    seventeen:{
+        image: "https://pbs.twimg.com/profile_images/1229880667/hbo-curbyourenthusiasm-header.jpg",
+        text: "You're now meeting with Larry David. You only get one shot at this so make sure you're funny. Tell him a joke and see if you can secure his funny for Bernie.",
         buttons: [],
+        input:[],
+    },
+    eighteen:{
+        image: "https://kenpire.files.wordpress.com/2015/02/le-reddit-soldier.jpg",
+        text: "Oh No! The reddit army is on to you! Don't worry, it's just the Bernie Bros, Donald followers and their utter contempt for any candidate who isn't a man. Let's go back and see if we can find you a position that works.",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
+        input:[],
+    },
+    nineteen:{
+        image: "http://www.thewrap.com/wp-content/uploads/2015/11/Larry-David-Heckling-Donald-Trump-on-SNL-340x300.jpg",
+        text: "Your joke was not funny. You've been fire. Sorry about that =(",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
         input:[],
     }
 };
-changeScene(scenario.one);
 
+changeScene(scenario.one);
 input.onkeypress = function(event) {
-  if (event.key == "Enter") {
-      changeScene(scenario.eight)
-  }
+    if (event.key == "Enter") {
+        answer = input.value;
+        if(!isNaN(answer)) {
+            changeScene(scenario.eight)
+        }else if (isNaN(answer)) {
+            changeScene(scenario.nineteen)
+        }
+    }
 };
+
+///Make the on keydown for each text and number a binary random number generator that would send you to one of two scenes instead of just one spot. THis is just a proof of concept.
