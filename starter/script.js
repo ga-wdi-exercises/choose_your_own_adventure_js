@@ -10,16 +10,16 @@ if (age < 16) {
         if (city === "dc".toLowerCase() || city === "D.C.".toLowerCase() || city === "D.C".toLowerCase()) {
             var ballTickets = prompt("Okay you're a D.C. fan. Nice. Please choose either \'top row\' or \'front row\'.");
             if (ballTickets === "top row".toLowerCase()) {
-                alert("Awesome, so you are going to watch the Wizards play and you chose top row seats. Good luck seeing the game from up there.");
+                alert("Awesome " + name + ", so you are going to watch the Wizards play and you chose top row seats. Good luck seeing the game from up there.");
             } else {
-                alert("Awesome, so you are going to watch the Wizards play and you chose front row seats. Must've taken a toll on your wallet.");
+                alert("Awesome " + name + ", so you are going to watch the Wizards play and you chose front row seats. Must've taken a toll on your wallet.");
             }
         } else {
             var ballTickets = prompt("Okay you're a Maryland fan. Nice. Please choose either \'top row\' or \'front row\'.");
             if (ballTickets === "top row".toLowerCase()) {
-                alert("Awesome, so you are going to watch UMD play and you chose top row seats. Good luck seeing the game from up there.");
+                alert("Awesome " + name + ", so you are going to watch UMD play and you chose top row seats. Good luck seeing the game from up there.");
             } else {
-                alert("Awesome, so you are going to watch UMD play and you chose front row seats. Must've taken a toll on your wallet.");
+                alert("Awesome " + name + ", so you are going to watch UMD play and you chose front row seats. Must've taken a toll on your wallet.");
             }
         }
     } else if (sportsChoice === "baseball".toLowerCase()) {
@@ -27,21 +27,27 @@ if (age < 16) {
         if (city === "dc".toLowerCase() || city === "D.C.".toLowerCase() || city === "D.C".toLowerCase()) {
             var ballTickets = prompt("Okay you're a D.C. fan. Nice. Please choose either \'top row\' or \'front row\'.");
             if (ballTickets === "top row".toLowerCase()) {
-                alert("Awesome, so you are going to watch the Nats play and you chose top row seats. Good luck seeing the game from up there.");
+                alert("Awesome " + name + ", so you are going to watch the Nats play and you chose top row seats. Good luck seeing the game from up there.");
             } else {
-                alert("Awesome, so you are going to watch the Nats play and you chose front row seats. Must've taken a toll on your wallet.");
+                alert("Awesome " + name + ", so you are going to watch the Nats play and you chose front row seats. Must've taken a toll on your wallet.");
             }
         } else {
             var ballTickets = prompt("Okay you're a Maryland fan. Nice. Please choose either \'top row\' or \'front row\'.");
             if (ballTickets === "top row".toLowerCase()) {
-                alert("Awesome, so you are going to watch the Orioles play and you chose top row seats. Good luck seeing the game from up there.");
+                alert("Awesome " + name + ", so you are going to watch the Orioles play and you chose top row seats. Good luck seeing the game from up there.");
             } else {
-                alert("Awesome, so you are going to watch the Orioles play and you chose front row seats. Must've taken a toll on your wallet.");
+                alert("Awesome " + name + ", so you are going to watch the Orioles play and you chose front row seats. Must've taken a toll on your wallet.");
             }
         }
     } else if (sportsChoice === "football".toLowerCase()) {
-        var favoriteTeam = prompt("Just curious, what is your favorite football team? Enter only the team name and not the city.");
+        var favoriteTeamPrompt = prompt("Just curious " + name + ", what is your favorite football team? Enter only the team name and not the city.");
+        var backwards = [];
+        for (var i = favoriteTeamPrompt.length - 1; i >= 0; i--) {
+          backwards.push(favoriteTeamPrompt.charAt(i));
+        };
+        alert("So your favorite team spelled backwards is: " + backwards.join(""));
+
+    } else {
+      alert("You didn't choose a valid sport option... start over");
     }
-
-
 }
