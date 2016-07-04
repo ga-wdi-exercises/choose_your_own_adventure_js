@@ -66,14 +66,14 @@ var scenario = {
     },
     three: {
         image: "http://static6.businessinsider.com/image/55918b77ecad04a3465a0a63/nbc-fires-donald-trump-after-he-calls-mexicans-rapists-and-drug-runners.jpg",
-        text: "Oh... your with the Donald. Well...Where do we start then?",
-        buttons: [["Take the Donald Pledge", "changeScene(scenario.nine)"],["","changeScene(scenario.ten)"]],
+        text: "Oh... you're with the Donald. Well...Where do we start then?",
+        buttons: [["Take the Donald Pledge", "changeScene(scenario.nine)"],["Try to track down the Don's phone for him so he can tweet","chageSceneInput(scenario.ten)"]],
         input:[],
     },
     four: {
         image: "http://www.newyorker.com/wp-content/uploads/2015/07/Lepore-Bernie-Sanders-1200.jpg",
-        text: "Oh...you're one of those...",
-        buttons: [],
+        text: "Oh...you're one of those...well let's get you hooked into the uh 'revolution' What do you want to do while you're here?",
+        buttons: [["Take down the establishment!","changeScene(scenario.thirteen)"],["On second thought, an average donation of $27 might not be enough to affect the change we're talking about", "changeScene(scenario.fourteen)"]],
         input:[],
     },
     five: {
@@ -97,28 +97,41 @@ var scenario = {
     eight:{
         image: "https://i.ytimg.com/vi/keWZk9-Z2gg/maxresdefault.jpg",
         text: "Looks like we didn't buy enough followers to stay relevant. The SS Hillary has sunk and you're out of the job.",
-        buttons: [],
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
         input:[],
     },
     nine:{
-        image: "",
-        text: "",
-        buttons: [],
+        image: "http://ichef.bbci.co.uk/news/660/cpsprodpb/2233/production/_85355780_028844202-1.jpg",
+        text: "Ohh boy. Now you've done it. This is how the Nazi's rose to power you know? Alright well now that you've pledge your undying loyalty what can you do for the campaign",
+        buttons: [["Wait? Nazis? I might need to rethink this whole Trump thing", "changeScene(scenario.eleven)"], ["Let's go play off of people's fear and predjudices!!","changeScene(scenario.twelve)"]],
         input:[],
     },
     ten:{
-        image: "",
-        text: "",
+        image: "http://s3.amazonaws.com/content.washingtonexaminer.biz/David%20Fitzsimmons.jpg",
+        text: "No such luck on the phone, but you did find this interesting book for our Supreme Leader. Pick a joke from it and write it down for him to tweet later!",
         buttons: [],
         input:[],
+        //need to figure out the onkeydown function for this one's design
     },
     eleven:{
+        image: "http://www.thegamescabin.com/wp-content/uploads/2015/07/bright-future-ahead.jpg",
+        text: "Way to use your brain citizen! Now get out there and make sure the US doesn't go and pull it's own Brexit!",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
+        input:[],
+    },
+    twelve:{
+        image: "http://www.nannygoatsinpanties.com/wp-content/uploads/2016/03/trump-gold-brick-maga.jpg",
+        text: "Now you've done it. Everyone besides 'the silent majority' is pissed off at you. Looks like you've sunk our chances at election by alienating the people you call 'Aliens.'",
+        buttons: [],
+        input:[],
+    },
+    thirteen:{
         image: "",
         text: "",
         buttons: [],
         input:[],
     },
-    twelve{
+    fourteen:{
         image: "",
         text: "",
         buttons: [],
