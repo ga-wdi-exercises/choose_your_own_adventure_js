@@ -43,11 +43,11 @@ if(char === "b")
 
     var socks = prompt("How are things going with Mr. Pitt? How many pairs of socks did you buy him?");
 
-    // if (socks > 1)
-    // {
-    //   alert("It'll take hours for him to choose the perfect pair! You'll have to cancel all your plans.");
-    // }
-    // if (socks === "1")
+    if (socks > 1)
+    {
+      alert("It'll take hours for him to choose the perfect pair! You'll have to cancel all your plans.");
+    }
+    if (socks === "1")
     {
       alert("They were perfect, nice work!");
     }
