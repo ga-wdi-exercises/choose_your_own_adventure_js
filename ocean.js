@@ -417,8 +417,8 @@ function death() {
 };
 
 function game() {
-  alert("Welcome to the Ocean. I hope you survive. Valid moves are in placed between sinlge quotes(' '). If you would like to exit at any time, type 'exit'. There are hidden paths that are not specified moves. To find them try look around some times.");
-  var start = alert("You have just woken up to find yourself floataing in the middle of the ocean. It is the dead of night, but the glow of moon allows you to see a few feet infront of you.");
+  alert("Welcome to the Ocean. I hope you survive. Valid moves are placed between sinlge quotes(' '). If you would like to exit at any time, type 'exit'. There are hidden paths that are not specified moves. To find them try look around some times.");
+  var start = alert("You have just woken up to find yourself floating in the middle of the ocean. It is the dead of night, but the glow of moon allows you to see a few feet infront of you.");
   ocean();
 };
 
