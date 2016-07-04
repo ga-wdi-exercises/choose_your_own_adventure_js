@@ -1,5 +1,5 @@
 // Swimming Adventure Game
-// Start in the water.
+// In comments, rooms refer to places
 
 // array to keep items collected during the game.
 var items = [];
@@ -25,7 +25,7 @@ function ocean() {
   } else if (move === 'swim behind') {
     bottomOfCliffs();
   } else if (move === 'swim straight') {
-    boat();
+    boatstart();
   } else {
     unknownMove();
     ocean();
@@ -33,11 +33,177 @@ function ocean() {
 };
 
 // boat room
-function boat() {
-  alert("Hopefully this was not your first choice becuase it is the last part of the game i was going to get to. And i am now tired and need to move on. Just trust it was going to be epic and lead you to a boat where a cartel drug deal was going down and you where going to have to either kill the leader and take control, be a coward and hide which would lead you to fall victim to the Ocean and have to start all over, or loss the fight against the leader and die a clean death. It will be awesome. Maybe ill get to it later. There was also going to be secret things to find to help you fight, loops and other good shit. Anyway ill prompt you to your death and let you play again if you would like and go a different way.");
+function boatstart() {
+  alert("Strangly, you start to swim straight into the darkness. You can see nothing. You can hear nothing. After a while the silhouette of a speed boat begins to take shape infront of you. To its left is a larger boat and you can see a light on in one of the cabins.")
+  var move = prompt("Which boat would you like to swim towards and board. The 'speed boat', 'larger boat', or would you like to 'turn back'?")
+  if (move === 'exit') {
+    return;
+  } else if (move === 'turn back') {
+    ocean();
+  } else if (move === 'speed boat') {
+    speedBoat();
+  } else if (move === 'larger boat') {
+    largerBoat();
+  } else {
+    unknownMove();
+    boatstart();
+  };
+};
+
+//speed boat approach room
+function speedBoat() {
+  alert("You swim up behind the speed boat. You can make out one guy sitting at wheel. An AK-47 is his arms, but you can hear what you think is snoring");
+  var move = prompt("Would you like to 'board the speed boat' and try and over power the possibly sleeping man, 'swim to the larger boat', or 'turn back'?")
+  if (move === 'exit') {
+    return;
+  } else if (move === 'turn back') {
+    boatstart();
+  } else if (move === 'board the speed boat') {
+    boardSpeedBoat();
+  } else if (move === 'swim to the larger boat') {
+    largerBoat();
+  } else {
+    unknownMove();
+    speedBoat();
+  };
+};
+
+// swim to the large boat
+function largerBoat() {
+  alert("You swim toward the larger boat but are noticed but a guard on the deck. Move men come out on the deck and they drag you from the water and toss you in a small room. After a while a man comes in and offers you deal. He says he is the leader of this boat and will fight you to the death. If you win you become the leader, if you loose you die. If you choose not to fight you will be set free.");
+  var move = prompt("Do you want to 'fight' or 'be set free'");
+  if (move === 'exit') {
+    return;
+  } else if (move === 'be set free') {
+    largerBoatSetFree();
+  } else if (move === 'fight') {
+    largerBoatFight();
+  } else {
+    unknownMove();
+    largerBoat();
+  };
+}
+
+// larger boat move when you are asked to be set free
+function largerBoatSetFree() {
+  alert("You ask to be set free. The man smiles at you and says ok. He leaves the room for a moment before returning. He hold the door open and says you can go. As you walk out the door he stabs you in the neck with a needle. You collapse on the ground and everything starts to fade. The last thing you hear is, 'Welcome to the Ocean.'")
+  ocean();
+};
+
+function largerBoatFight() {
+  // number of empty chambers in the gun
+  var emptyChambers = 5
+  var turn = "you"
+  alert("You choose to fight. The man smiles and leads you to a room with a table and two chairs facing eachother. He asks yout to sit. He puts a gun on the table and you watch as he removes all but one bullet. The fight, he explains, is a game of russian roulette.")
+  alert("He hands you the gun and says you go first.")
+  while (true) {
+    // even if the gun isn't empty you still have a chance of being shot.
+    var randomOutcome = Math.random()
+    console.log(randomOutcome);
+    if (turn === 'you') {
+      alert("You put the gun to your head and pull the trigger.")
+      if ((randomOutcome <= .5 && randomOutcome >= .3) || emptyChambers === 0) {
+        largerBoatDeathYou();
+        break;
+      } else {
+        alert("'Click'")
+        turn ='him';
+        emptyChambers--;
+      }
+    } else if (turn === 'him') {
+      turn = 'you';
+      emptyChambers--;
+      alert("He puts the gun to his head and pulls the trigger.")
+      if ((randomOutcome <= .5 && randomOutcome >= .4) || emptyChambers === 0) {
+        largerBoatDeathHim();
+        break;
+      } else {
+        alert("'Click'")
+        emptyChambers--;
+      };
+    };
+  };
+};
+
+// larger boat death you
+function largerBoatDeathYou() {
+  alert("You didn't even hear the sound of the gun.")
   death();
 };
 
+// lager boat death him
+function largerBoatDeathHim() {
+  alert("Bang! The mans head is blown open and he falls out of the chair. Two man pick him up and carry him out of the room. Another comes up to and hands you a golden crown. He says you are now the captin.")
+  alert("You have won! And not only that have become the leader of my most feared pirate crew in the world. You spend the next 40 years sailing around the world kill, getting rich, and fat. It is a good life.")
+  return;
+};
+
+// boarding the speed boat
+function boardSpeedBoat() {
+  alert("You slowly and quietly behind to climb up on the speed boat. The snoring man doesn't move. You pull yourself to your feet and climb across the boat towards the man.")
+  var move = prompt("Do you wish to 'attack' the sleeping man and attempt to take the boat or chicken out and 'jump' back into the water.")
+  if (move === 'exit') {
+    return;
+  } else if (move === 'jump') {
+    speedBoat();
+  } else if (move === 'look around') {
+    speedBoatWithWeapon();
+  } else if (move === 'attack') {
+    speedBoatRandom();
+  } else {
+    unknownMove();
+    boardSpeedBoat();
+  };
+}
+
+// random speed boat outcome without weapon
+function speedBoatRandom() {
+  randomOutcome = Math.random()
+  alert("You grab the sleeping man around his throat. A voice calls out of the radio in a language you do not understand. The man struggles against you trying to break free form you grasp.")
+  if (randomOutcome <= .5) {
+    speedBoatDeath();
+  } else {
+    alert("As you struggle you notice a gun in the seat next to you. You quickly dive for it.")
+    speedBoatEscape();
+  };
+};
+
+// speed boat dead without weapon
+function speedBoatDeath() {
+  alert("Tired from swimming, you just don't have the strenght to over power the man. He pulls you over his sholder and puts a bullet in your head. You attacked to quickly. Next time look around for something to fight with.");
+  death();
+}
+
+// attack speed boat guy with weapon
+function speedBoatWithWeapon() {
+  alert("Before you attack, you look around to see if you can find a weapon. In an empty seat you find a gun.")
+  // the gun doesn't do anything anywhere else so this is not needed but done for practice
+  // if you mess up a typing a move and move through this more than once, more than one gun gets pushed to the items. BUG
+  items.push("gun")
+  var move = prompt("You pick up the gun. Do you wake the man and tell him to 'jump off' else you will shoot him, or do you 'just shoot the mother fucker' while he is sleeping and take the boat?")
+  if (move === 'exit') {
+    return;
+  } else if (move === 'jump off') {
+    speedBoatDeathWithWeapon();
+  } else if (move === 'just shoot the mother fucker') {
+    speedBoatEscape();
+  } else {
+    unknownMove();
+    speedBoatWithWeapon();
+  };
+};
+
+// speed boat death with weapon
+function speedBoatDeathWithWeapon() {
+  alert("Before you can say a word, a voice calls out over a raido and the man wakes up. The man sees you and you panic and take a shot. You miss, he fires back hitting you in the chest. You fall back into the water and die. Next time shoot first you little bitch.")
+  death();
+};
+
+// escape on the speed boat
+function speedBoatEscape() {
+  alert("With out a second thought you put a bullet in the mans head just as a voice calls out over a radio on the boat. Quickly you toss the dead guy over board and start the boat. As you begin to speed away you, more lights come on the large boat and you can see people on the deck. They begin to fire and you but miss. You drive off safely. In the back of the boat you find a bag full of money. You are now rich as shit with a badass boat.")
+  alert("Congradulations! You have escaped the Ocean! Thanks for playing!")
+}
 // bottom of cliffs room
 function bottomOfCliffs() {
   alert('You swim towards the sound of crashing waves. Luckly you grab hold of a rock and pull yourself up before the waves can smash you into the rocks. You are standing at the bottom of a cliff. There is no where to go but up.');
@@ -48,19 +214,11 @@ function bottomOfCliffs() {
     ocean();
   } else if (move === 'climb') {
     topOfCliff();
-  } else if (move === 'look around'){
-    rope();
   } else {
     unknownMove();
     bottomOfCliffs();
   };
 };
-
-// rope room
-function rope(){
-  alert("Here is where you will find a rope, climb to a secret room where you play russian roulette with a mother fucker and other stuff happens but im just trying to wrap it up for now. There will be a random number pick and while loop that either kills you or kills the mother fucker. But im just not going to put that in right now, instead ill tell you you have died and let you play again if you want.")
-  death();
-}
 
 // Top of the Cliff
 function topOfCliff() {
