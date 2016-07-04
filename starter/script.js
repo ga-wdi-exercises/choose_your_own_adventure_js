@@ -1,17 +1,20 @@
+//Variables Making Life Easier
 var images = document.getElementById("images");
 var text = document.getElementById("text");
 var buttonBox = document.getElementById('buttonBox');
 var input = document.getElementById('box')
 var answer;
-var candidate;
 
+//All the functions that make scenes dynamic and change the different div elements
 function changeText(words) {
-    text.innerHTML = words.replace("your candidate", candidate);
+    text.innerHTML = words.replace();
 };
 
 function changeImage(img) {
     images.style.backgroundImage = "url(" + img + ")";
 };
+
+/*I wanted to talk about this one since I found it on a code pen and thought it was awesome. Basically it acceses our button box element and dynamically populates it based on the scenario it's accessing. The argument it takes is an Array structured like this [[],[]] where each inner array is a button. These have two properties. The first is the text of the button that will be what is shown to the user seen at buttonList[i][0]. The second is the actual function being run that gets input into the onClick link. A button will end up looking like this <button onClick="+position 1 of button object+">" +position 0 of button object + "</button>*/
 
 function changeButtons(buttonList) {
     buttonBox.innerHTML = "";
@@ -19,6 +22,8 @@ function changeButtons(buttonList) {
         buttonBox.innerHTML += "<button onClick="+buttonList[i][1]+">" + buttonList[i][0] + "</button>";
     };
 }
+
+//Tried to dynamically inject elements but realized they had to exist to use the onkeydown function I wanted to implement. Decided to hide and show based on the scene. And designed two scene change functions based on if I wanted an Input or buttons. Probably could have combined them all. Might refactor later.
 
 function hideButtons(){
     document.getElementById("buttonBox").style.visibility = "hidden";
@@ -36,6 +41,8 @@ function showInput(){
     document.getElementById('box').style.visibility = "visible";
 }
 
+//The Magic! Combines all our previous functions to change the scene we want (input or button layouts).
+
 function changeScene(scenario) {
     changeImage(scenario.image)
     changeText(scenario.text)
@@ -51,6 +58,8 @@ function chageSceneInput(scenario){
     showInput();
 }
 
+
+//Object with all of our scnarios that are accessed in the change scene functions. Very modular and can be expanded on later. Lol no jQuery.
 scenario = {}
 var scenario = {
     one: {
@@ -170,7 +179,10 @@ var scenario = {
     }
 };
 
+//Starts our website at scene one
 changeScene(scenario.one);
+
+///Make the on keydown for each text and number a binary random number generator that would send you to one of two scenes instead of just one spot. THis is just a proof of concept.
 input.onkeypress = function(event) {
     if (event.key == "Enter") {
         answer = input.value;
@@ -181,5 +193,3 @@ input.onkeypress = function(event) {
         }
     }
 };
-
-///Make the on keydown for each text and number a binary random number generator that would send you to one of two scenes instead of just one spot. THis is just a proof of concept.
