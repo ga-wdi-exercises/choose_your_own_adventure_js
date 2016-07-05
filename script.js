@@ -2,14 +2,14 @@
 alert("Daaaaaa Daaaaa Da Da Da Daaaaaa Da Da Da");
 alert("That was the game of thrones theme. My singing voice is fantastic, so if you didn’t recognize it you obviously aren’t a real fan.");
 alert("Regardless, welcome to the Game of Thrones text adventure. It’s exactly like the show… but with slightly less nudity.");
-var house = parseInt(prompt("Choose your house: Enter '1' for Stark, '2' for Lannister, or '3' for Martell"));
-if (house == 2) {
+var house = (prompt("Choose your house: Enter 'S' for Stark, 'L' for Lannister, or 'M' for Martell"));
+if (house == 'M') {
   alert("A Lannister always pays their debts. The real estate bubble never would have burst if more people took your catch-phrase seriously.");
 }
-else if(house == 1) {
+else if(house == 'S') {
   alert("Winter is coming.” Congratulations, you are the Al Gore of Westeros.");
 }
-else if(house == 3) {
+else if(house == 'M') {
   alert("Martell - Seriously? Dorne? This adventure is text based, and it’s still going to be more exciting than everything that happens in your segments of the show.");
 }
   alert("Now its time to generate some rating so we can stay on the air");
