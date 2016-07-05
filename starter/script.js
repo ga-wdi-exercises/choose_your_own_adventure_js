@@ -29,13 +29,13 @@ var dragon = {
 
 alert("Welcome to Final Vantasy! ฅ(ٛ•௰• ٛ )");
 character.name = prompt("Enter your character's name below: ");
-alert("Hello, " + character.name + ". Nice to meet you! ( ˃̶ω˂̶ ૃ)");
-alert("Your goal is to survive and defeat the dragon.")
-alert("Let us begin our journey. \nhint: If you run the dragon will likely come for you");
+alert("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Hello, " + character.name + ". Nice to meet you! ( ˃̶ω˂̶ ૃ)");
+alert("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Your goal is to survive and defeat the dragon.")
+alert("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Let us begin our journey. \nhint: If you run the dragon will likely come for you");
 actions();
 
 function actions() {
-	var command = prompt("type the following actions to proceed: \nwalk \nrun \nmenu");
+	var command = prompt("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "type the following actions to proceed: \nwalk \nrun \nmenu");
 	switch (command) {
 		case "walk":
 			walk();
@@ -74,18 +74,18 @@ function run() {
 }
 
 function menu() {
-	var command = prompt("Your inventory contains: " + character.inventory.toString() + " \nPerform an action: \nuse \nexit" );
+	var command = prompt("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Your inventory contains: " + character.inventory.toString() + " \nPerform an action: \nuse \nexit" );
 	if (command === "use") {
-		var item = prompt("Your inventory contains: " + character.inventory.toString() + " \nWhich item do you want to use? \nType nothing to leave this option");
+		var item = prompt("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Your inventory contains: " + character.inventory.toString() + " \nWhich item do you want to use? \nType nothing to leave this option");
 		if (item === "trash") {
-			alert("A very underwhelming banana peel, doesn't seem to be helpful at all.");
+			alert("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "A very underwhelming banana peel, doesn't seem to be helpful at all.");
 		}
 		else if (item === "potion") {
-			alert("Regain 5 health!");
+			alert("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Regain 5 health!");
 			character.health += 5;
 		}
 		else if (item === "grindstone") {
-			alert("Your attack was raised by 1!");
+			alert("(ٛ•௰• ٛ ) " + character.name + "  |  Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Your attack was raised by 1!");
 			character.attack += 1;
 		}
 		else {
@@ -96,7 +96,58 @@ function menu() {
 }
 
 function boss() {
-	
+	alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You have encountered a " + Object.keys(dragon) + "!! (۶ૈ ᵒ̌ Дᵒ̌)۶");
+	while (dragon.dragon.health > 0) {
+		if (character.health < 1) {
+			alert("=================\n====GAME OVER====\n=================");
+			break;
+		}
+		var command = prompt("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Perform an action: \nattack \nescape \nmenu");
+		if (command === "attack") {
+			if(Math.floor((Math.random() * 5) + 1) >= 2) {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(dragon) + " lunges at you dealing " + dragon.dragon.attack + " damage o(╥﹏╥)o");
+				character.health -= dragon.dragon.attack;
+			}
+			else {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(dragon) + " lunges at you and missed!  /(˚▽˚’!)/");
+			}
+			if (character.health < 1) {
+				alert("=================\n====GAME OVER====\n=================");
+				throw new Error("GG");
+			}
+			if(Math.floor((Math.random() * 5) + 1) >= 2) {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You strike the " + Object.keys(dragon) + ", dealing " + character.attack + " damage (۶ૈ ᵒ̌ Дᵒ̌)۶");
+				dragon.dragon.health -= character.attack;
+			}
+			else {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You swung and miss the " + Object.keys(dragon) + " ლ(ٱ٥ٱლ)");
+			}
+		}
+		if (command === "escape") {
+			if (Math.floor((Math.random() * 2) + 1) == 2) {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Escape successful! You managed to get away. \n- =͟͟͞͞ =͟͟͞͞ ﾍ( ´Д`)ﾉ")
+				actions();
+			}
+			else {
+				alert("Escape failed! You are trapped!")
+				if(Math.floor((Math.random() * 5) + 1) >= 2) {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(dragon) + " lunges at you dealing " + dragon.dragon.attack + " damage o(╥﹏╥)o");
+				character.health -= dragon.dragon.attack;
+			}
+			else {
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(dragon) + " lunges at you and missed!  /(˚▽˚’!)/");
+			}
+			if (character.health < 1) {
+				alert("=================\n====GAME OVER====\n=================");
+				throw new Error("GG");
+			}
+			}
+		}
+		if (command === "menu") {
+			menu();
+		}
+	}
+	alert("o==[]::::::::::::::::>\nCongratulation " + character.name + "! \nYOU HAVE DEFEATED THE DRAGON!! \nଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚‧⁺\no==[]::::::::::::::::>");
 }
 
 function fight() {
@@ -115,46 +166,46 @@ function fight() {
 			rng = monsters[2];
 			stats = monsters[2].tiger;
 		}
-	alert("You have encountered a " + Object.keys(rng) + "!! (۶ૈ ᵒ̌ Дᵒ̌)۶");
+	alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + " | " + Object.keys(rng) + " | " + "\n" + "-----------------------------------------------\n" + "You have encountered a " + Object.keys(rng) + "!! (۶ૈ ᵒ̌ Дᵒ̌)۶");
 	while (stats.health > 0) {
 		if (character.health < 1) {
 			alert("=================\n====GAME OVER====\n=================");
 			break;
 		}
-		var command = prompt("Perform an action: \nattack \nescape \nmenu");
+		var command = prompt("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Perform an action: \nattack \nescape \nmenu");
 		if (command === "attack") {
 			if(Math.floor((Math.random() * 5) + 1) >= 2) {
-				alert("The " + Object.keys(rng) + " lunges at you dealing " + stats.attack + " damage o(╥﹏╥)o");
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(rng) + " lunges at you dealing " + stats.attack + " damage o(╥﹏╥)o");
 				character.health -= stats.attack;
 			}
 			else {
-				alert("The " + Object.keys(rng) + " lunges at you and missed!  /(˚▽˚’!)/");
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(rng) + " lunges at you and missed!  /(˚▽˚’!)/");
 			}
 			if (character.health < 1) {
 				alert("=================\n====GAME OVER====\n=================");
 				throw new Error("GG");
 			}
 			if(Math.floor((Math.random() * 5) + 1) >= 2) {
-				alert("You strike the " + Object.keys(rng) + ", dealing " + character.attack + " damage (۶ૈ ᵒ̌ Дᵒ̌)۶");
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You strike the " + Object.keys(rng) + ", dealing " + character.attack + " damage (۶ૈ ᵒ̌ Дᵒ̌)۶");
 				stats.health -= character.attack;
 			}
 			else {
-				alert("You swung and miss the " + Object.keys(rng) + " ლ(ٱ٥ٱლ)");
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You swung and miss the " + Object.keys(rng) + " ლ(ٱ٥ٱლ)");
 			}
 		}
 		if (command === "escape") {
 			if (Math.floor((Math.random() * 2) + 1) == 2) {
-				alert("Escape successful! You managed to get away. \n- =͟͟͞͞ =͟͟͞͞ ﾍ( ´Д`)ﾉ")
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Escape successful! You managed to get away. \n- =͟͟͞͞ =͟͟͞͞ ﾍ( ´Д`)ﾉ")
 				actions();
 			}
 			else {
-				alert("Escape failed! You are trapped!")
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "Escape failed! You are trapped!")
 				if(Math.floor((Math.random() * 5) + 1) >= 2) {
-				alert("The " + Object.keys(rng) + " lunges at you dealing " + stats.attack + " damage o(╥﹏╥)o");
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(rng) + " lunges at you dealing " + stats.attack + " damage o(╥﹏╥)o");
 				character.health -= stats.attack;
 			}
 			else {
-				alert("The " + Object.keys(rng) + " lunges at you and missed!  /(˚▽˚’!)/");
+				alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "The " + Object.keys(rng) + " lunges at you and missed!  /(˚▽˚’!)/");
 			}
 			if (character.health < 1) {
 				alert("=================\n====GAME OVER====\n=================");
@@ -166,11 +217,11 @@ function fight() {
 			menu();
 		}
 	}
-	var next = prompt("You have slain the " + Object.keys(rng) + "!! ( ˃̶ω˂̶ ૃ) \nChoose an action: \nloot \ncontinue");
+	var next = prompt("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You have slain the " + Object.keys(rng) + "!! ( ˃̶ω˂̶ ૃ) \nChoose an action: \nloot \ncontinue");
 	if (next == "loot") {
 		var item = loot[Math.floor((Math.random() * 3))];
 		var name = Object.keys(item);
-		alert("You have found " + name + "!!");
+		alert("(ٛ•௰• ٛ ) " + character.name + " | Health: " + character.health + " Attack: " + character.attack + "\n" + "-----------------------------------------------\n" + "You have found " + name + "!!");
 		character.inventory += name;
 		actions();
 	}
