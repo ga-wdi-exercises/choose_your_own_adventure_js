@@ -176,6 +176,18 @@ var scenario = {
         text: "Your joke was not funny. You've been fire. Sorry about that =(",
         buttons: [["Go Back to Start","changeScene(scenario.one)"]],
         input:[],
+    },
+    twenty: {
+        image: "http://a.abcnews.com/images/Politics/AP_hillary_clinton_jt_150919_12x5_1600.jpg",
+        text: "You saved the campaign! Great Job! Our plan ala Silicon Valley worked!",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
+        input:[],
+    },
+    twentyone: {
+        image: "https://nypdecider.files.wordpress.com/2015/11/larry-david-vs-donald-trump-snl.jpg?quality=90&strip=all&w=1200",
+        text: "Your joke just saved the campaign!",
+        buttons: [["Go Back to Start","changeScene(scenario.one)"]],
+        input:[],
     }
 };
 
@@ -186,10 +198,20 @@ changeScene(scenario.one);
 input.onkeypress = function(event) {
     if (event.key == "Enter") {
         answer = input.value;
-        if(!isNaN(answer)) {
-            changeScene(scenario.eight)
-        }else if (isNaN(answer)) {
-            changeScene(scenario.nineteen)
+        if(!isNaN(answer)){
+            parseInt(answer)
+            if (answer < 10000) {
+                changeScene(scenario.eight)
+            }else{
+                changeScene(scenario.twenty)
+            }
+        }else if(isNaN(answer)) {
+            var funny = Math.floor(Math.random()+.5)
+            if(funny===1){
+                changeScene(scenario.nineteen)
+            }else{
+                changeScene(scenario.twentyone)
+            }
         }
     }
 };
