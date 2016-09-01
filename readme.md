@@ -7,7 +7,9 @@ Using what you know about data types, variables, operators, conditional blocks, 
 * There must be a minimum of **seven** total destinations the user could arrive at based on their responses.
 * For **at least one** of the questions asked, there must be **more than two possible user responses**.
 * Your code must contain **at least one loop**.
+* Your code must contain **at least one switch statement**
 * Your code must make use of **both string and number user inputs**.
+
 > **Hint:** You may need `parseInt()` and `toString()`
 
 ### Need Some Inspiration?
