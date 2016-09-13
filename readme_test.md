@@ -2,7 +2,7 @@
 
 ## Rules
 
-- <strong>Goal</strong> Using what you know about data types, variables, operators, conditional blocks, and accepting user input, create a text-based game that allows the user to arrive at different "destinations" based on the inputs they type.
+- <strong>A Made A Change</strong> Using what you know about data types, variables, operators, conditional blocks, and accepting user input, create a text-based game that allows the user to arrive at different "destinations" based on the inputs they type.
 
 - Any path the user goes down must ask them at least 3 questions(more if you want!)
 - There must be a minimum of 7 total destinations the user could arrive at based on their responses.(again more if you want!)
