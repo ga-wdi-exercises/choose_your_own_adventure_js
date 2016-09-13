@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>adventure</title>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="script.js"></script>
+  <h1>choose your own adventure</h1>
+  <div id="container">
+    <div id="textBox">You wake up in a field starring at the sky. There is a blinding pain in your head and blood is running freely down your face. You hear the sound of men talking loudly nearby.
+</div>
+    <div id="options">
+      <div class="option" data-situation="" data-choice="" onclick="choose()">Lay still on the ground and wait</div>
+      <div class="option" data-situation="" data-choice="" onclick="choose()">Sit up and tend to the wound in your head</div>
+      <div class="option" data-situation="" data-choice="" onclick="choose()">Go ask for help</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
