@@ -40,7 +40,7 @@ skyrimStory = {
         thief : "Thieves care only for themselves. Through stealth and agility, they steal and plunder to grow their wealth.",
         mage : "Mages dedicate themselves to the arcane arts, learning to bend elements to their will and cast powerfull spells."
       },
-      askRole : "Which role interests you the most?"
+      askRole : "Which role interests you the most?",
       transition : {
         warrior : "An honorable choice. The Imperial Legion in Solitude is always looking for new recruits. Time to visit the Blue Keep",
         thief : "Honor is for fools. Off to visit the Thieves Guild in Riften and begin building our fortune",
@@ -53,7 +53,7 @@ skyrimStory = {
         thief : "You've arrived in Riften and see a group of drunk nobles wandering the street. As they enter the inn, you notice a large gold amulet hanging from one of their packs.",
         mage : "As you enter the ancient grounds of the College of Mages, you see three urns in front of you. One is burning bright and engulfed in flame. The second is covered in a thick sheet of ice. The third glows green with a mystical energy. A voice calls out directing you to drink from one of them."
       },
-      askSpecialization {
+      askSpecialization : {
         warrior : "What weapon do you choose?",
         thief : "Should you follow the noble inside and attempt to pickpocket him or wait until nightfall and break in?",
         mage : "Which urn will you drink from?"
@@ -81,7 +81,7 @@ skyrimStory = {
         pickpocketSuccess : "You follow the noble inside and approach him from behind. Using your excellent agility, you sneakily reach into his pack and snatch the amulet. You exit the inn safely.",
         pickpocketFail : "You follow the noble inside and approach him from behind. As you reach into his pack, one of his bodyguards spots you and grabs you by the collar. You are publicly hung in the square the following day. You die."
       },
-      mage : {
+      mageResult : {
         iceSuccess : "You drink from the icy urn and immediately feel all warmth leave your body. Your eyes turn deep blue and you are imbued with the power to call down blizzards",
         spiritSuccess : "You drink from the glowing urn and see a portal open up around you as time tears itself apart. You are transported back in time to your birth.",
         fireSuccess : "You drink from the flaming urn and feel a burning sensation engulf your body. Your eyes glow red and you are imbued with the power to incinerate your foes",
