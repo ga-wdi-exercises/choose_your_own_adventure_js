@@ -6,6 +6,7 @@ body {
   align-items: center;
   color: #083836;
   font-family: 'VT323', monospace;
+  text-align: center;
 }
 
 h1 {
@@ -22,24 +23,26 @@ h1 {
   padding: 20px;
   background: #FBFFA3;
   font-size: 40px;
-  text-align: center;
 }
 
-#options {
+#optionsList {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
 }
 
-#options .option {
+#optionsList .option {
   margin: 10px;
   border: 4px solid #66D37E;
   padding: 5px;
   background: #FBFFA3;
-  text-align: center;
   font-size: 25px;
 }
 
-#options .option:hover {
+#optionsList .option:hover {
   border: 4px solid #C6E872;
+}
+
+.hidden {
+  display: none;
 }
