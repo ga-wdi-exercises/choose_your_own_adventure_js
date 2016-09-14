@@ -87,6 +87,20 @@ skyrimStory = {
         fireSuccess : "You drink from the flaming urn and feel a burning sensation engulf your body. Your eyes glow red and you are imbued with the power to incinerate your foes",
         fireFail : "'Only the strongest of mages can wield the power of fire. You are too weak' the voice calls out. You are incinerated. You die."
       }
+    },
+    finale : {
+      warriorEnd : {
+        sword : "You arrive in Solitude and become the most famous swordsman in Skyrim. After many years of service in the Imperial Legion, you are made Jarl of Falkreath and given a Housecarl",
+        bow : "You arrive in Solitude and are assigned to a special mission to assassinate Ulfric Stormcloak, leader of the rebellion. You infiltrate Windhelm and kill the Jarl in his sleep. You escape and are made Jarl of Whiterun as a reward."
+      },
+      thiefEnd : {
+        burglar : "With all of the gold you stole from the drunken nobles you become a wealthy noble in Riften. You form a partnership with the Thieves Guild and create an underworld Empire that spreads throughout Tamriel",
+        pickpocket : "The amulet you stole from the noble once belonged to Talos, the famous founder of Skyrim. You sell it to the Thieves Guild, buy a silver mine in Markarth, and live comfortably for the rest of your life"
+      },
+      mageEnd : {
+        fire : "With your newfound power you wreek fiery revenge on all of your past rivals. You gather a horde of disciples and inhabit an ancient castle in the Reach",
+        ice : "You continue to hone your power under the apprenticeship of Savos Aren, the head of the College of Mages. One day Savos dies and appoints you to succeed him in his will"
+      }
     }
   }
 }
