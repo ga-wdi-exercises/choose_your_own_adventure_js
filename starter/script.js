@@ -1,9 +1,4 @@
 var story = {
-  start: function() {
-    $("#container").removeClass("hidden");
-    $("#gameOver").html("");
-    story.setScene(0);
-  },
   stats: {
     none: 1,
     luck: 1,
@@ -11,60 +6,74 @@ var story = {
     dexterity: 1,
     charisma: 1,
     increaseStat: function(statName) {
+      console.log("increaseStat(" + statName + ") " + story.stats[statName] + " -> " + (story.stats[statName] + 0.1));
       story.stats[statName] += 0.1;
     },
     decreaseStat: function(statName) {
+      console.log("decreaseStat(" + statName + ") " + story.stats[statName] + " -> " + (story.stats[statName] - 0.1));
       story.stats[statName] -= 0.1;
-    }
+    },
   },
+  start: function() {
+    $("#container").removeClass("hidden");
+    $("#gameOver").addClass("hidden");
+    story.setScene(0);
+  },
+
   d: function(max) {
-    // console.log("d(" + max + ")");
+    console.log("roll d(" + max + ")");
     return Math.floor(Math.random() * (max - 1 + 1)) + 1;
   },
+  setTextBox: function(text) {
+    $("#textBox").text(text);
+  },
   gameOver: function() {
-    // console.log("gameOver");
-    var newOption = $("<h1></h1>");
-    newOption.attr("id","gameOver");
-    newOption.attr("onclick","story.start()");
-    newOption.text("game over");
-    $("#container").append(newOption);
+    $("#gameOver").removeClass("hidden");
   },
   determineSuccess: function(sceneIndex,optionIndex) {
-    // console.log("determineSuccess");
+    console.log("determineSuccess");
     var option = story.scenes[sceneIndex].options[optionIndex];
-    return story.d(option.difficulty[1]) * story.stats[option.statModifier] > option.difficulty[0];
+    var roll = story.d(option.difficulty[1]);
+    var mod = story.stats[option.statModifier];
+    var dc = option.difficulty[0];
+    console.log("sceneIndex: " + sceneIndex + ", optionIndex: " + optionIndex + ", max roll: " + option.difficulty[1] + " roll: " + roll + ", mod: " + mod + ", dc: " + dc);
+    // automatically fail on a roll of 1 and automatically succeed on a max roll
+    return (roll * mod >= dc && roll !== 1) || roll === option.difficulty[1];
+    // more efficient
+    // return story.d(option.difficulty[1]) * story.stats[option.statModifier] > option.difficulty[0];
   },
   choose: function(sceneIndex,optionIndex) {
-    // console.log("choose");
+    console.log("choose(sceneIndex(" + sceneIndex + "),optionIndex(" + optionIndex + "))");
     var option = story.scenes[sceneIndex].options[optionIndex];
-    $("#textBox").text("You " + option.choiceValue + ".");
+    story.setTextBox("You " + option.choiceValue + ".");
+    // perform different consequences and story paths depending on results of determineSuccess
     if (story.determineSuccess(sceneIndex,optionIndex)) {
-      // console.log("choose>success");
+      console.log("choose>success");
       option.successConsequences();
-      $("#textBox").text(option.successText);
-      story.setScene(option.successSceneId);
-      // console.log("choose>successSceneId>" + option.successSceneId);
+      setTimeout(story.setTextBox,3000,option.successText);
+      setTimeout(story.setScene,6000,option.successSceneId);
+      console.log("choose>successSceneId>" + option.successSceneId);
     } else {
-      // console.log("choose>failure");
+      console.log("choose>failure");
       option.failureConsequences();
-      $("#textBox").text(option.failureText);
-      story.setScene(option.failureSceneId);
-      // console.log("choose>failureSceneId" + option.failureSceneId);
+      setTimeout(story.setTextBox,3000,option.failureText);
+      setTimeout(story.setScene,6000,option.failureSceneId);
+      console.log("choose>failureSceneId" + option.failureSceneId);
     }
   },
   removeOptions: function() {
-    // console.log("removeOptions");
+    console.log("removeOptions");
     $("#optionsList").html("");
   },
   setOptions: function(sceneIndex) {
-    // console.log("setOptions>sceneIndex>" + sceneIndex);
+    console.log("setOptions>sceneIndex>" + sceneIndex);
     // should consider validating and handling empty option array
     for (var i = 0; i < story.scenes[sceneIndex].options.length; i++) {
       // this is poorly written and probably shouldn't rely on i to set data-option
       var newOption = $("<div></div>");
       newOption.addClass("option");
-      newOption.attr("data-scene",sceneIndex);
-      newOption.attr("data-option",i);
+      // newOption.attr("data-scene",sceneIndex);
+      // newOption.attr("data-option",i);
       newOption.attr("onclick","story.choose(" + sceneIndex + "," + i + ")");
       // this is successfully adding the attribute but it is not having the effect of hiding the div
       if (story.scenes[sceneIndex].options[i].hidden === true) {
@@ -75,43 +84,16 @@ var story = {
     }
   },
   setScene: function(sceneIndex) {
-    // console.log("setScene>sceneIndex>" + sceneIndex);
-    $("#textBox").html(story.scenes[sceneIndex].setting);
+    console.log("setScene>sceneIndex>" + sceneIndex);
+    story.setTextBox(story.scenes[sceneIndex].setting);
     story.removeOptions();
     if (story.scenes[sceneIndex].final === true) {
-      // consider adding arguments
-      return story.gameOver();
+      return setTimeout(story.gameOver,2000);
     } else {
-      return story.setOptions(sceneIndex);
+      // delay setting options by an amount of time determined by the length of the scene text (3s/100 characters)
+      return setTimeout(story.setOptions,story.scenes[sceneIndex].setting.length * 30,sceneIndex);
     }
   },
-  /* scene template
-  scene: {
-    id: <int>,
-    final: [true|false],
-    setting: "text",
-    options: [array of option objects],
-  },*/
-  /* option template
-  option: {
-    id: <int>,
-    choiceValue: "text",
-    hidden: [true|false],
-    statModifier: "name of story.stats[n]", // use "none" for no modification
-    difficulty: [<int difficulty ratio numberator>,<int difficulty ratio denominator>], // use [0,<n>] for automatic success
-    counter: 0,
-    successText: "text",
-    successConsequences: function() {
-
-    },
-    successSceneId: <int>,
-    failureText: "text",
-    failureConsequences: function() {
-
-    },
-    failureSceneId: <int>
-  }
-  */
   scenes: [{
     id: 0,
     final: false,
@@ -125,7 +107,19 @@ var story = {
       counter: 0,
       successText: "You wait silently while loosing blood.",
       successConsequences: function() {
-        return story.stats.decreaseStat("strength");
+        this.counter += 1;
+        story.stats.decreaseStat("strength");
+        story.scenes[0].setting = story.scenes[0].setting.replace("You wake up in a field staring at the sky. ","");
+        if (this.counter === 1) {
+          this.choiceValue += " for nightfall";
+          this.successText += " You feel weak but think you can probably sneak away once the men fall asleep."
+        }
+        if (this.counter === 5) {
+          this.successText = "The sun finally sets. The men settle down and fall asleep."
+        }
+        if (this.counter > 5) {
+          this.successSceneId = 4;
+        }
       },
       successSceneId: 0,
       failureText: "You accidentally let out a loud moan of pain.",
@@ -141,10 +135,10 @@ var story = {
       difficulty: [7,20],
       successText: "You quietly rip some cloth from the sleeve of your shirt and wrap up the wound on your head.",
       successConsequences: function() {
-        // replace function in choice 1 with one that does not loose strength
-        // unhide choice 3
-        // remove bleeding from scene 1 and choice 1
-        return undefined
+        debugger;
+        this.hidden = true;
+        story.scenes[0].options[3].hidden = false;
+        story.scenes[0].options[0].successText = "You wait silently.";
       },
       successSceneId: 0,
       failureText: "As you try to tear some cloth from your shirt it makes a loud ripping noise.",
@@ -185,6 +179,7 @@ var story = {
       successSceneId: 3,
       failureText: "You snap a twig as you crawl away from the men. The sounds of the men quiet briefly.",
       failureConsequences: function() {
+        console.log(this);
         this.counter += 1;
         this.failureText.replace("snap a twig","rustle some leaves");
         story.stats.decreaseStat("dexterity");
@@ -213,20 +208,25 @@ var story = {
   }],
 }
 
-var testObj = {
-  a: {
-    ab: 0,
-    ac: [],
-    ad: 2,
-    af: function(){
-      // console.log(this.parent.b);
-    }
-  },
-  b: 10,
-  c: {
-    ca: 30,
-    cb: function(v){
-      // console.log(this[v]);
+// remove after submission
+var obj = {
+  a: "tautology",
+  b: 2,
+  c: 3,
+  subObj: {
+    a: 10,
+    b: 20,
+    c: 30,
+    d: function() {
+      switch (obj.a) {
+        case "tautology":
+          console.log("a tautology");
+          break;
+        case "fallacy":
+          console.log("a fallacy");
+          break;
+        default: "default"
+      };
     }
   }
 }

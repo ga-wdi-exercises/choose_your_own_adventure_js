@@ -41,6 +41,7 @@ h1 {
 
 #optionsList .option:hover {
   border: 4px solid #C6E872;
+  cursor: pointer;
 }
 
 .hidden {
