@@ -24,10 +24,14 @@ function now() {
   console.log(f)
   if (f == true){
     var counter = 1
+    for(counter=1; counter < 4; counter = counter + 1){
+    confirm("Want another slice?")
     console.log(counter)
-    for(counter=1;counter<4;counter+1){ //this is my problem
-    // confirm("Want another slice?")
-    console.log(counter)
+    // if (counter=4){
+    //   console.log("Oops, you're dead.")  //come back here
+    }
+  } else {
+    console.log("Wow. Lame.")
   }
 }
 function doggieBag(){
@@ -49,7 +53,7 @@ function weight (){
   if (d == true){
     console.log("Diabetes!")
   } else {
-    console.log("You've scored a date with Heidi Klum.")
+    console.log("Good choices. You've scored a date with Heidi Klum.")
   }
 }
 function noWeight(){
