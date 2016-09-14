@@ -1,9 +1,7 @@
 
 
-console.log("test")
 function one () {
-  var a = confirm("Welcome to Cakeland.  Are you good or evil? (Good/Evil)");
-  console.log(a)
+  var a = confirm("Welcome to Cakeland.  Are you a good person or a dieter? (Good/Dieter)");
   if (a == true){
     good()
   } else {
@@ -13,7 +11,6 @@ function one () {
 
 function good() {
   var b = confirm("I've made some cake.  Want some?")
-  console.log(b)
   if (b == true){
     now()
   } else {
@@ -22,12 +19,10 @@ function good() {
 }
 function now() {
   var f = confirm("Want another slice?")
-  console.log(f)
   if (f == true){
     var counter = 1
     for(counter=1; counter <= 4; counter = counter + 1){
       confirm("Want another slice?")
-      console.log(counter)
       if (counter==4){
         console.log("Oops, you're dead.")  //come back here
       }
@@ -38,11 +33,9 @@ function now() {
   }
   function doggieBag(){
     var g = prompt("How many slices do you want to take home with you? I have five slices left.")
-    console.log(g)
     var h = parseInt(g)
     switch(h) {
       case 5:
-        console.log(h)
         console.log("Hospital Visit");
         break;
       case 4:
@@ -55,14 +48,12 @@ function now() {
         console.log("You're lame but at least you're alive.");
         break;
       default:
-        console.log(h)
         console.log("Hmm. Sounds fine.")
     }
   }
 
   function dieter() {
     var c = confirm("Grandma baked you a cake. You feel guilty. Gonna give in?")
-    console.log(c)
     if (c == true){
       weight()
     } else {
@@ -71,7 +62,6 @@ function now() {
   }
   function weight (){
     var d = confirm("You've gained weight. Sorry about that. I have cookies if you want to eat your feelings.")
-    console.log(d)
     if (d == true){
       console.log("Diabetes!")
     } else {
@@ -80,7 +70,6 @@ function now() {
   }
   function noWeight(){
     var e = confirm("You pass a cupcake shop on your way to the gym. (Walk past/Burn it down)")
-    console.log(e)
     if (e == true){
       console.log("What is wrong with you?? Cake is delicious!")
     } else {
