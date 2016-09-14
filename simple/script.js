@@ -15,10 +15,10 @@ if (!toPlayOrNotToPlay) {
   var response = parseInt(prompt("What year would you like to visit?"));
 
   if (response >= 2016) {
-    response = prompt("I see you're a fan of Back to the Future 2. Would you rather deal with Biff, or Griff? (B/G)").toString();
+    response = prompt("I see you're a fan of Back to the Future 2. Would you rather deal with Biff, or Griff? ([B]iff/[G]riff)").toString();
 
     if (response == "B") {
-      response = prompt("Hmm, interesting. Biff is angry and has a cane. Do you stand and fight, or run away like a coward? (S/R)");
+      response = prompt("Hmm, interesting. Biff is angry and has a cane. Do you stand and fight, or run away like a coward? ([S]tay/[R]un)");
 
       if (response == "S") {
         alert("Good choice. Biff is old and feeble at this point. You push him over and he falls in a pile of manure.");
@@ -28,7 +28,7 @@ if (!toPlayOrNotToPlay) {
         huh();
       }
     } else if (response == "G") {
-      response = prompt("Griff is asking you if you are in, or out. What do you say? (I/O)");
+      response = prompt("Griff is asking you if you are in, or out. What do you say? ([I]n/[O]ut)");
       if (response == "I") {
         alert("Bad call. Griff and his cronies rob the Hill Valley bank and frame you for it. No more time travel for you.");
       } else if (response == "O") {
@@ -45,9 +45,22 @@ if (!toPlayOrNotToPlay) {
 
     alert("Welcome to the future, " + response);
   } else if (response >= 1955) {
+    response = prompt("I see you're a fan of Back to the Future 1. Your future Mom has just asked you to the Enchantment Under the Sea dance. What do you do? ([Y]es/[N]o/[S]et her up with George)");
+
+      if (response == "Y") {
+        alert("Creepy. I hope you have some backup plan in place to get out of this. Until then, you're stuck in 1955.");
+      } else if (response == "N") {
+        alert("Honorable. But this also means that your future Dad will never meet your Mom, and therefore you cannot exist.")
+      } else if (response == "S") {
+        alert("Interesting. You set up an elaborate plan for your future Dad to surprise your Mom by beating you up. Despite going horribly awry, the plan ultimately works. You may go back to your own time.")
+      } else {
+        huh();
+      }
+
+  } else if (response < 1955) {
 
   } else {
-
+    huh();
   }
 
 }
