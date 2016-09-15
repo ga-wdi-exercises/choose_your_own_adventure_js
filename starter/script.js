@@ -4,8 +4,22 @@ var deliver = function(content) {
   userConsole.append('<br><br>');
 }
 var userSpecies;
-var assignClass = function(x) {
+var assignSpecies = function(x) {
   userSpecies = $(x).attr('id');
+  switch(userSpecies) {
+    case 'human' : story.attributes.strength = 3; story.attributes.agility = 3; story.attributes.magic = 3;
+    break;
+    case 'elf' : story.attributes.strength = 1; story.attributes.agility = 5; story.attributes.magic = 3;
+    break;
+    case 'dwarf' : story.attributes.strength = 5; story.attributes.agility = 3; story.attributes.magic = 1;
+    break;
+    case 'druid' : story.attributes.strength = 3; story.attributes.agility = 1; story.attributes.magic = 5;
+    break;
+  };
+};
+var userRole;
+var assignRole = function(x) {
+  userRole = $(x).attr('id');
 };
 var userText = $('input');
 var userSubmit = $('button');
@@ -35,17 +49,50 @@ var skyrimStory = {
         $(this).children().addClass('hide');
       });
     $('.option > div').on('click', function() {
-      assignClass(this);
+      assignSpecies(this);
       story.role();
     });
   },
   role : function() {
-    console.log("arrived");
     userConsole.html('');
+    $('.option').html('');
     deliver(story.dialogue.role.welcome);
+    $('#option1').append('Warrior'+'<br>'+'<div class="hide" id="warrior">'+story.dialogue.role.describe.warrior+'</div>');
+    $('#option2').append('Thief'+'<br>'+'<div class="hide" id="thief">'+story.dialogue.role.describe.thief+'</div>');
+    $('#option3').append('Mage'+'<br>'+'<div class="hide" id="mage">'+story.dialogue.role.describe.mage+'</div>');
+    $('.option').hover(
+      function() {
+        $(this).children().removeClass('hide');
+      },
+      function() {
+        $(this).children().addClass('hide');
+      });
+    deliver(story.dialogue.role.askRole);
+    $('.option > div').on('click', function() {
+      assignRole(this);
+      switch (userRole) {
+        case 'warrior' : deliver(story.dialogue.role.transition.warrior);
+        break;
+        case 'thief' : deliver(story.dialogue.role.transition.thief);
+        break;
+        case 'mage' : deliver(story.dialogue.role.transition.mage);
+        break;
+      }
+      story.specialization();
+    });
   },
   specialization : function() {
-
+    console.log("arrived");
+    userConsole.html('');
+    $('.option').html('');
+    deliver(switch (userRole) {
+      case 'warrior' : deliver(story.dialogue.specialization.welcome.warrior);
+      break;
+      case 'thief' : deliver(story.dialogue.specialization.welcome.thief);
+      break;
+      case 'mage' : deliver(story.dialogue.specialization.welcome.mage);
+      break;
+    });
   },
   finale : function() {
 
