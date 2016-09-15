@@ -1,6 +1,6 @@
 var name = prompt("Hello! What is your name?");
 
-var pokemon = prompt("Hello, " + name + "." + " Quick! You see a Pikachu, a Charmander, and a Squirtle! Which one do you want to battle? Choose: [p] for Pikachu, [c] for Charmander, [s] for Squirtle");
+var pokemon = prompt("Hello, " + name + "." + " Quick! You see a Pikachu, a Charmander, and a Squirtle! Which one do you want to battle?\n\n Choose: [p] for Pikachu, [c] for Charmander, [s] for Squirtle");
   if (pokemon === "p") {
     var p = prompt("Awesome, you got a Pikachu! Ready for a gym battle? Do you want to battle Brock or Misty?" );
 pikachu();
@@ -50,18 +50,17 @@ function teamRocket() {
 }
 
 function PokemonCenter() {
-  var welcome = confirm("Welcome to the Pokemon Center! We can heal your Pokemon back to perfect health! Shall we heal your Pokemon?");
+  var welcome = confirm("Welcome to the Pokemon Center!\n We can heal your Pokemon back to perfect health!\n Shall we heal your Pokemon?");
     if (welcome === true) {
-      var egg = prompt("Okay! We'll need your Pokemon! .  .\n.  .  .\n  .  .\n.  .  .\n.  .  .\nThank you! Your Pokemon are fully healed.\nOH! Professor Oak dropped of an egg for you! Do you want the BLUE egg, the GREEN egg, or the BLACK egg?");
+      var egg = prompt("Okay! We'll need your Pokemon! .  .\n.  .  .\n  .  .\n.  .  .\n.  .  .\nThank you! Your Pokemon are fully healed.\nOH! Professor Oak dropped of an egg for you!\n Do you want the BLUE egg, the GREEN egg, or the BLACK egg?");
     } else {
       alert("You don't want our help? Well, game over.");
       console.log("Game over.");
     }
-}
 
-switch (egg === true) {
+switch (egg) {
   case "BLUE":
-    console.log("After hours and hours of walking around, your BLUE egg hatched into a Magickarp! Sucker.");
+    console.log("After hours and hours of walking around, your BLUE egg hatched into a Magikarp! Sucker.");
   break;
   case "GREEN":
       console.log("After spending all literally weeks of keeping your egg warm, your GREEN egg hatched into a Caterpie. LAMEEEE.");
@@ -71,6 +70,7 @@ switch (egg === true) {
   break;
   default:
           console.log("You don't read directions very well, do you?");
+  }
 }
 
 // switch ()
