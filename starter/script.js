@@ -1,5 +1,9 @@
 var start = confirm("Are you ready to enter the Temple of Doom?")
 
+var names = ["Indy", "Short Round", "Willie", "Mola Ram"]
+for (i in names){
+  console.log(names[i])
+}
 var choice = prompt("Will you take the Golden Monkey or run?");
   if (choice=== "take"){
     console.log("taken")
