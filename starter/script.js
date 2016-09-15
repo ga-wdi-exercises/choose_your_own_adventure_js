@@ -72,27 +72,44 @@ var skyrimStory = {
       assignRole(this);
       switch (userRole) {
         case 'warrior' : deliver(story.dialogue.role.transition.warrior);
+        setTimeout(story.specialization, 5000);
         break;
         case 'thief' : deliver(story.dialogue.role.transition.thief);
+        setTimeout(story.specialization, 5000);
         break;
         case 'mage' : deliver(story.dialogue.role.transition.mage);
+        setTimeout(story.specialization, 5000);
         break;
-      }
-      story.specialization();
+      };
     });
   },
   specialization : function() {
     console.log("arrived");
     userConsole.html('');
     $('.option').html('');
-    deliver(switch (userRole) {
+    switch (userRole) {
       case 'warrior' : deliver(story.dialogue.specialization.welcome.warrior);
       break;
       case 'thief' : deliver(story.dialogue.specialization.welcome.thief);
       break;
       case 'mage' : deliver(story.dialogue.specialization.welcome.mage);
       break;
-    });
+    };
+    switch (userRole) {
+      case 'warrior' : deliver(story.dialogue.specialization.askSpecialization.warrior);
+      $('#option1').append('Sword'+'<br>'+'<div class="hide" id="sword">'+story.dialogue.specialization.warriorOptions.sword+'</div>');
+      $('#option2').append('Bow'+'<br>'+'<div class="hide" id="bow">'+story.dialogue.specialization.warriorOptions.bow+'</div>');
+      break;
+      case 'thief' : deliver(story.dialogue.specialization.askSpecialization.thief);
+      $('#option1').append('Burglar'+'<br>'+'<div class="hide" id="burglar">'+story.dialogue.specialization.thiefOptions.burglar+'</div>');
+      $('#option2').append('Pickpocket'+'<br>'+'<div class="hide" id="pickpocket">'+story.dialogue.specialization.thiefOptions.pickpocket+'</div>');
+      break;
+      case 'mage' : deliver(story.dialogue.specialization.askSpecialization.mage);
+      $('#option1').append('Fire Mage'+'<br>'+'<div class="hide" id="fire">'+story.dialogue.specialization.mageOptions.fire+'</div>');
+      $('#option2').append('Ice Mage'+'<br>'+'<div class="hide" id="ice">'+story.dialogue.specialization.mageOptions.ice+'</div>');
+      $('#option3').append('Mystic'+'<br>'+'<div class="hide" id="spirit">'+story.dialogue.specialization.mageOptions.spirit+'</div>');
+      break;
+    };
   },
   finale : function() {
 
