@@ -1,4 +1,5 @@
 var name = prompt("Hello! What is your name?");
+var z;
 
 var pokemon = prompt("Hello, " + name + "." + " Quick! You see a Pikachu, a Charmander, and a Squirtle! Which one do you want to battle?\n\n Choose: [p] for Pikachu, [c] for Charmander, [s] for Squirtle");
   if (pokemon === "p" || pokemon === "Pikachu") {
@@ -22,24 +23,26 @@ function pikachu() {
     var win = confirm("You lost, bro. Brock rocked you. Back to the Pokemon Center");
     PokemonCenter();
 } else if (p === "Misty" || p === "misty") {
-    var lose = confirm("Lol. That wasn't even a fair fight. Owned. Oh crap, it's TEAM ROCKET!!! WANNA BATTLE THEM?!");
+    z = confirm("Lol. That wasn't even a fair fight. You owned her. Oh crap, it's TEAM ROCKET!!! WANNA BATTLE THEM?!");
   teamRocket();
   }
 }
 
 function charmander() {
   if (c === "Erika" || c === "erika") {
-    var win = confirm("You beasted her! Nice Job!! Oh no, It's TEAM ROCKET. Should we battle them?");
+     z = confirm("You beasted her! Nice Job!! Oh no, It's TEAM ROCKET. Should we battle them?");
   teamRocket();
 
 } else if (c === "Misty" || c === "misty") {
     var lose = confirm("Whoa, she killed you! Go back to the Pokemon Center!");
     PokemonCenter();
+  } else {
+      alert("Welp");
   }
 }
 
 function teamRocket() {
-  if (s === true) {
+  if (s === true || z === true) {
     var win = confirm("Haha, TEAM ROCKETS blasting off again! Okay, let's go to the Pokemon Center!");
     PokemonCenter();
 
@@ -51,8 +54,9 @@ function teamRocket() {
 
 function PokemonCenter() {
   var welcome = confirm("Welcome to the Pokemon Center!\n We can heal your Pokemon back to perfect health!\n Shall we heal your Pokemon?");
+  var egg;
     if (welcome === true) {
-      var egg = prompt("Okay! We'll need your Pokemon! .  .\n.  .  .\n  .  .\n.  .  .\n.  .  .\nThank you! Your Pokemon are fully healed.\nOH! Professor Oak dropped of an egg for you!\n Do you want the BLUE egg, the GREEN egg, or the BLACK egg?");
+      egg = prompt("Okay! We'll need your Pokemon! .  .\n.  .  .\n  .  .\n.  .  .\n.  .  .\nThank you! Your Pokemon are fully healed.\nOH! Professor Oak dropped of an egg for you!\n Do you want the BLUE egg, the GREEN egg, or the BLACK egg?");
     } else {
       alert("You don't want our help? Well, game over.");
       console.log("Game over.");
@@ -60,18 +64,18 @@ function PokemonCenter() {
 
 switch (egg) {
   case "BLUE":
-    console.log("After hours and hours of walking around, your BLUE egg hatched into a Magikarp! Sucker.");
+    alert("After hours and hours of walking around, your BLUE egg hatched into a Magikarp! Sucker.");
+    console.log("Game over, thanks for playing!");
   break;
   case "GREEN":
-      console.log("After spending all literally weeks of keeping your egg warm, your GREEN egg hatched into a Caterpie. LAMEEEE.");
+      alert("After spending all literally weeks of keeping your egg warm, your GREEN egg hatched into a Caterpie. LAMEEEE.");
+      console.log("Game over, thanks for playing!");
   break;
   case "BLACK":
-        console.log("After many long days and many long nights, your BLACK egg hatched into a BEASTY MEWTWO! YOU WIN LIFE!");
+        alert("After many long days and many long nights, your BLACK egg hatched into a BEASTY MEWTWO! YOU WIN LIFE!");
+        console.log("Game over, thanks for playing!");
   break;
   default:
-          console.log("You don't read directions very well, do you?");
+          alert("You don't read directions very well, do you?");
   }
 }
-
-// switch ()
-// you wanna play again? while loop. or switch
