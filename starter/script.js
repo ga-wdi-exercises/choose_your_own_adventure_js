@@ -1,5 +1,8 @@
 
 
+var seanBean = ("<img src = 'http://ia.media-imdb.com/images/M/MV5BMTM0NzA4MDU5N15BMl5BanBnXkFtZTcwMDM5NzUyMw@@._V1_SX640_SY720_.jpg' alt ='Sean Bean'>")
+
+
 var qOne = prompt("You have just stolen the Declaration of Independence, you are in the secure storage room" +
 "do you head towards the front of the building or the back, F = Front, B =Back")
 
@@ -46,10 +49,12 @@ if (qOne == 'F'){
             qTwo2 = prompt("Oh no! you ran into Sean Bean and his cronies, you gotta get away! do you take the elevator or the stairs?" +
                             "E = elevator, S = stairs")
 
+            $('body').append(seanBean)
+
           switch (qTwo2) {
           case 'E' :
 
-            function elevator() {
+            function elevator() {s
                 for (i=0;i>10; i++) {
                   alert("Approaching floor: " + i)
                   console.log("Approaching floor: " + i)
