@@ -1,11 +1,20 @@
 // put code here!
 
-// "Hey Luigi! Look's like your ready to go on an adventure. Want to bring a mushroom?" (Y/N)
-    // - Yes. Great! The mushroom is your `Power Up`
-        // var powerUp = "mushroom"
-            // * World question
-    // - No. Okay that's fine! Your `Power Up` is empty.
-        // var powerUp = "" empty
+var powerUp = "" // empty variable for now
+
+console.log("Get ready to play \"Luigi's Console Adventure!\"")
+	function luigisConsoleAdventure(){
+		var response = confirm("Before you go on your adventure, do you want to bring a mushroom? \(Y/N\)")
+			if (response = "Yes") {
+				var powerUp="mushroom"
+    				console.log("Great! The mushroom is your `Power Up`")
+			} else {
+				var powerUp="nothing"
+				console.log("No? Okay that's fine! Just remember you have no Power Up.")
+			}
+
+	}
+	luigisConsoleAdventure.response
             // * World question
 // There are two worlds. Which world would you like to go to?
     // - 1. Great! Let's go down the pipe!
