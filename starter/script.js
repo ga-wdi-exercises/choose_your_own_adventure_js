@@ -1,16 +1,43 @@
 var age = 0
 var location = ""
+var caveOne;
+var caveTwo;
+var caveThree;
 confirm("Ready to play?");
 
 var age = prompt("Please enter you age")
 if (age >= 18) {
-  document.write("Welcome to Treasure Island");
+  console.log("Welcome to Treasure Island");
 }
-else {"Come back in a few years."
+  else { console.log("Come back in a few years.");
 }
-
-var location= prompt("Do you choose cave one, cave two, or cave three?")
-
+var location= prompt("Do you choose caveOne, caveTwo, or caveThree?")
+var location = {
+  "caveOne": function(option) {
+  return option1, option2, option3;
+},
+  "caveTwo": function(option) {
+  return option1, option2, option3;
+},
+  "caveThree": function(option) {
+  return option1, option2, option3;
+},
+};
+/*switch (location) {
+  caveOne: ("Unfortunately you fell into a giant swarm swarming with alligators.");
+  var option1 = confirm("Do you give up and let the gators take you?");
+  var option2 = confirm("Do you use what you have in your bag to defend yoursefl?");
+  var option3 = confirm("Do you try to out swim the gators?")
+    break;
+  caveTwo: ("")
+    break;
+  caveThree: ("")
+    break;
+}*/
+/*if (location === caveOne)
+{
+document.write("Awesome Choice! Unfortunately you fell into a giant swamp, swarming with alligators.")
+}
 /*if (cave one) {
   document.write("Unfortunately you fell into a gian swarm swarming with alligators.")
   prompt(Do you give up and let the gators take you?)
