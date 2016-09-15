@@ -52,11 +52,25 @@ function teamRocket() {
 function PokemonCenter() {
   var welcome = confirm("Welcome to the Pokemon Center! We can heal your Pokemon back to perfect health! Shall we heal your Pokemon?");
     if (welcome === true) {
-      confirm("Okay! We'll need your Pokemon! .  .  .  .  .   .   .   .   .     . Thank you! Your Pokemon are fully healed. We hope to see you again.");
+      var egg = prompt("Okay! We'll need your Pokemon! .  .\n.  .  .\n  .  .\n.  .  .\n.  .  .\nThank you! Your Pokemon are fully healed.\nOH! Professor Oak dropped of an egg for you! Do you want the BLUE egg, the GREEN egg, or the BLACK egg?");
     } else {
       alert("You don't want our help? Well, game over.");
       console.log("Game over.");
     }
+}
+
+switch (egg === true) {
+  case "BLUE":
+    console.log("After hours and hours of walking around, your BLUE egg hatched into a Magickarp! Sucker.");
+  break;
+  case "GREEN":
+      console.log("After spending all literally weeks of keeping your egg warm, your GREEN egg hatched into a Caterpie. LAMEEEE.");
+  break;
+  case "BLACK":
+        console.log("After many long days and many long nights, your BLACK egg hatched into a BEASTY MEWTWO! YOU WIN LIFE!");
+  break;
+  default:
+          console.log("You don't read directions very well, do you?");
 }
 
 // switch ()
