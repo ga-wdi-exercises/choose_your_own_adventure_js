@@ -3,17 +3,46 @@ var deliver = function(content) {
   userConsole.append(content);
   userConsole.append('<br><br>');
 }
+var userSpecies;
+var assignClass = function(x) {
+  userSpecies = $(x).attr('id');
+};
+var userText = $('input');
+var userSubmit = $('button');
 
-skyrimStory = {
+
+var skyrimStory = {
   intro : function() {
-    deliver(this.dialogue.intro.welcome);
-    setTimeout(deliver(this.dialogue.intro.askName), 5000);
+    deliver(story.dialogue.intro.welcome);
+    setTimeout(deliver(story.dialogue.intro.askName), 5000);
+    userSubmit.on('click', function() {
+      deliver(userText.val()+story.dialogue.intro.transition);
+      setTimeout(story.species, 1000);
+    });
   },
   species : function() {
-
+    userConsole.html('');
+    deliver(story.dialogue.species.askSpecies);
+    $('#option1').append('Human'+'<br>'+'<div class="hide" id="human">'+story.dialogue.species.describe.human+'</div>');
+    $('#option2').append('Elf'+'<br>'+'<div class="hide" id="elf">'+story.dialogue.species.describe.elf+'</div>');
+    $('#option3').append('Dwarf'+'<br>'+'<div class="hide" id="dwarf">'+story.dialogue.species.describe.dwarf+'</div>');
+    $('#option4').append('Druid'+'<br>'+'<div class="hide" id="druid">'+story.dialogue.species.describe.druid+'</div>');
+    $('.option').hover(
+      function() {
+        $(this).children().removeClass('hide');
+      },
+      function() {
+        $(this).children().addClass('hide');
+      });
+    $('.option > div').on('click', function() {
+      assignClass(this);
+      story.role();
+    });
   },
   role : function() {
-
+    console.log("arrived");
+    userConsole.html('');
+    deliver(story.dialogue.role.welcome);
   },
   specialization : function() {
 
@@ -22,7 +51,6 @@ skyrimStory = {
 
   },
   reset : function() {
-
   },
   attributes : {
     strength : 0,
@@ -33,7 +61,7 @@ skyrimStory = {
     intro : {
       welcome : "You open your eyes and look around and find yourself in a magical world full of magical wonders and dangerous dragons. You are in Skyrim.",
       askName : "What is your name?",
-      transition : "is is. Now it is time to decide which people you belong to"
+      transition : " it is. Now it is time to decide which people you belong to"
     },
     species : {
       askSpecies : "What species would you like to be: Human, Elf, Dwarf, or Druid. Mouse over each species for more information about them",
@@ -43,7 +71,6 @@ skyrimStory = {
         dwarf : "Dwarfs have honed their stamina from extensive work in the mines, posessing excellent Strength, medium Agility, but no Magic",
         druid : "Druids are the most mystical of Skyrim's inhabitants, possessing miraculous Magic, decent Strength, but terrible Agility"
       },
-      inputOptions : "Enter H for Human, E for Elf, D for Dwarf, or Dr for Druid",
       transition : "Excellent choice! However, without any skills you won't make it far. Now you must choose a role to be trained in."
     },
     role : {
@@ -117,4 +144,5 @@ skyrimStory = {
     }
   }
 }
+var story = skyrimStory;
 $('document').ready(skyrimStory.intro())
