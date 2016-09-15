@@ -27,6 +27,14 @@ var story = {
   setTextBox: function(text) {
     $("#textBox").text(text);
   },
+  textBoxDelayRate: 40, // milliseconds/character in text
+  queueTextBox: function(text,optionalExtraTime) {
+    var extraTime = 0;
+    if (optionalExtraTime) {
+      extraTime = optionalExtraTime;
+    }
+    setTimeout(story.setTextBox,(text.length * story.textBoxDelayRate) + extraTime,text);
+  },
   gameOver: function() {
     $("#gameOver").removeClass("hidden");
   },
@@ -45,19 +53,19 @@ var story = {
   choose: function(sceneIndex,optionIndex) {
     console.log("choose(sceneIndex(" + sceneIndex + "),optionIndex(" + optionIndex + "))");
     var option = story.scenes[sceneIndex].options[optionIndex];
-    story.setTextBox("You " + option.choiceValue + ".");
+    story.queueTextBox("You " + option.choiceValue + ".");
     // perform different consequences and story paths depending on results of determineSuccess
     if (story.determineSuccess(sceneIndex,optionIndex)) {
       console.log("choose>success");
       option.successConsequences();
-      setTimeout(story.setTextBox,3000,option.successText);
-      setTimeout(story.setScene,6000,option.successSceneId);
+      setTimeout(story.queueTextBox,4000,option.successText);
+      setTimeout(story.setScene,8000,option.successSceneId);
       console.log("choose>successSceneId>" + option.successSceneId);
     } else {
       console.log("choose>failure");
       option.failureConsequences();
-      setTimeout(story.setTextBox,3000,option.failureText);
-      setTimeout(story.setScene,6000,option.failureSceneId);
+      setTimeout(story.setTextBox,4000,option.failureText);
+      setTimeout(story.setScene,8000,option.failureSceneId);
       console.log("choose>failureSceneId" + option.failureSceneId);
     }
   },
@@ -88,10 +96,10 @@ var story = {
     story.setTextBox(story.scenes[sceneIndex].setting);
     story.removeOptions();
     if (story.scenes[sceneIndex].final === true) {
-      return setTimeout(story.gameOver,2000);
+      setTimeout(story.gameOver,2000);
     } else {
       // delay setting options by an amount of time determined by the length of the scene text (3s/100 characters)
-      return setTimeout(story.setOptions,story.scenes[sceneIndex].setting.length * 30,sceneIndex);
+      setTimeout(story.setOptions,story.scenes[sceneIndex].setting.length * 30,sceneIndex);
     }
   },
   scenes: [{
@@ -114,17 +122,16 @@ var story = {
           this.choiceValue += " for nightfall";
           this.successText += " You feel weak but think you can probably sneak away once the men fall asleep."
         }
-        if (this.counter === 5) {
+        if (this.counter === 4) {
           this.successText = "The sun finally sets. The men settle down and fall asleep."
         }
-        if (this.counter > 5) {
+        if (this.counter > 4) {
           this.successSceneId = 4;
         }
       },
       successSceneId: 0,
       failureText: "You accidentally let out a loud moan of pain.",
       failureConsequences: function() {
-        return undefined
       },
       failureSceneId: 1
     },{
@@ -135,7 +142,6 @@ var story = {
       difficulty: [7,20],
       successText: "You quietly rip some cloth from the sleeve of your shirt and wrap up the wound on your head.",
       successConsequences: function() {
-        debugger;
         this.hidden = true;
         story.scenes[0].options[3].hidden = false;
         story.scenes[0].options[0].successText = "You wait silently.";
@@ -143,7 +149,6 @@ var story = {
       successSceneId: 0,
       failureText: "As you try to tear some cloth from your shirt it makes a loud ripping noise.",
       failureConsequences: function() {
-        return undefined
       },
       failureSceneId: 1
     },{
@@ -155,14 +160,13 @@ var story = {
       successText: "The men see you in your pitiful state and regret assaulting you. They give you to the count of 10 to get out of their sight.",
       successConsequences: function() {
         story.stats.decreaseStat("strength");
-        return story.stats.increaseStat("charisma");
+        story.stats.increaseStat("charisma");
       },
       successSceneId: 2,
       failureText: "The men are bewildered and amused by your stupidity. They are so tickled that they decide not to finish the job they started.",
       failureConsequences: function() {
         story.stats.decreaseStat("strength");
         story.stats.decreaseStat("charisma");
-        return undefined
       },
       failureSceneId: 2
     },{
@@ -174,7 +178,6 @@ var story = {
       counter: 0,
       successText: "You quietly crawl away from the men until the sound of them fades into the distance.",
       successConsequences: function() {
-        return undefined
       },
       successSceneId: 3,
       failureText: "You snap a twig as you crawl away from the men. The sounds of the men quiet briefly.",
@@ -186,7 +189,6 @@ var story = {
         if (this.counter > 2) {
           this.failureSceneId = 2;
         }
-        return undefined
       },
       failureSceneId: 0
     }]
