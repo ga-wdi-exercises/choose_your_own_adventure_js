@@ -16,13 +16,17 @@ var jediToon = prompt("Would you like to train with Yoda(y), Obi-Wan(o), or Jar-
 if (jediToon === "y"){
  alert("You Learned how to lift a tree with the Force!")
  vaderOrTraining()}
-else if (jediToon === "o"){
-  alert("You need better training")
-   teacher();
-}
-else{
-  alert("You need better training")
-   teacher();
+// else if (jediToon === "o"){
+//   alert("You need better training")
+//    teacher();
+// }
+// else{
+//   alert("You need better training")
+//    teacher();
+// }
+while (jediToon === "o"|| jediToon === "j"){
+  teacher()
+  break;
 }
 }
 function vaderOrTraining(){
@@ -84,3 +88,7 @@ function general(){
 function sith(){
   alert("You've accidently trained a padawan who becomes a Sith Lord.")
 }
+
+// while (jediToon === "o")|| (jediToon === "j"){
+//   teacher()
+// }
