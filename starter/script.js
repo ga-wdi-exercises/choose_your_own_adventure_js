@@ -1,5 +1,13 @@
+var userConsole = $('.console');
+var deliver = function(content) {
+  userConsole.append(content);
+  userConsole.append('<br><br>');
+}
+
 skyrimStory = {
   intro : function() {
+    deliver(this.dialogue.intro.welcome);
+    setTimeout(deliver(this.dialogue.intro.askName), 5000);
   },
   species : function() {
 
@@ -15,6 +23,11 @@ skyrimStory = {
   },
   reset : function() {
 
+  },
+  attributes : {
+    strength : 0,
+    agility : 0,
+    magic : 0
   },
   dialogue : {
     intro : {
@@ -104,3 +117,4 @@ skyrimStory = {
     }
   }
 }
+$('document').ready(skyrimStory.intro())
