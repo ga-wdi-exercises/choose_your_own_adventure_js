@@ -55,54 +55,47 @@ if (qOne == 'Y'){
     // here */
   }
     }else if (qOne == 'N') {
-  alert("bad")
+      qTwo2 = prompt("Oh no! you ran into Sean Bean and his cronies, you gotta get away! do you take the elevator or the stairs?" +
+      "E = elevator, S = stairs")
+
+      switch (qTwo2) {
+      case 'E' :
+      i=5
+      for (i=10;i>10; i++) {
+        alert("Approaching floor: " + i)
+        console.log("Approaching floor: " + i)
+      }
+
+      qThree4 = prompt("You've reached the first floor, do you run to the van or tell the cops Sean Bean wants to kill you? V = van, C = cops")
+
+      if(qThree4 === "V") {
+
+        Alert("Congrats! you escaped safely with the declaration")
+      }
+      else {
+        Alert("The cops don't believe and you are arrested!");
+      }
+      break
+
+      case 'S':
+      qThree5 = prompt("Oh no! Sean Bean's cronies are in the stairwell, do you fight or give up the Declaration? F = fight G = give up");
+        if(qThree5 === "F") {
+
+        Alert("Despite your best efforts, Sean Bean and his men gun you down");
+      }
+        else {
+        Alert("You lost the Declaration of Independence! and Sean Bean and his men gun you down");
+      }
+      break
+      default:
+	alert("command not recognized, please try again");
+}
 }else {
-  alert('command not recognized, please try again');
+  alert("command not recognized, please try again");
 }
 
 
-qTwo2 = prompt("Oh no! you ran into Sean Bean and his cronies, you gotta get away! do you take the elevator or the stairs?" +
-"E = elevator, S = stairs")
 
-
-switch (qTwo2) {
-case 'E' :
-
-if (qTwo = "E") {
-for (i=5;i<1; i--) {
-  alert("Approaching floor: " + i)
-}
-
-qThree4 = prompt("You've reached the first floor, do you run to the van or tell the cops Sean Bean wants to kill you? V = van, C = cops")
-
-if(qThree1 === "V") {
-
-  Alert("Congrats! you escaped safely with the declaration")
-}
-else {
-  Alert("The cops don't believe and you are arrested!");
-}
-break
-
-case 'S':
-qThree5 = prompt("Oh no! Sean Bean's cronies are in the stairwell, do you fight or give up the Declaration? F = fight G = give up");
-  if(qThree2 === "F") {
-
-  Alert("Despite your best efforts, Sean Bean and his men gun you down");
-}
-  else {
-  Alert("You lost the Declaration of Independence! and Sean Bean and his men gun you down");
-}
-break
-
-
-
-if (qTwo = "E") {
-for (i=5;i<1; i--) {
-  alert("Approaching floor: " + i)
-}
-
-qThree4 = prompt("You've reached the first floor, do you run to the van or tell the cops Sean Bean wants to kill you?")
 
 
 
