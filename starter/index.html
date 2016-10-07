@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <script src="script.js"></script>
 </head>
 <body>
-  <script src="script.js"></script>
+  First name: <input id="nameBox"type="text" name="fname"><br>
+  Choose a State:
+    <select id="ddMenu">
+      <option value="start">--Select Option--</option>
+      <option value="California">California</option>
+      <option value="D.C.">D.C.</option>
+      <option value="Minnesota">Minnesota</option>
+      <option value="New York">New York</option>
+      <option value="Oregon">Oregon</option>
+      <option value="Texas">Texas</option>
+      <option value="Wisconsin">Wisconsin</option>
+    </select><br>
+
+    <input type="submit" value="Submit" onclick="submission()">
+
+    <div id="print"></div>
 </body>
 </html>
