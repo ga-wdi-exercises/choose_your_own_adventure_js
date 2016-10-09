@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  background-image: url("bikini_bottom.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 70px;
+}
+
+img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+h2 {
+  color: yellow;
+  font-size: 250%;
+}
+
+h1, h3 {
+  color: yellow;
+  font-size: 250%;
+  font-family: Georgia;
+}
