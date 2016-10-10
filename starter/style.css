@@ -1,0 +1,21 @@
+body {
+  background-image: url(https://c1.staticflickr.com/3/2681/4439237671_9527ddf6d2_b.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+h1 {
+  font-family: Impact, sans-serif;
+  position: absolute;
+  bottom: 60px;
+  color: white;
+  font-size: 4em;
+  bottom: 10px;
+}
