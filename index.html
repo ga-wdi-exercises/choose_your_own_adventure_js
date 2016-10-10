@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simpsons Game</title>
+  <style>
+  body{
+    background-color: yellow;
+    font-size: 20px;
+    /*background-image:url("/starter/Doughnut.png");*/
+  }
+  h1{
+     color:#ff4d88
+  }
+  span{
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <h1> Homer's Adventure</h1>
+  <p>On your way to get a dougnut. Marge calls you and tells your not to forget what she asked you to do...</p>
+  <p> <span>Goal:</span> Do what Marge asked you to do and get a Dougnut.</p>
+    <p> Hmmmh... I wonder what it was?<br/> ....was it.. <br/>
+     1.Pick up one of your offsprings (input A )<br/>
+     2.Get new washing machine (input B) <br/>
+     3.Get a present for Selman and Patty (input C) </p>
+
+     <p> Read to begin <button onclick="begin()">click here</button></p>
+
+
+ <script >
+ var answer;
+ var firstAnsw = answer
+
+  function begin(){
+  answer = prompt("So what's your answer A , B or C");
+  console.log(answer);
+}
+
+
+
+ </script>
+</body>
+</html>
