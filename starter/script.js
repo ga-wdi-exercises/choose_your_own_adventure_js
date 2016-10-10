@@ -47,9 +47,9 @@ function pizzaAdventure() {
     //choosing to run
     function run() {
       var running = prompt("You're gonna get there and 2-3 minutes before close! Do you a) call and place order, if it takes a bit longer, or b) just head there as fast as possible");
-      if (running === "Call") {
+      if (running === "a") {
         alert("Nice! they had the pizza ready for you, quick and easy!");
-        Call();
+        a();
       }
       else {
         alert("Sorry, They packed up and were ready for close. Go home and settle for cereal");
