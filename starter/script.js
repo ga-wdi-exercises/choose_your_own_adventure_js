@@ -18,6 +18,7 @@ function pizzaAdventure() {
    var trainLine = prompt("There are two lines that go towards the restaurant: a) M line, which is shorter but delayed. and b) L line, which is longer, or c) F train, which is out of the way");
    if (trainLine === "b") {
      alert("Good move with the L! the M line is backed up 45 minutes! you have 25 minutes after your stop")
+     run ();
    }
    else if (trainLine === "a") {
      alert("err..you're stuck! too many delays, now you only have 15 minutes to spare after you get off")
