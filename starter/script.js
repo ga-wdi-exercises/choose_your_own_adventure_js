@@ -32,5 +32,5 @@ switch (out) {
             break;
 
     default:
-        prompt("I didn't understand your choice. Hit Run and try again, this time picking SOBER, CASUAL, or WILD!");
+        prompt("I didn't understand your choice. Hit Refresh and try again, this time picking SOBER, CASUAL, or WILD!");
 }
