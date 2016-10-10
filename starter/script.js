@@ -1,15 +1,15 @@
 var name = prompt("What is your name?");
-var out = prompt("What's up " + name + "? Is your night SOBER, CASUAL, or WILD").toUpperCase();
+var out = prompt("What's up " + name + "? After a long week at GA's WDI course, you deserve a night out on the town. Is your night SOBER, CASUAL, or WILD").toUpperCase();
 
 switch (out) {
     case 'WILD':
         var drink = prompt("What are you drinking? (BEER, WINE, or TEQUILA)").toUpperCase();
         if (drink === "BEER") {
-            prompt("Wild-Beer");
+            prompt("Ahh a classic choice. Enjoy those hops responsibly. Don't do anything Miley Cyrus wouldn't do.");
         } else if (drink === "WINE") {
-            prompt("Wild-Wine");
+            prompt("You really have a taste for the finer things in life. Are you drinking the whole bottle though? Damn " + name + "!");
         } else if (drink === "TEQUILA") {
-            prompt("Wild-Tequila");
+            prompt("Holy crap you are wasted! You got in a break-dance battle with a homeless person and called your ex 7 times. Tomorrow you will question everything.");
         } else {
             prompt("Please pick BEER, WINE, or TEQUILA");
         }
@@ -17,11 +17,11 @@ switch (out) {
     case 'CASUAL':
         var drink = prompt("What are you drinking? (BEER, WINE, or TEQUILA)").toUpperCase();
         if (drink === "BEER") {
-            prompt("Casual-Beer");
+            prompt("Just a few beers huh? What are you some sort of craft-brew loving hipster? Do us all a favor and move to Brooklyn.");
         } else if (drink === "WINE") {
-            prompt("Casual-Wine");
+            prompt("Mmmmmm yes the cabernet pairs nicely with the lamb risotto. I taste subtle hints of oak, nutmeg, and coriander (WTF IS coriander BTW?).");
         } else if (drink === "TEQUILA") {
-            prompt("Casual-Tequila");
+            prompt("You don't always drink tequila. But when you do, it's probably not Patron.");
         } else {
             prompt("Please pick BEER, WINE, or TEQUILA");
         }
