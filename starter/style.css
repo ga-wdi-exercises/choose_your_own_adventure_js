@@ -4,6 +4,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 70px;
+  width: 60%;
+  margin-left: 20%;
 }
 
 img {
@@ -11,13 +13,24 @@ img {
   max-height: 400px;
 }
 
-h2 {
-  color: yellow;
+img:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 300%;
+  font-family: "Lucida Console";
+}
+
+h2, h3 {
   font-size: 250%;
+  font-family: "Lucida Console";
+}
+
+h2 {
+  color: white;
 }
 
 h1, h3 {
   color: yellow;
-  font-size: 250%;
-  font-family: Georgia;
 }
