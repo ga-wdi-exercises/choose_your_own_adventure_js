@@ -1,0 +1,67 @@
+html {
+  font-family: arial sans-serif;
+  background-color: #000;
+}
+
+h1 {
+  color:#567398;
+  text-align: center;
+  font-weight:700;
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: #567398;
+  font-weight: 300;
+  font-size: 20px;
+  font-style:oblique;
+
+}
+
+div {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction:row;
+  align-content: center;
+  image-orientation: center;
+}
+
+nav {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  color: #567398;
+  font-size: 30px;
+  text-transform:full-width;
+  font-weight: 800;
+  padding: 10px;
+}
+
+a {
+  color: #567398;
+  font-weight: 600;
+  text-transform: full-width;
+  font-size: 20px;
+  paddng: 7px;
+  margin: 5px;
+}
+
+button {
+  padding: 6px;
+  width: 130px;
+  font-weight: bold;
+  color:#696969;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+body {
+  margin: 20px;
+  padding:20px;
+}
