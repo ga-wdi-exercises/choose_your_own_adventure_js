@@ -1,0 +1,66 @@
+* {
+  transition: all 1.0s ease;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+background-image: url("images/hogwarts.png");
+background-size: cover;
+background-attachment: fixed;
+font-family: Calibri;
+color: #ffffff;
+margin: 20px 60px;
+font-size: 18px;
+}
+
+h1 {
+  font-family: 'Bad Script', cursive;
+  color: #54748E;
+}
+
+input {
+  margin: 10px 10px 0 0;
+  padding: 5px;
+  font-family: Calibri;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble
+{
+position: relative;
+width: 350px;
+height: 160px;
+padding: 15px;
+background: RGBA(57, 71, 96, .7);
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 26px 15px 0;
+border-color: transparent RGBA(57, 71, 96, .5);
+display: block;
+width: 0;
+z-index: 1;
+left: -26px;
+top: 24px;
+}
+
+
+img:hover {
+  transform: scale(1.1);
+}
