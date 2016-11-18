@@ -64,9 +64,9 @@ const gameConditions = function(input) {
     document.getElementById("header3").innerHTML = "Doc has already destoryed the Time Machine at the point. I guess you'll have to wait around until 2015. What name would you like to go by until then?"
     let userInput = document.getElementById("input3").value;
     console.log(userInput)
-    if () {
-      document.getElementById("path3").innerHTML = "Welcome to the future, " + userInput + ".";
-    }
+    //if () {
+    //  document.getElementById("path3").innerHTML = "Welcome to the future, " + userInput + ".";
+  //  }
   }
   else if (input >= 1955 && input <= 1984) {
     alert("Between 1955 and 1984");
