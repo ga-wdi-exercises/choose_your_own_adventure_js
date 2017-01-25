@@ -32,15 +32,35 @@ var pokemon = prompt("Which Pokemon do you chose? Bulbasaur (b), Squirtle (s), C
 
 if (pokemon === "b"){
   alert(userName+": Bulbasaur I choose you!");
+  var decision1 = prompt(rivalName+" choses Charmander and challenges you to a battle. Do you accept to (battle) or (run away)?").toLowerCase();
+
+    if (decision1 === "battle"){
+     var decision11 = prompt("It's a heated battle and even though fire Charmander has the type advantage over your grass Bulbasaur, the next move will determine the winner. Which move do you use, (tackle) or (growl)?").toLowerCase();
+
+     if (decision11 === "tackle"){
+       alert("Charmander used scratch but it missed! Bulbasaur used tackle and it was a critial hit! You and Bulbasaur won! "+rivalName+" was defeated.");
+
+     }else if (decision11 === "growl"){
+        alert("Bulbasaur used growl and it lowered Charmander's attack stat. Charmander used scratch and it's a critical hit! "+rivalName+" and Charmander won. You and Bulbasaur were defeated.");
+        }
+     }
+    if (decision1 === "run away"){
+      alert("There is no running away from battle challenges! You and "+rivalName+" battle. "+rivalName+" and their Charmander are a powerful team and landed a ONE HIT KNOCK OUT with scrath on your Bulbasaur."+rivalName+" and Charmander won. You and Bulbasaur were defeated.");
+    }
+
+
 } else if (pokemon ==="s"){
   alert(userName+": Squirtle I choose you!");
 } else if (pokemon ==="c"){
   alert(userName+": Charmander I choose you!");
 } else if (pokemon ==="p"){
   alert(userName+": Pikachu I choose you!");
+} else {
+  alert("Please select a valid Pokemon.")
 }
+
+
 //**user selects Bulbasaur**
-//b = prompt(rivalName+" choses Charmander and challenges you to a battle. Do you accept to battle. Do you accept to battle or do you run away?");
 //>Bulbasaur I choose you!
 //Q: rivalName choses Charmander and challenges you to a battle. Do you accept to battle or do you run?
 //>>>user accepts to battle.
