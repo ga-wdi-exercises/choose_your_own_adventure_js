@@ -69,31 +69,3 @@ if (userInput == "Canada"){
                         alert("Sorry, we don't have your size in mens. You will have to go somewhere else to rent one")
 
                   }
-
-
-
-/*
-  console.log("You are now in Tahoe.");
-
-}
-var snowboarded = prompt("Have you ever snowboarded? (Type Yes or No)");
-  if (snowboarded == "Yes") {
-
-  }
-
-
-
-if (userInput == "Canada"){
-  console.log("You are now in Whistler");
-}
-
-
-
-/*
-Any path the user goes down must ask them at least three questions.
-There must be a minimum of seven total destinations the user could arrive at based on their responses.
-For at least one of the questions asked, there must be more than two possible user responses.
-Your code must contain at least one loop.
-Your code must contain at least one switch statement
-Your code must make use of both string and number user inputs.
-*/
