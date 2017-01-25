@@ -82,22 +82,26 @@ var adventure = function() {
               alert("You ignore the hut and walk on. You wander the forest aimlessly for hours and then days. Unfortunately, life in the city did not teach you how to survive out here, and soon you succumb to untimely death in some random ditch.")
               end();
             }
-          }
-    } else {
-      alert("You decide to fall asleep under some tree.")
-        var tied = prompt("You wake up tied to the very same tree you fell asleep under.\nAre you trying to escape? (y/n)")
-          if (tied === "y") {
-            alert("turns out the bandits that captured you were nearby. You are knocked unconscious again for wiggling too much.")
-              var merchant = prompt("You are brought to the bandit camp and dumped into a fenced off pen. There is another prisoner there, a dirty man in rags. It's weird but he seems very familiar. Looking closer you realize that it's a merchant from the city. He used to be really rude to you and other less fortunate people.\nDo you\na. Decide to help him\nb. Kick him while he is down?")
-                if (merchant === "a") {
-                  alert("You decide to escape back to the city together. You wait until the night falls and help each other over the fence. You find your way back to the city in a few days, tired and hungry, but alive. The merchant leaves you as soon as you hit the city gates and runs back home, leaving you on the same place you started just a few days ago, with no change of fortune. Turns out adventuring is an ungrateful job. Perhaps you should go on another adventure.")
-                }
+          } else {
+            alert("You decide to fall asleep under some tree.")
+              var tied = prompt("You wake up tied to the very same tree you fell asleep under.\nAre you trying to escape? (y/n)")
+                if (tied === "y") {
+                  alert("turns out the bandits that captured you were nearby. You are knocked unconscious again for wiggling too much.")
+                    var merchant = prompt("You are brought to the bandit camp and dumped into a fenced off pen. There is another prisoner there, a dirty man in rags. It's weird but he seems very familiar. Looking closer you realize that it's a merchant from the city. He used to be really rude to you and other less fortunate people.\nDo you\na. Decide to help him\nb. Kick him while he is down?")
+                      if (merchant === "a") {
+                      alert("You decide to escape back to the city together. You wait until the night falls and help each other over the fence. You find your way back to the city in a few days, tired and hungry, but alive. The merchant leaves you as soon as you hit the city gates and runs back home, leaving you on the same place you started just a few days ago, with no change of fortune. Turns out adventuring is an ungrateful job. Perhaps you should go on another adventure.")
+                      end();
+                      } else {
+                      alert("The bandits whistle and cheer when you kick the merchant. One of the bandits throws you a piece of bread. You decide to kick the merchant again.\nBefore you know it, the merchant is out to be traded for ransom and you are offered to join the gang. What's there to lose?\nIn a few years you end up a wealthy bandit lord and drink to the day you first decided to go on an adventure.")
+                      end();
+                      }
           } else {
             alert("You give up the fight and meekly await your fate. The bandits soon find out that you have nothing and decide to slit your throat.")
             end();
           }
     }
 }
+
 adventure();
 
 function end() {
