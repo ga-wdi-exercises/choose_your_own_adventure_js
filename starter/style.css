@@ -1,0 +1,17 @@
+body {
+  background-image: url(road.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 250px;
+  height: 40px;
+  color: #767776;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 100px auto auto auto;
+}

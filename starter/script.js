@@ -1,10 +1,13 @@
+$(document).ready(function() {
+  $("#begin").click(adventure);
 //loop escape mechanism
 var finished = false;
 //main function
-var adventure = function() {
+function adventure() {
+  console.log("firing")
   alert("You live a life of obscurity in a dense, crowded city. All your life you've been hearing bards telling tales and singing ballads of adventures and heroes. It all sounds so exiting and marvelous. But it's not for you.\nOr is it?");
 //choose the class
-  var yourClass = prompt( "What is your defining characteristic? Are you\n1. Strong \n2. Smart \n3. Agile \n4. Happy? (Input 1, 2, 3 or 4)" );
+  var yourClass = prompt( "What is your defining characteristic? Are you\n1. Strong \n2. Smart \n3. Agile \n4. Happy?\n(Input 1, 2, 3 or 4)" );
     switch (parseInt(yourClass)) {
       case 1:
         alert("You are blacksmith's apprentice.");
@@ -113,9 +116,6 @@ var adventure = function() {
 
     }
 }
-
-adventure();
-
 function end() {
   var end = prompt("The End. Re-try (y/n)?")
     switch (end) {
@@ -128,3 +128,4 @@ function end() {
         break;
   }
 }
+})

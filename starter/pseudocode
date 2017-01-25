@@ -1,0 +1,53 @@
+We're Adventurers Now
+
+Intro;
+
+What is your defining characteristic? Are you 1. strong 2. smart 3. agile 4. happy? (Input 1, 2, 3 or 4);
+  1 - you are blacksmith apprentice
+  2 - you are a humble scholar
+  3 - you are a petty thief
+  4 - happy people have no history. END
+
+More intro;
+
+Character gets out of the city and travels down the road. The road is blocked and a thunderstorm is brewing quickly. Do you 1) look for food 2) look for shelter 3) look for the way forward d. run back to town;
+  1 - you are ignoring the storm and scavenge for some nuts and berries. Unfortunately, that brings you under a lonely tree in the middle of a small clearing. The tree is struck by lightning.
+    IF thief - you quickly roll out of the way of a falling tree and run for the forest.
+    ELSE You are crushed by a giant tree. END
+
+  2 - you decide to hide in the forest and wait it out.
+    IF scholar - It occurs to you that the tree blocking the road was chopped down...
+    ELSE - proceed
+
+  3 - you climb over the tree and double time it towards a distant settlement. An arrow flies out of the forest.
+    IF apprentice - you are running too fast for the archer, and the arrow hits the ground behind you. You run for the forest to get some cover.
+    ELSE - It hits you in the knee. As you fall to the ground the ground, you hear heavy boots approaching. Many of them. END
+
+  4 - you decide that this adventuring life just ain't worth it. You are cold, wet, hungry and probably lost, too. You turn around and head back the way you came, forever abandoning the dreams of adventure. END
+
+Character is making way through the forest. It's dark and damp. Do you want to 1) keep going 2) stop and sleep for a bit
+  1 - you push through the fatigue and thorny bushes. You walk out to an unexpected clearing.
+
+  2 - you decide to fall asleep under a tree.
+
+  IF chose 1 - there is a hut in the middle of the clearing. You can smell the smoke from the chimney. Someone is inside. Do you want to knock? (y/n)
+    IF y - the door opens on its own. A beautiful lady and an ugly crone sit inside. Do you want to talk to a) the lady b) the crone?
+      IF a - the lady's voice is so sweet that you can't even quite understand what she is saying. In fact, you can't remember your name or how you got here. It's all a blur.
+      You wake up on the road with no memories of anything and wander the world for the rest of your life as a beggar, trying to remember who you were and never able to find out.
+
+      IF b - the crone beacons for you to come closer. She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that. Do you agree to the task (y/n)?
+        IF y - she laughs at you and calls you a fool. There are no dragons. You are kicked out of the hut by an unseen force and are left alone in the middle of the forest. You slink back the way to came from and go back home and live you life in obscurity. END
+        IF n - she smiles a toothless smile at you and taps the end staff on the floor. You are transported to the king's court where he proclaims you his advisor. You marry a princess and live happily ever after. Common sense for the win. END
+
+    IF n - you ignore the hut and walk on. You wander the forest aimlessly for hours and then days. Unfortunately, life in the city did not teach you how to survive out here, and soon you succumb to untimely death in some random ditch. END
+
+
+  IF chose 2 - you wake up tied to the tree you fell asleep under. Are you trying to escape? (y/n)
+    IF y - turns out the bandits that captured you were nearby. You are knocked unconscious again for wiggling too much.
+      You are brought to the bandit camp and dumped into a fenced off pen. There is another prisoner there, a dirty man in rags. It's weird but he seems very familiar. Looking closer you realize that it's a merchant from the city. He used to be really rude to you and other less fortunate people. Do you a) decide to help him b) kick him while he is down?
+        IF a - you decide to escape back to the city together. You wait until the night falls and help each other over the fence. You find your way back to the city in a few days, tired and hungry, but alive. The merchant leaves you as soon as you hit the city gates and runs back home, leaving you on the same place you started just a few days ago, with no change of fortune. Turns out adventuring is an ungrateful job. Perhaps you should go on another adventure. END
+        IF b - the bandits whistle and cheer when you kick the merchant. One of the bandits throws you a piece of bread. You decide to kick the merchant again.
+        Before you know it, the merchant is out to be traded for ransom and you are offered to join the gang. What's there to lose?
+        In a few years you end up a wealthy bandit lord and drink to the day you first decided to go on an adventure. END
+
+    IF n - you give up and meekly await your fate. The bandits find out that you have nothing and decide to slit your throat. END
