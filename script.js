@@ -3,23 +3,21 @@
 var userName = prompt('What is your name?');
 // getting consent for the game
 var userInput = prompt('Hello, ' + userName +'!' + ' Welcome to New City Adventures. With the invention of our new teleporter we can take you seven different cities. However, in order to return you must be able to find the missing key in order to return home. If you would like to proceed, simply respond yes or no.');
+  while (userInput != 'yes' && userInput != 'no') {
+    userInput = prompt('Sorry that was not a valid answer, please try again. Please yes or no answers only.');
+};
   // path 1
   if (userInput == 'yes') {
     alert(userName + ' turns doorknob');
   }
-  else if (userInput == 'no') {
+  else {
     alert('Too bad ' + userName + '. Someone shoves you through the door into the chamber.');
   }
-  else {
-    // while (userInput != 'yes' || no) {
-       userInput = prompt('Sorry that was not a valid answer, please try again. Please yes or no answers only.');
-    //  }
-  };
 // choosing the location - path 2
 var destination = prompt('Please select the city you would like to go to: Beijing, Amsterdam, or Tokyo.');
   // Beijing is the destination -- strange man has appeared -- path 3
-  if (destination == 'Beijing') {
-    var response1 = prompt('Plop, you have been dropped in a street in Beijing, China. There is a suspicious hooded man at the corner who slowly approaches. run or confront?');
+function pathOne() {
+    var response1 = prompt('Plop, you have been dropped in a street in '+ destination + '. There is a suspicious hooded man at the corner who slowly approaches. run or confront?');
     // run or confront --- path 4
       if(response1 == 'run') {
         var money = prompt('You start running, but trip over the broken sidewalk. Hooded man catches up to you and asks to borrow some change. Choose between 1-5 dollars to give by inputting a whole number between 1-5.');
@@ -91,21 +89,22 @@ var destination = prompt('Please select the city you would like to go to: Beijin
           else {
             alert('You did not ask for help and got trapped in ' + destination)
           }
-      } else {
-        alert('Game over. The man did not give you the map. You are stuck in ' + destination)
       }
-        response1 = prompt('Not a valid answer, please write run or confront')
-      }
-
-  }
-  // Nairobi is the destination -- strange woman has appeared -- path 1
-  else if (destination == 'Amsterdam') {
-
-  }
-  // Tokyo is the destination -- strange baby has appeared -- path 1
-  else if (destination == 'Tokyo') {
-
-  }
-  else {
-    destination = prompt('Whoops. That was not in the list. Please choose a valid choice. Please choose a city with the correct capitalization: Beijing, Amsterdam, or Tokyo')
+      else {
+          alert('Game over. The man did not give you the map necessary to find the key. You are stuck in ' + destination)
+      };
+}
+//switch to try each pathway/destination - path 1
+  switch (destination) {
+    case 'Amsterdam':
+      pathOne();
+      break;
+    case 'Beijing':
+      pathOne();
+      break;
+    case 'Tokyo':
+      pathOne();
+      break;
+    default:
+      alert('Whoops. That was not in the list. Please choose a valid choice. Please choose a city with the correct capitalization: Beijing, Amsterdam, or Tokyo')
   }
