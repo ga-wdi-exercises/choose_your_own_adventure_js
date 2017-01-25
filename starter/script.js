@@ -134,7 +134,7 @@ var adventure = function() {
             alert("You give up the fight and meekly await your fate. The bandits soon find out that you have nothing and decide to slit your throat.")
             end();
           }
-        }
+        
     }
 }
 
