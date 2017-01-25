@@ -84,57 +84,33 @@ var adventure = function() {
    } else {
      alert("The crone beacons for you to come closer.")
    }
-   var dragon = prompt("She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that.\nDo you agree to the task (y/n)?")
-    if (dragon === "y") {
-      alert("The crone laughs at you and calls you a fool. There are no dragons. You are kicked out of the hut by an unseen force and are left alone in the middle of the forest.\nYou slink back the way to came from and go back home and live the rest of your life in obscurity.")
-      end();
-    } else {
-      alert("The crone smiles a toothless smile at you and taps the end staff on the floor. You are transported to the king's court where he proclaims you his advisor. You marry a princess and live a sickeningly sweet happily ever after.\nCommon sense for the win.")
-      end();
-    }
-    // if (forest === 1) {
-    //   alert("You push through the fatigue and thorny bushes. You walk out to an unexpected clearing.")
-    //     var hut = prompt("There is a hut in the middle of the clearing. You can smell the smoke from the chimney. Someone is inside.\nDo you want to knock? (y/n)")
-    //       if (hut === "y") {
-    //         alert("The door opens on its own. When you walk inside, you see a beautiful lady and an ugly crone sitting side by side.");
-    //       } else {
-    //         alert("You ignore the hut and walk on. You wander the forest aimlessly for hours and then days. Unfortunately, life in the city did not teach you how to survive out here, and soon you succumb to untimely death in some random ditch.")
-    //         end();
-    //       }
-    //         var choice = prompt("Do you want to talk to\n1. The lady\n2. The crone?")
-    //           if (choice === 1) {
-    //             alert("The lady's voice is so sweet that you can't even quite understand what she is saying. In fact, you can't remember your own name or how you got here. It's all a blur.\nYou wake up on the road with no memories of anything and wander the world for the rest of your life as a beggar, trying to remember who you were and never able to find out.")
-    //             end();
-    //           } else {
-    //               var dragon = prompt("The crone beacons for you to come closer. She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that.\nDo you agree to the task (y/n)?")
-    //                 if (dragon === "y") {
-    //                   alert("The crone laughs at you and calls you a fool. There are no dragons. You are kicked out of the hut by an unseen force and are left alone in the middle of the forest.\nYou slink back the way to came from and go back home and live the rest of your life in obscurity.")
-    //                   end();
-    //                 } else {
-    //                   alert("The crone smiles a toothless smile at you and taps the end staff on the floor. You are transported to the king's court where he proclaims you his advisor. You marry a princess and live a sickeningly sweet happily ever after.\nCommon sense for the win.")
-    //                   end();
-    //                 }
-    //           }
-    //
-          break;
-          case 2:
-            alert("You decide to fall asleep under some tree.")
-              var tied = prompt("You wake up tied to the very same tree you fell asleep under.\nAre you trying to escape? (y/n)")
-                if (tied === "y") {
-                  alert("Turns out the bandits that captured you were nearby. You are knocked unconscious again for wiggling too much.")
-                    var merchant = prompt("You are brought to the bandit camp and dumped into a fenced off pen. There is another prisoner there, a dirty man in rags. It's weird but he seems very familiar. Looking closer you realize that it's a merchant from the city. He used to be really rude to you and other less fortunate people.\nDo you\na. Decide to help him\nb. Kick him while he is down?")
-                      if (merchant === "a") {
-                      alert("You decide to escape back to the city together. You wait until the night falls and help each other over the fence. You find your way back to the city in a few days, tired and hungry, but alive.\nThe merchant leaves you as soon as you hit the city gates and runs back home, leaving you on the same place you started just a few days ago, with no change of fortune. Turns out adventuring is an ungrateful job. Perhaps you should go on another adventure.")
-                      end();
-                      } else {
-                      alert("The bandits whistle and cheer when you kick the merchant. One of the bandits throws you a piece of bread. You decide to kick the merchant again.\nBefore you know it, the merchant is out to be traded for ransom and you are offered to join the gang. What's there to lose?\nIn a few years you end up a wealthy bandit lord and drink to the day you first decided to go on an adventure.")
-                      end();
-                      }
-          } else {
-            alert("You give up the fight and meekly await your fate. The bandits soon find out that you have nothing and decide to slit your throat.")
-            end();
-          }
-        
+ var dragon = prompt("She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that.\nDo you agree to the task (y/n)?")
+  if (dragon === "y") {
+    alert("The crone laughs at you and calls you a fool. There are no dragons. You are kicked out of the hut by an unseen force and are left alone in the middle of the forest.\nYou slink back the way to came from and go back home and live the rest of your life in obscurity.")
+    end();
+  } else {
+    alert("The crone smiles a toothless smile at you and taps the end staff on the floor. You are transported to the king's court where he proclaims you his advisor. You marry a princess and live a sickeningly sweet happily ever after.\nCommon sense for the win.")
+    end();
+  }
+      break;
+      case 2:
+      alert("You decide to fall asleep under some tree.")
+      var tied = prompt("You wake up tied to the very same tree you fell asleep under.\nAre you trying to escape? (y/n)")
+        if (tied === "y") {
+          alert("Turns out the bandits that captured you were nearby. You are knocked unconscious again for wiggling too much.")
+            var merchant = prompt("You are brought to the bandit camp and dumped into a fenced off pen. There is another prisoner there, a dirty man in rags. It's weird but he seems very familiar. Looking closer you realize that it's a merchant from the city. He used to be really rude to you and other less fortunate people.\nDo you\na. Decide to help him\nb. Kick him while he is down?")
+              if (merchant === "a") {
+              alert("You decide to escape back to the city together. You wait until the night falls and help each other over the fence. You find your way back to the city in a few days, tired and hungry, but alive.\nThe merchant leaves you as soon as you hit the city gates and runs back home, leaving you on the same place you started just a few days ago, with no change of fortune. Turns out adventuring is an ungrateful job. Perhaps you should go on another adventure.")
+              end();
+              } else {
+              alert("The bandits whistle and cheer when you kick the merchant. One of the bandits throws you a piece of bread. You decide to kick the merchant again.\nBefore you know it, the merchant is out to be traded for ransom and you are offered to join the gang. What's there to lose?\nIn a few years you end up a wealthy bandit lord and drink to the day you first decided to go on an adventure.")
+              end();
+              }
+              } else {
+              alert("You give up the fight and meekly await your fate. The bandits soon find out that you have nothing and decide to slit your throat.")
+              end();
+            }
+
     }
 }
 
