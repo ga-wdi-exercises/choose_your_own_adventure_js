@@ -1,0 +1,9 @@
+body{
+  display: flex;
+}
+main {
+  background-image: url(road.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 1;
+}
