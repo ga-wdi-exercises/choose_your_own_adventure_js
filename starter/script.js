@@ -82,7 +82,7 @@ var adventure = function() {
      alert("The lady's voice is so sweet that you can't even quite understand what she is saying. In fact, you can't remember your own name or how you got here. It's all a blur.\nYou wake up on the road with no memories of anything and wander the world for the rest of your life as a beggar, trying to remember who you were and never able to find out.")
      end();
    } else {
-     alert("The crone beacons for you to come closer.")
+     alert("The crone becons you to come closer.")
    }
  var dragon = prompt("She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that.\nDo you agree to the task (y/n)?")
   if (dragon === "y") {
