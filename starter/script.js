@@ -1,16 +1,4 @@
-
-
-var end = function() {
-  prompt("The End. Re-try (y/n)?")
-  if ("y") {
-    adventure();
-    break;
-  }
-  else {
-    alert("The End.");
-    break;
-  }
-}
+var finished = false;
 var adventure = function() {
   alert("You live a life of obscurity in a dense, crowded city. All your life you've been hearing bards telling tales and singing ballads of adventures and heroes. It all sounds so exiting and marvelous. But it's not for you.\nOr is it?");
 
@@ -34,6 +22,9 @@ var adventure = function() {
       end();
       break;
   }
+  if(finished) {
+    return
+  }
   alert(
     "You get tired from being pushed around. All your efforts get you nothing. Nothing ever changes. But you don't want to be stuck like this your entire life.\nYou want to make a mark upon the world, want to hear bards sing praises about you. It's time to make a name for yourself.\nIt's time to go on an adventure."
   )
@@ -45,7 +36,8 @@ var adventure = function() {
           alert("You quickly roll out of the way of a falling tree and run for the forest.");
         } else {
           alert("You are crushed by a giant tree.");
-          end();
+          // end();
+          return;
         }
     case 2:
       alert("You decide to hide in the forest and wait it out.");
@@ -56,3 +48,16 @@ var adventure = function() {
   }
 }
 adventure();
+
+function end() {
+  var end = prompt("The End. Re-try (y/n)?")
+    switch (end) {
+      case "y":
+        adventure();
+        break;
+      default:
+        finished = true;
+        alert("The End.");
+        break;
+  }
+}
