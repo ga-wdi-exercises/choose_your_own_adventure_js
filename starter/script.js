@@ -26,12 +26,19 @@
 var name = prompt(`What's your name?`);
 var day = prompt(`Welcome to DisneyWorld, ${name}! What day of the week is today?`);
 console.log(day);
-if (day == 'Sunday' || day == 'Saturday'){
-  alert(`Bummer, lines are always longer on weekends!`)
-  } else {
-    alert(`Hey! Somebody got the day off. Weekday lines are shorter lines!`)
-  };
-
+// if (day == 'Sunday' || day == 'Saturday'){
+//   alert(`Bummer, lines are always longer on weekends!`)
+//   } else {
+//     alert(`Hey! Somebody got the day off. Weekday lines are shorter lines!`)
+//   };
+switch (day) {
+  case "Saturday":
+  case "Sunday":
+    alert(`Bummer, lines are always longer on weekends!`);
+    break;
+  default:
+    alert(`Hey! Somebody got the day off. Weekday lines are shorter lines!`);
+};
 
 var a = prompt(`Do you want to go to the Star Wars section or be lame? S/L`);
 if (a == 's') {
@@ -49,10 +56,12 @@ if (a == 's') {
         if (c == 'n') {
           alert(`Whoops! Turns out park security isn't as impressed with your sweet moves. You are politely but firmly escorted from the park. Hope you enjoyed your visit`);
         } else {
-          alert(`You watch the show. The force isn't strong with those kids`); //Possible loop
+          alert(`You watch the show. The force isn't strong with those kids`);
+          var a = prompt(`Do you want to go to the Star Wars section or be lame? S/L`);//I'm calling this a loop since it bring me back to a higher tier prompt.
         }
       }
 } else {
+
       var i = prompt(`Do you get in line for Space Mountain or wander the park? S/W`);
       if (i == 's') {
         var j = prompt(`The line is awfully long. Do you want to hang in or bail? H/B`);
