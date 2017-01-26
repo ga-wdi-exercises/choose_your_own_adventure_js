@@ -1,0 +1,33 @@
+Summary: You have to choose where to move based on job, cost of living, income.
+
+### Rules
+* Any path the user goes down must ask them at least **three** questions.
+* There must be a minimum of **seven** total destinations the user could arrive at based on their responses.
+* For **at least one** of the questions asked, there must be **more than two possible user responses**.
+* Your code must contain **at least one loop**.
+* Your code must contain **at least one switch statement**
+* Your code must make use of **both string and number user inputs**.
+
+1. Enter your name
+2. Choose where you'd like to move: DC, SF, Dreamland
+
+SF
+  Enter a salary value you'd like
+      < 50K -
+          This will not cover rent. You must leave SF.
+      >= 50K -
+          Are you a developer?
+              Y - Awesome! The world is yours.
+              N - Awesome! Please attend General Assembly. Roll the dice!
+                    Switch function to return class
+
+DC
+  Do you like watching the news?
+      Y: Great! This is literally going to be the best four years of news coverage ever.
+      N: Okay, let's talk about this. Are you in politics or bizness?
+            Politics: Okay, we can't work with this. I'm so sorry. Try dreamland.
+            Bizness: -- begin 50K questions
+
+Dreamland
+  Enter a number less than 10
+    While loop for seconds to fall asleep.
