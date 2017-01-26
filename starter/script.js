@@ -39,3 +39,13 @@ if (userInput == "Belt") {
   }
 
 alert("Joker:'Mwahahahaa Time's are starting to get INTERESTING! Ebon, you're going to let Bats and Charger boy win this one or are you going to get even!'");
+
+var UserInput = prompt("Ebon:'Static, I'm tired of your interfering boy, it's lights out for you! Oh, no! Ebon is covering Static in an envelope of Shadow! Slowly suffocating him. 'Enter Pulse to have Static use his Electromagnetic Pulse to weaken Ebon'. 'Enter Rescue to have Batman tase Ebon and attempt to rescue Static before it's too late!'");
+
+if (userInput == "Pulse") {
+  console.log("Static is free");
+}
+  else {
+    console.log("Static barely makes it");
+  }
+  
