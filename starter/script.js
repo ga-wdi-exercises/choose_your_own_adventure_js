@@ -56,7 +56,13 @@ if (pokemon === "b"){
       alert("There is no running away from battle challenges! You and "+rivalName+" battle. "+rivalName+" and their Charmander are a powerful team and landed a ONE HIT KNOCK OUT with scrath on your Bulbasaur."+rivalName+" and Charmander won. You and Bulbasaur were defeated.");
     }
 
-
+//**user selects Squirtle**
+//You've trained for months, won all the region's gym battles, and your Squirtle evolved into a Wartortle!
+//Wartortle wants to learn Hydro Pump but Wartortle already knows 4 moves! Should a move be forgotten to make space for Hydro Pump?
+//Yes. Which move should be forgotten?
+//Surf, Ice Beam, Rapid Spin, Aqua Ring?
+//1, 2 and...poof! Blastoise forgot [move] and learned Hydro Pump!
+//No. Blastoise did not learn Hydro Pump.
 } else if (pokemon ==="s"){
   alert(userName+": Squirtle I choose you!");
   var decision2 = prompt("You've trained for months, won half of the region's gym battles, and your Squirtle evolved into a Wartortle! Wartortle wants to learn Hydro Pump but Wartortle already knows 4 moves! Should a move be forgotten to make space for Hydro Pump? (Yes) or (No)").toLowerCase();
@@ -81,19 +87,52 @@ if (pokemon === "b"){
   alert(userName+": Charmander I choose you!");
 } else if (pokemon ==="p"){
   alert(userName+": Pikachu I choose you!");
+  var decision4 = alert("You're Pikachu is a beast, chooses not to evolve into a Raichu, even after defeating the Elite Four. What do you do next?");
+  prompt("(A)Challenge the Elite Four again?, (B)Go back to your home town because you miss your mom?, (C)Find and Capture rare pokemon hidden around the region?").toLowerCase();
+
+  switch (decision4){
+    case "a":
+    challenge();
+    break;
+    case "b":
+    home();
+    break;
+    case "c":
+    rare();
+    break;
+
+    function challenge(){
+      alert("Stock up on Health Potions, Elixers, and Full Heals, because the Elite Four is even stronger now. But you and your Pikachu are up for the challenge.");
+
+    function home(){
+      alert("You're home now and your mom cooked you and your pokemon an amazing homecoming meal. After you're finished eating, she keeps telling you to rest before you head out on yur adventure again.");
+
+    function rare(){
+        var decision41 = prompt("After hours of exploring the Cerulean Cave near your home town, you encounter a phenomenal creature of myth. A wild Mew-Two appeared! You send out Pikachu to battle. What will you do? (A)Battle, (B)Bag: Use Master ball, (C)Switch Pokemon, (D)Run").toLowerCase();
+
+        if(decision41 === "a"){
+          alert("Wild Mew-Two uses Psycic. It's a critical hit. Pikachu fainted.");
+        }else if(decision41 === "b"){
+          alert(userName+" throws a Master Ball. 1...2...and...'click'! Congratulations, Mew-Two was caught!");
+        }else if(decision41 === "c"){
+          alert("The rest of your pokemon have fainted. Pikachu is your only remaining pokemon to battle.");
+          rare();
+        }else if(decison41 === "d"){
+          alert("There's no escape.");
+          rare();
+        }
+      }
+    }
+    }
+
+  }
 } else {
   alert("Please select a valid Pokemon.")
 }
 
 
 
-//**user selects Squirtle**
-//You've trained for months, won all the region's gym battles, and your Squirtle evolved into a Wartortle!
-//Wartortle wants to learn Hydro Pump but Wartortle already knows 4 moves! Should a move be forgotten to make space for Hydro Pump?
-//Yes. Which move should be forgotten?
-//Surf, Ice Beam, Rapid Spin, Aqua Ring?
-//1, 2 and...poof! Blastoise forgot [move] and learned Hydro Pump!
-//No. Blastoise did not learn Hydro Pump.
+
 //**user selects Charmander**
 //feed charmander rare candies until it evolves to charizard. Charmander>25>Charmilion>75>Charizard
 //**user selects Pikachu**
