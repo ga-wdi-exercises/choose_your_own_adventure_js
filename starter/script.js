@@ -54,7 +54,7 @@ if (userInput == "Pulse") {
   var userInput = prompt("Joker can't resist Batman's bait, he starts to throw some homemake concoctions to both Batman and Static.'Enter FIGHT to battle Joker'. 'Enter NO to quit'");
 
   var Batman = fight;
-  switch(Batman().getFight()) {
+  switch(Batman().fight()) {
     case 0:
       fight = "Jumps out of toxins' way";
       break;
@@ -69,7 +69,7 @@ if (userInput == "Pulse") {
   }
 
   var Joker = fight;
-  switch(Joker().getFight()) {
+  switch(Joker().fight()) {
     case 0:
       fight = "Throws balls of toxins";
       break;
@@ -81,5 +81,8 @@ if (userInput == "Pulse") {
       break;
     case 3:
       fight = "Throws gas bomb";
-
   }
+
+alert("Oh no! The Joker has escaped and fled back to Gotham City");
+
+var userInput = prompt("The Joker may be gone but the Meta-Breed Gang are still up to no good! 'Enter FINAL to bring to justice'. 'Enter NO to quit'. ");
