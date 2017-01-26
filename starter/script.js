@@ -128,7 +128,7 @@ function barnes() {
     alert("Well, it will be tough, but you and your family live on a tight budget. You make it work, becuse you've learned from your mistakes in the past");
   } else if (numOfKids < 11) {
     alert("Whoa now, did you forget you are still working at Barnes & Noble? You are unable to support this many children, so one of your kids becomes a stripper and your spouse leaves you. You live a sad life, but you kind of did this to yourself.");
-  } else if (num > 10) {
+  } else if (numOfKids > 10) {
     alert("Your enormous family gets asked to do a reality TV show on A&E that becomes one of the most watched series of all times.  Congrats, you hit the big bucks... although it costs a lot to put that many kids through college...");
   } else {
     alert("Not sure what you entered, but that won't work.  Try again.");
