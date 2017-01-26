@@ -44,6 +44,13 @@ if (elfYesPluck == "a" || elfYesPluck == "A") {
 //  alert("Try Again!");
 };
 
+//ELF YES TALK
+if (elfYesTalk == "a" || elfYesTalk == "A") {
+  alert("You Lose!");
+} else if (elfYesTalk == "b" || elfYesTalk == "B") {
+  alert("You've won the Adventure!")
+};
+
 //ELF YES PLUCK 0
 if (elfYesPluck0 == "a" || elfYesPluck0 == "A") {
   alert("You Lose!");
@@ -63,13 +70,6 @@ if (elfYesPluck200 == "a" || elfYesPluck200 == "A") {
 } else if (elfYesPluck200 == "b" || elfYesPluck200 == "B") {
   alert("You Lose!");
 } else if (elfYesPluck200 == "c" || elfYesPluck200 == "C") {
-  alert("You've won the Adventure!")
-};
-
-//ELF YES TALK
-if (elfYesTalk == "a" || elfYesTalk == "A") {
-  alert("You Lose!");
-} else if (elfYesTalk == "b" || elfYesTalk == "B") {
   alert("You've won the Adventure!")
 };
 
@@ -117,5 +117,20 @@ if (chefYesPluck200 == "a" || chefYesPluck200 == "A") {
 if (chefYesStomp200 == "a" || chefYesStomp200 == "A") {
   alert("You Lose!");
 } else if (chefYesStomp200 == "b" || chefYesStomp200 == "B") {
+  alert("You Lose!");
+};
+
+//RED
+if (red == "a" || red == "A") {
+  var redYes = prompt("What do you do about the Flower? [A: Pluck, B: Stomp]");
+} else if (red == "b" || red == "B") {
+  alert("You are now a chipmunk!");
+  var chipmunk = prompt("What do you do about the Flower? [A: Attack, B: Ignore]");
+};
+
+//RED YES
+if (redYes == "a" || redYes == "A") {
+  alert("You Lose!");
+} else if (redYes == "b" || redYes == "B") {
   alert("You Lose!");
 };
