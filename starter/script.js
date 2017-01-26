@@ -51,4 +51,36 @@ if (userInput == "Pulse") {
 
   alert("Batman: 'Joker you're pathetic, using these kids to fight your battles for you, fight me like man!'");
 
+  var userInput = prompt("Joker can't resist Batman's bait, he starts to throw some homemake concoctions to both Batman and Static.'Enter FIGHT to battle Joker'. 'Enter NO to quit'");
+
+  var Batman = fight;
+  switch(Batman().fight()) {
+    case 0:
+      fight = "Jumps out of toxins' way";
+      break;
+    case 1:
+      fight = "Punch in shoulder";
+      break;
+    case 2:
+      fight = "Falls to floor";
+      break;
+    case 3:
+      fight = "Passes out";
+  }
+
+  var Joker = fight;
+  switch(Joker().fight()) {
+    case 0:
+      fight = "Throws balls of toxins";
+      break;
+    case 1:
+      fight = "Falls back";
+      break;
+    case 2:
+      fight = "Throws metal object";
+      break;
+    case 3:
+      fight = "Throws gas bomb";
+
+  }
   
