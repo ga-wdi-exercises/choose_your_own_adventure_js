@@ -134,3 +134,115 @@ if (redYes == "a" || redYes == "A") {
 } else if (redYes == "b" || redYes == "B") {
   alert("You Lose!");
 };
+
+//CHIPMUNK
+switch (chipmunk) {
+  case "a":
+    var chipmunkAttack = prompt("What do you do about the Bandits? [A: Attack, B: Ignore]");
+    break;
+  case "A":
+    var chipmunkAttack = prompt("What do you do about the Bandits? [A: Attack, B: Ignore]");
+    break;
+  case "b":
+    var chipmunkIgnore = prompt("What do you do about the Bandits? [A: Attack, B: Ignore]");
+    break;
+  case "B":
+    var chipmunkIgnore = prompt("What do you do about the Bandits? [A: Attack, B: Ignore]");
+    break;
+};
+
+//CHIPMUNK ATTACK
+switch (chipmunkAttack) {
+  case "a":
+    var chipmunkAttackAttack = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+  case "A":
+    var chipmunkAttackAttack = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+  case "b":
+    var chipmunkAttackIgnore = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+  case "B":
+    var chipmunkAttackIgnore = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+};
+
+//CHIPMUNK IGNORE
+switch (chipmunkIgnore) {
+  case "a":
+    var chipmunkIgnoreAttack = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+  case "A":
+    var chipmunkIgnoreAttack = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+  case "b":
+    var chipmunkIgnoreIgnore = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+  case "B":
+    var chipmunkIgnoreIgnore = prompt("What do you do about the Gorilla? [A: Attack, B: Talk]");
+    break;
+};
+
+//CHIPMUNK ATTACK ATTACK
+switch (chipmunkAttackAttack) {
+  case "a":
+    alert("You've won the Adventure!");
+    break;
+  case "A":
+    alert("You've won the Adventure!");
+    break;
+  case "b":
+    alert("You Lose!");
+    break;
+  case "B":
+    alert("You Lose!");
+    break;
+};
+
+//CHIPMUNK ATTACK IGNORE
+switch (chipmunkAttackIgnore) {
+  case "a":
+    alert("You Lose!");
+    break;
+  case "A":
+    alert("You Lose!");
+    break;
+  case "b":
+    alert("You Lose!");
+    break;
+  case "B":
+    alert("You Lose!");
+    break;
+};
+
+//CHIPMUNK IGNORE ATTACK
+switch (chipmunkIgnoreAttack) {
+  case "a":
+    alert("You Lose!");
+    break;
+  case "A":
+    alert("You Lose!");
+    break;
+  case "b":
+    alert("You Lose!");
+    break;
+  case "B":
+    alert("You Lose!");
+    break;
+};
+
+//CHIPMUNK IGNORE IGNORE
+switch (chipmunkIgnoreIgnore) {
+  case "a":
+    alert("You Lose!");
+    break;
+  case "A":
+    alert("You Lose!");
+    break;
+  case "b":
+    alert("You Lose!");
+    break;
+  case "B":
+    alert("You Lose!");
+    break;
+};
