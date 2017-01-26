@@ -143,14 +143,3 @@ if(game.toLowerCase() === "yes") {
 } else {
   alert("Sorry, no typos allowed :(. Let this be a warning to you if you ever find yourself lost and alone in the desert with nothing but a prompt box to allow you to make decisions. Refresh to start over.")
 }
-
-
-//Paths: 1) [Game? (yes) -> Village? (yes) -> Still village? (yes) -> Knock on door? (yes) -> Welcomed in, see other people from your caravan, and you live.]
-//       2) [Game? (yes) -> Village? (yes) -> Still village? (yes) -> Knock on door? (no) -> People from your caravan see you walk by, they run out and wave you down. You live.]
-//       3) [Game? (yes) -> Village? (no) -> Water? (Drink) -> Scorpion. Die.]
-//       4) [Game? (yes) -> Village? (no) -> Water? (Wash) -> Scorpion. Die.]
-//       5) [Game? (yes) -> Village? (no) -> Water? (Save) -> Direction? (North) -> Accidentally happen upon village. Live.]
-//       5) [Game? (yes) -> Village? (no) -> Water? (Save) -> Direction? (South) -> Walk forever and die.]
-//       6) [Game? (yes) -> Village? (no) -> Water? (Save) -> Direction? (East) -> Find Oasis. The water is bad! You die.]
-//       8) [Game? (yes) -> Village? (no) -> Water? (Save) -> Direction? (West) -> Is that Kanye?]
-//       9) [Game? (no) -> Done.]
