@@ -29,7 +29,15 @@ alert("Here, "+userName+"! There are 3 Pokemon here! Haha! They are inside the P
 //Option 3: Charmander
 //Option 4: Pikachu
 var pokemon = prompt("Which Pokemon do you chose? Bulbasaur (b), Squirtle (s), Charmander (c), or Pikachu (p).").toLowerCase();
-
+//**user selects Bulbasaur**
+//>Bulbasaur I choose you!
+//Q: rivalName choses Charmander and challenges you to a battle. Do you accept to battle or do you run?
+//>>>user accepts to battle.
+//>Q:Which finishing move do you select? Tackle or Growl?
+//>>>>Tackle, user wins.
+//>>>>Growl, user loses.
+//>>user runs from battle
+//>>user cannot escape, rival's POKEMON OHKO user. user loses.
 if (pokemon === "b"){
   alert(userName+": Bulbasaur I choose you!");
   var decision1 = prompt(rivalName+" choses Charmander and challenges you to a battle. Do you accept to (battle) or (run away)?").toLowerCase();
@@ -51,6 +59,24 @@ if (pokemon === "b"){
 
 } else if (pokemon ==="s"){
   alert(userName+": Squirtle I choose you!");
+  var decision2 = prompt("You've trained for months, won half of the region's gym battles, and your Squirtle evolved into a Wartortle! Wartortle wants to learn Hydro Pump but Wartortle already knows 4 moves! Should a move be forgotten to make space for Hydro Pump? (Yes) or (No)").toLowerCase();
+
+  if(decision2 === "yes"){
+    var decision21 = prompt("Which move should be forgotten? Surf, Ice Beam, Rapid Spin, Aqua Ring").toLowerCase();
+
+    if(decision21 === "surf"){
+      alert("1, 2 and...poof! Wartortle forgot Surf and learned Hydro Pump!");
+    }else if(decision21 === "ice beam"){
+      alert("1, 2 and...poof! Wartortle forgot Ice Beam and learned Hydro Pump!");
+    }else if(decision21 === "rapid spin"){
+      alert("1, 2 and...poof! Wartortle forgot Rapid Spin and learned Hydro Pump!");
+    }else if(decision21 === "aqua ring"){
+      alert("1, 2 and...poof! Wartortle forgot Aqua Ring and learned Hydro Pump!");
+    }
+  }if (decision2 === "no"){
+    alert("Wartortle did not learn Hydro Pump.");
+  }
+
 } else if (pokemon ==="c"){
   alert(userName+": Charmander I choose you!");
 } else if (pokemon ==="p"){
@@ -60,15 +86,7 @@ if (pokemon === "b"){
 }
 
 
-//**user selects Bulbasaur**
-//>Bulbasaur I choose you!
-//Q: rivalName choses Charmander and challenges you to a battle. Do you accept to battle or do you run?
-//>>>user accepts to battle.
-//>Q:Which finishing move do you select? Tackle or Growl?
-//>>>>Tackle, user wins.
-//>>>>Growl, user loses.
-//>>user runs from battle
-//>>user cannot escape, rival's POKEMON OHKO user. user loses.
+
 //**user selects Squirtle**
 //You've trained for months, won all the region's gym battles, and your Squirtle evolved into a Wartortle!
 //Wartortle wants to learn Hydro Pump but Wartortle already knows 4 moves! Should a move be forgotten to make space for Hydro Pump?
@@ -77,9 +95,7 @@ if (pokemon === "b"){
 //1, 2 and...poof! Blastoise forgot [move] and learned Hydro Pump!
 //No. Blastoise did not learn Hydro Pump.
 //**user selects Charmander**
-//Charmander has fully evolved into a very powerful Charizard!
-//Remind me, what was Charizard's nickname?
-//Prompt input charizard's nickname
+//feed charmander rare candies until it evolves to charizard. Charmander>25>Charmilion>75>Charizard
 //**user selects Pikachu**
 //You've been the elite four. What do you want to do next?
 //Go back to your home town to visit your mom, immidiately challenege the elite four to battle again, find and catch legendary pokemon?
