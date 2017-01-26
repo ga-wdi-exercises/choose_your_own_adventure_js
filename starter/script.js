@@ -1,60 +1,51 @@
-// put code here!
-//ask for name
-//Welcome to Dark Souls username
+//Welcome to Dark Souls
+var response = prompt("Welcome to Dark Souls!\n Do you need help? \n (y/n)");
+// waiting for a yes response
+while (response != "y") {
+  // if response is no
+    response = prompt("Did you Die Already?\n (y/n)");
+}
+    switch (response) {
+      case 'y' || 'Y':
+        alert("You Died \n Refresh page to try again.");
+        break;
+      case 'n' || 'N':
+        alert("Well then lets get started!");
+        //asking what class
+        response = prompt("Is your class Knight, Theif or Pyromancer \n (k/t/p)");
+        //Knight
+          if (response === 'k' || 'K'){
+            //Weapon
+            response = prompt("Do you have a weapon? \n (y/n)");
+            if (response === 'y' || 'Y'){
+              //Roll
+              response = prompt("Do you know how to roll? \n (y/n)");
+              if (response === 'n') {
+                alert("You should learn too!");
+                response = prompt("Are you ready to fight? \n (y/n)");
+                if (response === 'y'){
+                  alert("Walk into the mist \n and face the boss!");
+                  response = prompt("Do you go straight and attack or roll left, or roll to the right? \n (s/l/r)");
+                  if (response === 'l' || 'L'){
+                    alert("You roll left, and dodge an attack.");
+                    prompt("Do you want to attack now or roll again? \n (a/r)");
+                    if(response === 'a' || 'A'){
+                      alert("You attack, and do enough damaage to kill the Boss!");
+                      prompt("Do you want to save at the bonefire? \n (y/n)");
+                      if(response === 'y' || 'Y'){
+                        alert("You survived!!!");
+                      }
+                    } else {
+                      alert("You roll to the right, and get hit by attack.");
+                    }
+                  }
 
-//choose your class
-//Knight, Theif, Pyromancer
-
-//choose Knight   //choose Theif //choose Pyromancer
-//What weapon would you like? Sword and Sheild, Axe, Nothing(MAN-UP)
-  //Choose Sword and Sheild
-    //Choose your path
-      //Left
-      //You enter a clearing
-          //There is a chest in the middle of the clearing, what do you want to do.
-            //Walk right up and open it.
-              //Its a Mimik it gets up and round houses you in the face and You Died.
-
-            //Stay as far away
-              //You hug the wall and get to the other end of the clearing
-                //You open the door at the other end of the clearing and enter a hall
-                //with two doors and a hole in the middle
-                  //Left Door
-                    //Open the door and a dog jumps out and kills you. You Died.
-
-                  //Right Door
-                    //Open the door and a dog jumps out and kills you. You Died
-
-                  //Fall Down hole
-                    //You Take Fall Damage, and the Boss Battle begins
-                      //Do you attack, roll to dodge, or try to run away..
-                        //You attack
-                          //You do a little damage but can't get out of the way fast enough
-                          // and You Die.
-                        //You Dodge
-                        // You roll to the right twice and end up behind the Boss
-                          //Do you wanna attack, roll, or run.
-                            //attack
-                              //You do enough damage to kill the boss and a Bonfire
-                              //takes its bodys place
-                                //You touch the Bonfire where it is safe... for a second
-                                //a dog comes out of nowhere and kills you.
-
-                        //Run away
-                          //You try to run away and get hit and then You Died.
-            //Do Nothing
-              //Spear comes out of the wall and You Died.
-
-      //Right
-      //Fell off cliff. You Died.
-
-      //Straight
-      //Pitfall onto Spikes. You Died.
-
-
-//code below
-var userInputName = prompt("Welcome to Dark Souls. What is your name");
-var response = prompt("Hello " + userInputName + "are you ready to play? (y/n)");
-  while (response != "y") {
-    response = prompt("Do you want to play?");
-  }
+                  }
+                }
+              }
+            }
+        break;
+      default:
+        alert("You Died!");
+    }
+//here is where cut code goes
