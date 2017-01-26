@@ -11,15 +11,15 @@ function adventure() {
     switch (parseInt(yourClass)) {
       case 1:
         alert("You are blacksmith's apprentice.");
-        yourClass = "str";
+        yourClass = 1
         break;
       case 2:
         alert("You are a humble scholar.");
-        yourClass = "int";
+        yourClass = 2
         break;
       case 3:
         alert("You are a petty thief.");
-        yourClass = "dex";
+        yourClass = 3
         break;
       default:
         alert("Happy people have no history.")
@@ -38,31 +38,30 @@ function adventure() {
     switch (parseInt(storm)) {
       case 1:
         alert("You are ignoring the storm and scavenge for some nuts and berries. Unfortunately, that brings you under a lonely tree in the middle of a small clearing. The tree is struck by lightning.")
-          if (yourClass === "dex") {
-            alert("You quickly roll out of the way of a falling tree and run for the forest.");
-          } else {
+          while (yourClass !== 3) {
             alert("You are crushed by a giant tree.");
             end();
             break;
-          }
+          } alert("You quickly roll out of the way of a falling tree and run for the forest.");
         break;
       case 2:
         alert("You decide to hide in the forest and wait it out.");
-          if (yourClass === "int") {
-            alert("It occurs to you that the tree blocking the road was deliberately chopped down...")
-          } else {
+          while (yourClass !== 2) {
             alert("You leave scraps of your clothing on the thorns as you are tearing through underbrush. A very close thunderclap makes you hustle even more.")
+            break;
           }
+          break;
+          break;
+            alert("It occurs to you that the tree blocking the road was deliberately chopped down...")
         break;
       case 3:
         alert("You climb over the tree and double time it towards a distant settlement. An arrow flies out of the forest.")
-          if (yourClass === "str") {
-            alert("You are running too fast for the archer, and the arrow hits the ground behind you. You run for the forest to get some cover.")
-          } else {
+          while (yourClass !== 1) {
             alert("It hits you in the knee. As you fall to the ground the ground, you hear heavy boots approaching. Many of them.")
             end();
             break;
           }
+            alert("You are running too fast for the archer, and the arrow hits the ground behind you. You run for the forest to get some cover.")
         break;
       default:
         alert("You decide that this adventuring life just ain't worth it. You are cold, wet, hungry and probably lost, too. You turn around and head back the way you came, forever abandoning the dreams of adventure.");
@@ -71,32 +70,30 @@ function adventure() {
     }
   var forest = prompt("You are making your way through the forest. It's dark, damp and pretty creepy.\nDo you want to\n1. Keep going\n2. Stop and sleep for a bit")
   //re-making the part with the hut
-    switch (parseInt(forest)) {
-      case 1:
+    if (forest === "1") {
         var hut = prompt("You push through the fatigue and thorny bushes. You walk out to an unexpected clearing. There is a hut in the middle of the clearing. You can smell the smoke from the chimney. Someone is inside.\nDo you want to knock? (y/n)")
-        if (hut === "y") {
-          alert("The door opens on its own. When you walk inside, you see a beautiful lady and an ugly crone sitting side by side.");
-        } else {
-          alert("You ignore the hut and walk on. You wander the forest aimlessly for hours and then days. Unfortunately, life in the city did not teach you how to survive out here, and soon you succumb to untimely death in some random ditch.")
-          end();
-        }
-  var choice = prompt("Do you want to talk to\na. The lady\nb. The crone?")
-   if (choice === "a") {
-     alert("The lady's voice is so sweet that you can't even quite understand what she is saying. In fact, you can't remember your own name or how you got here. It's all a blur.\nYou wake up on the road with no memories of anything and wander the world for the rest of your life as a beggar, trying to remember who you were and never able to find out.")
-     end();
-   } else {
-     alert("The crone becons you to come closer.")
-   }
- var dragon = prompt("She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that.\nDo you agree to the task (y/n)?")
-  if (dragon === "y") {
-    alert("The crone laughs at you and calls you a fool. There are no dragons. You are kicked out of the hut by an unseen force and are left alone in the middle of the forest.\nYou slink back the way to came from and go back home and live the rest of your life in obscurity.")
-    end();
-  } else {
-    alert("The crone smiles a toothless smile at you and taps the end staff on the floor. You are transported to the king's court where he proclaims you his advisor. You marry a princess and live a sickeningly sweet happily ever after.\nCommon sense for the win.")
-    end();
-  }
-      break;
-      case 2:
+          if (hut === "y") {
+            alert("The door opens on its own. When you walk inside, you see a beautiful lady and an ugly crone sitting side by side.");
+            var choice = prompt("Do you want to talk to\na. The lady\nb. The crone?")
+             if (choice === "a") {
+               alert("The lady's voice is so sweet that you can't even quite understand what she is saying. In fact, you can't remember your own name or how you got here. It's all a blur.\nYou wake up on the road with no memories of anything and wander the world for the rest of your life as a beggar, trying to remember who you were and never able to find out.")
+               end();
+             } else {
+               alert("The crone becons you to come closer.")
+             }
+               var dragon = prompt("She holds a staff in her hand, and tells you that you can kill a dragon with its power. She will give it to you if you agree to do that.\nDo you agree to the task (y/n)?")
+                if (dragon === "y") {
+                  alert("The crone laughs at you and calls you a fool. There are no dragons. You are kicked out of the hut by an unseen force and are left alone in the middle of the forest.\nYou slink back the way to came from and go back home and live the rest of your life in obscurity.")
+                  end();
+                } else {
+                  alert("The crone smiles a toothless smile at you and taps the end staff on the floor. You are transported to the king's court where he proclaims you his advisor. You marry a princess and live a sickeningly sweet happily ever after.\nCommon sense for the win.")
+                  end();
+                }
+          } else {
+            alert("You ignore the hut and walk on. You wander the forest aimlessly for hours and then days. Unfortunately, life in the city did not teach you how to survive out here, and soon you succumb to untimely death in some random ditch.")
+            end();
+          }
+      } else {
       alert("You decide to fall asleep under some tree.")
       var tied = prompt("You wake up tied to the very same tree you fell asleep under.\nAre you trying to escape? (y/n)")
         if (tied === "y") {
@@ -109,11 +106,10 @@ function adventure() {
               alert("The bandits whistle and cheer when you kick the merchant. One of the bandits throws you a piece of bread. You decide to kick the merchant again.\nBefore you know it, the merchant is out to be traded for ransom and you are offered to join the gang. What's there to lose?\nIn a few years you end up a wealthy bandit lord and drink to the day you first decided to go on an adventure.")
               end();
               }
-              } else {
-              alert("You give up the fight and meekly await your fate. The bandits soon find out that you have nothing and decide to slit your throat.")
-              end();
-            }
-
+        } else {
+        alert("You give up the fight and meekly await your fate. The bandits soon find out that you have nothing and decide to slit your throat.")
+        end();
+      }
     }
 }
 function end() {
