@@ -25,8 +25,8 @@ if (begin == "y") {
         confirm("Sorry man, on a trip like this, you gotta go Harley");
         var biker = prompt("Looks like you'll be on a cruiser for a long trip! Do you want a Harley or a Honda?");
       }
-      var location = prompt("Where are we starting from? (DC/VA/MD)");
-      if (location == "DC") {
+      var place = prompt("Where are we starting from? (DC/VA/MD)");
+      if (place == "DC") {
         var start = prompt("Lets start from the Capitol (ok)");
         while (start != "ok") {
           confirm("Dude, we are starting from the Captiol");
@@ -35,7 +35,7 @@ if (begin == "y") {
         console.log("Sweet! Glad you packed for a roadtrip to Texas on your knarly Harley!");
         break;
       }
-      else if (location == "VA") {
+      else if (place == "VA") {
         var start1 = prompt("Are we starting in Alexandria or Fairfax?");
         if (start1 == "Alexandria") {
           console.log("Great! Looks like we are going to Summit Racing track to hone in on your motorcycle skills");
@@ -46,7 +46,7 @@ if (begin == "y") {
           break;
         }
       }
-      else if (location == "MD") {
+      else if (place == "MD") {
         var start2 = prompt("Are you leaving from Baltimore or Annapolis?");
         if (start2 == "Baltimore") {
           console.log("You're just going to take a short ride to the Baltimore aquarium");
