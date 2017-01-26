@@ -23,4 +23,32 @@ while(hasChosen === false){
   }
 }
 
-if (cyndaquil === "")
+if (cyndaquil === "A pat on the head"){
+  alert("Cyndaquil smiles and sounds happy when you pet him. He sounds like he is purring. Good job, he trusts you!")
+}
+else if (eevee === "A pat on the head"){
+  alert("Eevee smiles and sounds happy when you pet her. She sounds like he is purring. Good job, she trusts you!")
+}
+else if (dratini === "A pat on the head"){
+  alert("Dratini smiles and sounds happy when you pet her. She sounds like he is purring. Good job, she trusts you!")
+}
+
+if (cyndaquil === "A smile and a hug"){
+  alert("Cyndaquil smiles and sounds happy when you pet him. He sounds like he is purring. Good job, he trusts you!")
+}
+else if (eevee === "A smile and a hug"){
+  alert("Eevee smiles and sounds happy when you pet her. She sounds like he is purring. Good job, she trusts you!")
+}
+else if (dratini === "A smile and a hug"){
+  alert("Dratini smiles and sounds happy when you pet her. She sounds like he is purring. Good job, she trusts you!")
+}
+
+if (cyndaquil === "A compliment"){
+  alert("Cyndaquil smiles and sounds happy when you pet him. He sounds like he is purring. Good job, he trusts you!")
+}
+else if (eevee === "A compliment"){
+  alert("Eevee smiles and sounds happy when you pet her. She sounds like he is purring. Good job, she trusts you!")
+}
+else if (dratini === "A compliment"){
+  alert("Dratini smiles and sounds happy when you pet her. She sounds like he is purring. Good job, she trusts you!")
+}
