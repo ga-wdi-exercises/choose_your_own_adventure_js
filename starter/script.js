@@ -54,7 +54,7 @@ if (userInput == "Pulse") {
   var userInput = prompt("Joker can't resist Batman's bait, he starts to throw some homemake concoctions to both Batman and Static.'Enter FIGHT to battle Joker'. 'Enter NO to quit'");
 
   var Batman = fight;
-  switch(Batman().fight()) {
+  switch(Batman().getFight()) {
     case 0:
       fight = "Jumps out of toxins' way";
       break;
@@ -69,7 +69,7 @@ if (userInput == "Pulse") {
   }
 
   var Joker = fight;
-  switch(Joker().fight()) {
+  switch(Joker().getFight()) {
     case 0:
       fight = "Throws balls of toxins";
       break;
@@ -83,4 +83,3 @@ if (userInput == "Pulse") {
       fight = "Throws gas bomb";
 
   }
-  
