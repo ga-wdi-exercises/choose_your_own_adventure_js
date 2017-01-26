@@ -48,4 +48,7 @@ if (userInput == "Pulse") {
   else {
     console.log("Static barely makes it");
   }
+
+  alert("Batman: 'Joker you're pathetic, using these kids to fight your battles for you, fight me like man!'");
+
   
