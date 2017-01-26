@@ -53,36 +53,65 @@ if (userInput == "Pulse") {
 
   var userInput = prompt("Joker can't resist Batman's bait, he starts to throw some homemake concoctions to both Batman and Static.'Enter FIGHT to battle Joker'. 'Enter NO to quit'");
 
-  var Batman = fight;
-  switch(Batman().fight()) {
+if (userInput == "FIGHT") {
+
+  var Batman;
+  var Joker;
+
+  switch(fightMove) {
     case 0:
-      fight = "Jumps out of toxins' way";
+      Batman = "Jumps out of toxins' way";
       break;
     case 1:
-      fight = "Punch in shoulder";
+      Batman = "Punch in shoulder";
       break;
     case 2:
-      fight = "Falls to floor";
+      Batman = "Falls to floor";
       break;
     case 3:
-      fight = "Passes out";
+      Batman = "Passes out";
+
+}
+
+  switch(Joker) {
+    case 0:
+      Joker = "Throws balls of toxins";
+      break;
+    case 1:
+      Joker = "Falls back";
+      break;
+    case 2:
+      Joker = "Throws metal object";
+      break;
+    case 3:
+      Joker = "Throws gas bomb";
+  }
+}  else {
+    console.log("no fight scene");
   }
 
-  var Joker = fight;
-  switch(Joker().fight()) {
-    case 0:
-      fight = "Throws balls of toxins";
-      break;
-    case 1:
-      fight = "Falls back";
-      break;
-    case 2:
-      fight = "Throws metal object";
-      break;
-    case 3:
-      fight = "Throws gas bomb";
-  }
+  var fightMove = prompt("pick a fight move: 0, 1, 2, 3");
 
 alert("Oh no! The Joker has escaped and fled back to Gotham City");
 
-var userInput = prompt("The Joker may be gone but the Meta-Breed Gang are still up to no good! 'Enter FINAL to bring to justice'. 'Enter NO to quit'. ");
+// var userInput = prompt("The Joker may be gone but the Meta-Breed Gang are still up to no good! 'Enter FINAL to bring to justice'. 'Enter NO to quit'. ");
+//
+// function battleShowDown() {
+//
+//   var
+//     for (i = 0; i > .length; i++);
+//     console.log()
+// }
+
+// // end scene
+// if () {
+//
+//   else if (){
+//
+//   }
+//   else () {
+//
+//   }
+// }
+//
+// alert("The Meta-Gang are safely locked up at Belle Reve! Thank-you for helping Static and Batman on today's adventure! 'Enter '")
