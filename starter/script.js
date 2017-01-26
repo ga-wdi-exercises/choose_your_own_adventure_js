@@ -1,4 +1,5 @@
 // put code here!
+confirm("All responses are given either in numbers or lower case letters");
 var name = prompt("What is your name?");
 var begin = prompt("Hey "+name+", would you like to go on an adventure!?! (y/n)");
 if (begin == "y") {
@@ -21,12 +22,12 @@ if (begin == "y") {
       }
     case 2:
       var biker = prompt("Looks like you'll be on a cruiser for a long trip! Do you want a Harley or a Honda?");
-      while (biker != "Harley") {
+      while (biker != "harley") {
         confirm("Sorry man, on a trip like this, you gotta go Harley");
         var biker = prompt("Looks like you'll be on a cruiser for a long trip! Do you want a Harley or a Honda?");
       }
       var place = prompt("Where are we starting from? (DC/VA/MD)");
-      if (place == "DC") {
+      if (place == "dc") {
         var start = prompt("Lets start from the Capitol (ok)");
         while (start != "ok") {
           confirm("Dude, we are starting from the Captiol");
@@ -35,24 +36,24 @@ if (begin == "y") {
         console.log("Sweet! Glad you packed for a roadtrip to Texas on your knarly Harley!");
         break;
       }
-      else if (place == "VA") {
+      else if (place == "va") {
         var start1 = prompt("Are we starting in Alexandria or Fairfax?");
-        if (start1 == "Alexandria") {
+        if (start1 == "alexandria") {
           console.log("Great! Looks like we are going to Summit Racing track to hone in on your motorcycle skills");
           break;
         }
-        else if (start1 == "Fairfax") {
+        else if (start1 == "fairfax") {
           console.log("You are gonna take your Harley up to New York City! Gearup!");
           break;
         }
       }
-      else if (place == "MD") {
+      else if (place == "md") {
         var start2 = prompt("Are you leaving from Baltimore or Annapolis?");
-        if (start2 == "Baltimore") {
+        if (start2 == "baltimore") {
           console.log("You're just going to take a short ride to the Baltimore aquarium");
           break;
         }
-        else if (start2 == "Annapolis") {
+        else if (start2 == "annapolis") {
           console.log("Gear up, we are taking a ride out to Sin City");
           break;
         }
