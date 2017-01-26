@@ -9,15 +9,15 @@ if (begin == "y") {
     case 1:
       var driver = prompt("What type of car are you looking at taking? (1.Sports/2.Hybrid/3.Good ol' 'Murican pickup)");
       if (parseInt(driver) == 1) {
-        console.log('We are gonna head over to Virginia International Raceway to have you nail some apexes');
+        alert('We are gonna head over to Virginia International Raceway to have you nail some apexes');
         break;
       }
       else if (parseInt(driver) == 2) {
-        console.log('Ew, good day sir, this roadtrip is a bust');
+        alert('Ew, good day sir, this roadtrip is a bust');
         break;
       }
       else if (parseInt(driver) == 3) {
-        console.log("Time to go to the most 'Murican place possible..... Texas!");
+        alert("Time to go to the most 'Murican place possible..... Texas!");
         break;
       }
     case 2:
@@ -33,39 +33,39 @@ if (begin == "y") {
           confirm("Dude, we are starting from the Captiol");
           var start = prompt("Lets start from the Capitol (ok)");
         }
-        console.log("Sweet! Glad you packed for a roadtrip to Texas on your knarly Harley!");
+        alert("Sweet! Glad you packed for a roadtrip to Texas on your knarly Harley!");
         break;
       }
       else if (place == "va") {
         var start1 = prompt("Are we starting in Alexandria or Fairfax?");
         if (start1 == "alexandria") {
-          console.log("Great! Looks like we are going to Summit Racing track to hone in on your motorcycle skills");
+          alert("Great! Looks like we are going to Summit Racing track to hone in on your motorcycle skills");
           break;
         }
         else if (start1 == "fairfax") {
-          console.log("You are gonna take your Harley up to New York City! Gearup!");
+          alert("You are gonna take your Harley up to New York City! Gearup!");
           break;
         }
       }
       else if (place == "md") {
         var start2 = prompt("Are you leaving from Baltimore or Annapolis?");
         if (start2 == "baltimore") {
-          console.log("You're just going to take a short ride to the Baltimore aquarium");
+          alert("You're just going to take a short ride to the Baltimore aquarium");
           break;
         }
         else if (start2 == "annapolis") {
-          console.log("Gear up, we are taking a ride out to Sin City");
+          alert("Gear up, we are taking a ride out to Sin City");
           break;
         }
       }
     case 3:
       var destination = prompt("Would you like to fly domestic or international?");
       if (destination == "domestic") {
-        console.log("Congrats! We are flying to New Orleans for Mardi Gras!");
+        alert("Congrats! We are flying to New Orleans for Mardi Gras!");
         break;
       }
       else if (destination == "international") {
-        console.log("Congrats! We are going to go to Ibiza for a super lit party!");
+        alert("Congrats! We are going to go to Ibiza for a super lit party!");
         break;
       }
   }
