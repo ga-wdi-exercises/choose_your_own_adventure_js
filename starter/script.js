@@ -1,7 +1,7 @@
 // put code here!
 var response = prompt ("Welcome to United States, would you like to travel?");
   while (response != "yes") {
-    response = prompt ("we're sorry to hear that!");
+    response = alert ("we're sorry to hear that! Press Command+R to restart the adventure!");
   }
 
   response = prompt ("Ok, let's begin.  Would you like to go East or West? (East/West)");
