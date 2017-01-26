@@ -1,0 +1,11 @@
+body{
+  background-image: url(./game-of-thrones-logo-i21034.jpg);
+  background-size: cover;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 4px 4px gold;
+}
