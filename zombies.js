@@ -1,54 +1,35 @@
-var start = "Hello! What is your name?";
+function startGame () {
+var start = prompt("Hello! What is your name?");
+alert("We must hurry, " + start + "!! , Walkers are approaching!");
 
-var add = function(x,y) {
-  console.log(x*y);
+var zombiesKilled = prompt ("How many zombies have you killed?");{
+    if (zombiesKilled >= 500) {
+    prompt("Zombie Master!! You can lead us!");
+     var master = prompt("Do you want to take the Jungle route or Concrete route? j/c");
+  } else if (zombiesKilled < 100) {
+    prompt("Kill more zombies!!");
+      var newbieWeapon = prompt("Choose your weapon: Kitchen Knife or Stick? k/s"); {
+        if (newbieWeapon == 'k') {
+          alert("Be Smart!");
+        } else if (newbieWeapon == 's') {
+          alert("Good Luck!");
+
+        }
+      }
+  } else if (zombiesKilled >= 100 || x < 500) {
+    prompt("Great!! You can't lead a group yet, but you can assist our leaders."); {
+      var chooseLeader = prompt("Choose your leader: Rick or Negan? r/n"); {
+        if (chooseLeader == 'r') {
+          alert("Wise Choice!");
+        } else if (chooseLeader == 'n') {
+          alert("You just got Lucilled by Negan! Start over and choose wisely");
+          startGame();
+        }
+
+        }
+      }
+    }
+  }
 }
 
-var nameInput = function(x) {
-  return "We must hurry, " + x + "!! , Walkers are approaching! But first.., how many zombies have you killed ?";
-};
-console.log(nameInput);
-
-var zombiesKilled = function(x) {
-  if (x >= 500) {
-    return("Zombie Master!! You can lead us! Do you want to take the [J]ungle route or [C]oncrete route?");
-  } else if (x < 100) {
-    return("Kill more zombies!! Choose your weapon: " + weaponRookie);
-  } else if (x >= 100 || x < 500) {
-    return("Great!! You can't lead a group yet, but you can assist our leaders. Who do you want to assist? [R]ick or [N]egan?");
-  }
-};
-console.log(zombiesKilled);
-
-var weaponMaster = ['Bow & Arrow', 'Samurai', 'AK47','Lucille']
-var weaponLeader = ['Bow & Arrow', 'Samurai', 'Lucille']
-var weaponRookie = ['Kitchen Knife', "Stick"]
-
-var route = function (x) {
-  if (x == "J") {
-    console.log("Off to the Jungle! Choose your weapon:");
-    return weaponMaster;
-  } else if (x == "C") {
-    console.log("Good choice! Choose your weapon:");
-    return weaponMaster;
-  }
-
-}; console.log(route);
-
-var leader = function (x) {
-  if (x == "R") {
-    console.log("Wise choice! Choose your weapon:");
-    return weaponLeader;
-  } else if (x == "N") {
-    console.log("You just got Lucilled by Negan! Start over and choose wisely");
-    return start;
-  }
-
-}; console.log(leader);
-
-var newbie = function (weaponRookie) {
-  if (weaponRookie[0]) {
-    return("Be Smart!");
-  }
-};
-console.log(newbie);
+startGame();
