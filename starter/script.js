@@ -18,7 +18,7 @@ var userInput = prompt("Static is live on the scene of the mayhem and sees an un
       console.log("user is working with Batman");
     }
 
-alert("Joker, 'Hotstreak why don't you show Bats and Electric Boy what some real heat can do!'");
+alert("Joker: 'Hotstreak why don't you show Bats and Electric Boy what some real heat can do!'");
 
 var userInput = prompt("Hotstreak charges at Static! Choose one of the following moves to help Static. Choose 'Ball Lightning to knock Hotstreek to the ground' or Choose 'Force Field to protect Static'");
 
@@ -27,4 +27,13 @@ if (userInput == "Ball Lightning") {
 }
   else {
     console.log("Hotstreak blocked!");
+  }
+
+var userInput = prompt("Cool it! Hothead! Batman watch out! Oh no, Talon is flying towards Batman to use her Sonic Scream! To help Batman 'Enter Belt to have swing through the air and knock Talon to the floor.' 'Enter Charge to let Static hit Talon with a Taser shock.'");
+
+if (userInput == "Belt") {
+  console.log("Point for Batman");
+}
+  else {
+    console.log("Shock to System");
   }
