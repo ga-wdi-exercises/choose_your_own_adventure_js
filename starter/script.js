@@ -72,3 +72,50 @@ if (elfYesTalk == "a" || elfYesTalk == "A") {
 } else if (elfYesTalk == "b" || elfYesTalk == "B") {
   alert("You've won the Adventure!")
 };
+
+//CHEF
+if (chef == "a" || chef == "A") {
+  var chefYes = prompt("What do you do about the Flower? [A: Pluck, B: Stomp]");
+} else if (chef == "b" || chef == "B") {
+  alert("You are now a chipmunk!");
+  var chipmunk = prompt("What do you do about the Flower? [A: Attack, B: Ignore]");
+};
+
+//CHEF YES
+if (chefYes == "a" || chefYes == "A") {
+  var chefYesPluck = prompt("How much do you pay the Bandits? [A: 0g, B: 100g, C: 200g]");
+} else if (chefYes == "b" || chefYes == "B") {
+  var chefYesStomp = prompt("How much do you pay the Bandits? [A: 0g, B: 100g, C: 200g]");
+};
+
+//CHEF YES PLUCK
+if (chefYesPluck == "a" || chefYesPluck == "A") {
+  alert("You Lose!");
+} else if (chefYesPluck == "b" || chefYesPluck == "B") {
+  alert("You Lose!");
+} else if (chefYesPluck == "c" || chefYesPluck == "C") {
+  var chefYesPluck200 = prompt("What do you do about the Gorilla? [A: Cook, B: Fight]");
+};
+
+//CHEF YES STOMP
+if (chefYesStomp == "a" || chefYesStomp == "A") {
+  alert("You Lose!");
+} else if (chefYesStomp == "b" || chefYesStomp == "B") {
+  alert("You Lose!");
+} else if (chefYesStomp == "c" || chefYesStomp == "C") {
+  var chefYesStomp200 = prompt("What do you do about the Gorilla? [A: Cook, B: Fight]");
+};
+
+//CHEF YES PLUCK 200
+if (chefYesPluck200 == "a" || chefYesPluck200 == "A") {
+  alert("You've won the Adventure!");
+} else if (chefYesPluck200 == "b" || chefYesPluck200 == "B") {
+  alert("You Lose!");
+};
+
+//CHEF YES STOMP 200
+if (chefYesStomp200 == "a" || chefYesStomp200 == "A") {
+  alert("You Lose!");
+} else if (chefYesStomp200 == "b" || chefYesStomp200 == "B") {
+  alert("You Lose!");
+};
