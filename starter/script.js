@@ -17,3 +17,5 @@ var userInput = prompt("Static is live on the scene of the mayhem and sees an un
     if (userInput == "yes") {
       console.log("user is working with Batman");
     }
+
+alert("Joker, 'Hotstreak why don't you show Bats and Electric Boy what some real heat can do!");
