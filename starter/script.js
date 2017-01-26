@@ -37,3 +37,5 @@ if (userInput == "Belt") {
   else {
     console.log("Shock to System");
   }
+
+alert("Joker:'Mwahahahaa Time's are starting to get INTERESTING! Ebon, you're going to let Bats and Charger boy win this one or are you going to get even!'");
