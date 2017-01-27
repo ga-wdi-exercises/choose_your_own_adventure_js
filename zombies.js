@@ -5,7 +5,14 @@ alert("We must hurry, " + start + "!! , Walkers are approaching!");
 var zombiesKilled = prompt ("How many zombies have you killed?");{
     if (zombiesKilled >= 500) {
     prompt("Zombie Master!! You can lead us!");
-     var master = prompt("Do you want to take the Jungle route or Concrete route? j/c");
+     var master = prompt("Do you want to take the Jungle route or Concrete route? j/c");{
+       if (master == 'j') {
+         alert("Good Luck!");
+       } else if (master == 'c') {
+         alert("Watch Your Back!");
+       }
+     }
+
   } else if (zombiesKilled < 100) {
     prompt("Kill more zombies!!");
       var newbieWeapon = prompt("Choose your weapon: Kitchen Knife or Stick? k/s"); {
