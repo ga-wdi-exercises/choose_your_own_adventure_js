@@ -25,11 +25,11 @@ if(foodChoice == "taco shells"){
       };
 } else if (foodChoice == "bagels"){
   var timeCook= prompt("You are making a bread pudding with the bagels, how many minutes will you cook it for?");
-    if (timeCook > 15){
+    if (timeCook >= 15){
       alert("Oh no! you have burned your bread pudding! \nYou have been eliminated from the competition");
     } else if (timeCook < 15 && timeCook > 10){
       alert("Your bread pudding is perfectly cooked but not very tasty. \nYou have been eliminated from the competition");
-    } else if (timeCook < 10){
+    } else if (timeCook <= 10){
       alert("Your bread pudding is undercooked.\n You have been eliminated from the competition.");
     } else{
     alert("You must enter a number.Please try again.");
