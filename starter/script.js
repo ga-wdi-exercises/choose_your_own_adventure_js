@@ -53,8 +53,8 @@ if (elf == "a" || elf == "A") {
 
 //ELF YES ***DONE***
 if (elfYes == "a" || elfYes == "A") {
-  alert("What you a stunning specimen of nature's beauty. It makes you feel at home and reminds you of what you're fighting for. You pluck the Flower and take it with you as you venture into the forest.");
-  alert("Walking along the path, your approached by a band of Thieves. The largest calls out to you.");
+  alert("What a stunning specimen of nature's beauty. It makes you feel at home and reminds you of what you're fighting for. You pluck the Flower and take it with you as you venture into the forest.");
+  alert("Walking along the path, you're approached by a band of Thieves. The largest calls out to you.");
   alert("Doesn't look like you're from around here, Elf. Well let me explain how this works. There's a toll on this here path. 100 gold pieces per person. Well, at least that's the normal price. But considering it's peak hours right now, we'll actually need 200 coins from you.");
   var elfYesPluck = prompt("How much do you pay the Bandits? [A: 0, B: 100, or B: 200]");
 } else if (elfYes == "b" || elfYes == "B") {
@@ -184,14 +184,14 @@ if (chef == "a" || chef == "A") {
 //CHEF YES ***DONE***
 if (chefYes == "a" || chefYes == "A") {
   alert("This Flower looks to be Kingspice, a particularly rare and delicious flower. Good thing you've had all of that culinary training or you'd never recognize it. You pluck the flower and take it with you as you head into the forest.");
-  alert("Walking along the path, your approached by a band of Thieves. The largest calls out to you.");
+  alert("Walking along the path, you're approached by a band of Thieves. The largest calls out to you.");
   alert("You know the drill, buddy. The toll on this here path is 100 gold pieces per person. Normally. But considering it's peak hours right now, we'll actually need 200 coins from you.");
   var chefYesPluck = prompt("How much do you pay the Bandits? [A: 0, B: 100, C: 200]");
 } else if (chefYes == "b" || chefYes == "B") {
   alert("You hate Flowers. So you go out of your way to crush this one. After all, it's not like you could have walked around it or anything.");
   alert("...");
   alert("Well, anyway...");
-  alert("You head into the forest. Walking along the path, your approached by a band of Thieves. The largest calls out to you.")
+  alert("You head into the forest. Walking along the path, you're approached by a band of Thieves. The largest calls out to you.")
   alert("You know the drill, buddy. The toll on this here path is 100 gold pieces per person. Normally. But considering it's peak hours right now, we'll actually need 200 coins from you.");
   var chefYesStomp = prompt("How much do you pay the Bandits? [A: 0, B: 100, C: 200]");
 };
