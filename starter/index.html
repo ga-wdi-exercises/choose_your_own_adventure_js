@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <script src="script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>The Path</title>
+		<script type="text/javascript"> 
+function insertText () {
+    document.getElementById('td1').innerHTML = "table data one!!! ";
+}
+</script>
+	</head>
+	<body onload="insertText();">
+		<h2>Welcome to The Path...</h2>
+		<main>
+		<div class="path">
+			<table>
+				<tr>
+					<td id="td1"> table data one</td> <!-- $("#td1").text = return of function that find what is the next option -->
+				</tr>
+			</table>
+		</div>
+		</main>
+		<script
+		src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
