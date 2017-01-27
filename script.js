@@ -37,8 +37,12 @@ if (start === "Yes") {
 
                                   if (wifeTroubles === "1") {
                                     alert("BAM! You blew a hole in your front door and Bob is now headless.  Your ears are ringing and the smell of gunpowder fills the air.  As you look out the door you see at least 20 more…zombies??? shuffling towards your house.  Your door in ruins, the zombies pile in and begin to feast on you and your family.  All you can think is BOB WAS LICKING MY DOOR!  Everything goes dark.  The End.");
-                                  } else if(wifeTroubles === 2){
-                                    //LOOP BACK TO VAR WIFETROUBLES
+                                  } else if(wifeTroubles == "2"){
+                                      //LOOP GOES HERE
+                                      // while (wifeTroubles == "2") {
+                                      //   var wifeTroubles = prompt ("Your wife screams WHAT ARE YOU DOING?!?!  Startled, you lower the shotgun, look at her and... 1 - Tell her you love her as you shoot at the peephole. OR 2 - Tell her you love her and begin leveling your shotgun at the door again OR 3 - Stare at her while your brain catches up with your instincts. (Enter 1 or 2 or 3)");
+
+                                      }
                                   } else {
                                     var wifeTroublesLive = prompt ("The banging continues and gets louder and louder as more…zombies??? join in with Bob.  What do you do? 1 - You lower your shotgun and yell EVERYONE TO THE CAR! OR 2 - You lower your shotgun and yell EVERYONE UPSTAIRS! (Enter 1 or 2)");
 
