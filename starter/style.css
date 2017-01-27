@@ -1,0 +1,16 @@
+button {
+  background: #000;
+  color: #FFF;
+  font-family: Josefin Slab;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+
+}
+.myBtn{
+  background: #32CD32;
+  font-size: 32px;
+}
