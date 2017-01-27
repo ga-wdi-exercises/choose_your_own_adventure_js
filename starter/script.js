@@ -94,24 +94,25 @@ if (userInput == "FIGHT") {
 
 alert("Oh no! The Joker has escaped and fled back to Gotham City");
 
-// var userInput = prompt("The Joker may be gone but the Meta-Breed Gang are still up to no good! 'Enter FINAL to bring to justice'. 'Enter NO to quit'. ");
-//
-// function battleShowDown() {
-//
-//   var
-//     for (i = 0; i > .length; i++);
-//     console.log()
-// }
+var userInput = prompt("The Joker may be gone but the Meta-Breed Gang are still up to no good! 'Enter FINAL to bring to justice'. 'Enter NO to quit'. ");
 
-// // end scene
-// if () {
-//
-//   else if (){
-//
-//   }
-//   else () {
-//
-//   }
-// }
-//
-// alert("The Meta-Gang are safely locked up at Belle Reve! Thank-you for helping Static and Batman on today's adventure! 'Enter '")
+var battleShowDown;
+
+var meta = ['Ebon', 'Talon', 'Hotstreak'];
+var heroes = ['Batman', 'Static'];
+
+  for (i = 0; i < meta.length; i++);
+    if ('Ebon' == meta) {
+     console.log('Ebon loses to Static');
+   }
+      else if ('Talon' == meta) {
+        console.log('Talon loses to Batman');
+        }
+        else if ('Hotstreak == meta') {
+          console.log('Hotstreak loses to Static and Batman');
+        }
+        else {
+          console.log('game over');
+        }
+
+alert("The Meta-Gang are safely locked up at Belle Reve! Thank-you for helping Static and Batman on today's adventure! 'Enter '"); 
