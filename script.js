@@ -10,14 +10,14 @@ if (start === "Yes") {
       if (shower === "1") {
         alert("As you are rinsing off you get shampoo in your eyes.  You stumble around trying to get it rinsed out.  You step on the bar of soap, crash down and crack your skull open.  As your brains and blood ooze down the drain all you can think of is THEY ARE GOING TO FIND ME NAKED!  Everything goes dark.  The End.");
       } else {
-          var showerLive = prompt ("You get downstairs, soap drying into a sticky film on your skin you see your wife and son staring out the open front door.   You walk over and look out to see what they see.  There, on the street, are people running around getting...attacked?...by their…neighbors?  It looks like a riot has broken out on the streets of Little Turtle! (Click OK to Continue)");
+          var showerLive = alert ("You get downstairs, soap drying into a sticky film on your skin you see your wife and son staring out the open front door.   You walk over and look out to see what they see.  There, on the street, are people running around getting...attacked?...by their…neighbors?  It looks like a riot has broken out on the streets of Little Turtle! (Click OK to Continue)");
 
             var frontDoor = prompt ("One of your neighbors, Bob, starts towards your house.  What do you do? 1 - Walk out and see if Bob knows what's going on. OR 2 - Slam the door, lock it up and tell your son to get your guns! (Enter 1 or 2)");
 
               if (frontDoor === "1") {
                 alert("You walk up to the Bob and ask him Hey buddy…whats going on?  Bob looks up at you and you see…is that BLOOD???...smeared all over his face.  He lunges at you, you fall to the ground and Bob  starts chewing on you.  You hear your wife scream.  As blood starts pumping out of your neck all you can think is I'M LAYING IN THE STREET IN NOTHING BUT A TOWEL!  Everything goes dark.  The End");
               } else {
-                  var frontDoorLive = ("You tell your wife to close the curtains, lock the back door and turn off all the lights.  While you are waiting for your trusty shotgun you look through the peephole on the front door. (Click OK to Continue)");
+                  var frontDoorLive = alert ("You tell your wife to close the curtains, lock the back door and turn off all the lights.  While you are waiting for your trusty shotgun you look through the peephole on the front door. (Click OK to Continue)");
 
                     var peepHole = prompt ("You see Bob standing there banging on the door with his fists.  THUMP!  THUMP!  THUMP!   What do you do?  1 - You open the door!  Bob needs help! OR 2 - You yell at Bob though the door, asking him if he knows whats going on. (Enter 1 or 2)");
 
@@ -42,8 +42,8 @@ if (start === "Yes") {
                                       // while (wifeTroubles == "2") {
                                       //   var wifeTroubles = prompt ("Your wife screams WHAT ARE YOU DOING?!?!  Startled, you lower the shotgun, look at her and... 1 - Tell her you love her as you shoot at the peephole. OR 2 - Tell her you love her and begin leveling your shotgun at the door again OR 3 - Stare at her while your brain catches up with your instincts. (Enter 1 or 2 or 3)");
 
-                                      }
-                                  } else {
+                                    
+                                   } else {
                                     var wifeTroublesLive = prompt ("The banging continues and gets louder and louder as more…zombies??? join in with Bob.  What do you do? 1 - You lower your shotgun and yell EVERYONE TO THE CAR! OR 2 - You lower your shotgun and yell EVERYONE UPSTAIRS! (Enter 1 or 2)");
 
                                     if (wifeTroublesLive === "1") {
