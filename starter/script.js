@@ -19,11 +19,15 @@ function displayThis() {
 */
 
 
-
+/*
 var planet = $("button").on("click", function myFunction(){
   document.getElementsByClassName('button').innerHTML
   return ;
 });
+*/
+var planet = prompt("please enter a planet")
+
+  console.log(planet)
 
 if (planet == "earth"){
 
@@ -60,29 +64,29 @@ if (planet == "pandora"){
 if(planet != "earth" || "pandora"){
 
           switch (planet) {
-                  case 0:
-                  planet = "mercury";
+                  case ("mercury"):
+                        alert("your body can't survive this")
                   break;
-                  case 1:
-                          planet = "uranus";
+                  case ("uranus"):
+                      alert("your body can't survive this")
                         break;
-                   case 2:
-                          planet = "Mars";
+                   case ("mars"):
+                        alert("your body can't survive this")
                         break;
-                   case 3:
-                          planet = "Venus";
+                   case ("venus"):
+                          alert("your body can't survive this")
                         break;
-                   case 4:
-                          planet = "jupiter";
+                   case ("jupiter"):
+                          alert("your body can't survive this")
                         break;
-                   case 5:
-                          planet = "saturn";
+                   case ("saturn"):
+                          alert("your body can't survive this")
                           break;
-                   case 6:
-                          planet = "neptune";
+                   case ("neptune"):
+                        alert("your body can't survive this")
                           break;
-                    default: prompt("There is no such planet")
-                         }
-  document.getElementById('atmosphere').innerHTML = planet + "atmosphere doesn't support life";
 
-}
+                         }
+
+
+} 
