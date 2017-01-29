@@ -1,0 +1,146 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*h1 {
+  display: flex;
+  justify-content: space-around;
+  border: solid green 2px;
+  color: solid 22px
+}*/
+
+h3 {
+  /*color: black;*/
+  display: flex;
+  justify-content: space-around;
+  border: solid black 2px;
+  color: solid;
+  font-size: 33px;
+  padding-bottom: 11px;
+  padding-top: 0;
+}
+h5 {
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  border: solid black 2px;
+  color: solid;
+  font-size: 11px;
+  padding-bottom: 11px;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
+section div {
+  display: flex;
+  justify-content: space-around;
+}
+.imgBox {
+  min-height: 33vh;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgBox:nth-child(1) {
+  background-image: url("../img/london.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+  width: 200px;
+  height: 175px;
+  flex-grow: 1;
+
+}
+.imgBox:nth-child(2) {
+  background-image: url("../img/san-francisco.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  width: 200px;
+  height: 175px;
+  flex-grow: 1;
+}
+.imgBox:nth-child(3) {
+  background-image: url("../img/new-york.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+  width: 200px;
+  height: 175px;
+  flex-grow: 1;
+}
+
+.cities1 {
+  padding; 11px;
+}
+.cities2 {
+  padding; 11px;
+}
+
+.imgBox2 {
+  min-height: 33vh;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-position: center;
+  background-size: cover;
+  align-items: stretch;
+}
+.imgBox2:nth-child(1) {
+  background-image: url("../img/san-francisco.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+  width: 200px;
+  height: 175px;
+  flex-grow: 1;
+
+}
+.imgBox2:nth-child(2) {
+  background-image: url("../img/sonoma.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  width: 200px;
+  height: 175px;
+  flex-grow: 1;
+}
+.imgBox2:nth-child(3) {
+  background-image: url("../img/napa.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+  width: 200px;
+  height: 175px;
+  flex-grow: 1;
+}
+
+/*.imgBox2:nth-child(1) {
+  background-image: url("../img/san-francisco-2.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+  width: 200px;
+  height: 175px;
+}
+.imgBox2:nth-child(2) {
+  background-image: url("../img/sonoma.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  width: 200px;
+  height: 175px;
+}
+.imgBox2:nth-child(3) {
+  background-image: url("../img/napa.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+  width: 200px;
+  height: 175px;
+}*/

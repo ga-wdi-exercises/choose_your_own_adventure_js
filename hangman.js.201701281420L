@@ -1,0 +1,58 @@
+$(document).ready(function() {
+  console.log("Hangman Game");
+});
+
+var btnEnterYerWord = $("#btnEnterYerWord");
+var textInputPlayerOnesWord = $("#textInputPlayerOnesWord");
+var playerOnesWordInput;
+var playerOnesWordSplitArray;
+
+btnEnterYerWord.on('click', function (event) {
+  event.preventDefault();
+                              console.log("in click handler btnEnterYerWord");
+                              console.log(textInputPlayerOnesWord.val());
+  playerOnesWordInput = textInputPlayerOnesWord.val();
+  // $(".warning").css("background",color);
+                              console.log("heres playerOnesWord:" + playerOnesWordInput);
+  playerOnesWordSplitArray = playerOnesWordInput.split(/(?!$)/);     //this works: //"overpopulation".split(/(?!$)/)
+                              console.log("heres playerOnesWordSplitArray:" + playerOnesWordSplitArray);
+  fillOutVannaWhitesWall();
+  // alert(playerOnesWord.charAt(0));                             //"overpopulation"; alert(s.charAt(0)) // alerts o.
+      // alert(playerOnesWord);                                      //"overpopulation"; alert(s.charAt(0)) // alerts o.
+      // playerOnesWordSplitArray = playerOnesWord.split('');
+});
+
+function fillOutVannaWhitesWall() {
+  console.log('filling in Vanna');
+  playerOnesWordCssClass = $("#playerOnesWord");
+  for (i=0; i < playerOnesWordSplitArray.length; i++){
+    var div = $('<div id="div'+ i +'"  class="aLetter">&nbsp&nbsp&nbsp&nbsp</div>');
+                              console.log('were on div: ' + i);
+    playerOnesWordCssClass.append(div);
+  }
+}
+
+
+// btnEnterYerWord.on('click', function (event) {
+//   event.preventDefault();
+//                               console.log("in click handler btnEnterYerWord");
+//                               console.log(textInputPlayerOnesWord.val());
+//   playerOnesWordInput = textInputPlayerOnesWord.val();
+//   // $(".warning").css("background",color);
+//                               console.log("heres playerOnesWord:" + playerOnesWordInput);
+//   playerOnesWordSplitArray = playerOnesWordInput.split(/(?!$)/);     //this works: //"overpopulation".split(/(?!$)/)
+//                               console.log("heres playerOnesWordSplitArray:" + playerOnesWordSplitArray);
+//   fillOutVannaWhitesWall();
+//   // alert(playerOnesWord.charAt(0));                             //"overpopulation"; alert(s.charAt(0)) // alerts o.
+//       // alert(playerOnesWord);                                      //"overpopulation"; alert(s.charAt(0)) // alerts o.
+//       // playerOnesWordSplitArray = playerOnesWord.split('');
+// });
+
+// console.log("outside the handler, heres playerOnesWord:" + playerOnesWord);
+// <section   class = "playerOnesWord">
+//   <div class = "aLetter">xxx </div>
+//   <div class = "aLetter">xxx </div>        <div class = "aLetter">xxx </div>
+//           <div class = "aLetter">xxx </div>        <div class = "aLetter">xxx </div>
+//                   <div class = "aLetter">xxx </div>        <div class = "aLetter">xxx </div>
+//                           <div class = "aLetter">xxx </div>        <div class = "aLetter">xxx </div>
+//                                   <div class = "aLetter">xxx </div>
