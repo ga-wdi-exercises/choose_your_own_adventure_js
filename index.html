@@ -10,31 +10,36 @@
 <body>
   <h1>hangman</h1>
   <h2>all rise and bow fer yer hanging judge</h2>
-        <!-- ENTER THE WORD -->
+  <!-- ENTER THE WORD -->
   <div class="controls">
-        <form id="form">
-          <input  type=  "text"  id="textInputPlayerOnesWord">                   </input>
-          <button                id="btnEnterYerWord"> Player 1:  Enter yer word </button>
-        </form>
-        <!-- WARN PLAYERTWO -->
-        <div class="warning"> <p>Player2:<br> Gird yer loins ... <br> a hard rains a-gonna fall if you play this wrong </p> </div> </div>
+    <form id="form">
+      <input type="text" id="textInputPlayerOnesWord"> </input>
+      <button id="btnEnterYerWord"> Player 1:  Enter yer word </button>
+    </form>
+    <!-- WARN PLAYERTWO -->
+    <div class="warning">
+      <p>Player2:<br> Gird yer loins ... <br> a hard rains a-gonna fall if you play this wrong </p>
+    </div>
+  </div>
 
-        </div>
-        <div class="controls">
-              <form id="form">
-                <input  type=  "text"  id="textInputPlayerTwosGuess">                   </input>
-                <button                id="btnPlayerTwosGuess"> Player 2:  Take yer lame guess </button>
-              </form>
+  </div>
+  <div class="controls">
+    <form id="form">
+      <input type="text" id="textInputPlayerTwosGuess"> </input>
+      <button id="btnPlayerTwosGuess"> Player 2:  Take yer lame guess </button>
+    </form>
 
-        <section   id = "playerOnesWord"  style = "display: flex; justify-content: space-around;" >
-        </section>
+    <section class="theWord">
+    </section>
 
-        <section   id = "playerTwosGuess"  style = "display: flex; justify-content: space-around;" >
-        </section>
+    <!-- <section id="playerTwosGuess" style="display: flex; justify-content: space-around;"> -->
+      <section class="guess" ">
+      </section>
 
-  <footer>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="hangman.js"></script>
+      <footer>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="hangman.js"></script>
 </body>
+
 </html>

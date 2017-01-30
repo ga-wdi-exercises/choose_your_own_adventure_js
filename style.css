@@ -5,13 +5,13 @@
 /*.square   { float: left; width: 10px; height: 10px; background: #E7E5DB; margin: 0; }*/
 
 
-h1 { font-family: Monoton; font-size: 48px; text-align: center; }
-h2 { font-family: Monoton; font-size: 24px; text-align: center; color: rgba(255,0,0,.5) }
-h3 { font-family: Monoton; font-size: 12px; text-align: center; color: rgba(255,0,0,.5) }
+h1 { font-family: Monoton; font-size: 44px; text-align: center; }
+h2 { font-family: Monoton; font-size: 33px; text-align: center; color: rgba(255,0,0,.5) }
+h3 { font-family: Monoton; font-size: 22px; text-align: center; color: rgba(255,0,0,.5) }
 
-.controls { text-align: center; }
-.warning  { text-align: center; color: rgba(0,0,255,.5) }
-.aLetter  { text-align: center; color: rgba(0,255,0,1) }
-section     { display: flex; justify-content: space-around;  }
-section div {                                             border-bottom: solid black 2px; }
-/*.aLetter { display: flex; border-bottom: blue; justify-content: space-around;}*/
+.controls                    { text-align: center; }
+.warning                     { text-align: center; color: rgba(0,0,255,.5)   }
+.aLetter, #playersTwoGuess   { text-align: center; font-size; 33px; color: rgba(255, 0,111,1) }
+.guess, .theWord, section    { display: flex; justify-content: space-around;  }
+section                      { display: flex; justify-content: space-around;  }
+section div                  {                                             border-bottom: solid black 2px; }
