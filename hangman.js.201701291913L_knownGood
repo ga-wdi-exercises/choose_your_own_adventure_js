@@ -26,10 +26,10 @@ function vannaWhite() {
   // dom = $("#playerOnesWord");
   // dom = ('#playerOnesWord');
   for (i = 0; i < word.length; i++) {
-    letter = word[i];
+    var letter = word[i];
     console.log('letter:' + letter);
     console.log('div + i: ' + 'div' + i);
-    div = $('<div id="div' + i + ' class="guess" style="color: white;">  ' + letter + '  </div>'); //console.log('were on div: ' + i);
+    var div = $('<div id="div' + i + ' class="guess" >  ' + letter + '  </div>'); //console.log('were on div: ' + i);
     $('main').append(div);
   }
 }

@@ -1,0 +1,59 @@
+$(document).ready(function() {
+  console.log("Hangman Game");
+});
+
+var btnEnterYerWord =           $("#btnEnterYerWord");
+var textInputPlayerOnesWord =   $("#textInputPlayerOnesWord");
+var playerOnesWordInput;
+var playerOnesWordSplitIntoArray;
+var btnPlayerTwosGuess =        $("#btnPlayerTwosGuess");
+var textInputPlayerTwosGuess =  $("#textInputPlayerTwosGuess");
+
+btnEnterYerWord.on('click', function (event) {
+  event.preventDefault();
+                              console.log("in click handler btnEnterYerWord");
+                              console.log(textInputPlayerOnesWord.val());
+  playerOnesWordInput = textInputPlayerOnesWord.val();
+                              console.log("heres playerOnesWord:" + playerOnesWordInput);
+  // playerOnesWordSplitIntoArray = playerOnesWordInput.split(/(?!$)/);     //this works: //"overpopulation".split(/(?!$)/)
+  playerOnesWordSplitIntoArray = playerOnesWordInput.split('');     //this works: //"overpopulation".split(/(?!$)/)
+                              console.log("heres playerOnesWordSplitIntoArray:" + playerOnesWordSplitIntoArray);
+  fillOutVannaWhitesWall();
+});
+
+function fillOutVannaWhitesWall()                     { console.log('filling in Vanna');
+// playerOnesWordCSSSelector = $("#playerOnesWord");
+playerOnesWordCSSSelector = ('#playerOnesWord');
+  for (i=0; i < playerOnesWordSplitIntoArray.length; i++) {
+    var thisLetter = playerOnesWordSplitIntoArray[i];       console.log('thisLetter:' + thisLetter);
+                              console.log('div + i: ' + div + i);
+    var div = $('<div id="div' + i + ' class="aLetter" >  ' + thisLetter + '  </div>');    //console.log('were on div: ' + i);
+    playerOnesWordCSSSelector.append(div);
+  }
+}
+
+
+btnPlayerTwosGuess.on('click', function (event) {
+  event.preventDefault();
+                              console.log(textInputPlayerTwosGuess.val());
+  playerTwosGuess = textInputPlayerTwosGuess.val();
+  comparo();
+});
+
+function comparo() {                                //console.log('filling in Vanna');
+  //^^ dont use /////// maybe... addClass('playerTwosGuess')//////////////
+  for (i=0; i < playerOnesWordSplitIntoArray.length; i++){
+    console.log('playerTwosGuess: ' + playerTwosGuess);
+                              console.log( 'thisWord: ' + playerOnesWordInput);
+                              console.log( 'thisGuess:' + playerTwosGuess);
+
+    if ($.inArray(playerTwosGuess, playerOnesWordSplitIntoArray) !== -1){
+                              console.log( 'thisGuess:   ' + playerTwosGuess + '   is in thisWord:  ' + playerOnesWordInput);
+      $('.guess').append('+');
+    }
+    else {
+                              console.log( 'suckah' );
+    }
+
+  }
+}

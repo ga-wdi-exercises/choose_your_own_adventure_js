@@ -4,40 +4,35 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <title> hangman; js</title>
+  <title> hangman.js</title>
 </head>
 
 <body>
   <h1>hangman</h1>
   <h2>all rise and bow fer yer hanging judge</h2>
-  <!-- ENTER THE WORD -->
+                  <!-- ENTER THE WORD -->
   <div class="controls">
-    <form id="form">
-      <input type="text" id="textInputPlayerOnesWord"> </input>
-      <button id="btnEnterYerWord"> Player 1:  Enter yer word </button>
-    </form>
-    <!-- WARN PLAYERTWO -->
-    <div class="warning">
-      <p>Player2:<br> Gird yer loins ... <br> a hard rains a-gonna fall if you play this wrong </p>
-    </div>
+      <form id="form">
+        <input type="password" id="boxWord" > </input>
+                  <!--THIS type-"password" CLAUSE PUTS DOTS INSTEAD OF LETTERS, MASKS THE WORD, YOU CAN HOWEVER SEE THE WORD WITH console.log OUTPUT IN CHROME DEVELOPER CONSOLE  </-->
+        <button id="btnWord"> Player 1:  Enter yer word </button>
+      </form>
+      <div class="warning">
+        <p>Player2:<br> Gird yer loins ... <br> a hard rains a-gonna fall if you play this wrong </p>
+      </div>
   </div>
 
-  </div>
   <div class="controls">
     <form id="form">
-      <input type="text" id="textInputPlayerTwosGuess"> </input>
-      <button id="btnPlayerTwosGuess"> Player 2:  Take yer lame guess </button>
+      <input type="text" id="boxGuess" maxlength="1" style="width:11px"> </input>
+      <button id="btnGuess"> Player 2:  Take yer lame guess <br> one char at a time </button>
     </form>
+  </div>
 
-    <section class="theWord">
-    </section>
-
-    <!-- <section id="playerTwosGuess" style="display: flex; justify-content: space-around;"> -->
-      <section class="guess" ">
-      </section>
-
-      <footer>
-      </footer>
+                  <!-- <section></section> -->
+                  <!-- OUR hangman.js APPENDS DIVS INTO THE <main> SECTION -->
+      <main></main>
+      <footer></footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="hangman.js"></script>
 </body>

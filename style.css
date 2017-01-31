@@ -1,17 +1,33 @@
-@import url(http://fonts.googleapis.com/css?family=Monoton);
-
-
-
+/*201701302040L   EL LUNES   GIRO*/
 /*.square   { float: left; width: 10px; height: 10px; background: #E7E5DB; margin: 0; }*/
 
+@import url(http://fonts.googleapis.com/css?family=Monoton);
 
-h1 { font-family: Monoton; font-size: 44px; text-align: center; }
-h2 { font-family: Monoton; font-size: 33px; text-align: center; color: rgba(255,0,0,.5) }
-h3 { font-family: Monoton; font-size: 22px; text-align: center; color: rgba(255,0,0,.5) }
+h1 { font-family: Monoton;  font-size: 44px;  text-align: center;                                    }
+h2 { font-family: Monoton;  font-size: 33px;  text-align: center;  color: rgba(255,0,0,.5)           }
+h3 { font-family: Monoton;  font-size: 22px;  text-align: center;  color: rgba(255,0,0,.5)           }
 
-.controls                    { text-align: center; }
-.warning                     { text-align: center; color: rgba(0,0,255,.5)   }
-.aLetter, #playersTwoGuess   { text-align: center; font-size; 33px; color: rgba(255, 0,111,1) }
-.guess, .theWord, section    { display: flex; justify-content: space-around;  }
-section                      { display: flex; justify-content: space-around;  }
-section div                  {                                             border-bottom: solid black 2px; }
+.controls  {                                  text-align: center;                                    }
+.letter    {                font-size; 33px;  text-align: center;  color: rgba(255, 0,111,1)         }
+.word      {                font-size; 33px;  text-align: center;  color: rgba(255, 0,111,1)         }
+
+                        /*FLEXYBOXY STUFFZ:*/
+main div {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid black 2px;
+}
+
+.guess {
+  display: flex;
+  justify-content: space-around;
+}
+                      /*THIS IS THE FULL ENCHILADA, ALL ARGS, NOW LETS SEE IF WE CAN DPLIT*/
+/*main               { display: flex; align-content: auto; width: 50%; justify-content: space-around; align-items: center;margin:auto; }*/
+                      /*TO LIMIT THE WIDTH AND NOT HAVE THE flexbox SPRAWL ALL WIDE OVER THE SCREEN HAVE TO HAVE margin:auto; AND width: 50% */
+                      /*NOW I KNOW THAT CSS STYLE LINES ARE ADDITIVE, NOT REPLACE THE ONE ABOVE*/
+main               { display: flex; align-content: auto; justify-content: space-around;                         }
+main               {                                                                   margin:auto; width: 50%; }
+/*main               { display: flex; justify-content: space-around; align-items: center;margin:auto; }*/
+/*main               { display: flex; justify-content: space-around; width: auto; margin:auto; }*/
+/*main               { display: flex; justify-content: space-around; width: 60%; padding-right: 11px; padding-left: 11px; margin-left: 11px; margin-right: 11px; }*/
