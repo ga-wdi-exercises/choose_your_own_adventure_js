@@ -3,7 +3,7 @@
 
 // "Welcome to High School! What's your name?"
 // Prompt Input Name
-var name = prompt("Welcome to High School! What's your name?").toLowerCase();
+var name = prompt("Welcome to High School! What's your name?");
 // Hi + name + ! Here's a welcoming gift *hands you a 10 pack of gum*
 
 // var input1 = ['straight','right','left','exit'];
@@ -14,7 +14,7 @@ var direction = prompt("Hi" + " " + name + "! Here's a welcoming gift *hands you
 switch(direction) {
   // Straight
     case 'straight':
-    // You run into a teacher who thinks you're tardy and is very upset. Do you 1: offer them some gum or 2: explain your way out?
+    // You run into a teacher who thinks you're skipping and is very upset. Do you 1: offer them some gum or 2: explain your way out?
         var straight = prompt("You run into a teacher who thinks you're tardy and is very upset. Do you 1: offer them some gum or 2: explain your way out?").toString();
         // User input 1: Offer a piece of gum so they get off your case
         if (straight === '1') {
@@ -34,8 +34,31 @@ switch(direction) {
         }
         // User input 2: Don't give them a piece. You only have 9 left!
         else {
-          alert("'You're a jerk' the someone breathes hot stinky breath in your face, you pass out from the toxins and they steal your entire pack. GAME OVER!")
+          alert("'You're a jerk' the someone breathes hot stinky breath in your face, you pass out from the toxins and they steal your entire pack. GAME OVER!");
         }
+        break;
+    case 'right':
+      var right = prompt("Your crush is walking towards you. They're wearing a t-shirt that says I HEART GUM. Do you want to 1: Offer them your entire pack or 2: Offer them a piece?");
+      //User input 1: Your crush really appreciates it... but you have no more gum left so
+      if (right === '1') {
+        alert("Your crush really appreciates it... but you have no more gum left so... GAME OVER!");
+      }
+      // User input 2: Your crush really appreciates it but resents you for not sharing the rest.
+      else {
+        alert("Your crush really appreciates it but resents you for not sharing the rest. Oh well, YOU WIN!");
+      }
+      break;
+    case 'exit':
+      var exit = prompt("Now that you're playing hookie, your gum is pretty much safe. You've go two options of where to go: 7-11 or the park?");
+      // 7-11: Distraught and freshly out of gum, the sales clerk assumes you stole their last piece and takes it from you.
+      if (exit == '7-11') {
+        alert("Distraught and freshly out of gum, the sales clerk assumes you stole their last piece and takes it from you. GAME OVER!");
+      }
+      // Park: It's a great day outside! You eat a piece of gum and enjoy the sun.
+      else if (exit == 'park') {
+        alert("It's a great day outside! You eat a piece of gum and enjoy the sun.");
+      }
+      break;
     default:
         prompt("No info")
 }
@@ -46,7 +69,7 @@ switch(direction) {
       // Game over!!
     // 2: Your crush really appreciates it but resents you for not sharing the rest.
 // Exit
-  // Now that you're playing hookie, your gum is pretty much safe. You've go two options of where to go: 7-11 or the park?
+  // Now that you're playing hookie, your gum is pretty much safe. You've go two options of where to go: 7-11 or Park?
     // 7-11: Distraught and freshly out of gum, the sales clerk assumes you stole their last piece and takes it from you.
       // Game over!!
     // The Park: It's a great day outside! You eat a piece of gum and enjoy the sun.
