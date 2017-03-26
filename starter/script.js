@@ -27,14 +27,14 @@ switch(direction) {
         break;
   // Left
     case 'left':
-        var left = prompt("You take the long way to class. You're feeling a little peckish from the walk so you eat a piece of gum. Someone sees it and asks for a piece. Do you 1: oblige or 2: refuse?").toString();
+        var left = prompt("You take the long way to class. Your mouth feels dry so you take out a piece of gum. Someone sees the pack and asks for a piece. Do you 1: give them some or 2: refuse?").toString();
         // User input 1: Sure, I still have 9 pieces left!
         if (left === '1') {
-          alert("'Aww thanks!' you catch a whiff of their horrifying breath and your noble act lifts your mood for the entire day. YOU WIN!");
+          alert("'Aww thanks!' they say. You catch a whiff of their horrifying breath and you feel like you did them a service. YOU WIN!");
         }
         // User input 2: Don't give them a piece. You only have 9 left!
         else {
-          alert("'You're a jerk' the someone breathes hot stinky breath in your face, you pass out from the toxins and they steal your entire pack. GAME OVER!");
+          alert("'You're a jerk!' they say. They then breathe their hot stinky breath in your face, and after you pass out from the toxins and they steal your entire pack. GAME OVER!");
         }
         break;
     case 'right':
@@ -49,27 +49,18 @@ switch(direction) {
       }
       break;
     case 'exit':
-      var exit = prompt("Now that you're playing hookie, your gum is pretty much safe. You've go two options of where to go: 7-11 or the park?");
+      var exit = prompt("Now that you're playing hookie, your gum is pretty much safe. You've got two options of where to go: 7-11 or the park?");
       // 7-11: Distraught and freshly out of gum, the sales clerk assumes you stole their last piece and takes it from you.
       if (exit == '7-11') {
-        alert("Distraught and freshly out of gum, the sales clerk assumes you stole their last piece and takes it from you. GAME OVER!");
+        alert("Distraught and freshly out of gum, the sales clerk assumes you stole their last pack and takes it from you. GAME OVER!");
       }
       // Park: It's a great day outside! You eat a piece of gum and enjoy the sun.
       else if (exit == 'park') {
-        alert("It's a great day outside! You eat a piece of gum and enjoy the sun.");
+        alert("It's a great day outside! You eat a piece of gum and enjoy the sun. YOU WIN!");
       }
       break;
     default:
         prompt("No info")
 }
 
-// Right
-  // Your crush is walking towards you. They're wearing a t-shirt that says I HEART GUM. Do you want to 1: Offer them your entire pack or 2: Offer them a piece?
-    // 1: Your crush really appreciates it... but you have no more gum left so
-      // Game over!!
-    // 2: Your crush really appreciates it but resents you for not sharing the rest.
-// Exit
-  // Now that you're playing hookie, your gum is pretty much safe. You've go two options of where to go: 7-11 or Park?
-    // 7-11: Distraught and freshly out of gum, the sales clerk assumes you stole their last piece and takes it from you.
-      // Game over!!
-    // The Park: It's a great day outside! You eat a piece of gum and enjoy the sun.
+//Still needs a loop
