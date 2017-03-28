@@ -52,7 +52,9 @@ if (userResponse <= 25 && userResponse > 0) {
     case 7:
     case 13:
     case 18:
-      alert('You find that the TV channel is just static.  Just as you are about the change channels, some words start to form.  It says "Get a hobby." Well, you are freaked out. So you take it\'s advice and join a pilates class.');
+      userResponse = prompt('You find that the TV channel is just static.  Just as you are about the change channels, some words start to form.  It says "Get a hobby." Well, you are freaked out. So you take it\'s advice and pick a hobby. What do you want to do?');
+
+      alert("You start " + userResponse + ".");
       break;
     case 10:
       userResponse = prompt('It\'s your favorite cooking show!  You watch for awhile and realize the you are now hungry.  You call up your friends and they say they want to go to McDonalds.  You say "(y)es" or "(n)o?" (y/n)');
@@ -64,9 +66,16 @@ if (userResponse <= 25 && userResponse > 0) {
       }
       break;
     case 22:
-      alert("Your favorite movie is showing. You can't believe your luck.  You watch the movie!");
+      userResponse = prompt("Your favorite movie is showing. You can't believe your luck.  You watch the movie! Turn up the volume! (0 - 20)");
+
+      if (parseInt(userResponse) > 0 && parseInt(userResponse) <= 20 ) {
+        alert("You turned the volume up to " + userResponse + '.');
+      } else {
+        alert("You broke the volume knob.")
+      }
       break;
     default:
+      alert("You didn't enter one of the choices.")
 
   }
 
