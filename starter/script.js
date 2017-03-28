@@ -43,12 +43,44 @@ var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winn
 				alert("Sorry didn't understand your answer.  Please enter Y or N.");
 			}
 
-}
+	}
 
 	} else if (winner == 2) {
-		var room = prompt("Hello Veruca Salt.  Would you like to wander around in the Edible Outdoorsy Space or move on to the Inventions Room?.  Enter outdoors or inventions.");
+		var room = prompt("Hello Veruca Salt.  Would you like to wander around in the Edible Outdoorsy Space or move on to the Egg Room?.  Enter outdoors or eggRoom.");
 			if (room == "outdoors") {
 				var taste4 = prompt("Do you take a sip from a ginormous flower or snack on railing?  Enter flower or railing.");
+					if (taste4 == "flower") {
+						var egg = prompt("It\'s delicious.  Mr. Wonka whisks your group away to the room where gold eggs are being laid.  Do you try to steal one of the eggs?  Enter Y or N.");
+							if (egg == "Y") {
+								alert("You fall down the egg chute, having been deemed a 'bad egg'.");
+							} else if (egg == "N") {
+								alert("That's too bad.  You look up the going price for golden eggs and it's super high.");
+							}
+					} else if (taste4 == "railing") {
+						var wallpaper = prompt("The railing tastes surprisingly like Jolly Ranchers.  Next you enter a room with edible wallpaper.  Do you lick the wall?  Enter Y or N.");
+							if (wallpaper == "Y") {
+								alert("The snozzberries taste like snozzberries.");
+							} else if (wallpaper == "N") {
+								alert("Good.  That\'s just asking to get sick.");
+							}
+					}
+			} else if (room == "eggRoom") {
+				var transportation = prompt("Ok there are two ways to get there.  You can take a scary gondola, or walk.  Enter gondola or walk.");
+					if (transportation == "gondola") {
+						var steal = prompt("The ride is the stuff of nightmares.  But you quickly get to a room where hens are laying golden eggs.  Do you collaborate with Violet to steal the egg, or do you do a solo dance number?  Enter collab or dance.");
+							if (steal == "collab") {
+								alert("Success.  One of you distracts the crowd while the other sneaks an egg out.  Congrats.");
+							} else if (steal == "dance") {
+								alert("You sing about how you want the world.  You want the whole world.  Then you fall down the egg chute.");
+							}
+					} else if (transportation == "walk") {
+						var steal2 = prompt("The walk is long but you pass by the room where the golden eggs are stored.  Do you try to take one of the eggs?  Enter Y or N.");
+							if (steal2 == "Y") {
+								alert("Alarms immediately sound and you are kicked out of the factory.");
+							} else if (steal2 == "N") {
+								alert("Good thing you didn't.  They're watching on the security cams.");
+							}
+					}
 			}
 
 
