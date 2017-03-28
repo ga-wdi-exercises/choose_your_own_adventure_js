@@ -10,7 +10,6 @@ var gameStart = function() {
 
   while(hasAnswered == false) {
 
-
   var direction = prompt("Hi" + " " + name + "! Time for a long day of classes. Which direction will you go? Straight, Left, Right, or Exit?").toLowerCase();
 
   switch(direction) {
@@ -78,8 +77,6 @@ var gameStart = function() {
       default:
         alert('please enter a valid answer')
         break;
-        // add new loop and function that starts the game over if you put a bad set of characters
-        // var again = prompt("That wasn't the answer I was looking for. Try typing in 'straight', 'left', 'right', or 'exit'");
     }
   }
 }
@@ -95,4 +92,3 @@ var gameStart = function() {
     if (playGame === "yes" || playGame === "y") {
       gameStart();
     }
-//Still needs a loop
