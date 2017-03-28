@@ -17,10 +17,10 @@ if (userResponse <= 25 && userResponse > 0) {
 
         if (userResponse.toLowerCase() === 'b') {
           userResponse = null;
-          userResponse = prompt('You wake up in your bed. It was all a dream. You look at your alarm clock and realize its time to get up for work.'
+          userResponse = prompt('You wake up in your bed. It was all a dream. You look at your alarm clock and realize its time to get up for work.');
         } else if (userResponse.toLowerCase() === 'r')
           userResponse = null;
-          userResponse = prompt('You take the red pill. You realize that is just a Jolly Rancher.  Neo laughs and you follow him into the matrix.'
+          userResponse = prompt('You take the red pill. You realize that is just a Jolly Rancher.  Neo laughs and you follow him into the matrix.');
       } else {
         userResponse = prompt("The keypad's screen says \"You have entered in the wrong password, try again.\"");
       }
@@ -35,7 +35,7 @@ if (userResponse <= 25 && userResponse > 0) {
 
     } else if (userResponse === 'y'){
       userResponse = null;
-      alert("You start yelling and out of no where you hear someone yell \"Cuttttt!\" You just upset the director of the television show that you star in.  Apparently that was not in the script.");
+      alert("You start yelling and out of no where you hear someone yell \"Cuttttt!\" You just upset the director of the television show that you star in.  Apparently that was not in the script. Your work day just got longer.");
 
     }
 
@@ -48,58 +48,26 @@ if (userResponse <= 25 && userResponse > 0) {
   userResponse = null;
   userResponse = prompt('You are watching TV.  Your receiver only can pick up 5 channels, what channel do you choose? (7/10/13/18/22)');
 
-  switch (userResponse) {
+  switch (parseInt(userResponse)) {
     case 7:
     case 13:
     case 18:
-      userResponse = prompt('You find that the TV channel is just static.  Just as you are about the change channels, ');
-
+      alert('You find that the TV channel is just static.  Just as you are about the change channels, some words start to form.  It says "Get a hobby." Well, you are freaked out. So you take it\'s advice and join a pilates class.');
       break;
     case 10:
-      //IDEA
+      userResponse = prompt('It\'s your favorite cooking show!  You watch for awhile and realize the you are now hungry.  You call up your friends and they say they want to go to McDonalds.  You say "(y)es" or "(n)o?" (y/n)');
+
+      if (userResponse === 'y') {
+        alert("You leave to meet your friends at McDonalds");
+      } else if (userResponse === 'n') {
+        alert("You decide that you need to watch your figure.  So you sit this one out and end up taking a nap.");
+      }
       break;
     case 22:
-
+      alert("Your favorite movie is showing. You can't believe your luck.  You watch the movie!");
       break;
     default:
 
   }
 
-
 }
-
-// } else if (userResponse <= 75 && userResponse > 50) {
-//   // Dimly Lit Tunnel
-//
-//   userResponse = prompt("You find yourself in a dimly lit tunnel. You hear some rustling in the dark.  Do you (r)un away or do you (i)nvestigate the sound? (r/i)");
-//   if (userResponse === "r") {
-//   	userResponse = prompt('You turn around and run. You find you have reached a dead end.  Do you (h)ide amongst some rubble, (c)lose your eyes and pretend nothing is there, or do you (p)repare to fight? (h/c/p)');
-//   	switch (userResponse) {
-//   		case 'h':
-//   		case 'c':
-//   			userResponse = prompt('You find that it was just a scurrying rat, so you continue on.. As you walk some more you see two paths, one path leads (l)eft and seems to go deeper and the other path leads (r)ight. Choose. (l/r)');
-//   			break;
-//   		case 'p':
-//   			// TODO: Prepared to fight you ready your fists, only to find it was a scurying rat.  You laugh and continue on. As you walk some more you see two paths, one path leads (l)eft and seems to go deeper and the other path leads (r)ight. Choose. (l/r)
-//   			if (l === true) {
-//   				// TODO: You follow the tunnel. You find that your observations where wrong.  You see light, you continue to follow it and you reach the exit.  CONGRATULATIONS! You excaped the tunnel.  You are going to the pub, what are you going to drink? (Enter drink name)
-//   				// TODO: You had a {DRINK} and laughed with all your buddies about the fabled rat.
-//   			} else if (r === true) {
-//   				// TODO: You continue right to find that there is a blocked path with rocks.  Beside that path, there is a deep bottomless whole. How do you cross the rubble, do you (c)lear the path, c(l)imb over the rubble, or do you (j)ump the rubble? (c/l/j)
-//   				if (c) {
-//   					//TODO: You clear the bath pushing the rubble into the hole.  Once the path is clear you continue on. As you move through the tunnel, you can feel air moving.  This a good sign.  You turn
-//   				} else if (l) {
-//
-//           } else if (j) {
-//
-//           }
-//   			}
-//   			break;
-//   		default:
-//   			// TODO: You did not enter the correct response.  Check again.
-//   	} else if (userResponse === "i") {
-//   		userResponse = prompt("You look around and see a small shadow in the corner. As you watch the shadow, you realize that its just a rat. You");
-//   	}
-//   } else {
-//   	userResponse = prompt("Your response is either not a number or it is outside the number range. Enter a number between 1 and 75.");
-//   }
