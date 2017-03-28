@@ -1,16 +1,17 @@
-// put code here!
 var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
+
+while (user == "Martin") {
+  // game goes here
 
   if (user == "Martin") {
   var deal = prompt("YOU THE MAN! Would you like to deal with Brotha Man, Ms. Geri, Pam, Mad Dog No Good, Ricky Fontaine or Varnell Hill? ");
-
-
 
     if (deal == "Brotha Man"){
               var bm = prompt("Brotha Man wants a sandwich? Do you give him a sandwich or kick him out?");
                 switch (bm) {
                   case "sandwich":
                     alert ("BAD IDEA! You'll need more than a sandwich to feed him?");
+                  break;
                   case "kick him out":
                     alert("GOOD IDEA! Brotha Man will eat you out of house and home.");
                    break;
@@ -24,6 +25,7 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                 switch (mg) {
                   case "fight":
                     alert ("BAD IDEA! Ms. Geri is a bar knuckles boxing champ.");
+                  break;
                   case "flight":
                     alert("GOOD IDEA! Ms. Geri would've knocked you out with one punch.");
                   break;
@@ -32,10 +34,11 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                   break; }
 
   } else if (deal == "Pam") {
-              var mg = prompt("Pam just came from the beauty salon and her weave is on point. Do you give her a compliment or inslut?");
+              var mg = prompt("Pam just came from the beauty salon and her weave is on point. Do you give her a compliment or insult?");
                 switch (mg) {
                   case "insult":
                     alert ("BAD IDEA! Pam is ready to snap back with an insult she said: 'Not today Sir Short A Lot, now move before I crush you with my pinky toe!'");
+                  break;
                   case "compliment":
                     alert("GOOD IDEA! Pam says: 'I know I look Short Doggy Dog, now get out of my way!'");
                   break;
@@ -48,6 +51,7 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                 switch (mg) {
                   case "stay":
                     alert ("BAD IDEA! Pam is ready to snap back with an insult she said: 'Not today Sir Short A Lot, now move before I crush you with my pinky toe!'");
+                  break;
                   case "go":
                     alert("GOOD IDEA! Pam says: 'I know I look Short Doggy Dog, now get out of my way!'");
                   break;
@@ -60,6 +64,7 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                 switch (mg) {
                   case "kick butt":
                     alert ("BAD IDEA! His curl activator spashes in your eyes when you knock him out.");
+                  break;
                   case "make peace":
                     alert("GOOD IDEA! He's always been a coward anyway.");
                   break;
@@ -73,6 +78,7 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                 switch (mg) {
                   case "chill":
                     alert ("BAD IDEA! Varnell needs to be taught a lesson .");
+                  break;
                   case "ambush the show":
                     alert("GOOD IDEA! Varnell needs to know that Hollywood talk doesn't fly in Detroit.");
                   break;
@@ -83,3 +89,11 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
     console.log("You must choose Brotha Man, Ms. Geri, Pam, Mad Dog No Good, Ricky Fontaine or Varnell Hill.")
   }
   }
+
+
+  // end game
+  user = prompt("Type Martin to Play Again")
+  if (user == "Martin") { var deal = prompt("YOU THE MAN! Would you like to deal with Brotha Man, Ms. Geri, Pam, Mad Dog No Good, Ricky Fontaine or Varnell Hill? ");
+
+  }
+}
