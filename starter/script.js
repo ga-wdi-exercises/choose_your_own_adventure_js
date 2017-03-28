@@ -40,8 +40,9 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                     alert("GOOD IDEA! Pam says: 'I know I look Short Doggy Dog, now get out of my way!'");
                   break;
                   default:
-                    console.log("You must choose compliment or insult.")
+                  console.log("You must choose compliment or insult.")
                   break; }
+
   } else if (deal == "Mad Dog No Good") {
               var mg = prompt("Mad Dog No Good, just cam home from prison. He went to prison because you testified against him. Do you stay or do you go?");
                 switch (mg) {
@@ -53,18 +54,32 @@ var user = prompt("LET's PLAY MARTIN TV SHOW! Type Martin to start the game" );
                   default:
                     console.log("You must choose stay or go.")
                   break; }
+
   } else if (deal == "Ricky Fontaine") {
-              var mg = prompt("Ricky Fontaine, is at your high school reunion and he's making fun or you. Do you kick butt...?");
+              var mg = prompt("Ricky Fontaine your arch enemy, is at your high school reunion and he's making fun or you. Do you kick butt or make peace?");
                 switch (mg) {
                   case "kick butt":
-                    alert ("BAD IDEA!");
-                  case "kiss my butt":
-                    alert("GOOD IDEA! !'");
+                    alert ("BAD IDEA! His curl activator spashes in your eyes when you knock him out.");
+                  case "make peace":
+                    alert("GOOD IDEA! He's always been a coward anyway.");
                   break;
                   default:
                     console.log("You must choose sandwich or kick butt or kiss my butt.")
                   break; }
+  }
+
+  else if (deal == "Varnell Hill") {
+              var mg = prompt("Varnell Hill said you can be on his show if you come to Hollywood. When you arrive he doesn't keep his word. What do you do 'ambush the show' or 'chill'. ?");
+                switch (mg) {
+                  case "chill":
+                    alert ("BAD IDEA! Varnell needs to be taught a lesson .");
+                  case "ambush the show":
+                    alert("GOOD IDEA! Varnell needs to know that Hollywood talk doesn't fly in Detroit.");
+                  break;
+                  default:
+                    console.log("You must choose sandwich or ambush the show or chill.")
+                  break; }
   } else {
-    console.log("You must choose Brotha Man or Ms. Geri.")
+    console.log("You must choose Brotha Man, Ms. Geri, Pam, Mad Dog No Good, Ricky Fontaine or Varnell Hill.")
   }
   }
