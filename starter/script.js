@@ -1,5 +1,6 @@
 var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winner are you?  Enter 1, 2, 3, 4, or 5");
-	if (winner == 1) {
+switch (parseInt(winner)){
+	case 1:
 		var candy = prompt("Hello Augustus Gloop.  The tour of the factory is about to begin, but you really want to get another candy bar from your bag on the other side of the room.  Do you go get the candy bar?  Enter Y or N.");
 			if (candy == "Y") {
 				var direction = prompt("You get your candy bar, but by the time you turn around, the tour has started without you.  It looks like you can go right or left.  Enter R or L.");
@@ -41,11 +42,11 @@ var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winn
 
 			} else {
 				alert("Sorry didn't understand your answer.  Please enter Y or N.");
-			}
+			}};
 
-	}
+	break;
 
-	} else if (winner == 2) {
+	case 2:
 		var room = prompt("Hello Veruca Salt.  Would you like to wander around in the Edible Outdoorsy Space or move on to the Egg Room?.  Enter outdoors or eggRoom.");
 			if (room == "outdoors") {
 				var taste4 = prompt("Do you take a sip from a ginormous flower or snack on railing?  Enter flower or railing.");
@@ -81,33 +82,28 @@ var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winn
 								alert("Good thing you didn't.  They're watching on the security cams.");
 							}
 					}
-			}
+			};
 
 
+	break;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	} else if (winner == 3) {
+	case 3:
 		alert("Violet Beauregard.");
-	} else if (winner == 4) {
+
+	break;
+
+	case 4:
 		alert("Mike Teavee.");
-	} else if (winner == 5) {
+
+	break;
+
+	case 5:
 		alert("Charlie Bucket.");
-	} else {
-		alert("Sorry you're not on the list.  Make sure you enter the number 1, 2, 3, 4, or 5.");
-	}
+	
+	// break;
+
+	// 	alert("Sorry you're not on the list.  Make sure you enter the number 1, 2, 3, 4, or 5.");
+	
+}
+
+//write a for loop where you set a variable as true at the top.  at the bottom of the loop, have that switch to false to break the boop.
