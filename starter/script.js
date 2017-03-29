@@ -11,12 +11,28 @@ var year = prompt("Hello, " + username +  " Okay, let's select our destination. 
     } else var ninetyfour = prompt("Sorry, I didn't catch that. Where are we going? 1950/1965/1989/1994");
 
 
+//Options for first question for 1950//
 if (fifty === "T") {
 	var trumanOne = prompt("Excellent. President Truman would like to Prep for the meeting. Would you like to discuss domestic or international affairs? (D/I");
 } else if (fifty === "M" ) {
 	var mccarthurOne = prompt("Excellent. the General looks forward to the discussion. Would you like the meeting to take place on sea or on land? (S/L")
 } else {
 	prompt("Sorry, I didn't catch that. Press 'T' if you'd like to have lunch with President Truman. Press  'M' if you'd like to have lunch with Douglas MacArthur.")
+}
+
+
+
+//Options for Truman Question 1
+if (trumanOne === "D") {
+	var trumanD = prompt("Good choice - there is much to be discussed. Would you like to talk about the McCarran Internal Security Act, or the Kefauver Committee? (M/K");
+} else if (trumanOne === "I") {
+	var trumanI = prompt("Good choice - there is much to be discussed. Would you like to discuss the ratification of the North Atlantic Treaty Organization, or the Korean War? (N/K")
+}
+
+if (trumanD === "M") {
+	var mcCarran = prompt("Excellent topic. Please prepare for the discussion by doing some initital background reading here: 'www.wikipedia.org'.");
+} else if (trumanD === "K") {
+	var Kefauver = prompt("Excellent topic. Please prepare for the discussion by doing some initital background reading here: 'www.wikipedia.org'.");
 }
 
 
