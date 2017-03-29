@@ -1,4 +1,4 @@
-var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winner are you?  Enter 1, 2, 3, 4, or 5");
+var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winner are you?  Enter 1, 2, 3, or 4.");
 switch (parseInt(winner)){
 	case 1:
 		var candy = prompt("Hello Augustus Gloop.  The tour of the factory is about to begin, but you really want to get another candy bar from your bag on the other side of the room.  Do you go get the candy bar?  Enter Y or N.");
@@ -107,33 +107,69 @@ switch (parseInt(winner)){
 							}
 					}
 			} else if (transportation2 == "gondola") {
-				var experiment = prompt("You get whisked away to the Inventions Room.  You are intrigued by the Everlasting Gobstopper and the 3-Course-Meal-Gum.  Which do you choose?  Enter E or 3.")
+				var experiment = prompt("You get whisked away to the Inventions Room.  You are intrigued by the Everlasting Gobstopper and the 3-Course-Meal-Gum.  Which do you choose?  Enter E or 3.");
 					if (experiment == "E") {
 						var spit = prompt("The Everlasting Gobstopper tastes nasty.  Do you spit it out?  Enter Y or N.")
 							if (spit == "Y") {
-								alert("You offend the Oompah Loompah inventors in the room.  They worked pretty hard on it.")
+								alert("You offend the Oompah Loompah inventors in the room.  They worked pretty hard on it.");
 							} else if (spit == "N") {
-								alert("The rest of the tour is just pretty uncomfortable for you.")
+								alert("The rest of the tour is just pretty uncomfortable for you.");
 							}
 					} else if (experiment == 3) {
-						var stop = prompt("Within seconds you taste tomato soup and roast beef.  It's delicious.  However Mr. Wonka asks you to spit it out.  Do you?  Enter Y or N.")
+						var stop = prompt("Within seconds you taste tomato soup and roast beef.  It's delicious.  However Mr. Wonka asks you to spit it out.  Do you?  Enter Y or N.");
 							if (stop == "Y") {
-								alert("You avoid further disaster, but your skin does turn and stay a purple hue.")
+								alert("You avoid further disaster, but your skin does turn and stay a purple hue.");
 							} else if (stop == "N") {
-								alert("Your body fills with juice and you get wheeled off by the Oompah Loompahs.")
+								alert("Your body fills with juice and you get wheeled off by the Oompah Loompahs.");
 							}
 					}
 			}
 
 	break;
 
+//there just isnt time right now for Mike Teavee..
+	// case 5:
+	// 	alert("Mike Teavee.");
+
+	// break;
+
 	case 4:
-		alert("Mike Teavee.");a 
-
-	break;
-
-	case 5:
-		alert("Charlie Bucket.");
+		var wander = prompt("Charlie Bucket.  You have your fill of edible rocks and such and now Grandpa Joe suggests that you two wander off on your own.  Do you agree?  Enter Y or N.");
+			if (wander == "Y") {
+				var drink = prompt("You come upon a room with several mysterious looking vials.  Which one do you try?  Enter 1 or 2.");
+					if (drink == 1) {
+						var float = prompt("Your body slowly lifts off the ground and you start floating around the room.  Grandpa Joe suggests burping your way down.  Do you?  Enter Y or N.");
+							if (float == "Y") {
+								alert("Though uncomfortable, the repetitious burping does work and you are able to ground yourself again.");
+							} else if (float == "N") {
+								alert("You continue to float until you get stuck on a blade of the ceiling fan.  You remain there until the Oompah Loompahs come to retrieve you.");
+							}
+					} else if (drink == 2) {
+						var sink = prompt("You start sinking into the ground.  Grandpa Joe suggests trying another vial to see if it will counteract the effects.  Try?  Enter Y or N.");
+							if (sink == "Y") {
+								alert("The potions do appear to equalize each other and you wind up ok.");
+							} else if (sink == "N") {
+								alert("You continue to sink.  Your life flashes before your eyes.  You have some regrets you didn't even know you had.  Then a team of Oompah Loompahs come and fish you out.")
+							}
+					}
+			} else if (wander == "N") {
+				var inventRoom = prompt("Good.  The group moves on to the Inventing Room.  It is here that you see the Everlasting Gobstopper that Mr. Slugworth asked you to steal.  Do you take one?  Enter Y or N.")
+					if (inventRoom == "Y") {
+						var fight = prompt("An alarm immediately sounds and you find yourself surrounded by angry Oompah Loompahs.  What do you do?  Enter fight or flight");
+							if (fight == "fight") {
+								alert("You make an honorable attempt, but you are no match for the Oompah Loompahs.  Your body and pride are hurt as you are removed from the tour.");
+							} else if(fight = "flight") {
+								alert("You start to run but those Oompah Loompahs are fast.  They tackle you to the ground and you are escorted off the premises.");
+							}
+					} else if (inventRoom == "N") {
+						var elevator = prompt("Good job!  You're the last remaining kid on the tour and Mr. Wonka offers you control of the Chocolate Factory.  Do you accept?  Enter Y or N.");
+							if (elevator == "Y") {
+								alert("You run the factory for a few years, but then find that the job just isn't really for you.  You start looking into other career options.");
+							} else if (elevator == "N") {
+								alert("It was a hard decision to make, but you ultimately wind up living a well-rounded happy life without the stress of running a chocolate factory.")
+							}
+					}
+			}
 	
 	break;
 
