@@ -1,3 +1,7 @@
+var play = "Y";
+
+while (play == "Y") {
+
 var winner = prompt("Welcome to the chocolate factory.  Which golden ticket winner are you?  Enter 1, 2, 3, or 4.");
 switch (parseInt(winner)){
 	case 1:
@@ -7,17 +11,18 @@ switch (parseInt(winner)){
 					if (direction == "R") {
 						var taste = prompt("Back with the group!  It looks like you can eat everything in this room.  Do you try tasting the grass or the chocolate river?  Enter grass or river");
 							if (taste == "grass") {
-								alert("The grass tastes like pointy cotton candy.");
+								play = prompt ("The grass tastes like pointy cotton candy.  Play again?  Enter Y or N.");
+								
 							} else if (taste == "river") {
-								alert("You fall into the chocolate river, but you calmly climb out.");
+								play = prompt("You fall into the chocolate river, but you calmly climb out.  Play again?  Enter Y or N.");
 							}
 
 					} else if (direction == "L") {
 						var dance = prompt("You apparently went the wrong way, and come across a group of Oompah Loompahs practicing their newest dance number.  They ask if you would like to participate.  Enter Y or N.");
 							if (dance == "Y") {
-								alert("Your dance moves astound them, and they invite you to permanently join their troupe.");
+								play = prompt("Your dance moves astound them, and they invite you to permanently join their troupe.  Play again?  Enter Y or N.");
 							} else if (dance == "N") {
-								alert("You offend them and they escort you out of the building.")
+								play = prompt("You offend them and they escort you out of the building.  Play again?  Enter Y or N.")
 							}
 					}
 
@@ -28,16 +33,16 @@ switch (parseInt(winner)){
 					if (offer == "Y") {
 						var taste2 = prompt("Charlie becomes your buddy and suggests that you try the edible trees or chocoloate river.  Which one do you try?  Enter trees or river.");
 							if (taste2 == "trees") {
-								alert("The bark tastes like dark chocolate and the leaves taste like white chocolate.");
+								play = prompt("The bark tastes like dark chocolate and the leaves taste like white chocolate.  Play again?  Enter Y or N.");
 							} else if(taste2 == "river") {
-								alert("You clumsily fall into the chocolate river.  Charlie organizes a human chain and they help get you out.");
+								play = prompt("You clumsily fall into the chocolate river.  Charlie organizes a human chain and they help get you out.  Play again?  Enter Y or N.");
 							}
 					} else if (offer == "N") {
 						var taste3 = prompt("And why should you?  Time to taste some edible rocks or the chocolate river.  Enter rocks or river.");
 							if (taste3 == "rocks") {
-								alert("The rocks takes alright but they chip your front tooth.");
+								play = prompt("The rocks takes alright but they chip your front tooth.  Play again?  Enter Y or N.");
 							} else if(taste3 == "river") {
-								alert("You fall into the chocolate river, and your body gets sucked up by a giant tube.");
+								play = prompt("You fall into the chocolate river, and your body gets sucked up by a giant tube.  Play again?  Enter Y or N.");
 							}
 
 			} else {
@@ -53,16 +58,16 @@ switch (parseInt(winner)){
 					if (taste4 == "flower") {
 						var egg = prompt("It\'s delicious.  Mr. Wonka whisks your group away to the room where gold eggs are being laid.  Do you try to steal one of the eggs?  Enter Y or N.");
 							if (egg == "Y") {
-								alert("You fall down the egg chute, having been deemed a 'bad egg'.");
+								play = prompt("You fall down the egg chute, having been deemed a 'bad egg'.  Play again?  Enter Y or N.");
 							} else if (egg == "N") {
-								alert("That's too bad.  You look up the going price for golden eggs and it's super high.");
+								play = prompt("That's too bad.  You look up the going price for golden eggs and it's super high.  Play again?  Enter Y or N.");
 							}
 					} else if (taste4 == "railing") {
 						var wallpaper = prompt("The railing tastes surprisingly like Jolly Ranchers.  Next you enter a room with edible wallpaper.  Do you lick the wall?  Enter Y or N.");
 							if (wallpaper == "Y") {
-								alert("The snozzberries taste like snozzberries.");
+								play = prompt("The snozzberries taste like snozzberries.  Play again?  Enter Y or N.");
 							} else if (wallpaper == "N") {
-								alert("Good.  That\'s just asking to get sick.");
+								play = prompt("Good.  That\'s just asking to get sick.  Play again?  Enter Y or N.");
 							}
 					}
 			} else if (room == "eggRoom") {
@@ -70,16 +75,16 @@ switch (parseInt(winner)){
 					if (transportation == "gondola") {
 						var steal = prompt("The ride is the stuff of nightmares.  But you quickly get to a room where hens are laying golden eggs.  Do you collaborate with Violet to steal the egg, or do you do a solo dance number?  Enter collab or dance.");
 							if (steal == "collab") {
-								alert("Success.  One of you distracts the crowd while the other sneaks an egg out.  Congrats.");
+								play = prompt("Success.  One of you distracts the crowd while the other sneaks an egg out.  Congrats.  Play again?  Enter Y or N.");
 							} else if (steal == "dance") {
-								alert("You sing about how you want the world.  You want the whole world.  Then you fall down the egg chute.");
+								play = prompt("You sing about how you want the world.  You want the whole world.  Then you fall down the egg chute.  Play again?  Enter Y or N.");
 							}
 					} else if (transportation == "walk") {
 						var steal2 = prompt("The walk is long but you pass by the room where the golden eggs are stored.  Do you try to take one of the eggs?  Enter Y or N.");
 							if (steal2 == "Y") {
-								alert("Alarms immediately sound and you are kicked out of the factory.");
+								play = prompt("Alarms immediately sound and you are kicked out of the factory.  Play again?  Enter Y or N.");
 							} else if (steal2 == "N") {
-								alert("Good thing you didn't.  They're watching on the security cams.");
+								play = prompt("Good thing you didn't.  They're watching on the security cams.  Play again?  Enter Y or N.");
 							}
 					}
 			};
@@ -94,16 +99,16 @@ switch (parseInt(winner)){
 					if (direction == "right") {
 						var chew = prompt("You run into Veruca Salt, who also decided to walk.  She makes it clear she finds your gum-chewing to be annoying.  Do you stop chewing?  Enter Y or N.");
 							if (chew == "Y") {
-								alert("You lose your world record status for Longest Continuous Chew Time.  sorry.");
+								play = prompt("You lose your world record status for Longest Continuous Chew Time.  Sorry.  Play again?  Enter Y or N.");
 							} else if (chew == "N") {
-								alert("You start choking on your gum.  An Oompah Loompah rushes to your aid.");
+								play = prompt("You start choking on your gum.  An Oompah Loompah rushes to your aid.  Play again?  Enter Y or N.");
 							}
 					} else if (direction == "left") {
 						var report = prompt("You pass by an Oompah Loompah who is sleeping on the job.  Do you report him?  Enter Y or N.")
 							if (report == "Y") {
-								alert("He gets fired, and you have mixed feelings about that.");
+								play = prompt("He gets fired, and you have mixed feelings about that.  Play again?  Enter Y or N.");
 							} else if (report == "N") {
-								alert("The Oompah Loompah was in charge of quality control and a bad batch of candy gets shipped :(.")
+								play = prompt("The Oompah Loompah was in charge of quality control and a bad batch of candy gets shipped :(.  Play again?  Enter Y or N.")
 							}
 					}
 			} else if (transportation2 == "gondola") {
@@ -111,16 +116,16 @@ switch (parseInt(winner)){
 					if (experiment == "E") {
 						var spit = prompt("The Everlasting Gobstopper tastes nasty.  Do you spit it out?  Enter Y or N.")
 							if (spit == "Y") {
-								alert("You offend the Oompah Loompah inventors in the room.  They worked pretty hard on it.");
+								play = prompt("You offend the Oompah Loompah inventors in the room.  They worked pretty hard on it.  Play again?  Enter Y or N.");
 							} else if (spit == "N") {
-								alert("The rest of the tour is just pretty uncomfortable for you.");
+								play = prompt("The rest of the tour is just pretty uncomfortable for you.  Play again?  Enter Y or N.");
 							}
 					} else if (experiment == 3) {
 						var stop = prompt("Within seconds you taste tomato soup and roast beef.  It's delicious.  However Mr. Wonka asks you to spit it out.  Do you?  Enter Y or N.");
 							if (stop == "Y") {
-								alert("You avoid further disaster, but your skin does turn and stay a purple hue.");
+								play = prompt("You avoid further disaster, but your skin does turn and stay a purple hue.  Play again?  Enter Y or N.");
 							} else if (stop == "N") {
-								alert("Your body fills with juice and you get wheeled off by the Oompah Loompahs.");
+								play = prompt("Your body fills with juice and you get wheeled off by the Oompah Loompahs.  Play again?  Enter Y or N.");
 							}
 					}
 			}
@@ -177,4 +182,4 @@ switch (parseInt(winner)){
 	
 }
 
-//write a for loop where you set a variable as true at the top.  at the bottom of the loop, have that switch to false to break the boop.
+}
