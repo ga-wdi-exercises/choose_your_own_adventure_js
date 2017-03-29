@@ -88,21 +88,56 @@ switch (parseInt(winner)){
 	break;
 
 	case 3:
-		alert("Violet Beauregard.");
+		var transportation2 = prompt("Hello Violet Beauregard.  After eating plenty of trees, you move on to the next room.  Do you take the creepy-looking gondola or walk?  Enter gondola or walk. ");
+			if (transportation2 == "walk") {
+				var direction = prompt("You take the scenic route.  Enter right or left.");
+					if (direction == "right") {
+						var chew = prompt("You run into Veruca Salt, who also decided to walk.  She makes it clear she finds your gum-chewing to be annoying.  Do you stop chewing?  Enter Y or N.");
+							if (chew == "Y") {
+								alert("You lose your world record status for Longest Continuous Chew Time.  sorry.");
+							} else if (chew == "N") {
+								alert("You start choking on your gum.  An Oompah Loompah rushes to your aid.");
+							}
+					} else if (direction == "left") {
+						var report = prompt("You pass by an Oompah Loompah who is sleeping on the job.  Do you report him?  Enter Y or N.")
+							if (report == "Y") {
+								alert("He gets fired, and you have mixed feelings about that.");
+							} else if (report == "N") {
+								alert("The Oompah Loompah was in charge of quality control and a bad batch of candy gets shipped :(.")
+							}
+					}
+			} else if (transportation2 == "gondola") {
+				var experiment = prompt("You get whisked away to the Inventions Room.  You are intrigued by the Everlasting Gobstopper and the 3-Course-Meal-Gum.  Which do you choose?  Enter E or 3.")
+					if (experiment == "E") {
+						var spit = prompt("The Everlasting Gobstopper tastes nasty.  Do you spit it out?  Enter Y or N.")
+							if (spit == "Y") {
+								alert("You offend the Oompah Loompah inventors in the room.  They worked pretty hard on it.")
+							} else if (spit == "N") {
+								alert("The rest of the tour is just pretty uncomfortable for you.")
+							}
+					} else if (experiment == 3) {
+						var stop = prompt("Within seconds you taste tomato soup and roast beef.  It's delicious.  However Mr. Wonka asks you to spit it out.  Do you?  Enter Y or N.")
+							if (stop == "Y") {
+								alert("You avoid further disaster, but your skin does turn and stay a purple hue.")
+							} else if (stop == "N") {
+								alert("Your body fills with juice and you get wheeled off by the Oompah Loompahs.")
+							}
+					}
+			}
 
 	break;
 
 	case 4:
-		alert("Mike Teavee.");
+		alert("Mike Teavee.");a 
 
 	break;
 
 	case 5:
 		alert("Charlie Bucket.");
 	
-	// break;
+	break;
 
-	// 	alert("Sorry you're not on the list.  Make sure you enter the number 1, 2, 3, 4, or 5.");
+		// alert("Sorry you're not on the list.  Make sure you enter the number 1, 2, 3, 4, or 5.");
 	
 }
 
