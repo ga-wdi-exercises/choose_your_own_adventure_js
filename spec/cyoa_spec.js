@@ -21,3 +21,10 @@ describe("Solution", function(){
     expect(matches.length).toBeGreaterThan(0)
   })
 })
+var x = document.createElement("INPUT");
+x.setAttribute("type", "text");
+
+var message;
+message = "x is equal to ";
+document.write (message);
+console.log("Hey, help yourself to anything in the fridge, just don't eat the last slice. Got it? (y/n)");
