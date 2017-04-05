@@ -52,7 +52,7 @@ Nice to meet you, `Sean`. What year would you like to go to? **(YYYY)**
         * `S`et her up with George
             * Interesting. You set up an elaborate plan for your future Dad to surprise your Mom by beating you up. Despite going horribly awry, the plan ultimately works. You may go back to your own time.
 * `< 1955`
-    * I see you're a fan of Back to the Future 3. You've run out of nitroglycerin to get back to your own time. How do you power the Time Machine? **(H/M/T)**
+    * I see you're a fan of Back to the Future 3. You've run out of gas and can't get back to your own time! How do you power the Time Machine? **(H/M/T)**
         * `H`orses
             * Good idea, but no. The time machine needs to get to 88mph. 12 horsepower ain't gonna cut it.
         * `M`oonshine
