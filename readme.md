@@ -1,12 +1,14 @@
+Use Prompt! make sure to put options in parentheses
+
 # Choose Your Own Adventure!
 
 Using what you know about data types, variables, operators, conditional blocks, and accepting user input, create a text-based game that allows the user to arrive at different "destinations" based on the inputs they type.
 
 ### Rules
 * Any path the user goes down must ask them at least **three** questions.
-* There must be a minimum of **seven** total destinations the user could arrive at based on their responses.
+* There must be a minimum of **seven** total destinations the user could arrive at based on their responses. DONE 
 * For **at least one** of the questions asked, there must be **more than two possible user responses**.
-* Your code must contain **at least one loop**.
+* Your code must contain **at least one loop**. 
 * Your code must contain **at least one switch statement**
 * Your code must make use of **both string and number user inputs**.
 
@@ -63,3 +65,27 @@ Nice to meet you, `Sean`. What year would you like to go to? **(YYYY)**
                     * Interesting choice. Unfortunately the Doc can't grab Clara and get back to the car in time. He ends up staying in 1855 with her.
                 * `L`eave her
                     * Smart choice. Unfortunately the Doc was deeply in love with Clara, and when he gets back to 1985 he becomes very depressed.
+
+
+
+                    var firstQuestion = function() {
+    prompt("Hello, " + getName + "! Okay, let's select our destination. We have a few options. Enter the year you'd like to visit: 1950, 1965, 1989, or 1994");
+  };
+
+  var blastoff = function() {
+    if (firstQuestion === '1950') {
+      prompt("Heading to 1950!");
+    } else if (firstQuestion === '1965') {
+      prompt("Heading to 1965!");
+    } else if (firstQuestion === '1989') {
+      prompt("Heading to 1994!")
+    } else prompt("Sorry, I didn't catch that. Where are we going? 1950/1965/1989/1994")
+  };
+
+
+  unction begin() {
+  prompt("Are you ready to blast to the past? Let's begin with your name!")
+  greeting();
+};
+
+whole loop - while the answer isnt xyz prompt("What year?)"
