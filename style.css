@@ -1,0 +1,24 @@
+body{
+  background-image: url('houston.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+button{
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  border: 5px solid #CE1141;
+  background-color: #C4CED3;
+  width: 30em;
+  height: 5em;
+  font-family: 'Orbitron', serif;
+}
