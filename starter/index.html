@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>adventure</title>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="script.js"></script>
+  <h1 onclick="story.start()">choose your own adventure</h1>
+  <div id="container" class="hidden">
+    <div id="textBox"></div>
+    <div id="optionsList"></div>
+  </div>
+  <h1 id="gameOver" class="hidden">game over</h1>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

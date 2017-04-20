@@ -1,0 +1,33 @@
+'.source.js':
+  'adventure scene':
+    'prefix': 'scene'
+    'body': """
+    {
+      id: ${1:<int>},
+      final: ${2:[true|false]},
+      setting: "${3:text}",
+      options: [${4:array of option objects}]
+    }
+    """
+  'adventure option':
+    'prefix': 'option'
+    'body': """
+    {
+      id: ${1:<int>},
+      choiceValue: "${2:text}",
+      hidden: ${3:[true|false]},
+      statModifier: "${4:name of story.stats[n]}",
+      difficulty: [${5:<int difficulty ratio numberator>},${6:<int difficulty ratio denominator>}],
+      counter: 0,
+      successText: "${7:text}",
+      successConsequences: function() {
+        return ${11:undefined}
+      },
+      successSceneId: ${8:<int>},
+      failureText: "${9:text}",
+      failureConsequences: function() {
+        return ${12:undefined}
+      },
+      failureSceneId: ${10:<int>}
+    }$13
+    """

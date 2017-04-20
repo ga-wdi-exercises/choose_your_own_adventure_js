@@ -1,0 +1,49 @@
+/* Using palette http://colorhunt.co/c/39305 */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #083836;
+  font-family: 'VT323', monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+#container {
+  max-width: 800px;
+}
+
+#textBox {
+  margin: 10px;
+  border: 4px solid #C6E872;
+  padding: 20px;
+  background: #FBFFA3;
+  font-size: 40px;
+}
+
+#optionsList {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+#optionsList .option {
+  margin: 10px;
+  border: 4px solid #66D37E;
+  padding: 5px;
+  background: #FBFFA3;
+  font-size: 25px;
+}
+
+#optionsList .option:hover {
+  border: 4px solid #C6E872;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
