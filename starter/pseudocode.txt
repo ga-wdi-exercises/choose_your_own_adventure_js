@@ -1,0 +1,52 @@
+Hello Bilbo, what is your name?
+  Bilbo (Baggins)
+    So erm..How old are you again? (AAA)
+      132+
+        Gee, that's old, are you sure? (Y/N)
+          Y es
+            *So, what's out there in the Undying Lands?
+          N o
+            back to How old are you again?
+      131
+        What a long life you've had Bilbo Baggins, do you wish to travel with the Elves to the Undying Lands?
+          Y es
+            *You are oldest Hobbit to ever grace Middle Earth. Goodbye, Bilbo, you've earned this rest.
+          N o
+            *You live what little time you have left out along, your favorite nephew and all the elves having crossed over the Sea.
+      112-130
+        You are now resting in Rivendell well done a life well lived! What's next? S / W
+          S teal back the ring
+            *That didn't work so well did it? You reach for the ring and slip and fall smashing your nose.
+          W rite a book
+            Brilliant! Chronicle your life in your new book, The Hobbit, to there and back again!  Remember Smaug? Oh those were the days...
+              C ontinue
+      111
+        It's your Eleventy-First Birthday! Happy Birthday! What do you do first? S / F / D
+          S peech
+            'I don't know half of you half as well as I should like; and I like less than half of you half as well as you deserve.' - You feel awkward! Time to vanish away. You slip on the ring and run off away from the party laeving everything to Frodo.
+          F ight
+            *Those Sackville-Bagginses are stealing your things again.  You fight them and they sue you and take all of your belongings!
+          D rink too much
+            *Alas, no one thought it possible, but a hobbit has drunk too much and died from alcohol poisoning
+      51-110
+        Time to rest up for your eleventy first birthday. Anyone you wish to invite along with Gandalf?
+          Of course we'll invite ____. Here they come with Gandalf!
+            C ontinue
+      50
+        Knock knock.
+          A nswer
+            Ah, it's Thorin II Oakenshield, Fíli, Kíli, Óin, Glóin, Balin, Dwalin, Ori, Dori, Nori, Bifur, Bofur, Bombur, and Gandalf. Set off as the thief?
+              Y es
+                How ever so adventurous of you.  I'd tell you the rest, but that's a story for another time.
+              N o
+                *A boring life you lead. You die at the age of 70 for being too fat- quite young for a Hobbit, might I add.
+          I gnore
+            Loop up
+      0-49
+        Let's have some tea and biscuits. No need for an adventure! Enjoy your time until you're 50... wait is that an old man walking down the road?  He greets you, how do you respond?
+           G ood morning
+            Ah, it appears adventure has chosen you for a journy!
+           B ye Felicia
+            *A boring life you lead. You die at age the 70 for being too fat- quite young for a Hobbit, might I add.
+      <0
+        Get outta here!
