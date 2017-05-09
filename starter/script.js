@@ -51,15 +51,42 @@ if(fallChoice === "check"){
 		var climbWalk = prompt("It looks like you have 2 choices... \n Attempt to climb the cliff you somehow survived falling off to reach the trail... \n Or Walk down hill and hope to find a stream or a trail... \n type 'climb' or 'walk' to make a choice");
 		
 		if(climbWalk==="climb"){
-			confirm("You Attempt to climb the cliff. It has been dry so your foot holds are strong. \n you can feel the breeze on your back reminding you of how high you really are. \n Those rock climbing classes are paying off as you ascend higher \n *crumbles* not a good sound... The rock face gives way... \n this fall you are not so lucky... \n RIP");
+			confirm("You Attempt to climb the cliff. It has been dry so your foot holds are strong. \n you can feel the breeze on your back reminding you of how high you really are. \n Those rock climbing classes are paying off as you ascend higher \n *crumbles* not a good sound... The rock face gives way... \n this fall you are not so lucky... \n RIP ");
 		}else if(climbWalk==="walk"){
 			confirm("you decide to walk down hill. \n Water flows down hill. \n Water means life and trails.\n life and Trials mean People \n ...4 Days pass...\n 4 days of eating bugs and drinking water out of the stream you find a trail. To your amazement you see People! \n You survived! Congratulations!");
 		}
 
 	} else {
 		var iiii = prompt("Let take inventory...\n "+person.bag+"Alright! we have some stuff to work with \n After studying the map you see 2 possible options... option 1 - walk down hill and fallow the stream to link up to the longest trail in the park \n option 2 - walk in the general direction of the park entrance \n type 'option1' or 'option2'");
-		if (iiii === "") {}
+		if (iiii === "option1") {
+			//downhill
+			prompt("");
+		}else{
+			//towards gate
+		}
 	}
+}else{
+	//fall choice walking
+	//game trail or Downhill
+	prompt("");
+	if(){
+		//gameTrial = mt.lion
+		// fight or run
+		if () {
+			//fight = survive
+		}else{
+			//run = RIP
+		}
+	}else{
+		//downhill to stream = bear
+		if(){
+			//play dead = survive
+		}else{
+			//run away = RIP
+		}
+	}
+}
+
 
 
 
