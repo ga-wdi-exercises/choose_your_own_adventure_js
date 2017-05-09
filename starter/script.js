@@ -9,7 +9,8 @@ var bags = {
 	medium :["water bottle","knife","map","Cliff Bars","paracord","Socks","Life-Straw","compass"],
 	large :["water bottle","knife","map","Cliff Bars","paracord","Socks","Life-Straw","rain gear","compass","light blanket","tent"]
 };
-
+var theWall = ["Fred 1903","P & T forever!","a Dude was here","Great Scott 1894","Jerry 2006"];
+var stringy;
 var start = prompt("Welcome to Unfortunate Trail, whatt is your name?", "John Doe");
 
 person.name = start;
@@ -57,42 +58,56 @@ if(fallChoice === "check"){
 		}
 
 	} else {
-		var iiii = prompt("Let take inventory...\n "+person.bag+"Alright! we have some stuff to work with \n After studying the map you see 2 possible options... option 1 - walk down hill and fallow the stream to link up to the longest trail in the park \n option 2 - walk in the general direction of the park entrance \n type 'option1' or 'option2'");
+		var iiii = prompt("Let take inventory...\n "+person.bag+"\nAlright! we have some stuff to work with \n After studying the map you see 2 possible options... option 1 - walk down hill and fallow the stream to link up to the longest trail in the park \n option 2 - walk in the general direction of the park entrance \n type 'option1' or 'option2'");
 		if (iiii === "option1") {
-			//downhill
-			//bear trap
-			//RIP
-			prompt("");
+			confirm("You start your journey down hill, There is not a clear trail\n you have to snake your way down walking around, under, and through thick under brush\n the under growth begins to clear...");
+			confirm("Some well traveled game trails become visiable. \n Its is a good break form the brush\n ...*click* *SLAM!!* \n you stepped in a bear trap... it hurts so bad.\n You end up dying from blood loss\nRIP");
 		}else{
-			//towards gate
-			//rock wal engravins
-			//loop through names dates add to collection
+			var yN = prompt("You start walking with the cliff to your side. \n The mountain side provides some shade and after a few hour of walking you come across a cliff face with names ingraved. Do you want to add to the boulder?(y/n)");
+			yN = yN.toLowerCase()
+			if (yN ==="y") {
+				namesOnWall(theWall);
+				var userYear = prompt("looks like a lot of cool peoeple have been here..."+theWall+" Time to add your name to the list... \n type in a year...");
+				userYear = userYear.toString();
+				theWall.push(person.name +" "+ userYear)
+				confirm(theWall+" Look at that, lost travelers will see you name for cenutries! \n lets keep walking");
+				confirm("After hours of walking you made it to the ranger station before night fall! Congratulations you survived!!");
+			}else{
+				namesOnWall(theWall);
+				confirm("Well /n"+theWall+" \n have all been here before...But you dont care about that");
+				confirm("After hours of walking you made it to the ranger station before night fall! Congratulations you survived!!");
+			}
 		}
 	}
 }else{
-	//fall choice walking
-	//game trail or Downhill
-	prompt("");
-	if(){
-		//gameTrial = mt.lion
-		// fight or run
-		if () {
-			//fight = survive
+	var trailOrStream = prompt("You decide to get moving ASAP \n 'movement is life' \n as you get up and dust your self off you noctice 2 possible directions to head \n choice1 = fallow the game trail \n choice2 = walk down hill \n (type choice1 or choice2)");
+	
+	if(trailOrStream==="choice1"){
+		var fightOrRun = prompt("You decide to fallow the game trail. It makes for easy walking compared to walkingdown hill through the brush. \n After what feel like a few hours you notice the sound of soft foot falls behind you... \n you turn around to see a Mountan Lion staring into your soul! \n its eyes are locked on you... What do you do? \n fight - make your self seem big, scream and yell at it to try and intimidate it \n run - run away from the threat, if you zig zag you might esacpe (fight/run?)");
+
+		if (fightOrRun === "fight") {
+			confirm("You yell and scream at it stares back...\n you contintue to scream at it. the it starts to back away. slowly it turn tail to run\n you fall to the ground dead tied and out of breath. That when you hear the voices... People!! a Park Ranger heard your screaming and came to help\n Congratulations you survived!!");
 		}else{
-			//run = RIP
+			confirm("you turn tail and run...\n the mountain lion is much faster than you are... \n RIP \n eaten by Mountain Lion");
 		}
 	}else{
-		//downhill to stream = bear
-		if(){
-			//play dead = survive
+		var playDead = prompt("You walk down hill and find a good sized stream. You start fallowing it.\n After and hour or two you hear and unusual noise...\nYou turn around to see a bear behind you! \ndo you play dead?(y/n)");
+		if(playDead === "y"){
+			confirm("You drop to the ground and hold as still as possible. The bear investigates, it trys to move you but you lay very still...\n *gun shot* echos through the vally\n You forgot it was bear season\n Congratulations you have been saved by hunters!!");
 		}else{
-			//run away = RIP
+			confirm("you run away from the bear. \n You can hear it chasing you... gaining ground...\n RIP\n eaten by a Bear")
 		}
 	}
 }
 
 
+function namesOnWall(arry) {
+	for (var i = 0; i < arry.length; i++) {
+		
+		arry[i] = arry[i]+"\n";
 
+	}
+}
 
 	
 
