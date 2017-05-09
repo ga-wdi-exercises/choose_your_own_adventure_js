@@ -60,9 +60,13 @@ if(fallChoice === "check"){
 		var iiii = prompt("Let take inventory...\n "+person.bag+"Alright! we have some stuff to work with \n After studying the map you see 2 possible options... option 1 - walk down hill and fallow the stream to link up to the longest trail in the park \n option 2 - walk in the general direction of the park entrance \n type 'option1' or 'option2'");
 		if (iiii === "option1") {
 			//downhill
+			//bear trap
+			//RIP
 			prompt("");
 		}else{
 			//towards gate
+			//rock wal engravins
+			//loop through names dates add to collection
 		}
 	}
 }else{
