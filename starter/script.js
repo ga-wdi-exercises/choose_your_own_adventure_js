@@ -20,7 +20,7 @@ if (lv1 == "yes") {
       } else {
       var lv3b = prompt(person + "," + " did you grow up on Tatooine?\n" + "yes/no")
       if (lv3b == "yes") {
-          confirm("Luke! I'm so glad to see you again.\n I do not understand why you thought your name was " + person + ".")
+          confirm("Master Luke! I'm so glad to see you again.\n I do not understand why you thought your name was " + person + ".")
           } else {
           confirm("I'm sorry " + person + " , you must be lost!")
           }
@@ -31,7 +31,24 @@ if (lv1 == "yes") {
     while (user !== "millennium falcon" && user !== "tie fighter" && user !== "star destroyer" && user !== "x-wing") {
     var user = prompt(person + ", which ship do you prefer?\n" + "millennium falcon\ntie fighter\nstar destroyer\nx-wing\n" + "Please choose one and enter answer here:").toLowerCase()
     }
-    if (user == "millennium falcon" || "x-wing") {}
+    if (user == "millennium falcon") {
+      var lv3c = prompt(person + "," + " are you usually the hariest creature on a ship?\n" + "yes/no")
+      if (lv3c == "yes") {
+          confirm("Chewbacca! I'm so glad to see you again.\n I do not understand why you thought your name was " + person + ".")
+          } else {
+          confirm("Han Solo, you must be running from the authorities under the name " + person + ".")
+          }
+
+    } else if (user == "x-wing"){
+      var lv3d = prompt(person + "," + " how many tie fighters have you destroyed?\n0\n10\n20\n30\n40")
+      if (lv3d >"20") {
+          confirm(person + ", you truly are an excelent pilot, but I bet you have never made the kessel run in 12 parsecs!")
+          } else {
+          confirm("You are still a rookie" + person + ".")
+          }
+    } else {
 
     }
+
+  }
 }
