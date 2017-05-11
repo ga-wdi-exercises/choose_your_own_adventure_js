@@ -41,10 +41,11 @@ if (lv1 == "yes") {
 
     } else if (user == "x-wing"){
       var lv3d = prompt(person + "," + " how many tie fighters have you destroyed?\n0\n10\n20\n30\n40")
-      if (lv3d >"20") {
+      var lv3dNum = parseInt(lv3d)
+      if (lv3dNum > 20) {
           confirm(person + ", you truly are an excelent pilot, but I bet you have never made the kessel run in 12 parsecs!")
           } else {
-          confirm("You are still a rookie" + person + ".")
+          confirm("You are still a rookie " + person + ".")
           }
     } else {
       var lv3e = prompt(person + "Do you wear a white, black or grey uniform?")
