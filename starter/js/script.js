@@ -13,21 +13,21 @@ Bar = number input
 Use prompts to get input
 Output final message in window alert
 
-Code does not work!!!
+Code does not work!!! And sorry my story is not that fun :(
 */
 
 
-var questionOne == true;
+var questionOne =  true;
 while (questionOne) {
   var questionOne=prompt("Are you ready for the weekend? Yes or No")
-    if (questionOne == "Yes") {
+    if (questionOne === "Yes") {
       prompt("Do you want to go to a movie, dinner, or shopping?");
       determineActivity();
-      questionOne == true;
+      questionOne === true;
     }else{
       prompt("Then we can stay home")
       stayHomeActivity();
-      questionOne == false;
+      questionOne === false;
   }
 }
 
@@ -50,10 +50,10 @@ function determineActivity () {
 
         default:
           window.alert('I have not seen that yet. Sounds good to me!');
-
-  } else if (activity == 'shopping') {
+        }
+  } else if (activity === 'shopping') {
       var shopping = prompt("Where? Tysons, Georgetown, or Outlets?");
-      var shoppingLocation =();
+      var shoppingLocation;
         switch (shoppingLocation){
           case Georgetown:
             window.alert('We have to go to Baked & Wired while we are there');
@@ -69,10 +69,11 @@ function determineActivity () {
 
           default:
             window.alert('Good idea!');
+          }
 
-    }else (activity == 'get drinks'){
+    } else if (activity = 'get drinks') {
       prompt("How many drinks we having? 1 to 10");
-        var drinks =();
+        var drinks;
           if (drinks > 4) {
             for(var i = 10; i > 4; i -=2){
               console.log("Are you sure?");
@@ -107,7 +108,7 @@ function determineActivity () {
                     window.alert('Cleaning on the weekend is zero percent fun!');
                 }
               } else if (activity == 'watch a movie'){
-                var watchTV = prompt("What are we watching? news, cartoons, sitcoms?";
+                var watchTV = prompt("What are we watching? news, cartoons, sitcoms?");
 
                 switch (watchTV) {
                   case 'news':
@@ -143,5 +144,5 @@ function determineActivity () {
 
                   default:
                     window.alert('Sounds good to me!');
-                  }
+                  };
               }
