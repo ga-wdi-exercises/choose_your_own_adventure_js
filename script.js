@@ -66,14 +66,23 @@ switch (person) {
           $("img").attr("src","images/macDrain.jpg")
         }else{
           while (macDrain == "n"){
-          var macDrain = prompt("Good.  You should never do that it will suck your insides out.  But then again... y/n")
+          macDrain = prompt("Good.  You should never do that it will suck your insides out.  But then again... y/n")
           }
           $("img").attr("src","images/macDrain.jpg")
           break;
         }
       }else if(macAdventure == "k"){
+        var sweetMoves = prompt("Should you show off some sweet moves? y/n")
+        if (sweetMoves == "y") {
+          $("img").attr("src","images/macKarate.gif")
+        }else{
+        while (sweetMoves == "n"){
+          sweetMoves = prompt("Are you sure?  It's so badass!!")
+        }
         $("img").attr("src","images/macKarate.gif")
+        break;
       }
+    }
       break;
   case "c" || "C":
     alert("Hello Charlie, what would you like to do today?")
