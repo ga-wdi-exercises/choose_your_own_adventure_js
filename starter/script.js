@@ -47,8 +47,19 @@ if (lv1 == "yes") {
           confirm("You are still a rookie" + person + ".")
           }
     } else {
-
-    }
-
-  }
+      var lv3e = prompt(person + "Do you wear a white, black or grey uniform?")
+    switch (lv3e) {
+      case "white":
+      confirm(person + "You are stormtrooper!")
+        break;
+      case "black":
+      confirm(person + "You are a pilot!")
+        break;
+      case "grey":
+      confirm(person + "You must be part of the leadership!")
+        break;
+      default:
+}
+}
+}
 }
