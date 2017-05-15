@@ -1,0 +1,204 @@
+Now Playing: The Matrix Re-Reloaded! Starring:
+//enter name
+
+Well, I would've stuck with Keanu Reeves, but I'm not the director, you are!
+
+You wake up after a late night of haxing. Suddenly you notice that someone has taken
+control of your computer!
+
+Follow the white rabbit, $name.
+
+Then--a knock at the door! A white rabbit tattoo! Do you (f)ollow the white rabbit or
+(o)rder Dominos and watch the next season of The Hills?
+
+//  (f)
+        Wow do you always go to underground raves on Tuesday nights? Pretty badass/
+        irresponsible.
+
+
+//  (o)
+        Your intrusive friends browbeat you into submission (rightfully) and you
+        go out anyway.
+
+You're at the night club, which is playing Rob Zombie for some reason, because
+who in their right mind doesn't dance to Rob Zombie? (What?!)
+
+Someone of the opposite gender sidles up behind you.
+
+"Hello, Neo," the person says.
+
+"How do you know that name?" you respond.
+
+"I know a lot about you. I've been wanting to meet you for some time."
+
+Do you (e)ngage or (g)et away from this admitted stalker?
+
+//  (e)
+        "Who are you?" you ask.
+
+        "My name is Trinity."
+
+        "The Trinity? The Trinity that cracked the Kansas City Chuckie Cheese?"
+
+        "That was a long time ago," they respond.
+
+        "That was like two months ago!"
+
+        "That feels right."
+
+        A long, awkward pause drags on. "I always thought you were the opposite
+        gender."
+
+        Trinity muses on how you made an uncomfortable moment even more awkward.
+        "Most people of your gender do."
+
+        "That was you on my computer, wasn't it?"
+
+        "Yes," they say. "I brought you here to warn you, Neo.  You are in a lot
+        of danger..."
+
+        The next day, you're late for work. Maybe don't go clubbing on Tuesdays.
+
+        You get a package at your desk. That's odd--you didn't order anything.
+
+        You open it and pull out a cell phone from 1998. It looks hilarious now.
+
+        Suddenly, the phone rings! It's AT&T.
+
+        (A)re you satisfied with your long distance coverage or would you
+        like to (c)hange to AT&T?
+
+        //  a
+            You hang up. Time is money, after all.
+
+            Suddenly the phone rings again!!!!
+
+            "Hello," a deep and pleasing voice says.
+
+            "Morpheus?!" you ask.
+
+            "Wait, how on Earth did you guess that right away?"
+
+            "I...I don't know. I answer every call that way. You know, just in case."
+
+            "OK..." Morpheus says. "That's objectively weird. Anyway, I've been
+            watching you, Neo, and I want to meet you."
+
+            "LOL and you called me weird?"
+
+            "LOL indeed, Neo. But you have to listen to me. There is a break room
+            at the end of the row of cubicles. Inside that break room is a quilt.
+            I need you to jump out the window of the break room and use the quilt
+            as a parachute."
+
+            Do you (u)se the quilt as a parachute or (t)urn yourself in to
+            the agents?
+
+            //  u
+
+            For a fleeting moment, you feel the quilt parachute working. Then reality
+            sets in and you plummet 40 stories. You definitely have guts!
+
+            MOVIE OVER!!!
+
+            //  t
+
+            You're escorted from the building by a couple suits. Despite being
+            apprehended for badass computer haxin, everyone you work with
+            assumes it's something filthy.
+
+*********
+
+        //  c
+            After thirty minutes on the phone, you now have unlimited calls to
+            28 countries and over 3000 foreign language cable channels. You
+            are not good at saying no.
+
+            Also, Morpheus called like 4 times but you missed every one
+            talking to Chad from AT&T. So the agents picked you up. Idiot.
+
+********
+
+//  (g)
+        "Umm, I think I left my shower light on, I have to go."
+
+        Feeling a bit mystified, you walk home. Only now Rob Zombie is stuck
+        in your head.
+
+        The next day, you're late for work. Maybe don't go clubbing on Tuesdays.
+
+        You open it and pull out a cell phone from 1998. It looks hilarious now.
+
+        Suddenly, the phone rings! It's AT&T.
+
+        (A)re you satisfied with your long distance coverage or would you
+        like to (c)hange to AT&T?
+
+        //  a
+            You hang up. Time is money, after all.
+
+            Suddenly the phone rings again!!!!
+
+            "Hello," a deep and pleasing voice says.
+
+            "Morpheus?!" you ask.
+
+            "Wait, how on Earth did you guess that right away?"
+
+            "I...I don't know. I answer every call that way. You know, just in case."
+
+            "OK..." Morpheus says. "That's objectively weird. Anyway, I've been
+            watching you, Neo, and I want to meet you."
+
+            "LOL and you called me weird?"
+
+            "LOL indeed, Neo. Did you enjoy your talk with Trinity?"
+
+            "Who?"
+
+            "The person from the rave last night."
+
+            You struggle to remember. "I didn't meet anyone last night."
+
+            A pause. "Re--really?"
+
+            "No, I left pretty early."
+
+            "So I guess I need to go over everything now?"
+
+            You shrug. "I guess. What's this about?"
+
+            You hear a sigh through the phone. "Do you have a pen or something?"
+
+*********
+
+        //  c
+            After thirty minutes on the phone, you now have unlimited calls to
+            28 countries and over 3000 foreign language cable channels. You
+            are not good at saying no.
+
+            Also, Morpheus called like 4 times but you missed every one
+            talking to Chad from AT&T.
+
+            And the agents arrived almost twenty minutes ago and have been
+            standing in your cubicle waiting for you to finish. Needless to say,
+            they no longer consider you a threat.
+
+            MOVIE OVER!!!
+
+
+AFTER CHOICE5:
+
+roll over or stay silent
+
+admit you're the one or admit you're not the one
+
+if admit positive, do you save trinity?
+
+if yes, you fail
+
+if no, you fail
+
+if admit you're not the one
+
+you save the human race
