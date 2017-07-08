@@ -1,5 +1,15 @@
+cs1 = "<img src='ches.jpg'/>"
+cs2 = "<img src='che2.jpg'/>"
+cs3 = "<img src='ches3.png'/>"
+var cheeseSteaks = [cs1, cs2, cs3]
+
+var addCheesesteak = function () {
+ for (i = 0; i < cheeseSteaks.length; i++)
+   $('body').append(cheeseSteaks[i])
+ }
 
 var name = prompt('What is your name?')
+
 
 if (name !== null) {{
   var roadTrip = prompt('Nice to meet you. Are you up for a road trip? (Yes/No)')
@@ -17,9 +27,10 @@ if (name !== null) {{
           var cheeseSteak = prompt('Ok. Cheesesteak or salad?')
             } if (cheeseSteak === 'Cheesesteak') {
               var youWin = prompt('You Win!! Enjoy your cheesesteak')
-              $('body').append("<img src='ches.jpg'/>")
-              $('body').append("<button>Click me!</button>")
+              $('body').append("<button>Click me for your prize!</button>")
               $('button').css("font-size", 40)
+              var button = $('button')
+              button.on('click', addCheesesteak)
             } else {
               var youLose = prompt('Rethink this. Game over.')}}
             }
