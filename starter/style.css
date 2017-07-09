@@ -1,0 +1,23 @@
+body {
+  background-image: url("../starter/img/dragon.jpg");
+  background-size: cover;
+  text-align: center;
+}
+h2 {
+  color: white;
+  font-size: 50px;
+}
+h1 {
+  color: white;
+}
+.winner {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+p {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
