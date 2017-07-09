@@ -1,10 +1,7 @@
-
-
 function game () {
   $('.startGame').remove()
-  var name = prompt('Enter Name') // prompt user to enter name
+  var name = prompt('Enter Name')  // prompt user to enter name
   $('h2').text(`Greetings ${name} welcome to the game`) // return greeting with name
-
   choice1 = prompt(`press 1 for dragons, 2 for unicorns or 3 for really much bigger dragons`) // give user first choice of three different options
 
   switch (choice1) {
