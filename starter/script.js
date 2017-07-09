@@ -1,4 +1,6 @@
- function game () {
+var choice1
+var next = $('.next')
+function game () {
   var name = prompt('Enter Name') // prompt user to enter name
   $('h2').text(`Greetings ${name} welcome to the game`) // return greeting with name
   var choice1a
@@ -12,12 +14,15 @@
       break
     case choice1 = '2':
       console.log('you have chosen unicorns')
+      $('body').css('background-image', 'url(../starter/img/unicorn.jpg)')
       break
     case choice1 = '3':
       console.log('uh oh you chose the bigger dragons')
       break
-
   }
+
+}
+function nextChoice () {
   if (choice1 === '1') {
     console.log('you see a bunch of dragons ahead of you,  luckily they arent that big')
     choice1a = prompt('do you go forward or backwards? Enter F/B').toLowerCase()
@@ -29,6 +34,7 @@
       console.log('Coward....there is no backwards, you died....again')
     }
   }
+
   if (choice1 === '2') {
     console.log('you see a bunch of unicorns ahead of you')
     choice2a = prompt('do you go forward or backwards? Enter F/B').toLowerCase()
@@ -36,17 +42,19 @@
     if (choice2a === 'f') {
       var sleepDays = parseInt(prompt('You come to a dark room with a small cot. Suddenly you feel tired, how many hours will you sleep?'))
       for (let i = 1; i < sleepDays; i++) {
-        alert(`You slept for ${i} hours`)
+        console.log(`You slept for ${i} hours`)
       }
     }
   }
   if (choice1 === '3') {
-    alert('these dragons are way too big. You lose please try again')
+    console.log('these dragons are way too big. You lose please try again')
   }
 }
-$(document).ready(function(){
+$(document).ready(function () {
   var start = function () {
     game()
   }
   $('.startGame').on('click', start)
+  $('.next').on('click', nextChoice)
+
 })
