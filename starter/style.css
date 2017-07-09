@@ -1,0 +1,11 @@
+body {
+  background-image: url("../starter/img/dragon.jpg");
+  background-size: cover;
+  text-align: center;
+}
+h2 {
+  color: white;
+}
+h1 {
+  color: white;
+}
