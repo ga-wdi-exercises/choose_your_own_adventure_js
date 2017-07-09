@@ -3,16 +3,16 @@ cs2 = "<img src='che2.jpg'/>"
 cs3 = "<img src='ches3.png'/>"
 var cheeseSteaks = [cs1, cs2, cs3]
 
-var addCheesesteak = function () {
- for (i = 0; i < cheeseSteaks.length; i++)
-   $('body').append(cheeseSteaks[i])
- }
+var addCheesesteak = function() {
+  for (i = 0; i < cheeseSteaks.length; i++)
+  $('body').append(cheeseSteaks[i])
+}
 
 var name = prompt('What is your name?')
 
 
 if (name !== null) {{
-  var roadTrip = prompt('Nice to meet you. Are you up for a road trip? (Yes/No)')
+  var roadTrip = prompt(`Nice to meet you ${name}. Are you up for a road trip? (Yes/No)`)
   }
     if (roadTrip === 'Yes') {{
       var whereTo = prompt('Ok, lets go. Philadelphia or Cleveland?')}
