@@ -1,11 +1,12 @@
 var choice1
-var next = $('.next')
+var choice1a
+var choice2a
+var choice3a
+
 function game () {
   var name = prompt('Enter Name') // prompt user to enter name
   $('h2').text(`Greetings ${name} welcome to the game`) // return greeting with name
-  var choice1a
-  var choice2a
-  var choice3a
+
   choice1 = prompt(`press 1 for dragons, 2 for unicorns or 3 for really much bigger dragons`) // give user first choice of three different options
 
   switch (choice1) {
@@ -18,9 +19,9 @@ function game () {
       break
     case choice1 = '3':
       console.log('uh oh you chose the bigger dragons')
+      $('body').css('background-image', 'url(../starter/img/bigdragon.jpg)')
       break
   }
-
 }
 function nextChoice () {
   if (choice1 === '1') {
@@ -50,11 +51,11 @@ function nextChoice () {
     console.log('these dragons are way too big. You lose please try again')
   }
 }
+
 $(document).ready(function () {
   var start = function () {
     game()
   }
   $('.startGame').on('click', start)
   $('.next').on('click', nextChoice)
-
 })
