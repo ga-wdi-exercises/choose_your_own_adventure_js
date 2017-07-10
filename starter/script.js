@@ -20,28 +20,28 @@ var name = prompt ("What is your name?");
 
 if(name!==null)
 {
-  var year = parseInt(prompt( `Nice to meet you, ${name}. What year would you like to go to? (YYYY))`));
+  var year = parseInt(prompt( `Nice to meet you, ${name}. You are in a time machine, and you can go to any year you want, enter the year? (YYYY))`));
 }
 
 
 
 if (year>=2015)
 {
-  var bg = prompt(`I see you're a fan of Back to the Future 2. Would you rather deal with Biff, or Griff? (B/G)`);
+  var bg = prompt(`you are in a modern city, woudl like to to play Baseball or Go watch movies? (B/G)`);
 
 
   switch (bg)
   {
     case 'B':
     {
-      var sr = prompt(`Hmm, interesting. Biff is angry and has a cane. Do you stand and fight, or run away like a coward? (S/R)`);
+      var sr = prompt(`great, would you like to Seat or Run ? (S/R)`);
       if(sr==='S')
       {
-        alert(`Good choice. Biff is old and feeble at this point. You push him over and he falls in a pile of manure.`);
+        alert(`Let's seat`);
       }
       else if (sr==='R')
       {
-        alert(`You get away, but your future son Marty Jr. is heckled for the rest of his days for his dad's cowardice.`);
+        alert(`Let's go to Run`);
       }
       else
       {
@@ -52,14 +52,14 @@ if (year>=2015)
 
     case 'G':
     {
-      var io= prompt(`Griff is asking you if you are in, or out. What do you say? (I/O)`);
+      var io= prompt(`Would you like to watch Incentive or Other (I/O)`);
       if(io==='I')
       {
-        alert(`Bad call. Griff and his cronies rob the Hill Valley bank and frame you for it. No more time travel for you.`);
+        alert(`This is a Scary Movie`);
       }
       else if (io==='O')
       {
-        alert(`Good call. You deck Griff in the jaw and run away. He gives chase on his hoverboard and ends up in a pile of manure.`);
+        alert(`there are many movies available`);
       }
       else
       {
@@ -83,25 +83,25 @@ if (year>=2015)
 
 else if ( year>=1985 && year <=2014)
 {
-  var namex = prompt(`Doc has already destroyed the Time Machine at this point. I guess you'll have to wait around until 2015. What name would you like to go by until then?`);
-  prompt(`Welcome to the future, ${namex}`);
+  var namex = prompt(`Nothing good happens during this time, let's change your name, what would you like to be called?`);
+  alert('Try not to bring any attention  ${namex}')
 }
 
 
 else if ( year >= 1955 && year <= 1984)
 {
-  var yns = prompt(`I see you're a fan of Back to the Future 1. Your future Mom has just asked you to the Enchantment Under the Sea dance. What do you do? (Y/N/S)`);
+  var yns = prompt(`You have to change the way you act, you are in different time, do you want to be different  (Y/N/S)`);
   if(yns ==='Y')
   {
-    alert(`Creepy. I hope you have some backup plan in place to get out of this. Until then, you're stuck in 1955.`);
+    alert(`great`);
   }
   else if(yns ==='N')
   {
-    alert(`Honorable. But this also means that your future Dad will never meet your Mom, and therefore you cannot exist.`);
+    alert(`It is not a good thing to do `);
   }
   else if(yns ==='S')
   {
-    alert(`Interesting. You set up an elaborate plan for your future Dad to surprise your Mom by beating you up. Despite going horribly awry, the plan ultimately works. You may go back to your own time.`);
+    alert(`ok keep the same behavior you had in the past , and see how it goes.`);
   }
   else
   {
@@ -115,26 +115,26 @@ else if ( year >= 1955 && year <= 1984)
 
 else if (year<1955)
 {
-  var hmt = prompt(`I see you're a fan of Back to the Future 3. You've run out of gas and can't get back to your own time! How do you power the Time Machine? (H/M/T)`);
+  var hmt = prompt(`Now we are in weird times, You want to ride a Horse, or climb Mountains, os just keep Traveling and exploring the place(H/M/T)`);
 
   if(hmt ==='H')
   {
-    alert(`Good idea, but no. The time machine needs to get to 88mph. 12 horsepower ain't gonna cut it.`);
+    alert(`It is fun to ride in horses`);
   }
   else if(hmt ==='M')
   {
-    alert(`You'd be better off drinking the moonshine. Do not pass Go, do not collect $200. Stuck in 1855`);
+    alert(`uuhh,, there is a lot of fresh air here in the Mountains, like never before`);
   }
   else if(hmt =='T')
   {
-    var tl = prompt(`Good call! This plan seems to be working. But wait! Clara wants to go Back to the Future with you at the last moment. What do you do? (T/L)`);
+    var tl = prompt(`it is great to keep exploring, do you wanna travel by Train or do you wanna do Leg work? (T/L)`);
     if(tl==='T')
     {
-      alert(`Interesting choice. Unfortunately the Doc can't grab Clara and get back to the car in time. He ends up staying in 1855 with her.`)
+      alert(`The train is full, and smells bad, lets go grab some food before we leave.`)
     }
     else if ( tl ==='L')
     {
-      alert(`Smart choice. Unfortunately the Doc was deeply in love with Clara, and when he gets back to 1985 he becomes very depressed.`);
+      alert(`I don't understand why would you wanna walk , you will only ge to know this place.`);
     }
     else
     {
