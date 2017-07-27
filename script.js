@@ -8,7 +8,7 @@ this.name = prompt('Please enter your full name')
 while (!this.name.includes(' ') ) {
     this.name = prompt('Thats not actually a full name.  Enter your FULL name to continue')
 }
-
+ 
 var option = prompt('You hear a scream! Turn around to see a leatherclad with a knife standing over a woman tied to a St. Andrews cross!  You can run like a coward or fight the man to free your wife.  enter a random number to see what you would do ' )
 
 if (option % 2 === 0)
